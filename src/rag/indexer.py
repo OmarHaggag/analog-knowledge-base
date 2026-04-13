@@ -1,119 +1,143 @@
 #!/usr/bin/env python3
 """
 Indexer for Analog Devices Knowledge Base.
-Supports Batch Processing to avoid Google API Rate Limits (Error 429).
+Supports Local, Google API, and the new Ollama Cloud API.
 """
 
 import os
 import glob
+import json
+import hashlib
 import argparse
 import time
+from typing import List
 from dotenv import load_dotenv
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import MarkdownTextSplitter
 from langchain_community.vectorstores import Chroma
 
-# Load environment variables
 load_dotenv()
 
 # ==========================================
-# Configuration & DYNAMIC ABSOLUTE PATHS
+# Configuration & Absolute Paths
 # ==========================================
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", ".."))
 
-# Based on your last output, your data is currently here:
 INPUT_DIR = os.path.join(PROJECT_ROOT, "src", "scraper", "data", "markdown")
 CHROMA_PATH = os.path.join(PROJECT_ROOT, "src", "scraper", "data", "chroma_db")
+CACHE_DIR = os.path.join(PROJECT_ROOT, "src", "scraper", "data", "custom_cache")
 
-# Local Setup
-OLLAMA_BASE_URL = "http://localhost:11434"
-LOCAL_EMBEDDING_MODEL = "nomic-embed-text"
-
-# External API Setup (Using the stable model ID you found)
-GOOGLE_EMBEDDING_MODEL = "models/gemini-embedding-001"
-
-def parse_arguments():
-    parser = argparse.ArgumentParser(description="Run the Vector Indexer with Batching.")
-    parser.add_argument(
-        '--mode', 
-        choices=['local', 'ext-api'], 
-        required=True, 
-        help="Choose mode."
-    )
-    return parser.parse_args()
-
-def load_documents() -> list:
-    md_files = glob.glob(os.path.join(INPUT_DIR, "*.md"))
-    documents = []
-    for filepath in md_files:
-        loader = TextLoader(filepath, encoding='utf-8')
-        documents.extend(loader.load())
-    print(f"[+] Loaded {len(documents)} documents.")
-    return documents
-
-def split_text(documents: list) -> list:
-    print("[*] Splitting documents into chunks...")
-    text_splitter = MarkdownTextSplitter(chunk_size=1000, chunk_overlap=150)
-    chunks = text_splitter.split_documents(documents)
-    print(f"[+] Generated {len(chunks)} chunks.")
-    return chunks
-
-def get_embeddings_instance(mode: str):
-    if mode == 'local':
-        from langchain_community.embeddings import OllamaEmbeddings
-        return OllamaEmbeddings(base_url=OLLAMA_BASE_URL, model=LOCAL_EMBEDDING_MODEL)
-    elif mode == 'ext-api':
-        from langchain_google_genai import GoogleGenerativeAIEmbeddings
-        if not os.getenv("GOOGLE_API_KEY"):
-            raise ValueError("[!] GOOGLE_API_KEY is missing in your .env file.")
-        return GoogleGenerativeAIEmbeddings(model=GOOGLE_EMBEDDING_MODEL)
-
-def create_vector_db(chunks: list, embeddings):
-    """
-    Saves chunks to ChromaDB in batches to respect Google's 100 RPM rate limit.
-    """
-    BATCH_SIZE = 90  # Safe margin below the 100 limit
-    WAIT_TIME = 65   # Seconds to wait between batches
-    
-    print(f"[*] Starting Batch Processing: {len(chunks)} chunks in groups of {BATCH_SIZE}...")
-    
-    # 1. Initialize the Chroma instance with the first batch
-    db = Chroma.from_documents(
-        documents=chunks[:BATCH_SIZE],
-        embedding=embeddings,
-        persist_directory=CHROMA_PATH
-    )
-    print(f"[+] Initialized DB with first {min(BATCH_SIZE, len(chunks))} chunks.")
-    
-    # 2. Loop through the remaining chunks in batches
-    for i in range(BATCH_SIZE, len(chunks), BATCH_SIZE):
-        print(f"[*] Quota Cooldown: Waiting {WAIT_TIME} seconds before the next batch...")
-        time.sleep(WAIT_TIME)
+# ==========================================
+# Universal Resilient Cache Wrapper
+# ==========================================
+class BulletproofCacheEmbeddings:
+    def __init__(self, base_model, cache_directory: str):
+        self.model = base_model
+        self.cache_dir = cache_directory
+        os.makedirs(self.cache_dir, exist_ok=True)
         
-        batch = chunks[i : i + BATCH_SIZE]
-        db.add_documents(batch)
-        print(f"[+] Successfully added batch: {i} to {min(i + BATCH_SIZE, len(chunks))}")
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        final_embeddings = [None] * len(texts)
+        texts_to_fetch = []
+        indices_to_fetch = []
+        
+        for i, text in enumerate(texts):
+            text_hash = hashlib.md5(text.encode('utf-8')).hexdigest()
+            cache_file = os.path.join(self.cache_dir, f"{text_hash}.json")
+            
+            if os.path.exists(cache_file):
+                with open(cache_file, 'r') as f:
+                    final_embeddings[i] = json.load(f)
+            else:
+                texts_to_fetch.append(text)
+                indices_to_fetch.append(i)
+                
+        if texts_to_fetch:
+            print(f"[*] Cache MISS: Fetching {len(texts_to_fetch)} embeddings via Provider...")
+            BATCH_SIZE = 50 
+            SLEEP_TIME = 2  
+            
+            new_embeddings = []
+            
+            for i in range(0, len(texts_to_fetch), BATCH_SIZE):
+                batch = texts_to_fetch[i : i + BATCH_SIZE]
+                print(f"    -> Processing batch {i} to {min(i + BATCH_SIZE, len(texts_to_fetch))}...")
+                
+                try:
+                    batch_embeddings = self.model.embed_documents(batch)
+                    new_embeddings.extend(batch_embeddings)
+                    time.sleep(SLEEP_TIME)
+                except Exception as e:
+                    print(f"\n[!] Error during batch processing: {e}")
+                    break 
+            
+            for idx, text, vec in zip(indices_to_fetch, texts_to_fetch, new_embeddings):
+                text_hash = hashlib.md5(text.encode('utf-8')).hexdigest()
+                cache_file = os.path.join(self.cache_dir, f"{text_hash}.json")
+                with open(cache_file, 'w') as f:
+                    json.dump(vec, f)
+                final_embeddings[idx] = vec
+        else:
+            print("[*] Cache HIT: 100% of embeddings loaded from local storage.")
+                
+        return [emb for emb in final_embeddings if emb is not None]
 
-    db.persist()
-    print(f"\n[+++] Success! Vector database saved at: {CHROMA_PATH}")
+    def embed_query(self, text: str) -> List[float]:
+        return self.model.embed_query(text)
 
+# ==========================================
+# Main Pipeline
+# ==========================================
 def main():
-    args = parse_arguments()
-    if not os.path.exists(INPUT_DIR) or not os.listdir(INPUT_DIR):
-        print(f"[!] Critical Error: Markdown directory EMPTY at: {INPUT_DIR}")
-        return
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--mode', choices=['local', 'ext-api', 'ollama-cloud'], required=True)
+    args = parser.parse_args()
 
-    documents = load_documents()
-    chunks = split_text(documents)
-    embeddings = get_embeddings_instance(args.mode)
+    md_files = glob.glob(os.path.join(INPUT_DIR, "*.md"))
+    documents = [doc for filepath in md_files for doc in TextLoader(filepath, encoding='utf-8').load()]
+    print(f"[+] Loaded {len(documents)} documents.")
     
-    start_time = time.time()
-    create_vector_db(chunks, embeddings)
-    end_time = time.time()
+    chunks = MarkdownTextSplitter(chunk_size=1000, chunk_overlap=100).split_documents(documents)
+    print(f"[+] Generated {len(chunks)} chunks.")
+
+    print(f"[*] Initializing connection for mode: {args.mode.upper()}")
     
-    duration = (end_time - start_time) / 60
-    print(f"[*] Total indexing time: {duration:.2f} minutes.")
+    # ----------------------------------------
+    # Routing Logic for Embeddings
+    # ----------------------------------------
+    # ----------------------------------------
+    # Routing Logic for Embeddings
+    # ----------------------------------------
+    if args.mode == 'ext-api':
+        from langchain_google_genai import GoogleGenerativeAIEmbeddings
+        base_model = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+        
+    elif args.mode == 'local':
+        # Using the new official package
+        from langchain_ollama import OllamaEmbeddings
+        base_model = OllamaEmbeddings(base_url="http://localhost:11434", model="nomic-embed-text")
+        
+    elif args.mode == 'ollama-cloud':
+        # Using the new official package
+        from langchain_ollama import OllamaEmbeddings
+        ollama_key = os.getenv("OLLAMA_API_KEY")
+        if not ollama_key:
+            raise ValueError("[!] OLLAMA_API_KEY is missing in your .env file.")
+            
+        print("[*] Connecting to Ollama Cloud API (https://ollama.com)...")
+        # Passing headers using client_kwargs for the updated package
+        base_model = OllamaEmbeddings(
+            base_url="https://ollama.com", 
+            model="nomic-embed-text", 
+            client_kwargs={"headers": {"Authorization": f"Bearer {ollama_key}"}}
+        )
+    # Wrap the selected model in our custom cache
+    embeddings = BulletproofCacheEmbeddings(base_model, CACHE_DIR)
+
+    print("[*] Saving to ChromaDB...")
+    db = Chroma.from_documents(chunks, embeddings, persist_directory=CHROMA_PATH)
+    print(f"[+] Success! Database saved to: {CHROMA_PATH}")
 
 if __name__ == "__main__":
     main()
