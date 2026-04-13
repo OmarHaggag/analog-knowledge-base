@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Web Crawler for Analog Devices Electronics Course
 This script fetches the Table of Contents (TOC), extracts chapter links,

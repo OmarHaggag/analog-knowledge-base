@@ -4,14 +4,15 @@
 # ==========================================
 
 # 1. Web Scraping & HTML Parsing
-requests==2.31.0          # For sending HTTP requests to the Analog Devices website
-beautifulsoup4==4.12.3    # For parsing raw HTML and extracting structural elements
-markdownify==0.11.6       # For converting the parsed HTML directly into clean Markdown
+requests
+beautifulsoup4
+markdownify
 
 # 2. Vector Database & RAG Framework
-chromadb==0.4.24          # Local Vector Database (SQLite-based, no external daemon needed)
-langchain==0.1.13         # Core orchestration framework for building the RAG pipeline
-langchain-community==0.0.29 # Contains integrations for ChromaDB and local embedding models
+chromadb
+langchain
+langchain-community
+langchain-google-genai
 
 # 3. Environment & Utilities
-python-dotenv==1.0.1      # For loading configuration and API keys from the .env file
+python-dotenv

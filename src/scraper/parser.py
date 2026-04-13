@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 HTML to Markdown Parser for Analog Devices Course.
 This script reads raw HTML files, extracts the core educational content 
