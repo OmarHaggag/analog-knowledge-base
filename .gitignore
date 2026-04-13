@@ -9,6 +9,7 @@ __pycache__/
 
 # Environment Variables
 .env
+*.env
 
 # Project Data (Avoid pushing large DBs or raw HTML)
 data/
