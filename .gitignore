@@ -1,0 +1,18 @@
+# Virtual Environments
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment Variables
+.env
+
+# Project Data (Avoid pushing large DBs or raw HTML)
+data/
+
+# IDE / OS specific
+.vscode/
+.DS_Store

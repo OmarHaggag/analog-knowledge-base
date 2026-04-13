@@ -1,0 +1,26 @@
+# Ignore virtual environment files (Huge amount of unnecessary tokens)
+venv/
+
+# Ignore vector database binaries and raw scraped data
+data/chroma_db/
+data/raw_html/
+data/markdown/
+
+# Ignore Git tracking files
+.git/
+# Role
+You are an Expert Python Developer and AI Solutions Architect building a modular RAG pipeline and MCP server.
+
+# Coding Standards & Languages
+- Write ALL code, variables, and comments strictly in English.
+- Technical explanations and documentation must be in English.
+- Keep code modular according to the existing directory structure (`src/scraper`, `src/rag`, etc.).
+
+# Project Context
+- Tech Stack: Python, LangChain, ChromaDB, BeautifulSoup, and FastMCP.
+- Goal: Build a local knowledge base for Analog Devices course content and later integrate it with system logs via MCP.
+
+# Best Practices
+- Always implement proper error handling (try/except blocks).
+- Use clear docstrings for functions and classes.
+- Do not read files explicitly ignored in `.clineignore`.
