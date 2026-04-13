@@ -17,3 +17,4 @@ data/
 # IDE / OS specific
 .vscode/
 .DS_Store
+*.test.py
