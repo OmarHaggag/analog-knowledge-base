@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Indexer for Analog Devices Knowledge Base.
-Supports Local, Google API, and the new Ollama Cloud API.
+Features: Eager Disk Writing Cache (True Bulletproof), Local & API Routing.
 """
 
 import os
@@ -29,7 +29,7 @@ CHROMA_PATH = os.path.join(PROJECT_ROOT, "src", "scraper", "data", "chroma_db")
 CACHE_DIR = os.path.join(PROJECT_ROOT, "src", "scraper", "data", "custom_cache")
 
 # ==========================================
-# Universal Resilient Cache Wrapper
+# Universal Resilient Cache Wrapper (Eager Write)
 # ==========================================
 class BulletproofCacheEmbeddings:
     def __init__(self, base_model, cache_directory: str):
@@ -42,6 +42,7 @@ class BulletproofCacheEmbeddings:
         texts_to_fetch = []
         indices_to_fetch = []
         
+        # 1. Load existing cache
         for i, text in enumerate(texts):
             text_hash = hashlib.md5(text.encode('utf-8')).hexdigest()
             cache_file = os.path.join(self.cache_dir, f"{text_hash}.json")
@@ -53,31 +54,34 @@ class BulletproofCacheEmbeddings:
                 texts_to_fetch.append(text)
                 indices_to_fetch.append(i)
                 
+        # 2. Fetch and EAGER SAVE
         if texts_to_fetch:
-            print(f"[*] Cache MISS: Fetching {len(texts_to_fetch)} embeddings via Provider...")
+            print(f"[*] Cache MISS: Fetching {len(texts_to_fetch)} new embeddings...")
             BATCH_SIZE = 50 
-            SLEEP_TIME = 2  
-            
-            new_embeddings = []
+            SLEEP_TIME = 1  
             
             for i in range(0, len(texts_to_fetch), BATCH_SIZE):
                 batch = texts_to_fetch[i : i + BATCH_SIZE]
-                print(f"    -> Processing batch {i} to {min(i + BATCH_SIZE, len(texts_to_fetch))}...")
+                batch_indices = indices_to_fetch[i : i + BATCH_SIZE]
+                print(f"    -> Processing and saving batch {i} to {min(i + BATCH_SIZE, len(texts_to_fetch))}...")
                 
                 try:
+                    # Get embeddings from the model
                     batch_embeddings = self.model.embed_documents(batch)
-                    new_embeddings.extend(batch_embeddings)
+                    
+                    # IMMEDIATELY write to disk (Eager Writing)
+                    for local_idx, text, vec in zip(batch_indices, batch, batch_embeddings):
+                        text_hash = hashlib.md5(text.encode('utf-8')).hexdigest()
+                        cache_file = os.path.join(self.cache_dir, f"{text_hash}.json")
+                        with open(cache_file, 'w') as f:
+                            json.dump(vec, f)
+                        final_embeddings[local_idx] = vec
+                        
                     time.sleep(SLEEP_TIME)
                 except Exception as e:
                     print(f"\n[!] Error during batch processing: {e}")
+                    print("[!] Saved progress up to the crash point. Aborting.")
                     break 
-            
-            for idx, text, vec in zip(indices_to_fetch, texts_to_fetch, new_embeddings):
-                text_hash = hashlib.md5(text.encode('utf-8')).hexdigest()
-                cache_file = os.path.join(self.cache_dir, f"{text_hash}.json")
-                with open(cache_file, 'w') as f:
-                    json.dump(vec, f)
-                final_embeddings[idx] = vec
         else:
             print("[*] Cache HIT: 100% of embeddings loaded from local storage.")
                 
@@ -103,36 +107,25 @@ def main():
 
     print(f"[*] Initializing connection for mode: {args.mode.upper()}")
     
-    # ----------------------------------------
-    # Routing Logic for Embeddings
-    # ----------------------------------------
-    # ----------------------------------------
-    # Routing Logic for Embeddings
-    # ----------------------------------------
     if args.mode == 'ext-api':
         from langchain_google_genai import GoogleGenerativeAIEmbeddings
         base_model = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
         
     elif args.mode == 'local':
-        # Using the new official package
         from langchain_ollama import OllamaEmbeddings
         base_model = OllamaEmbeddings(base_url="http://localhost:11434", model="nomic-embed-text")
         
     elif args.mode == 'ollama-cloud':
-        # Using the new official package
         from langchain_ollama import OllamaEmbeddings
         ollama_key = os.getenv("OLLAMA_API_KEY")
         if not ollama_key:
             raise ValueError("[!] OLLAMA_API_KEY is missing in your .env file.")
-            
-        print("[*] Connecting to Ollama Cloud API (https://ollama.com)...")
-        # Passing headers using client_kwargs for the updated package
         base_model = OllamaEmbeddings(
             base_url="https://ollama.com", 
             model="nomic-embed-text", 
             client_kwargs={"headers": {"Authorization": f"Bearer {ollama_key}"}}
         )
-    # Wrap the selected model in our custom cache
+
     embeddings = BulletproofCacheEmbeddings(base_model, CACHE_DIR)
 
     print("[*] Saving to ChromaDB...")
