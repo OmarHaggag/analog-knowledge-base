@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import streamlit as st
 import os
+import re
 from dotenv import load_dotenv
 from langchain_community.vectorstores import Chroma
 from langchain_classic.chains import RetrievalQA
@@ -159,5 +160,33 @@ if prompt := st.chat_input("Ask a technical question (e.g., How does an Op-Amp w
                 answer = response["result"]
                 st.markdown(answer)
                 st.session_state.messages.append({"role": "assistant", "content": answer})
+            except Exception as e:
+                st.error(f"Error during generation: {e}")
+# ... [Keep your existing chat input logic] ...
+
+    # Get and display AI response
+    with st.chat_message("assistant"):
+        with st.spinner(f"Thinking using {llm_choice}..."):
+            try:
+                response = qa_chain.invoke(prompt)
+                raw_answer = response["result"]
+
+                # ==========================================
+                # The Sanitizer Middleware
+                # ==========================================
+                # 1. Convert standard LaTeX block delimiters to Streamlit's $$
+                clean_answer = raw_answer.replace('\\[', '$$').replace('\\]', '$$')
+                
+                # 2. Convert standard LaTeX inline delimiters to Streamlit's $
+                clean_answer = clean_answer.replace('\\(', '$').replace('\\)', '$')
+                
+                # 3. Catch edge cases where the LLM outputs bare [ or ] on new lines
+                clean_answer = re.sub(r'^\[\s*$', '$$', clean_answer, flags=re.MULTILINE)
+                clean_answer = re.sub(r'^\]\s*$', '$$', clean_answer, flags=re.MULTILINE)
+                # ==========================================
+
+                st.markdown(clean_answer)
+                st.session_state.messages.append({"role": "assistant", "content": clean_answer})
+            
             except Exception as e:
                 st.error(f"Error during generation: {e}")
