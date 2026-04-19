@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"
+      dir="ltr"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Chapter 7:  Diode application topics [Analog Devices Wiki]</title>
+
+    <script>(function (H) {
+            H.className = H.className.replace(/\bno-js\b/, 'js')
+        })(document.documentElement)</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500,500i,600,600i,700,700i|Barlow:300,300i,400,400i,500,500i,600,600i&display=swap" rel="stylesheet">
+
+    <link href="https://assets2.analog.com/apps-assets/wiki/index.css" rel="stylesheet" />
+    <script src="https://assets2.analog.com/apps-assets/wiki/index.mjs"></script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="university,courses,electronics,text,chapter-7"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Analog Devices Wiki"/>
+<link rel="start" href="/"/>
+<link rel="contents" href="/university/courses/electronics/text/chapter-7?do=index" title="Sitemap"/>
+<link rel="manifest" href="/lib/exe/manifest.php" crossorigin="use-credentials"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns=university:courses:electronics:text"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/university/courses/electronics/text/chapter-7"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/university/courses/electronics/text/chapter-7"/>
+<link rel="canonical" href="https://wiki.analog.com/university/courses/electronics/text/chapter-7"/>
+<link rel="stylesheet" href="/lib/exe/css.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb"/>
+<script nonce="1d97a6fd2d1338f573f50438701aa530">var NS='university:courses:electronics:text';var JSINFO = {"plugin_enforcesummary":{"enforce_summary":1,"default_minoredit":0,"enforce_preview":0},"plugin_folded":{"hide":"hide","reveal":"reveal"},"plugins":{"interwikipaste":{"patterns":"[{\"shortcut\":\"footprints\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/design\\\\-center\\\\\\\/packaging\\\\-quality\\\\-symbols\\\\-footprints\\\\\\\/symbols\\\\-and\\\\-footprints\\\\\\\/([^ ]+)?\\\\.html\",\"encode\":false},{\"shortcut\":\"staging.kernel.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/gregkh\\\\\\\/staging\\\\.git;a\\\\=blob;hb\\\\=refs\\\\\\\/heads\\\\\\\/staging\\\\-next;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"avnetexpress\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/avnetexpress\\\\.avnet\\\\.com\\\\\\\/store\\\\\\\/em\\\\\\\/EMController\\\\?storeId\\\\=500201&N\\\\=0&action\\\\=products&term\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"downgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/analogdevicesinc\\\\.github\\\\.io\\\\\\\/DownGit\\\\\\\/\\\\#\\\\\\\/home\\\\?url\\\\=https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"cart\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/shoppingcart\\\\.analog\\\\.com\\\\\\\/AddModel\\\\.aspx\\\\?locale\\\\=en&ACTION\\\\=BUY_BUNDLES&modelNbr\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digikey\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digikey\\\\.com\\\\\\\/scripts\\\\\\\/DkSearch\\\\\\\/dksus\\\\.dll\\\\?KeywordSearch\\\\?Site\\\\=US&amp;Keywords\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"git.linux.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/torvalds\\\\\\\/linux\\\\.git;a\\\\=blob;hb\\\\=HEAD;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"export\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/exportclassification\\\\\\\/Search\\\\\\\/Result\\\\?strSearch\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ibis\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/media\\\\\\\/en\\\\\\\/simulation\\\\-models\\\\\\\/ibis\\\\-models\\\\\\\/([^ ]+)?\\\\.ibs\",\"encode\":false},{\"shortcut\":\"bfsvn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/project\\\\\\\/([^ ]+)?\\\\\\\/scmsvn\\\\\\\/trunk\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?;hb\\\\=HEAD\",\"encode\":false},{\"shortcut\":\"paypal\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.paypal\\\\.com\\\\\\\/cgi\\\\-bin\\\\\\\/webscr\\\\?cmd\\\\=_xclick&amp;business\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"arrow\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.arrow\\\\.com\\\\\\\/en\\\\\\\/products\\\\\\\/search\\\\?cat\\\\=&q\\\\=([^ ]+)?&r\\\\=true\",\"encode\":false},{\"shortcut\":\"linux.github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/linux\\\\\\\/blob\\\\\\\/([^ ]+)?\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit_rev\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digilent\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digilentinc\\\\.com\\\\\\\/Products\\\\\\\/Detail\\\\.cfm\\\\?Prod\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"reg\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/my\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/app\\\\\\\/registration\\\\\\\/hardware\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\\\\\\\/blob\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"go\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?&amp;btnI\\\\=lucky\",\"encode\":true},{\"shortcut\":\"docs\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/docs\\\\.blackfin\\\\.uclinux\\\\.org\\\\\\\/doku\\\\.php\\\\?id\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.com\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-20\",\"encode\":true},{\"shortcut\":\"amazon.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.de\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-21\",\"encode\":true},{\"shortcut\":\"mouser\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/mouser\\\\.com\\\\\\\/Search\\\\\\\/Refine\\\\?Keyword\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tkt\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/tracker\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"repo\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpmeta\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/meta\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bf\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"maxim\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.maximintegrated\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/en\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpfr\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/fr\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpde\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/de\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpes\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/es\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wppl\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/pl\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpjp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ja\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpru\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ru\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfin\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon.uk\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.co\\\\.uk\\\\\\\/dp\\\\\\\/([^ ]+)?\",\"encode\":true},{\"shortcut\":\"google\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"oreilly\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.oreilly\\\\.com\\\\\\\/catalog\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"mw\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.mathworks\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"rfc\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/tools\\\\.ietf\\\\.org\\\\\\\/html\\\\\\\/rfc([^ ]+)?\",\"encode\":false},{\"shortcut\":\"google.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.de\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"user\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/members\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"this\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/wiki\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"phpfn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/secure\\\\.php\\\\.net\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"adi\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"xilinx\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.xilinx\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ez\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"doku\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.dokuwiki\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"callto\",\"pattern\":\"callto\\\\:\\\\\\\/\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"man\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/man\\\\.cx\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"skype\",\"pattern\":\"skype\\\\:([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tel\",\"pattern\":\"tel\\\\:([^ ]+)?\",\"encode\":false}]"},"vshare":{"youtube":"youtube\\.com\/.*[&?]v=([a-z0-9_\\-]+)","vimeo":"vimeo\\.com\\\/(\\d+)","slideshare":"slideshare.*id=(\\d+)","dailymotion":"dailymotion\\.com\/video\/([a-z0-9]+)","archiveorg":"archive\\.org\/(?:embed|details)\/([a-zA-Z0-9_\\-]+)","soundcloud":"soundcloud\\.com\/([\\w-]+\/[\\w-]+)","niconico":"nicovideo\\.jp\/watch\/(sm[0-9]+)","bitchute":"bitchute\\.com\\\/video\\\/([a-zA-Z0-9_\\-]+)","coub":"coub\\.com\\\/view\\\/([a-zA-Z0-9_\\-]+)","odysee":"odysee\\.com\/\\$\/(?:embed|download)\/([-%_?=\/a-zA-Z0-9]+)","youku":"v\\.youku\\.com\/v_show\/id_([0-9A-Za-z=]+)\\.html","bilibili":"bilibili\\.com\\\/video\\\/(BV[0-9A-Za-z]+)","msoffice":"(?:office\\.com.*[&?]videoid=([a-z0-9\\-]+))","msstream":"microsoftstream\\.com\\\/video\\\/([a-f0-9\\-]{36})","rutube":"rutube\\.ru\\\/video\\\/([a-z0-9]+)\\\/","gdrive":"drive\\.google\\.com\\\/file\\\/d\\\/([a-zA-Z0-9_-]+)\/"}},"id":"university:courses:electronics:text:chapter-7","namespace":"university:courses:electronics:text","ACT":"show","useHeadingNavigation":1,"useHeadingContent":0};(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script src="/lib/exe/jquery.php?tseed=8faf3dc90234d51a499f4f428a0eae43" defer="defer"></script>
+<script src="/lib/exe/js.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb" defer="defer"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/lib/tpl/analog2014/images/favicon.ico" />
+
+    <script src="https://assets2.analog.com/header-footer/index.js" type="text/javascript" defer="true"></script>
+
+    <!-- LIVE tracking -->
+<script src="//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js" async></script>
+<script src="/lib/tpl/analog2014/assets/js/adi/global.analytics.js" type="text/javascript"></script>
+</head>
+
+<!-- List of supported themes thm-education, thm-applications, thm-parametric, thm-product, thm-community, thm-design-center, thm-my-analog, thm-support -->
+<body class="home">
+
+
+<!-- wiki_header.html -->
+<header class="adi_header adi_header--wiki tools-header" id="dokuwiki__top" data-ot="true">
+
+    <div class="adi_topbar">
+        <div class="adi_container">
+            <section class="adi_row">
+                <!--  BEGIN:  Internal Links -->
+                <nav class="adi_column adi_pull-left">
+                    <a class="adi_topbar-link adi_topbar-link--analog-home" href="//www.analog.com">
+                        <strong>Analog.com</strong>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--engineer-zone" href="//ez.analog.com">
+                        <strong class="adi_link--hover-accent">Engineer</strong>
+                        <span>Zone</span>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--analog-dialogue" href="//www.analog.com/en/resources/analog-dialogue.html">
+                        <strong class="adi_link--hover-accent">Analog</strong>
+                        <span>Dialogue</span>
+                    </a>
+                </nav> <!-- /.adi_column.adi_pull-left -->
+                <!--  END:  Internal Links  -->
+                <!--  BEGIN:  Language Options  -->
+                <nav class="adi_column adi_pull-right">
+                    <a class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-logo" href="//my.analog.com/">
+                        <span><img src="https://assets2.analog.com/cms-assets/images/images/images/myanalog_logo.png" alt="My Analog Login"></span>&nbsp;
+                    </a>
+
+                    <a href="/university/courses/electronics/text/chapter-7?do=login&amp;sectok="  class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-login action login" rel="nofollow" title="Log In"><strong>Log In</strong></a>                </nav> <!-- /.adi_column.adi_pull-right -->
+                <!--  END:  Language Options  -->
+            </section> <!-- /.adi_row -->
+        </div> <!-- /.adi_container -->
+    </div>
+
+
+
+    <div class="adi_container">
+        <section class="adi_row">
+            <!--  BEGIN:  Logo  -->
+            <div class="adi_column adi_logo-container">
+                <a class="adi_logo" href="/start">
+                    <img src="/lib/tpl/analog2014//assets/images/adi-logo.svg" alt="Analog Devices Wiki" />
+                </a>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+            <div class="adi_column adi_page-title-container">
+                <h1 class="adi_page-title">Wiki</h1>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+        </section> <!-- /.adi_row -->
+    </div> <!-- /.adi_container -->
+
+    <div class="navigation-bar">
+        <div class="content-wrap clearfix">
+            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"><a href="#">Wiki Tools</a></div><ul class="submenu"><li class="level2"><a href="/university/courses/electronics/text/chapter-7?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-7?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-7?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>
+            <ul class="list-inline pull-right searchmenu clearfix">
+                <li class="search-box">
+                    <form action="" accept-charset="utf-8" class="search clearfix" id="dw__search" method="get" role="search">
+                        <div class="no">
+                            <input type="hidden" name="do" value="search">
+                            <input type="text" autocomplete="off" id="qsearch__in" accesskey="f" name="id" class="edit" placeholder="search wiki">
+                            <button type="submit" value="Search" class="button search-icon" title="Search"></button>
+
+                            <div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none; white-space: nowrap;">
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</header> <!-- /.adi_header -->
+
+
+
+
+
+<!-- Mobile view navigation drawer-->
+<div class="wiki-mob-body">
+    <div class="content" role="main">
+        <div class="col-md-12 wiki-head-row">
+            <div class="row ">
+                <div class="title-nophoto">
+                    <div class="container page-title ">
+                        <h1 data-page-title="true">Analog Devices Wiki</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 floater-menu-container">
+                <div class="row product-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 wiki-right-panel">
+                                <div class="row">
+                                    <div class=" product-bookmarks" id="affix-nav" name="adi_products_left_navigation">
+                                        <ul class="nav" id="affix-ul">
+                                            <li class="">
+
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#"
+                                                   name='SDR-home_2e322e80-5ec4-4b20-b8b8-71702b590a25'>Analog Devices
+                                                    Wiki
+                                                </a>
+
+                                            </li>
+                                            <!--Wiki-->
+                                            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"><a href="#">Wiki Tools</a></div><ul class="submenu Res_tools_child"><li class="level2"><a href="/university/courses/electronics/text/chapter-7?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-7?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-7?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>                                            <!--Wiki-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="special-content">
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#English">English<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="English" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/en/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_en.jpg" class="mobile-images"
+                                 width="100%" alt="English"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#简体中文">简体中文<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="简体中文" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/cn/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_cn.jpg" class="mobile-images"
+                                 width="100%" alt="简体中文"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#日本語">日本語<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="日本語" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/jp/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_jp.jpg" class="mobile-images"
+                                 width="100%" alt="日本語"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#Руccкий">Руccкий<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="Руccкий" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/ru/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_ru.jpg" class="mobile-images"
+                                 width="100%" alt="Руccкий"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile view navigation drawer-->
+
+<!-- /tpl_header.php -->
+
+
+
+<div id="dokuwiki__site" role="main" class="main-body content">
+    <div class="site dokuwiki mode_show tpl_analog2014   ">
+        <div class="container">
+
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content">
+                <div class="pad group">
+
+                    <div class="page group">
+                        
+                                                <!-- wikipage start -->
+                        <div class="approval approved_yes"><span class="approval_approved">This version (<span class="approval_date">18 Mar 2018 16:52</span>) was <em>approved</em> by <a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a>.</span><span class="approval_previous">The <a href="/university/courses/electronics/text/chapter-7?rev=1496761559">Previously approved version</a> (06 Jun 2017 15:05) is available.<a href="https://wiki.analog.com/university/courses/electronics/text/chapter-7?do=diff&rev2[0]=1496761559&rev2[1]=1521391923&difftype=sidebyside" class="approved_diff_link"><img src="/lib/images/diff.png" class="approved_diff_link" alt="Diff" /></a></span></div><!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#chapter_7diode_application_topics">Chapter 7:  Diode application topics</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#half-wave_rectifier_with_filter_capacitor_or_peak_detector">7.1 Half-wave rectifier with filter capacitor or peak detector</a></div></li>
+<li class="level2"><div class="li"><a href="#absolute_value_circuits">7.2 Absolute value circuits</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#precision_half_wave_rectifier">7.2.1 Precision half wave rectifier</a></div></li>
+<li class="level3"><div class="li"><a href="#an_application_examplemeasuring_the_peak_value_of_an_ac_voltage">An Application Example: Measuring the peak value of an AC Voltage</a></div></li>
+<li class="level3"><div class="li"><a href="#precision_full_wave_rectifier">7.2.2 Precision full wave rectifier</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#envelope_detector">7.3 Envelope Detector</a></div></li>
+<li class="level2"><div class="li"><a href="#diode_clamp">7.4 Diode Clamp</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#op-amp_clamp_circuit">Op-amp clamp circuit</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#diode_clipperslimiters">7.5 Diode Clippers / Limiters</a></div></li>
+<li class="level2"><div class="li"><a href="#voltage_controlled_variable_attenuator">7.6 Voltage controlled variable attenuator</a></div></li>
+<li class="level2"><div class="li"><a href="#logarithmic_output_amplifiers">7.7 Logarithmic output amplifiers</a></div></li>
+<li class="level2"><div class="li"><a href="#exponential_antilog_output_amplifiers">7.8 Exponential (antilog) output amplifiers</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="chapter_7diode_application_topics">Chapter 7:  Diode application topics</h1>
+<div class="level1">
+
+<p>
+In this chapter we will investigate a variety of circuits that make use of certain characteristics of the PN junction diode. In chapter 6 we discussed the use of the diode as a means to convert AC power into DC power. There are other cases where a time varying signal might need to be converted into a DC signal. In these situations it is often desirable to effectively cancel or correct for the forward voltage drop of the diode to accurately measure the required value of the signal.
+</p>
+
+<p>
+Another property of the diode is that the small signal conductance (or resistance) of the diode is a function of the DC current flowing through the diode (the operating point). This characteristic can be used to make a voltage (actually current) dependent attenuator. Also as we discovered in chapter 5 the diode voltage, in the forward conduction region, is exponentially related to the current through the diode. This property can be used to make non-linear amplifier circuits which have either logarithmic or anti-logarithmic (exponential) input to output relationships. 
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="half-wave_rectifier_with_filter_capacitor_or_peak_detector">7.1 Half-wave rectifier with filter capacitor or peak detector</h2>
+<div class="level2">
+
+<p>
+The simplest form of a peak detector circuit is the series connection of a diode and a capacitor which outputs a DC voltage across the capacitor equal to the peak value of the input AC signal (minus the forward bias voltage drop of the diode). A switch of some sort in parallel with the capacitor is generally needed to periodically reset the output voltage such as when a new peak detection is desired.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f1.png"><img src="/_media/university/courses/electronics/text/chptr7-f1.png?w=600&amp;tok=d97e78" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.1.1 Simple peak detector 
+</p>
+</div>
+<p>
+With the diode facing as shown in figure 7.1.1 the circuit detects the positive peaks. If the direction of the diode were reversed then the circuit will detect the negative peaks of the input. The output of the simple peak detector is not actually the true peak value of the input due to the inherent built-in voltage drop of the diode. By including an op-amp as in figure 7.1.2 the error due to the diode drop is greatly reduced by the forward gain of the op-amp.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f2.png"><img src="/_media/university/courses/electronics/text/chptr7-f2.png?w=600&amp;tok=143d83" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.1.2 Precession half-wave rectifier or peak detector 
+</p>
+</div>
+<p>
+There is, however, a fundamental problem with this simple circuit in that when the input signal is less (more negative) than the voltage being held on the capacitor, the diode will be reverse biased and the output of the op amp will be “disconnected” from the inverting input terminal. The amplifier will in this case have no negative feedback and the op amp output will saturate at the negative supply rail. When the input voltage again becomes more positive than the voltage held on the capacitor and the output moves out of saturation the response time of the amplifier will be affected. The circuit may not respond properly to fast, short duration positive peaks in the input signal. We will investigate a better form of the half wave rectifier in the next section.
+</p>
+
+</div>
+
+<h2 class="sectionedit7" id="absolute_value_circuits">7.2 Absolute value circuits</h2>
+<div class="level2">
+
+<p>
+In this section we investigate absolute value circuits. Rectifiers, or &#039;absolute-value&#039; circuits are often used as detectors to convert the amplitudes of AC signals to DC values to be more easily measured. For this type of circuit, the AC signal is first high-pass filtered to remove any DC term and then rectified and perhaps low pass filtered. As we discovered in Chapter 6, the simple rectifier circuits constructed with diodes does not respond well to signals with a magnitude less than a diode-drop (0.6V for silicon diodes). This limits their use in designs where small amplitudes need to be measured. For designs in which a high degree of precision is needed, op-amps can be used in conjunction with diodes to build precision rectifiers or absolute value circuits.
+</p>
+
+</div>
+
+<h3 class="sectionedit8" id="precision_half_wave_rectifier">7.2.1 Precision half wave rectifier</h3>
+<div class="level3">
+
+<p>
+The inverting op-amp circuit can be converted into an “ideal” (linear precision) half-wave rectifier by adding two diodes as shown in figure 7.2.1. For the negative half of the input swing, diode D<sub>1</sub> is reverse biased and diode D<sub>2</sub> is forward biased and the circuit operates as a conventional inverter with a gain of -1, assuming that R<sub>1</sub>=R<sub>2</sub>. For the positive half of the input swing, diode D<sub>1</sub> is forward biased, closing the feedback around the amplifier. Diode D<sub>2</sub> is reverse biased disconnecting the output from the amplifier. The output will be at the virtual ground potential (- input terminal) through resistor R<sub>2</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f3.png"><img src="/_media/university/courses/electronics/text/chptr7-f3.png?w=600&amp;tok=ecb170" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.2.1 Precision half-wave rectifier circuit. 
+</p>
+</div>
+<p>
+The peak of the rectified output, as seen in figure 7.2.2, is now equal to the peak value of the input. There is also a sharp transition as the input crosses zero. The reader should investigate the waveforms at different points in the circuit, such as the op amp output, to explain why this circuit works better than the simple diode half wave rectifier.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f4.png"><img src="/_media/university/courses/electronics/text/chptr7-f4.png?w=600&amp;tok=22599c" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.2.2 Precision half-wave rectifier simulation. 
+</p>
+</div>
+</div>
+
+<h3 class="sectionedit13" id="an_application_examplemeasuring_the_peak_value_of_an_ac_voltage">An Application Example: Measuring the peak value of an AC Voltage</h3>
+<div class="level3">
+
+<p>
+We only have access to a DC voltmeter and need to design a circuit that can measure the peak voltage of an AC signal. We can use the precision half wave rectifier to provide just the negative half of the input signal and then low pass filter the rectified output as shown in figure 7.2.3. What is the DC output voltage of the following circuit if R<sub>1</sub> = 3.24 kΩ, R<sub>2</sub> = 10.2 kΩ, R<sub>3</sub>= 20 kΩ and R<sub>4</sub> = 20 kΩ Assume Vp = 1 <abbr title="volt">V</abbr>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f5.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f5.png"><img src="/_media/university/courses/electronics/text/chptr7-f5.png?w=600&amp;tok=fecb4c" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.2.3 
+</p>
+</div>
+<p>
+For a sine wave input with peak value <abbr title="volt">V</abbr><sub>P</sub> the output of the half wave rectifier is a half sine wave with a peak value of <abbr title="volt">V</abbr><sub>P</sub>(R<sub>2</sub>/R<sub>1</sub>). The half sine wave has a DC component given by:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-e1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-e1.png"><img src="/_media/university/courses/electronics/text/chptr7-e1.png?w=500&amp;tok=87e269" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+
+<p>
+The first order low pass filter will remove the AC content and pass the DC component with a gain equal to R<sub>4</sub>/R<sub>3</sub>. The final DC output will be:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-e2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-e2.png"><img src="/_media/university/courses/electronics/text/chptr7-e2.png?w=250&amp;tok=4a7952" class="mediacenter" loading="lazy" alt="" width="250" /></a>
+</p>
+
+</div>
+
+<h3 class="sectionedit16" id="precision_full_wave_rectifier">7.2.2 Precision full wave rectifier</h3>
+<div class="level3">
+
+<p>
+The circuit shown figure 7.2.4 is<em> </em>an absolute value circuit, often called a precision full-wave rectifier. It should operate like a full wave rectifier circuit constructed with ideal diodes (the voltage across the diode, in forward conduction, equals 0 volts). The actual diodes used in the circuit will have a forward voltage of around 0.6 <abbr title="volt">V</abbr>. In order for both halves of the input waveform to have the same gain from the input to the output resistor R<sub>2</sub> = R<sub>3</sub> and R<sub>4</sub> = R<sub>5</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f6.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f6.png"><img src="/_media/university/courses/electronics/text/chptr7-f6.png?w=600&amp;tok=df475a" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.2.4 Absolute value circuit. 
+</p>
+</div>
+<p>
+If the value of R<sub>1</sub> is made lower than R<sub>2</sub> and R<sub>3</sub>, the circuit has gain. If the value of R<sub>1</sub> is higher than R<sub>2</sub> and R<sub>3</sub>, the circuit can accept higher input voltages because it acts as an attenuator. For example, if R<sub>1</sub> is 1kΩ with R<sub>2</sub> and R<sub>3</sub> equal to 10kΩ, the circuit has a gain of 10, and if R<sub>1</sub> is 100kΩ, the gain is 0.1 (an attenuation of 10). All other normal opamp restrictions apply like other inverting op amp stages, so if a high gain is used the frequency response will be affected.
+</p>
+
+<p>
+The input impedance of the circuit is equal to the value of R<sub>1</sub>, and is constant as long as the first op amp is operating within its limits, that is it&#039;s inverting input is at a virtual ground. One interesting feature of using the inverting topology is that it allows the circuit to function as a summation circuit for multiple inputs. R<sub>1</sub> can be replicated to provide a second input, or it could be extended with a third resistor etc.
+</p>
+
+<p>
+The peak of the rectified output, as seen in figure 7.2.5, is again equal to the peak value of the input. There is the sharp transition as the input crosses zero. The reader should investigate the waveforms at different points in the circuit, such as the op amp output and across the diodes, to explain why this circuit works better than the diode full wave or bridge rectifier.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f7.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f7.png"><img src="/_media/university/courses/electronics/text/chptr7-f7.png?w=600&amp;tok=e949ee" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.2.5 Full-wave rectifier simulation. 
+</p>
+</div>
+<p>
+<strong>ADALM1000 Lab Activity, <a href="/university/courses/alm1k/circuits1/alm-cir-precision-rectifier" class="wikilink1" title="university:courses:alm1k:circuits1:alm-cir-precision-rectifier" data-wiki-id="university:courses:alm1k:circuits1:alm-cir-precision-rectifier"> Precision Rectifiers, Absolute value circuits</a></strong>
+</p>
+
+</div>
+
+<h2 class="sectionedit21" id="envelope_detector">7.3 Envelope Detector</h2>
+<div class="level2">
+
+<p>
+An envelope detector is a circuit that takes a high-frequency amplitude modulated input and produces an output which is the “envelope” of the AM signal. The capacitor in the circuit stores up charge on the rising edge, and releases it slowly through the resistor when the signal falls. The diode in series rectifies the incoming signal, allowing current flow only when the positive input terminal is at a higher potential than the negative input terminal.
+</p>
+
+<p>
+Most practical envelope detectors use either half-wave or full-wave rectification of the signal to convert the AM input into a pulsed DC signal where the peaks of the DC pulses represent the modulating signal. Low pass filtering is then used to smooth the final result, leaving the low frequency modulating signal component. This filtering is rarely perfect and some “ripple” is likely to remain on the envelope detector output, particularly for low frequency inputs such as notes from a bass guitar. More filtering gives a smoother result, but decreases the high frequency response to the original modulating signal. Real world designs must be optimized for the given application.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f8.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f8.png"><img src="/_media/university/courses/electronics/text/chptr7-f8.png?w=600&amp;tok=feacf3" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.3.1 Envelope detector 
+</p>
+</div>
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f9.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f9.png"><img src="/_media/university/courses/electronics/text/chptr7-f9.png?w=600&amp;tok=50a7a6" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.3.2 Envelope detector <span style="color: #0000ff">input</span> and <span style="color: #ff0000">output</span> waveforms 
+</p>
+</div>
+<p>
+The simple diode envelope detector has several drawbacks:
+</p>
+
+<p>
+1) The input to the detector must be band-pass filtered around the desired carrier signal, or else the detector will simultaneously demodulate several signals. The filtering can be done with a tunable filter or, more practically, a superheterodyne receiver<br/>
+
+2) It is more susceptible to noise than a product detector<br/>
+
+3) If the signal is overmodulated, distortion will occur
+</p>
+
+<p>
+Most of these drawbacks are relatively minor and are usually acceptable tradeoffs for the simplicity and low cost of using an envelope detector.
+</p>
+
+<p>
+<strong>ADALM1000 Lab Activity, <a href="/university/courses/alm1k/circuits1/alm-cir-envelope-detector" class="wikilink1" title="university:courses:alm1k:circuits1:alm-cir-envelope-detector" data-wiki-id="university:courses:alm1k:circuits1:alm-cir-envelope-detector">AM Modulation and the Envelope Detector</a></strong><br/>
+
+<strong>ADALM2000 Lab Activity, <a href="/university/courses/electronics/electronics-lab-envelope-detector" class="wikilink1" title="university:courses:electronics:electronics-lab-envelope-detector" data-wiki-id="university:courses:electronics:electronics-lab-envelope-detector">Envelope Detector</a></strong>
+</p>
+
+</div>
+
+<h2 class="sectionedit26" id="diode_clamp">7.4 Diode Clamp</h2>
+<div class="level2">
+
+<p>
+When a signal drives an open-ended AC coupling capacitor the average voltage level on the output terminal of the capacitor is determined by some initial charge on that terminal of the capacitor and therefore will be unpredictable. It is then necessary to provide a DC path from the output terminal of the capacitor to ground or some other reference voltage via a large resistor. This DC path drains any excess charge and results in an average or DC output voltage of zero. This is useful if we want to force the average value of the AC signal to be referenced to a known value, however, what if we want to force the positive or negative peak of the AC signal to the know value? The so called clamp circuit can be used to “clamp” the peak value to a known reference level.
+</p>
+
+<p>
+A clamp is an electronic circuit that prevents a signal from going above or below a certain defined DC value or clamping level. The clamp does not alter the peak-to-peak magnitude of the signal, it shifts it up or down by a fixed value. A diode clamp (a simple, common type) relies on the property of a diode to conduct in only one direction, along with resistors and capacitors to maintain the altered dc level at the clamp output.
+</p>
+
+<p>
+The clamp circuit will fix either the upper or lower peak of a signal waveform to a fixed DC voltage level. This circuit is also sometimes referred to as a DC voltage restorer for obvious reasons. When unbiased, clamp circuit will fix the output voltage lower limit (or upper limit, in the case of negative clampers) to 0 Volts. By including a fixed bias voltage in series with the diode the circuit will clamp the peak of a waveform to a specific DC level.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f10.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f10.png"><img src="/_media/university/courses/electronics/text/chptr7-f10.png?w=600&amp;tok=b77006" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.4.1 DC Clamp Input and Output Waveforms 
+</p>
+</div>
+<p>
+The schematic of a diode clamp as shown in figure 7.4.2 reveals that it is a relatively simple device. The two components creating the clamping effect are a capacitor, followed by a diode in parallel with the output. The clamp circuit relies on a change in the capacitor&#039;s time constant; this is the result of the diode changing current path, either conducting or non-conducting, with the changing input voltage. The value of C<sub>1</sub> and the magnitude of any external load R are chosen so that Τ = RC is large enough to ensure that the voltage across the capacitor does not discharge significantly during the diode&#039;s non-conducting interval. During the first negative phase of the AC input voltage, the capacitor in the positive clamper charges rapidly. As <abbr title="volt">V</abbr><sub>IN</sub> becomes positive, the capacitor serves as a voltage doubler; since it has stored the equivalent of the peak value of <abbr title="volt">V</abbr><sub>IN</sub> during the negative cycle, it provides nearly that voltage during the positive cycle; this essentially doubles the voltage seen at the output <abbr title="volt">V</abbr><sub>OUT</sub>. As <abbr title="volt">V</abbr><sub>IN</sub> becomes negative, the capacitor acts as a battery of the same voltage of <abbr title="volt">V</abbr><sub>IN</sub>. The input voltage and the capacitor counteract each other, resulting in a net voltage of zero as seen at the output <abbr title="volt">V</abbr><sub>OUT</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f11.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f11.png"><img src="/_media/university/courses/electronics/text/chptr7-f11.png?w=600&amp;tok=2f2d6f" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.4.2 Diode DC restoring circuit 
+</p>
+</div>
+<p>
+A simple method of establishing a DC reference for the output voltage is by using a diode clamp as shown in figure 7.4.2. By conducting whenever the voltage at the output terminal of the capacitor goes negative, this circuit builds up an average charge on the terminal that is sufficient to prevent the output from ever going more negative than the forward voltage of the diode. Positive charge on this terminal is effectively trapped.
+</p>
+
+</div>
+
+<h3 class="sectionedit31" id="op-amp_clamp_circuit">Op-amp clamp circuit</h3>
+<div class="level3">
+
+<p>
+The schematic in figure 7.4.3 includes an op-amp clamp circuit with a non-zero reference clamping voltage. The very large op amp open loop gain provides the advantage that the clamping level is at very nearly the reference voltage. There is no need to take into account the forward volt drop of the diode (which is necessary in the previous simple circuits as this adds to the reference voltage). The effect of the diode volt drop on the circuit output will be reduced by the open loop gain of the amplifier, resulting in an insignificant error.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f12.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f12.png"><img src="/_media/university/courses/electronics/text/chptr7-f12.png?w=600&amp;tok=f98fd9" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.4.3 Precision op-amp clamp circuit 
+</p>
+</div>
+</div>
+
+<h2 class="sectionedit34" id="diode_clipperslimiters">7.5 Diode Clippers / Limiters</h2>
+<div class="level2">
+
+<p>
+A diode clipping circuit can be used to limit the voltage swing of a signal. The input vs. output transfer function of an ideal clipping circuit is shown in figure 7.5.1. <abbr title="volt">V</abbr><sub>OUT</sub> is equal to <abbr title="volt">V</abbr><sub>IN</sub> as long as <abbr title="volt">V</abbr><sub>IN</sub> is less than <abbr title="volt">V</abbr><sub>L+</sub> and greater than <abbr title="volt">V</abbr><sub>L-</sub>. When <abbr title="volt">V</abbr><sub>IN</sub> is outside these limiting voltages <abbr title="volt">V</abbr><sub>OUT</sub> is clipped or limited to <abbr title="volt">V</abbr><sub>L+</sub> or <abbr title="volt">V</abbr><sub>L-</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f13.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f13.png"><img src="/_media/university/courses/electronics/text/chptr7-f13.png?w=600&amp;tok=fff33d" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.5.1 Voltage clipping characteristic 
+</p>
+</div>
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f14.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f14.png"><img src="/_media/university/courses/electronics/text/chptr7-f14.png?w=600&amp;tok=0d7724" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.5.2 Clipper waveforms 
+</p>
+</div>
+<p>
+Figure 7.5.3 shows a diode circuit that clips both the positive and negative voltage swings to references voltages. The basic components required for a clipping circuit are, an ideal diode and a resistor. To fix the clipping level to the desired level other than ground, a dc source must also be included in series with the diode as shown in the figure.  When the diode is forward biased, it acts as a closed switch shorting <abbr title="volt">V</abbr><sub>OUT</sub> to <abbr title="volt">V</abbr><sub>L+</sub> or <abbr title="volt">V</abbr><sub>L-</sub>, and when the diode is reverse biased, it acts as an open switch. Different levels of clipping can be obtained by varying the voltage of the DC source and also interchanging the positions of the diode and resistor.
+</p>
+
+<p>
+Depending on the features of the diode, the positive or negative region of the input signal is “clipped” off and accordingly the diode clippers may be positive or negative clippers.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f15.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f15.png"><img src="/_media/university/courses/electronics/text/chptr7-f15.png?w=600&amp;tok=81b898" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.5.3 Parallel or shunt clipper circuit 
+</p>
+</div>
+<p>
+There are two general forms of clippers: series and parallel (or shunt). The shunt clipper has the diode in a branch parallel to the load while the series configuration, figure 7.5.4, is defined as one where the diode is in series with the load.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f16.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f16.png"><img src="/_media/university/courses/electronics/text/chptr7-f16.png?w=600&amp;tok=0b0442" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.5.4 Series clipper circuit 
+</p>
+</div>
+<p>
+<strong>Drawbacks of Shunt and Series Diode Clippers</strong>
+In shunt clippers, when the diode is in the non-conducting state, transfer of input signal should take place to output without any attenuation or loss. But in the case of high frequency, RF, input signals, the diode capacitance affects the circuit operation adversely and the signal gets attenuated (that is, it passes through diode capacitance to ground).
+</p>
+
+<p>
+In series clippers, when the diode is in non-conducting state, there will be no transmission of input signal to output. But in case of high frequency RF signals leakage occurs through the diode capacitance which is undesirable. This is the drawback of using diode as a series element in such clippers.
+</p>
+
+</div>
+
+<h2 class="sectionedit43" id="voltage_controlled_variable_attenuator">7.6 Voltage controlled variable attenuator</h2>
+<div class="level2">
+
+<p>
+Electronically controllable variable RF attenuators are common in the design of RF signal chains. For example, it is often desirable to be able to control the amplitude of a radio frequency signal using a control voltage. These variable RF attenuators can even be used in programmable RF attenuators. Here the controlling voltage is generated by a digital to analog converter which is programed from a micro-controller or digital signal processor (<abbr title="Digital Signal Processor">DSP</abbr>).
+</p>
+
+<p>
+By changing the bias current through a PN diode, it&#039;s possible to change the RF resistance. At high frequencies, the diode appears as a resistor whose resistance is an inverse function of its forward current. In addition a diode can be used in some variable attenuator designs as amplitude modulators or output leveling (automatic gain control) circuits. An example attenuator circuit configuration is shown in figure 7.6.1.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f17.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f17.png"><img src="/_media/university/courses/electronics/text/chptr7-f17.png?w=650&amp;tok=dcfe99" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.6.1 Voltage controlled variable attenuator 
+</p>
+</div>
+<p>
+The purpose of C<sub>1</sub> (and C<sub>2</sub>) is to block DC current from the input and output circuits so the operating point of the diode is not affected. The purpose of inductor L<sub>1</sub> is to block the AC signal from flowing in R<sub>2</sub>. The attenuator uses the fact that that “small signal” resistance of the diode r<sub>D</sub> is a function the DC current flowing in the diode I<sub>D</sub>. See Equations below:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-e3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-e3.png"><img src="/_media/university/courses/electronics/text/chptr7-e3.png?w=300&amp;tok=fefdaf" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+Where:<br/>
+
+n is the diode area (size) scale factor<br/>
+
+<abbr title="volt">V</abbr><sub>T</sub> is the Thermal Voltage<br/>
+
+I<sub>D</sub> is the diode current<br/>
+
+<abbr title="thousands (prefix, as in kHz, kΩ, kV, kW)">k</abbr> is Boltzmann&#039;s constant<br/>
+
+q is the electron charge<br/>
+
+T is the absolute temperature
+</p>
+
+<p>
+In the circuit a voltage divider is set up between R<sub>1</sub> and the resistance of D<sub>1</sub>. The current in D<sub>1</sub>is varied by changing the current in R<sub>2</sub>. When the current in D<sub>1</sub> is small r<sub>D</sub>is large and the fraction of the input signal seen at the output is large. As the current in D<sub>1</sub> increases, its resistance decreases and the fraction of the input seen at the output decreases.
+</p>
+
+</div>
+
+<h2 class="sectionedit46" id="logarithmic_output_amplifiers">7.7 Logarithmic output amplifiers</h2>
+<div class="level2">
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f18.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f18.png"><img src="/_media/university/courses/electronics/text/chptr7-f18.png?w=500&amp;tok=8e5ab1" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.7.1 Logarithmic amplifier 
+</p>
+</div>
+<p>
+The relationship between the input voltage <abbr title="volt">V</abbr><sub>in</sub> and the output voltage <abbr title="volt">V</abbr><sub>out</sub> is given by:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-e5.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-e5.png"><img src="/_media/university/courses/electronics/text/chptr7-e5.png?w=300&amp;tok=8391fc" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+where I<sub>S</sub> is the saturation current and <abbr title="volt">V</abbr><sub>T</sub> is the thermal voltage.
+</p>
+
+<p>
+If the operational amplifier is considered ideal, the negative pin is at a virtual ground, so the current flowing into the resistor from the input (and thus through the diode to the output, since no current flows into the op-amp inputs) is:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-e6.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-e6.png"><img src="/_media/university/courses/electronics/text/chptr7-e6.png?w=250&amp;tok=c034b5" class="mediacenter" loading="lazy" alt="" width="250" /></a>
+</p>
+
+<p>
+where I<sub>D</sub> is the current through the diode. 
+</p>
+
+<p>
+As we know from chapter 5, the relationship between the current and the voltage for a diode is:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-e7.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-e7.png"><img src="/_media/university/courses/electronics/text/chptr7-e7.png?w=300&amp;tok=4aa592" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+This equation, when the voltage <abbr title="volt">V</abbr><sub>D</sub> is greater than zero, can be approximated by:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-e8.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-e8.png"><img src="/_media/university/courses/electronics/text/chptr7-e8.png?w=300&amp;tok=66d967" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+Putting these two formulae together and considering that the output voltage is the negative of the voltage across the diode (<abbr title="volt">V</abbr><sub>out</sub> = -<abbr title="volt">V</abbr><sub>D</sub>), the logarithmic relationship of the output to the input is true.
+</p>
+
+<p>
+Note that this implementation does not consider the temperature drift of the diode voltage due to the thermal voltage <abbr title="volt">V</abbr><sub>T</sub> and other non-ideal effects.
+</p>
+
+<p>
+To illustrate the input voltage to output voltage characteristics of the diode log amplifier the circuit of figure 7.7.1 was simulated with R set to 1 kΩ and a 1N4148 diode. The results are plotted in figure 7.7.2. The bottom green curve is a linear sweep of <abbr title="volt">V</abbr><sub>IN</sub> from 0 to 5V. With a 1 kΩ resistor the current through the diode is thus swept from 0 to 5 <abbr title="milliampere">mA</abbr>. The top blue curve shows the characteristic logarithmic shape we are expecting.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f19.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f19.png"><img src="/_media/university/courses/electronics/text/chptr7-f19.png?w=600&amp;tok=c2a854" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.7.2 Log Amp simulation 
+</p>
+</div>
+</div>
+
+<h2 class="sectionedit51" id="exponential_antilog_output_amplifiers">7.8 Exponential (antilog) output amplifiers</h2>
+<div class="level2">
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f20.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f20.png"><img src="/_media/university/courses/electronics/text/chptr7-f20.png?w=500&amp;tok=ef17af" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.8.1 Anti-Logarithmic amplifier 
+</p>
+</div>
+<p>
+The relationship between the input voltage <abbr title="volt">V</abbr><sub>in</sub> and the output voltage <abbr title="volt">V</abbr><sub>out</sub>is given by:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-e9.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-e9.png"><img src="/_media/university/courses/electronics/text/chptr7-e9.png?w=300&amp;tok=eeee82" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+where I<sub>S</sub> is the saturation current and <abbr title="volt">V</abbr><sub>T</sub> is the thermal voltage.
+</p>
+
+<p>
+If we again consider the operational amplifier as ideal, then the negative pin is at a virtual ground, so the current through the diode is given by:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-e10.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-e10.png"><img src="/_media/university/courses/electronics/text/chptr7-e10.png?w=300&amp;tok=a8618d" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+when the diode voltage <abbr title="volt">V</abbr><sub>D</sub> is greater than zero, it can be approximated by:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-e11.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-e11.png"><img src="/_media/university/courses/electronics/text/chptr7-e11.png?w=300&amp;tok=4af515" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+The output voltage is given by:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-e12.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-e12.png"><img src="/_media/university/courses/electronics/text/chptr7-e12.png?w=400&amp;tok=bd2716" class="mediacenter" loading="lazy" alt="" width="400" /></a>
+</p>
+
+<p>
+To illustrate the input voltage to output voltage characteristics of the diode anti-logarithmic amplifier the circuit of figure 7.8.1 was simulated with R set to 1 kΩ and a 1N4148 diode. The results are plotted in figure 7.8.2. The bottom green curve is a linear sweep of <abbr title="volt">V</abbr><sub>IN</sub> from 0 to 660 <abbr title="millivolt">mV</abbr>. By using the same diode as we did in section 7.7 on log amps we know that 660 <abbr title="millivolt">mV</abbr> will result in a 1 <abbr title="milliampere">mA</abbr> current through the diode and with the same 1 kΩ resistor output voltage will be 5V. The top blue curve shows the characteristic exponential shape we are expecting.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr7-f21.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7" class="media" title="university:courses:electronics:text:chptr7-f21.png"><img src="/_media/university/courses/electronics/text/chptr7-f21.png?w=600&amp;tok=f4f514" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 7.8.2 Anti-Logarithmic amp simulation 
+</p>
+</div>
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/chapter-6" class="wikilink1" title="university:courses:electronics:text:chapter-6" data-wiki-id="university:courses:electronics:text:chapter-6">Previous Chapter</a></strong>
+</p>
+
+<p>
+<strong>Go to <a href="/university/courses/electronics/text/chapter-8" class="wikilink1" title="university:courses:electronics:text:chapter-8" data-wiki-id="university:courses:electronics:text:chapter-8">Next Chapter</a></strong>
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/electronics-toc" class="wikilink1" title="university:courses:electronics:text:electronics-toc" data-wiki-id="university:courses:electronics:text:electronics-toc">Table of Contents</a></strong>
+</p>
+
+</div>
+                        <!-- wikipage stop -->
+                    </div>
+
+                    <div class="docInfo"><bdi>university/courses/electronics/text/chapter-7.txt</bdi> · Last modified: <time datetime="2018-03-18T16:52:03+0000">18 Mar 2018 16:52</time> by <bdi><a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a></bdi></div>
+
+                                    </div>
+            </div>
+            <!-- /content -->
+
+            <hr class="a11y"/>
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="/university/courses/electronics/text/chapter-7?do=edit" title="View Source [v]" rel="nofollow" accesskey="v"><span>View Source</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="/university/courses/electronics/text/chapter-7?do=revisions" title="History [o]" rel="nofollow" accesskey="o"><span>History</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="/university/courses/electronics/text/chapter-7?do=backlink" title="Backlinks" rel="nofollow"><span>Backlinks</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="menuitemfolded"><a href="javascript:void(0);" title="Fold/unfold all" rel="nofollow" class="fold_unfold_all_new" onclick="fold_unfold_all();"><span>Fold/unfold all</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M 2,0 L 6.5,3 L 2,6 z M 8,6.6 L 12.5,9.6 L 8,12.6 z M 14,13.2 L 20,13.2 L 17,17.7 z"/></svg></a></li><li class="top"><a href="#dokuwiki__top" title="[ Back to top ] [t]" rel="nofollow" accesskey="t"><span>[ Back to top ]</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /wrapper -->
+
+    </div>
+    <!-- /container -->
+</div>
+<!-- /site -->
+
+﻿<a class="backtotop" href="#header">&nbsp;</a>
+<footer class="footer" id="footer">
+    <adi-footer short></adi-footer>
+
+    
+    <script type="text/javascript">
+        var analytics = '//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js';
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script type="text/javascript">
+        var ADIAssetsPath = "//assets2.analog.com";
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script>
+        /* Copyright 2011-2015 iPerceptions, Inc. All rights reserved. Do not distribute. iPerceptions provides this code 'as is' without warranty of any kind, either express or implied. */
+        window.iperceptionskey = 'acafac0d-3b8a-4d30-8a98-6cbcd5256d93';
+        (function() { var a = document.createElement('script'),
+            b = document.getElementsByTagName('body')[0];
+            a.type = 'text/javascript';
+            a.defer = true;
+            a.src = '//universal.iperceptions.com/wrapper.js';
+            b.appendChild(a); })();
+    </script>
+</footer>
+<script type="text/javascript">
+            if(typeof(_satellite) != 'undefined') {
+            _satellite.pageBottom();
+            }
+        </script>
+<div class="a11y"
+     style="float: left"><img src="/lib/exe/taskrunner.php?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-7&amp;1776083307" width="2" height="1" alt="" /></div>
+</body>
+</html>

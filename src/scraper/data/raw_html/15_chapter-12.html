@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"
+      dir="ltr"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Chapter 12:  Differential amplifiers [Analog Devices Wiki]</title>
+
+    <script>(function (H) {
+            H.className = H.className.replace(/\bno-js\b/, 'js')
+        })(document.documentElement)</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500,500i,600,600i,700,700i|Barlow:300,300i,400,400i,500,500i,600,600i&display=swap" rel="stylesheet">
+
+    <link href="https://assets2.analog.com/apps-assets/wiki/index.css" rel="stylesheet" />
+    <script src="https://assets2.analog.com/apps-assets/wiki/index.mjs"></script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="university,courses,electronics,text,chapter-12"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Analog Devices Wiki"/>
+<link rel="start" href="/"/>
+<link rel="contents" href="/university/courses/electronics/text/chapter-12?do=index" title="Sitemap"/>
+<link rel="manifest" href="/lib/exe/manifest.php" crossorigin="use-credentials"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns=university:courses:electronics:text"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/university/courses/electronics/text/chapter-12"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/university/courses/electronics/text/chapter-12"/>
+<link rel="canonical" href="https://wiki.analog.com/university/courses/electronics/text/chapter-12"/>
+<link rel="stylesheet" href="/lib/exe/css.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb"/>
+<script nonce="845e18fe6f7a700236991a735dc5d909">var NS='university:courses:electronics:text';var JSINFO = {"plugin_enforcesummary":{"enforce_summary":1,"default_minoredit":0,"enforce_preview":0},"plugin_folded":{"hide":"hide","reveal":"reveal"},"plugins":{"interwikipaste":{"patterns":"[{\"shortcut\":\"footprints\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/design\\\\-center\\\\\\\/packaging\\\\-quality\\\\-symbols\\\\-footprints\\\\\\\/symbols\\\\-and\\\\-footprints\\\\\\\/([^ ]+)?\\\\.html\",\"encode\":false},{\"shortcut\":\"staging.kernel.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/gregkh\\\\\\\/staging\\\\.git;a\\\\=blob;hb\\\\=refs\\\\\\\/heads\\\\\\\/staging\\\\-next;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"avnetexpress\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/avnetexpress\\\\.avnet\\\\.com\\\\\\\/store\\\\\\\/em\\\\\\\/EMController\\\\?storeId\\\\=500201&N\\\\=0&action\\\\=products&term\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"downgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/analogdevicesinc\\\\.github\\\\.io\\\\\\\/DownGit\\\\\\\/\\\\#\\\\\\\/home\\\\?url\\\\=https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"cart\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/shoppingcart\\\\.analog\\\\.com\\\\\\\/AddModel\\\\.aspx\\\\?locale\\\\=en&ACTION\\\\=BUY_BUNDLES&modelNbr\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digikey\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digikey\\\\.com\\\\\\\/scripts\\\\\\\/DkSearch\\\\\\\/dksus\\\\.dll\\\\?KeywordSearch\\\\?Site\\\\=US&amp;Keywords\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"git.linux.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/torvalds\\\\\\\/linux\\\\.git;a\\\\=blob;hb\\\\=HEAD;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"export\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/exportclassification\\\\\\\/Search\\\\\\\/Result\\\\?strSearch\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ibis\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/media\\\\\\\/en\\\\\\\/simulation\\\\-models\\\\\\\/ibis\\\\-models\\\\\\\/([^ ]+)?\\\\.ibs\",\"encode\":false},{\"shortcut\":\"bfsvn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/project\\\\\\\/([^ ]+)?\\\\\\\/scmsvn\\\\\\\/trunk\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?;hb\\\\=HEAD\",\"encode\":false},{\"shortcut\":\"paypal\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.paypal\\\\.com\\\\\\\/cgi\\\\-bin\\\\\\\/webscr\\\\?cmd\\\\=_xclick&amp;business\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"arrow\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.arrow\\\\.com\\\\\\\/en\\\\\\\/products\\\\\\\/search\\\\?cat\\\\=&q\\\\=([^ ]+)?&r\\\\=true\",\"encode\":false},{\"shortcut\":\"linux.github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/linux\\\\\\\/blob\\\\\\\/([^ ]+)?\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit_rev\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digilent\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digilentinc\\\\.com\\\\\\\/Products\\\\\\\/Detail\\\\.cfm\\\\?Prod\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"reg\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/my\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/app\\\\\\\/registration\\\\\\\/hardware\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\\\\\\\/blob\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"go\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?&amp;btnI\\\\=lucky\",\"encode\":true},{\"shortcut\":\"docs\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/docs\\\\.blackfin\\\\.uclinux\\\\.org\\\\\\\/doku\\\\.php\\\\?id\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.com\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-20\",\"encode\":true},{\"shortcut\":\"amazon.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.de\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-21\",\"encode\":true},{\"shortcut\":\"mouser\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/mouser\\\\.com\\\\\\\/Search\\\\\\\/Refine\\\\?Keyword\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tkt\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/tracker\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"repo\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpmeta\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/meta\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bf\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"maxim\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.maximintegrated\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/en\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpfr\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/fr\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpde\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/de\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpes\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/es\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wppl\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/pl\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpjp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ja\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpru\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ru\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfin\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon.uk\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.co\\\\.uk\\\\\\\/dp\\\\\\\/([^ ]+)?\",\"encode\":true},{\"shortcut\":\"google\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"oreilly\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.oreilly\\\\.com\\\\\\\/catalog\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"mw\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.mathworks\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"rfc\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/tools\\\\.ietf\\\\.org\\\\\\\/html\\\\\\\/rfc([^ ]+)?\",\"encode\":false},{\"shortcut\":\"google.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.de\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"user\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/members\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"this\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/wiki\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"phpfn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/secure\\\\.php\\\\.net\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"adi\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"xilinx\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.xilinx\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ez\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"doku\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.dokuwiki\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"callto\",\"pattern\":\"callto\\\\:\\\\\\\/\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"man\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/man\\\\.cx\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"skype\",\"pattern\":\"skype\\\\:([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tel\",\"pattern\":\"tel\\\\:([^ ]+)?\",\"encode\":false}]"},"vshare":{"youtube":"youtube\\.com\/.*[&?]v=([a-z0-9_\\-]+)","vimeo":"vimeo\\.com\\\/(\\d+)","slideshare":"slideshare.*id=(\\d+)","dailymotion":"dailymotion\\.com\/video\/([a-z0-9]+)","archiveorg":"archive\\.org\/(?:embed|details)\/([a-zA-Z0-9_\\-]+)","soundcloud":"soundcloud\\.com\/([\\w-]+\/[\\w-]+)","niconico":"nicovideo\\.jp\/watch\/(sm[0-9]+)","bitchute":"bitchute\\.com\\\/video\\\/([a-zA-Z0-9_\\-]+)","coub":"coub\\.com\\\/view\\\/([a-zA-Z0-9_\\-]+)","odysee":"odysee\\.com\/\\$\/(?:embed|download)\/([-%_?=\/a-zA-Z0-9]+)","youku":"v\\.youku\\.com\/v_show\/id_([0-9A-Za-z=]+)\\.html","bilibili":"bilibili\\.com\\\/video\\\/(BV[0-9A-Za-z]+)","msoffice":"(?:office\\.com.*[&?]videoid=([a-z0-9\\-]+))","msstream":"microsoftstream\\.com\\\/video\\\/([a-f0-9\\-]{36})","rutube":"rutube\\.ru\\\/video\\\/([a-z0-9]+)\\\/","gdrive":"drive\\.google\\.com\\\/file\\\/d\\\/([a-zA-Z0-9_-]+)\/"}},"id":"university:courses:electronics:text:chapter-12","namespace":"university:courses:electronics:text","ACT":"show","useHeadingNavigation":1,"useHeadingContent":0};(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script src="/lib/exe/jquery.php?tseed=8faf3dc90234d51a499f4f428a0eae43" defer="defer"></script>
+<script src="/lib/exe/js.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb" defer="defer"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/lib/tpl/analog2014/images/favicon.ico" />
+
+    <script src="https://assets2.analog.com/header-footer/index.js" type="text/javascript" defer="true"></script>
+
+    <!-- LIVE tracking -->
+<script src="//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js" async></script>
+<script src="/lib/tpl/analog2014/assets/js/adi/global.analytics.js" type="text/javascript"></script>
+</head>
+
+<!-- List of supported themes thm-education, thm-applications, thm-parametric, thm-product, thm-community, thm-design-center, thm-my-analog, thm-support -->
+<body class="home">
+
+
+<!-- wiki_header.html -->
+<header class="adi_header adi_header--wiki tools-header" id="dokuwiki__top" data-ot="true">
+
+    <div class="adi_topbar">
+        <div class="adi_container">
+            <section class="adi_row">
+                <!--  BEGIN:  Internal Links -->
+                <nav class="adi_column adi_pull-left">
+                    <a class="adi_topbar-link adi_topbar-link--analog-home" href="//www.analog.com">
+                        <strong>Analog.com</strong>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--engineer-zone" href="//ez.analog.com">
+                        <strong class="adi_link--hover-accent">Engineer</strong>
+                        <span>Zone</span>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--analog-dialogue" href="//www.analog.com/en/resources/analog-dialogue.html">
+                        <strong class="adi_link--hover-accent">Analog</strong>
+                        <span>Dialogue</span>
+                    </a>
+                </nav> <!-- /.adi_column.adi_pull-left -->
+                <!--  END:  Internal Links  -->
+                <!--  BEGIN:  Language Options  -->
+                <nav class="adi_column adi_pull-right">
+                    <a class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-logo" href="//my.analog.com/">
+                        <span><img src="https://assets2.analog.com/cms-assets/images/images/images/myanalog_logo.png" alt="My Analog Login"></span>&nbsp;
+                    </a>
+
+                    <a href="/university/courses/electronics/text/chapter-12?do=login&amp;sectok="  class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-login action login" rel="nofollow" title="Log In"><strong>Log In</strong></a>                </nav> <!-- /.adi_column.adi_pull-right -->
+                <!--  END:  Language Options  -->
+            </section> <!-- /.adi_row -->
+        </div> <!-- /.adi_container -->
+    </div>
+
+
+
+    <div class="adi_container">
+        <section class="adi_row">
+            <!--  BEGIN:  Logo  -->
+            <div class="adi_column adi_logo-container">
+                <a class="adi_logo" href="/start">
+                    <img src="/lib/tpl/analog2014//assets/images/adi-logo.svg" alt="Analog Devices Wiki" />
+                </a>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+            <div class="adi_column adi_page-title-container">
+                <h1 class="adi_page-title">Wiki</h1>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+        </section> <!-- /.adi_row -->
+    </div> <!-- /.adi_container -->
+
+    <div class="navigation-bar">
+        <div class="content-wrap clearfix">
+            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"><a href="#">Wiki Tools</a></div><ul class="submenu"><li class="level2"><a href="/university/courses/electronics/text/chapter-12?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-12?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-12?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>
+            <ul class="list-inline pull-right searchmenu clearfix">
+                <li class="search-box">
+                    <form action="" accept-charset="utf-8" class="search clearfix" id="dw__search" method="get" role="search">
+                        <div class="no">
+                            <input type="hidden" name="do" value="search">
+                            <input type="text" autocomplete="off" id="qsearch__in" accesskey="f" name="id" class="edit" placeholder="search wiki">
+                            <button type="submit" value="Search" class="button search-icon" title="Search"></button>
+
+                            <div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none; white-space: nowrap;">
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</header> <!-- /.adi_header -->
+
+
+
+
+
+<!-- Mobile view navigation drawer-->
+<div class="wiki-mob-body">
+    <div class="content" role="main">
+        <div class="col-md-12 wiki-head-row">
+            <div class="row ">
+                <div class="title-nophoto">
+                    <div class="container page-title ">
+                        <h1 data-page-title="true">Analog Devices Wiki</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 floater-menu-container">
+                <div class="row product-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 wiki-right-panel">
+                                <div class="row">
+                                    <div class=" product-bookmarks" id="affix-nav" name="adi_products_left_navigation">
+                                        <ul class="nav" id="affix-ul">
+                                            <li class="">
+
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#"
+                                                   name='SDR-home_2e322e80-5ec4-4b20-b8b8-71702b590a25'>Analog Devices
+                                                    Wiki
+                                                </a>
+
+                                            </li>
+                                            <!--Wiki-->
+                                            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"><a href="#">Wiki Tools</a></div><ul class="submenu Res_tools_child"><li class="level2"><a href="/university/courses/electronics/text/chapter-12?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-12?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-12?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>                                            <!--Wiki-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="special-content">
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#English">English<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="English" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/en/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_en.jpg" class="mobile-images"
+                                 width="100%" alt="English"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#简体中文">简体中文<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="简体中文" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/cn/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_cn.jpg" class="mobile-images"
+                                 width="100%" alt="简体中文"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#日本語">日本語<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="日本語" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/jp/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_jp.jpg" class="mobile-images"
+                                 width="100%" alt="日本語"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#Руccкий">Руccкий<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="Руccкий" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/ru/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_ru.jpg" class="mobile-images"
+                                 width="100%" alt="Руccкий"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile view navigation drawer-->
+
+<!-- /tpl_header.php -->
+
+
+
+<div id="dokuwiki__site" role="main" class="main-body content">
+    <div class="site dokuwiki mode_show tpl_analog2014   ">
+        <div class="container">
+
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content">
+                <div class="pad group">
+
+                    <div class="page group">
+                        
+                                                <!-- wikipage start -->
+                        <div class="approval approved_yes"><span class="approval_approved">This version (<span class="approval_date">06 Jun 2017 15:50</span>) was <em>approved</em> by <a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a>.</span><span class="approval_previous">The <a href="/university/courses/electronics/text/chapter-12?rev=1429047093">Previously approved version</a> (14 Apr 2015 21:31) is available.<a href="https://wiki.analog.com/university/courses/electronics/text/chapter-12?do=diff&rev2[0]=1429047093&rev2[1]=1496764199&difftype=sidebyside" class="approved_diff_link"><img src="/lib/images/diff.png" class="approved_diff_link" alt="Diff" /></a></span></div><!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#chapter_12differential_amplifiers">Chapter 12:  Differential amplifiers</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#starting_with_the_basics">12.1 Starting with the basics</a></div></li>
+<li class="level2"><div class="li"><a href="#long-tailed_pair">12.2 Long-tailed pair</a></div></li>
+<li class="level2"><div class="li"><a href="#differential_gain">12.3 Differential Gain</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#the_current_mirror_as_a_load">The current mirror as a load</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#summary">Summary</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="chapter_12differential_amplifiers">Chapter 12:  Differential amplifiers</h1>
+<div class="level1">
+
+<p>
+The differential amplifier is probably the most widely used circuit building block in analog integrated circuits, principally op amps. We had a brief glimpse at one back in Chapter 3 section 3.4.3 when we were discussing input bias current. The differential amplifier can be implemented with BJTs or MOSFETs. A differential amplifier multiplies the voltage difference between two inputs (Vin+ - Vin-) by some constant factor Ad, the differential gain. It may have either one output or a pair of outputs where the signal of interest is the voltage difference between the two outputs. A differential amplifier also tends to reject the part of the input signals that are common to both inputs (Vin+ + Vin-)/2 . This is referred to as the common mode signal.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="starting_with_the_basics">12.1 Starting with the basics</h2>
+<div class="level2">
+
+<p>
+It is often easiest to start again with the very basic single transistor and build a workable differential amplifier as a logical progression from there. Consider the single transistor amplifier stage, figure 12.1.1, which is similar to what we explored in the section on the degenerated common emitter back in Chapter 9. This amplifier can actually be viewed as either an inverting common emitter amplifier when driven from <abbr title="volt">V</abbr><sub>neg</sub> and with <abbr title="volt">V</abbr><sub>pos</sub> considered an AC ground. Or as a non-inverting common base amplifier when driven from <abbr title="volt">V</abbr><sub>pos</sub> and with <abbr title="volt">V</abbr><sub>neg</sub> considered an AC ground.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr12_f1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-12" class="media" title="university:courses:electronics:text:chptr12_f1.png"><img src="/_media/university/courses/electronics/text/chptr12_f1.png?w=650&amp;tok=59bf2a" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 12.1.1 AC coupled difference amplifier 
+</p>
+</div>
+<p>
+Let&#039;s assume that we make the coupling capacitors, C<sub>1</sub> and C<sub>2</sub>, sufficiently large so that we can view them as AC shorts for the signal frequencies of interest. The small signal voltage gain from <abbr title="volt">V</abbr><sub>neg</sub> to <abbr title="volt">V</abbr><sub>out</sub> is:
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=53f88b0d4bc6c1276f5210caf3f0246d" class="mediacenter mathpublish" alt="A_vn = -g_m R_L" title="A_vn = -g_m R_L" width="105" height="27" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+Likewise, the small signal voltage gain from <abbr title="volt">V</abbr><sub>pos</sub> to <abbr title="volt">V</abbr><sub>out</sub> is:
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=762ffcb0bce5631cc0e025a07c081c8d" class="mediacenter mathpublish" alt="A_vp = g_m R_L" title="A_vp = g_m R_L" width="95" height="27" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+The transistor amplifies the small signal voltage across its <abbr title="volt">V</abbr><sub>be</sub> which in this case is <abbr title="volt">V</abbr><sub>pos</sub>-<abbr title="volt">V</abbr><sub>neg</sub>. If we apply equal amplitude, in phase signals to <abbr title="volt">V</abbr><sub>pos</sub> and <abbr title="volt">V</abbr><sub>neg</sub>, such that <abbr title="volt">V</abbr><sub>pos</sub>-<abbr title="volt">V</abbr><sub>neg</sub> = 0 then there will be no varying signal across <abbr title="volt">V</abbr><sub>be</sub> and the output signal at <abbr title="volt">V</abbr><sub>out</sub> will be zero. On the other hand, if we apply equal amplitude signals that are 180º out of phase with each other, then <abbr title="volt">V</abbr><sub>pos</sub>-<abbr title="volt">V</abbr><sub>neg</sub> = twice the amplitude of the inputs. This difference voltage will appear across <abbr title="volt">V</abbr><sub>be</sub> and be amplified by <abbr title="gravity">g</abbr><sub><abbr title="milli (prefix, as in mW, mA, mV, ms)">m</abbr></sub>*R<sub>L</sub> at <abbr title="volt">V</abbr><sub>out</sub>.
+</p>
+
+<p>
+The inverting or negative input terminal of our simple difference amplifier has the relatively high input impedance of the common emitter stage while the non-inverting or positive input terminal of the amplifier has the relatively low input impedance of the common base stage. The importance of this observation and how it can be put to good use will become apparent in the next chapter (13) on transimpedance amplifiers.
+</p>
+
+<p>
+It would be advantageous if our differential amplifier had more symmetric inputs where the input impedance for both the positive and negative inputs was as high as possible, ideally infinite. An additional step to get us in that direction is shown in figure 12.1.2. If we now include an emitter follower stage, Q<sub>2</sub>, to buffer the relatively low impedance of the common base amplifier path of the positive input we get a more symmetrical pair of inputs.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr12_f2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-12" class="media" title="university:courses:electronics:text:chptr12_f2.png"><img src="/_media/university/courses/electronics/text/chptr12_f2.png?w=650&amp;tok=0ad181" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 12.1.2 difference amplifier with emitter follower added. 
+</p>
+</div>
+<p>
+Because we are still AC coupling our input signals a second set of biasing resistors, R<sub>B3</sub> and R<sub>B4</sub> are necessary to provide DC bias for the new emitter follower. If we instead DC couple the now symmetric inputs the biasing resistors become unnecessary and our difference amplifier now takes on the look of the classic differential pair we will discuss in the next section.
+</p>
+
+</div>
+
+<h2 class="sectionedit7" id="long-tailed_pair">12.2 Long-tailed pair</h2>
+<div class="level2">
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr12_f3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-12" class="media" title="university:courses:electronics:text:chptr12_f3.png"><img src="/_media/university/courses/electronics/text/chptr12_f3.png?w=650&amp;tok=caca7a" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 12.2.1: A long-tailed pair with resistor loads 
+</p>
+</div>
+<p>
+The classic differential pair amplifier is formed from at least two identical transistors, configured with the emitters for BJT transistors or the sources for FETs connected together. A long-tailed pair (LTP), or emitter coupled (source coupled) pair, is a pair of transistors where the shared emitter or source node is supplied from a more or less constant current source/sink, which could be as simple as a relatively large value resistor connected to the negative supply, such as R<sub>tail</sub> in figure 12.2.1, (or the positive supply for p-type devices) that develops a large voltage drop relative to the amplitude of the input signal thus the “long tail”. Given the more or less constant current supplied to the emitters or sources the summation of the two collector or drain currents is also more or less constant with signal.
+</p>
+
+<p>
+The two inputs at the bases or gates can be fed with a differential or balanced input signal and the two outputs from the collectors or drains remain balanced, or one input could be grounded to convert a single ended input signal to a differential output.
+</p>
+
+<p>
+The higher the resistance of the current source R<sub>tail</sub>, the lower the common mode gain or A<sub>c</sub> is, and the better the common mode rejection ratio (CMRR). In more sophisticated designs, an active constant current source may be substituted for the high resistance R<sub>tail</sub>.
+With two inputs and two outputs, this forms a differential amplifier stage. The two bases or gates are inputs which are differentially amplified by the pair.
+</p>
+
+<p>
+Even though this circuit is designed to have two inputs and two outputs, it is not necessary to use both inputs and both outputs. (Remember, a differential amplifier was defined as having two possible inputs and two possible outputs.) A differential amplifier can be connected as a single-input, single-output device; a single-input, differential-output device; or a differential-input, differential-output device. The output may be single-ended (taken from just one of the collectors or drains, or differential depending on the needs of the subsequent circuitry.
+</p>
+
+<p>
+In a long-tailed pair built using BJTs, the emitters are connected together, and then through the current source to ground or to a negative supply (for an LTP using NPN transistors). In this form, one of the transistors can be thought of as an amplifier operating in common emitter configuration, and the other as an emitter follower, feeding the other input signal into the emitter of the first stage as we discussed in the previous section. Since a transistor will amplify the current flowing between base and emitter, it follows that the current flowing in the collector circuit of the first transistor is proportional to the difference between the two inputs. However since the circuit is totally symmetrical, either element can be viewed as an amplifier or as a follower, understanding how the circuit functions does not depend on which role you assign to which device.
+</p>
+
+<p>
+The bias condition assumes equal voltages at <abbr title="volt">V</abbr><sub>pos</sub> and <abbr title="volt">V</abbr><sub>neg</sub>, forcing the bias current I<sub>tail</sub> (set by R<sub>tail</sub>) to split equally between the transistors resulting in I<sub>C1</sub> = I<sub>C2</sub>. With R<sub>C1</sub> = R<sub>C2</sub>, equal voltages develop at <abbr title="volt">V</abbr><sub>out</sub>+ and <abbr title="volt">V</abbr><sub>out</sub>-.
+</p>
+
+<p>
+Using MOSFETs, we can construct an source-coupled differential pair, which is a counterpart of the emitter-coupled differential pair using BJTs. The main advantage of using MOSFETs for a differential pair compared to BJTs is the nearly infinite input impedance, while the disadvantage is generally lower differential gain.
+</p>
+
+<p>
+Assuming the two MOSFETs are the same. The analysis of the source-coupled differential pair proceeds in the same way as the emitter-coupled differential pair for both common-mode signal and differential input signal. The transfer characteristics for drain current I<sub>d1</sub> and I<sub>d2</sub> are shown in the figure.
+</p>
+
+</div>
+
+<h2 class="sectionedit10" id="differential_gain">12.3 Differential Gain</h2>
+<div class="level2">
+
+<p>
+We can calculate the differential voltage gain as follows. Consider Q<sub>1</sub> and Q<sub>2</sub> as current sources controlled by their base voltages. R<sub>C1</sub> and R<sub>C2</sub> then convert the currents back into voltages. First, the small signal collector current
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=2bd618af52ca21146f83db991d3846ee" class="mediacenter mathpublish" alt="i_C = g_m v_BE" title="i_C = g_m v_BE" width="88" height="27" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+Where the transconductance <abbr title="gravity">g</abbr><sub><abbr title="milli (prefix, as in mW, mA, mV, ms)">m</abbr></sub>  (Amps/Volts) is set by the DC collector current 
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=9598698f69a85261833e9d1dd15bc2e3" class="mediacenter mathpublish" alt="g_m = I_c / V_T = I_c / 25 mV" title="g_m = I_c / V_T = I_c / 25 mV" width="126" height="54" style="display: block; object-fit: fill;" /> at room temperature. 
+</p>
+
+<p>
+Then, R<sub>C</sub> converts I<sub>c</sub> back to a voltage.
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=0968027a7a5f121a937b2f2c7ba4dc9d" class="mediacenter mathpublish" alt="v_C = R_C * g_m v_BE" title="v_C = R_C * g_m v_BE" width="132" height="27" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+Bringing the input <abbr title="volt">V</abbr><sub>diff</sub> = <abbr title="volt">V</abbr><sub>pos</sub> - <abbr title="volt">V</abbr><sub>neg</sub>into the picture, notice it divides equally across the two base-emitter junctions, but with opposite polarities. Putting it all together you get a single-ended output at each collector
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=b30afc6a9d85c1d0ebda07a3601b6006" class="mediacenter mathpublish" alt="v_C1 = R_C1 * g_m * (+V_diff / 2)" title="v_C1 = R_C1 * g_m * (+V_diff / 2)" width="210" height="59" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=29eb4b75d53499f6adaa92ca9aea0158" class="mediacenter mathpublish" alt="v_C2 = R_C2 * g_m * (-V_diff / 2)" title="v_C2 = R_C2 * g_m * (-V_diff / 2)" width="200" height="59" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+Subtracting the two outputs gets you a differential output of
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=742369d0f0cbe4ef5f5aff3c626c53c6" class="mediacenter mathpublish" alt="v_C1 - v_C2 = R_C * g_m * V_diff" title="v_C1 - v_C2 = R_C * g_m * V_diff" width="195" height="27" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+An example to set the bias: R<sub>tail</sub> sets the bias at Ie = (-0.6V - <abbr title="volt">V</abbr><sub>DD</sub>) / R<sub>tail</sub> = (-0.6 <abbr title="volt">V</abbr> - (-15 <abbr title="volt">V</abbr>)) / 7.2 kΩ = 2 <abbr title="milliampere">mA</abbr> which divides equally between Q<sub>1</sub> and Q<sub>2</sub> giving
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=7aac36c25991e72dba2ed62fa807151a" class="mediacenter mathpublish" alt="I_c1 = I_c2 approx I_e / 2 approx 1mA" title="I_c1 = I_c2 approx I_e / 2 approx 1mA" width="148" height="46" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+Finally, we easily calculate <abbr title="gravity">g</abbr><sub><abbr title="milli (prefix, as in mW, mA, mV, ms)">m</abbr></sub> = 1 <abbr title="milliampere">mA</abbr> / 25 <abbr title="millivolt">mV</abbr> = 0.04 A/<abbr title="volt">V</abbr>. The single-ended gain becomes:
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=058b69bae1372ad4295616c38561c02e" class="mediacenter mathpublish" alt="v_C1 / V_diff = R_C1 * g_m * 1/2 = 1 k * 0.04 * 1/2 = 20 V/V" title="v_C1 / V_diff = R_C1 * g_m * 1/2 = 1 k * 0.04 * 1/2 = 20 V/V" width="294" height="54" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr12_f4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-12" class="media" title="university:courses:electronics:text:chptr12_f4.png"><img src="/_media/university/courses/electronics/text/chptr12_f4.png?w=650&amp;tok=e2114f" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+
+<p>
+The output from a differential amplifier is itself often differential. If this is not desired, then only one output can be used, disregarding the other output. Or to avoid sacrificing gain, a differential to single-ended stage can be used following the differential stage. This is often implemented with an active current mirror load instead of the collector/drain resistors.
+</p>
+
+<p>
+Long-tailed pairs are frequently used in circuits that implement linear amplifiers with feedback, as in operational amplifiers, and in other circuits that require a differential amplifier.
+</p>
+
+<p>
+When used as a switch, the “left” base or gate is used as signal input and the “right” base or gate is grounded; output is taken from the right collector or drain. When the input is zero or negative, the output is close to zero; when the input is positive, the output is most-positive, dynamic operation being the same as the amplifier use described above.
+</p>
+
+<p>
+Bias stability and independence from variations in device parameters can be improved by negative feedback introduced via emitter or source degeneration resistors.
+</p>
+
+<p>
+The differential pair with a small differential input signal v<sub>i</sub>
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr12_e1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-12" class="media" title="university:courses:electronics:text:chptr12_e1.png"><img src="/_media/university/courses/electronics/text/chptr12_e1.png?w=150&amp;tok=efbea5" class="media" loading="lazy" alt="" width="150" /></a>
+<a href="/_detail/university/courses/electronics/text/chptr12_e2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-12" class="media" title="university:courses:electronics:text:chptr12_e2.png"><img src="/_media/university/courses/electronics/text/chptr12_e2.png?w=150&amp;tok=550d21" class="media" loading="lazy" alt="" width="150" /></a>
+</p>
+
+<p>
+Small-Signal Operation
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=d19f0fbc4c50eeeccdaee21a12c9a92b" class="mediacenter mathpublish" alt="v_d &lt;&lt; V_T" title="v_d &lt;&lt; V_T" width="67" height="27" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+<strong>Some Formulas</strong>
+</p>
+
+<p>
+1. Differential Input Resistance
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=e30ea969a6af3f5efa8eea21c611ebd3" class="mediacenter mathpublish" alt="R_id = 2 ( ß+1 ) ( r_e + R_Tail )" title="R_id = 2 ( ß+1 ) ( r_e + R_Tail )" width="201" height="40" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+2. Differential Voltage gain
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=56dcbcc4c4248ee92c46cc121a6a6926" class="mediacenter mathpublish" alt="A_d = -(2 alpha R_c)/(2(r_e+R_E)) approx -R_C/(r_e+R_E)" title="A_d = -(2 alpha R_c)/(2(r_e+R_E)) approx -R_C/(r_e+R_E)" width="275" height="83" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+3. Common mode gain:
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=75ecae2b5b07d89ad81264e5ac1cc82e" class="mediacenter mathpublish" alt="v_C1 = v_C2 = -v_CM (alpha R_C )/(2R+r_e) approx - v_CM (alpha R_c)/(2R)" title="v_C1 = v_C2 = -v_CM (alpha R_C )/(2R+r_e) approx - v_CM (alpha R_c)/(2R)" width="332" height="78" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=07a1119292a9dbf3b712226f7804e1a5" class="mediacenter mathpublish" alt="A_CM = - (alpha R_c)/(2R)" title="A_CM = - (alpha R_c)/(2R)" width="125" height="64" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+<strong>Increasing the linear differential input range of the diff pair</strong>
+</p>
+
+<p>
+Sometimes it is advantageous to add emitter degeneration resistor REF to the circuit, as shown in the figure 12.3.1. The resistors have the disadvantage of reducing the differential voltage gain of the circuit. However, two reasons for this is to increase input impedance and to reduce distortion due to the nonlinearity of the BJTs. The right figure shows the transfer characteristic of the differential amplifier (R<sub>EF</sub>=40V<sub>T</sub>/I<sub>EE</sub>).
+</p>
+
+<p>
+To improve linearity, we introduce emitter-degeneration resistors, which increase the linear range from a few <abbr title="volt">V</abbr><sub>T</sub> to about I<sub>Tail</sub>R.
+</p>
+
+<p>
+<strong>ADALM1000 Lab Activity 12, <a href="/university/courses/alm1k/alm-lab-12" class="wikilink1" title="university:courses:alm1k:alm-lab-12" data-wiki-id="university:courses:alm1k:alm-lab-12">BJT Differential Amplifier</a></strong><br/>
+
+<strong>ADALM1000 Lab Activity 12m, <a href="/university/courses/alm1k/alm-lab-12m" class="wikilink1" title="university:courses:alm1k:alm-lab-12m" data-wiki-id="university:courses:alm1k:alm-lab-12m">MOS Differential Amplifier</a></strong>
+</p>
+
+<p>
+<strong>ADALM2000 Lab Activity 12, <a href="/university/courses/electronics/electronics-lab-12" class="wikilink1" title="university:courses:electronics:electronics-lab-12" data-wiki-id="university:courses:electronics:electronics-lab-12">BJT Differential Amplifier</a></strong><br/>
+
+<strong>ADALM2000 Lab Activity 12m, <a href="/university/courses/electronics/electronics-lab-12m" class="wikilink1" title="university:courses:electronics:electronics-lab-12m" data-wiki-id="university:courses:electronics:electronics-lab-12m">MOS Differential Amplifier</a></strong>
+</p>
+
+</div>
+
+<h3 class="sectionedit11" id="the_current_mirror_as_a_load">The current mirror as a load</h3>
+<div class="level3">
+
+<p>
+The following figure shows a variation of the emitter-coupled pair in which the collector resistors are replaced by a current mirror. This circuit is particularly favored in integrated circuits, because matched  transistors are much easier to construct than precession matched high value resistors. A simple analysis by assuming large ß so that base currents of Q<sub>3</sub> and Q<sub>4</sub> are neglected, results in the equation as follows:
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=4b7aeacb5cbb2ed573982e7eae091a5c" class="mediacenter mathpublish" alt="i_o = partial I_EE tanh(v_id/(2V_T))" title="i_o = partial I_EE tanh(v_id/(2V_T))" width="211" height="83" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+For 
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=706a4edb3648738d8ae9e73fee1ec1c7" class="mediacenter mathpublish" alt="|i_o| &lt; V_T, i_o" title="|i_o| &lt; V_T, i_o" width="92" height="27" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+is approximately proportional to v<sub>id</sub>. Notice furthermore that the common-mode input component does not affect the output current.
+</p>
+
+</div>
+
+<h2 class="sectionedit12" id="summary">Summary</h2>
+<div class="level2">
+
+<p>
+This chapter has presented information on differential amplifiers. The information that follows summarizes the important points of this chapter. 
+</p>
+
+<p>
+A difference amplifier is any amplifier with an output signal dependent upon the difference between the input signals. A two-input, single-output difference amplifier can be made by combining the common-emitter and common-base configurations in a single transistor.
+</p>
+
+<p>
+A difference amplifier can have input signals that are in phase with each other, 180º out of phase with each other, or out of phase by something other than 180º with each other.
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/chapter-11" class="wikilink1" title="university:courses:electronics:text:chapter-11" data-wiki-id="university:courses:electronics:text:chapter-11">Previous Chapter</a></strong>
+</p>
+
+<p>
+<strong>Go to <a href="/university/courses/electronics/text/chapter-13" class="wikilink1" title="university:courses:electronics:text:chapter-13" data-wiki-id="university:courses:electronics:text:chapter-13">Next Chapter</a></strong>
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/electronics-toc" class="wikilink1" title="university:courses:electronics:text:electronics-toc" data-wiki-id="university:courses:electronics:text:electronics-toc">Table of Contents</a></strong>
+</p>
+
+</div>
+                        <!-- wikipage stop -->
+                    </div>
+
+                    <div class="docInfo"><bdi>university/courses/electronics/text/chapter-12.txt</bdi> · Last modified: <time datetime="2017-06-06T15:49:59+0000">06 Jun 2017 15:49</time> by <bdi><a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a></bdi></div>
+
+                                    </div>
+            </div>
+            <!-- /content -->
+
+            <hr class="a11y"/>
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="/university/courses/electronics/text/chapter-12?do=edit" title="View Source [v]" rel="nofollow" accesskey="v"><span>View Source</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="/university/courses/electronics/text/chapter-12?do=revisions" title="History [o]" rel="nofollow" accesskey="o"><span>History</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="/university/courses/electronics/text/chapter-12?do=backlink" title="Backlinks" rel="nofollow"><span>Backlinks</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="menuitemfolded"><a href="javascript:void(0);" title="Fold/unfold all" rel="nofollow" class="fold_unfold_all_new" onclick="fold_unfold_all();"><span>Fold/unfold all</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M 2,0 L 6.5,3 L 2,6 z M 8,6.6 L 12.5,9.6 L 8,12.6 z M 14,13.2 L 20,13.2 L 17,17.7 z"/></svg></a></li><li class="top"><a href="#dokuwiki__top" title="[ Back to top ] [t]" rel="nofollow" accesskey="t"><span>[ Back to top ]</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /wrapper -->
+
+    </div>
+    <!-- /container -->
+</div>
+<!-- /site -->
+
+﻿<a class="backtotop" href="#header">&nbsp;</a>
+<footer class="footer" id="footer">
+    <adi-footer short></adi-footer>
+
+    
+    <script type="text/javascript">
+        var analytics = '//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js';
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script type="text/javascript">
+        var ADIAssetsPath = "//assets2.analog.com";
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script>
+        /* Copyright 2011-2015 iPerceptions, Inc. All rights reserved. Do not distribute. iPerceptions provides this code 'as is' without warranty of any kind, either express or implied. */
+        window.iperceptionskey = 'acafac0d-3b8a-4d30-8a98-6cbcd5256d93';
+        (function() { var a = document.createElement('script'),
+            b = document.getElementsByTagName('body')[0];
+            a.type = 'text/javascript';
+            a.defer = true;
+            a.src = '//universal.iperceptions.com/wrapper.js';
+            b.appendChild(a); })();
+    </script>
+</footer>
+<script type="text/javascript">
+            if(typeof(_satellite) != 'undefined') {
+            _satellite.pageBottom();
+            }
+        </script>
+<div class="a11y"
+     style="float: left"><img src="/lib/exe/taskrunner.php?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-12&amp;1776083320" width="2" height="1" alt="" /></div>
+</body>
+</html>

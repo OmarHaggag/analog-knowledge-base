@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"
+      dir="ltr"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Chapter 14:  Voltage References [Analog Devices Wiki]</title>
+
+    <script>(function (H) {
+            H.className = H.className.replace(/\bno-js\b/, 'js')
+        })(document.documentElement)</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500,500i,600,600i,700,700i|Barlow:300,300i,400,400i,500,500i,600,600i&display=swap" rel="stylesheet">
+
+    <link href="https://assets2.analog.com/apps-assets/wiki/index.css" rel="stylesheet" />
+    <script src="https://assets2.analog.com/apps-assets/wiki/index.mjs"></script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="university,courses,electronics,text,chapter-14"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Analog Devices Wiki"/>
+<link rel="start" href="/"/>
+<link rel="contents" href="/university/courses/electronics/text/chapter-14?do=index" title="Sitemap"/>
+<link rel="manifest" href="/lib/exe/manifest.php" crossorigin="use-credentials"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns=university:courses:electronics:text"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/university/courses/electronics/text/chapter-14"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/university/courses/electronics/text/chapter-14"/>
+<link rel="canonical" href="https://wiki.analog.com/university/courses/electronics/text/chapter-14"/>
+<link rel="stylesheet" href="/lib/exe/css.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb"/>
+<script nonce="218c0ffabe5f2c5eca3be8256bc1551e">var NS='university:courses:electronics:text';var JSINFO = {"plugin_enforcesummary":{"enforce_summary":1,"default_minoredit":0,"enforce_preview":0},"plugin_folded":{"hide":"hide","reveal":"reveal"},"plugins":{"interwikipaste":{"patterns":"[{\"shortcut\":\"footprints\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/design\\\\-center\\\\\\\/packaging\\\\-quality\\\\-symbols\\\\-footprints\\\\\\\/symbols\\\\-and\\\\-footprints\\\\\\\/([^ ]+)?\\\\.html\",\"encode\":false},{\"shortcut\":\"staging.kernel.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/gregkh\\\\\\\/staging\\\\.git;a\\\\=blob;hb\\\\=refs\\\\\\\/heads\\\\\\\/staging\\\\-next;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"avnetexpress\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/avnetexpress\\\\.avnet\\\\.com\\\\\\\/store\\\\\\\/em\\\\\\\/EMController\\\\?storeId\\\\=500201&N\\\\=0&action\\\\=products&term\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"downgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/analogdevicesinc\\\\.github\\\\.io\\\\\\\/DownGit\\\\\\\/\\\\#\\\\\\\/home\\\\?url\\\\=https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"cart\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/shoppingcart\\\\.analog\\\\.com\\\\\\\/AddModel\\\\.aspx\\\\?locale\\\\=en&ACTION\\\\=BUY_BUNDLES&modelNbr\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digikey\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digikey\\\\.com\\\\\\\/scripts\\\\\\\/DkSearch\\\\\\\/dksus\\\\.dll\\\\?KeywordSearch\\\\?Site\\\\=US&amp;Keywords\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"git.linux.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/torvalds\\\\\\\/linux\\\\.git;a\\\\=blob;hb\\\\=HEAD;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"export\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/exportclassification\\\\\\\/Search\\\\\\\/Result\\\\?strSearch\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ibis\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/media\\\\\\\/en\\\\\\\/simulation\\\\-models\\\\\\\/ibis\\\\-models\\\\\\\/([^ ]+)?\\\\.ibs\",\"encode\":false},{\"shortcut\":\"bfsvn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/project\\\\\\\/([^ ]+)?\\\\\\\/scmsvn\\\\\\\/trunk\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?;hb\\\\=HEAD\",\"encode\":false},{\"shortcut\":\"paypal\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.paypal\\\\.com\\\\\\\/cgi\\\\-bin\\\\\\\/webscr\\\\?cmd\\\\=_xclick&amp;business\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"arrow\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.arrow\\\\.com\\\\\\\/en\\\\\\\/products\\\\\\\/search\\\\?cat\\\\=&q\\\\=([^ ]+)?&r\\\\=true\",\"encode\":false},{\"shortcut\":\"linux.github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/linux\\\\\\\/blob\\\\\\\/([^ ]+)?\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit_rev\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digilent\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digilentinc\\\\.com\\\\\\\/Products\\\\\\\/Detail\\\\.cfm\\\\?Prod\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"reg\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/my\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/app\\\\\\\/registration\\\\\\\/hardware\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\\\\\\\/blob\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"go\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?&amp;btnI\\\\=lucky\",\"encode\":true},{\"shortcut\":\"docs\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/docs\\\\.blackfin\\\\.uclinux\\\\.org\\\\\\\/doku\\\\.php\\\\?id\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.com\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-20\",\"encode\":true},{\"shortcut\":\"amazon.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.de\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-21\",\"encode\":true},{\"shortcut\":\"mouser\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/mouser\\\\.com\\\\\\\/Search\\\\\\\/Refine\\\\?Keyword\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tkt\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/tracker\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"repo\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpmeta\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/meta\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bf\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"maxim\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.maximintegrated\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/en\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpfr\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/fr\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpde\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/de\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpes\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/es\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wppl\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/pl\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpjp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ja\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpru\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ru\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfin\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon.uk\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.co\\\\.uk\\\\\\\/dp\\\\\\\/([^ ]+)?\",\"encode\":true},{\"shortcut\":\"google\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"oreilly\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.oreilly\\\\.com\\\\\\\/catalog\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"mw\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.mathworks\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"rfc\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/tools\\\\.ietf\\\\.org\\\\\\\/html\\\\\\\/rfc([^ ]+)?\",\"encode\":false},{\"shortcut\":\"google.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.de\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"user\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/members\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"this\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/wiki\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"phpfn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/secure\\\\.php\\\\.net\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"adi\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"xilinx\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.xilinx\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ez\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"doku\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.dokuwiki\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"callto\",\"pattern\":\"callto\\\\:\\\\\\\/\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"man\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/man\\\\.cx\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"skype\",\"pattern\":\"skype\\\\:([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tel\",\"pattern\":\"tel\\\\:([^ ]+)?\",\"encode\":false}]"},"vshare":{"youtube":"youtube\\.com\/.*[&?]v=([a-z0-9_\\-]+)","vimeo":"vimeo\\.com\\\/(\\d+)","slideshare":"slideshare.*id=(\\d+)","dailymotion":"dailymotion\\.com\/video\/([a-z0-9]+)","archiveorg":"archive\\.org\/(?:embed|details)\/([a-zA-Z0-9_\\-]+)","soundcloud":"soundcloud\\.com\/([\\w-]+\/[\\w-]+)","niconico":"nicovideo\\.jp\/watch\/(sm[0-9]+)","bitchute":"bitchute\\.com\\\/video\\\/([a-zA-Z0-9_\\-]+)","coub":"coub\\.com\\\/view\\\/([a-zA-Z0-9_\\-]+)","odysee":"odysee\\.com\/\\$\/(?:embed|download)\/([-%_?=\/a-zA-Z0-9]+)","youku":"v\\.youku\\.com\/v_show\/id_([0-9A-Za-z=]+)\\.html","bilibili":"bilibili\\.com\\\/video\\\/(BV[0-9A-Za-z]+)","msoffice":"(?:office\\.com.*[&?]videoid=([a-z0-9\\-]+))","msstream":"microsoftstream\\.com\\\/video\\\/([a-f0-9\\-]{36})","rutube":"rutube\\.ru\\\/video\\\/([a-z0-9]+)\\\/","gdrive":"drive\\.google\\.com\\\/file\\\/d\\\/([a-zA-Z0-9_-]+)\/"}},"id":"university:courses:electronics:text:chapter-14","namespace":"university:courses:electronics:text","ACT":"show","useHeadingNavigation":1,"useHeadingContent":0};(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script src="/lib/exe/jquery.php?tseed=8faf3dc90234d51a499f4f428a0eae43" defer="defer"></script>
+<script src="/lib/exe/js.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb" defer="defer"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/lib/tpl/analog2014/images/favicon.ico" />
+
+    <script src="https://assets2.analog.com/header-footer/index.js" type="text/javascript" defer="true"></script>
+
+    <!-- LIVE tracking -->
+<script src="//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js" async></script>
+<script src="/lib/tpl/analog2014/assets/js/adi/global.analytics.js" type="text/javascript"></script>
+</head>
+
+<!-- List of supported themes thm-education, thm-applications, thm-parametric, thm-product, thm-community, thm-design-center, thm-my-analog, thm-support -->
+<body class="home">
+
+
+<!-- wiki_header.html -->
+<header class="adi_header adi_header--wiki tools-header" id="dokuwiki__top" data-ot="true">
+
+    <div class="adi_topbar">
+        <div class="adi_container">
+            <section class="adi_row">
+                <!--  BEGIN:  Internal Links -->
+                <nav class="adi_column adi_pull-left">
+                    <a class="adi_topbar-link adi_topbar-link--analog-home" href="//www.analog.com">
+                        <strong>Analog.com</strong>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--engineer-zone" href="//ez.analog.com">
+                        <strong class="adi_link--hover-accent">Engineer</strong>
+                        <span>Zone</span>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--analog-dialogue" href="//www.analog.com/en/resources/analog-dialogue.html">
+                        <strong class="adi_link--hover-accent">Analog</strong>
+                        <span>Dialogue</span>
+                    </a>
+                </nav> <!-- /.adi_column.adi_pull-left -->
+                <!--  END:  Internal Links  -->
+                <!--  BEGIN:  Language Options  -->
+                <nav class="adi_column adi_pull-right">
+                    <a class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-logo" href="//my.analog.com/">
+                        <span><img src="https://assets2.analog.com/cms-assets/images/images/images/myanalog_logo.png" alt="My Analog Login"></span>&nbsp;
+                    </a>
+
+                    <a href="/university/courses/electronics/text/chapter-14?do=login&amp;sectok="  class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-login action login" rel="nofollow" title="Log In"><strong>Log In</strong></a>                </nav> <!-- /.adi_column.adi_pull-right -->
+                <!--  END:  Language Options  -->
+            </section> <!-- /.adi_row -->
+        </div> <!-- /.adi_container -->
+    </div>
+
+
+
+    <div class="adi_container">
+        <section class="adi_row">
+            <!--  BEGIN:  Logo  -->
+            <div class="adi_column adi_logo-container">
+                <a class="adi_logo" href="/start">
+                    <img src="/lib/tpl/analog2014//assets/images/adi-logo.svg" alt="Analog Devices Wiki" />
+                </a>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+            <div class="adi_column adi_page-title-container">
+                <h1 class="adi_page-title">Wiki</h1>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+        </section> <!-- /.adi_row -->
+    </div> <!-- /.adi_container -->
+
+    <div class="navigation-bar">
+        <div class="content-wrap clearfix">
+            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"><a href="#">Wiki Tools</a></div><ul class="submenu"><li class="level2"><a href="/university/courses/electronics/text/chapter-14?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-14?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-14?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>
+            <ul class="list-inline pull-right searchmenu clearfix">
+                <li class="search-box">
+                    <form action="" accept-charset="utf-8" class="search clearfix" id="dw__search" method="get" role="search">
+                        <div class="no">
+                            <input type="hidden" name="do" value="search">
+                            <input type="text" autocomplete="off" id="qsearch__in" accesskey="f" name="id" class="edit" placeholder="search wiki">
+                            <button type="submit" value="Search" class="button search-icon" title="Search"></button>
+
+                            <div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none; white-space: nowrap;">
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</header> <!-- /.adi_header -->
+
+
+
+
+
+<!-- Mobile view navigation drawer-->
+<div class="wiki-mob-body">
+    <div class="content" role="main">
+        <div class="col-md-12 wiki-head-row">
+            <div class="row ">
+                <div class="title-nophoto">
+                    <div class="container page-title ">
+                        <h1 data-page-title="true">Analog Devices Wiki</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 floater-menu-container">
+                <div class="row product-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 wiki-right-panel">
+                                <div class="row">
+                                    <div class=" product-bookmarks" id="affix-nav" name="adi_products_left_navigation">
+                                        <ul class="nav" id="affix-ul">
+                                            <li class="">
+
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#"
+                                                   name='SDR-home_2e322e80-5ec4-4b20-b8b8-71702b590a25'>Analog Devices
+                                                    Wiki
+                                                </a>
+
+                                            </li>
+                                            <!--Wiki-->
+                                            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"><a href="#">Wiki Tools</a></div><ul class="submenu Res_tools_child"><li class="level2"><a href="/university/courses/electronics/text/chapter-14?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-14?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-14?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>                                            <!--Wiki-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="special-content">
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#English">English<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="English" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/en/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_en.jpg" class="mobile-images"
+                                 width="100%" alt="English"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#简体中文">简体中文<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="简体中文" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/cn/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_cn.jpg" class="mobile-images"
+                                 width="100%" alt="简体中文"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#日本語">日本語<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="日本語" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/jp/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_jp.jpg" class="mobile-images"
+                                 width="100%" alt="日本語"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#Руccкий">Руccкий<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="Руccкий" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/ru/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_ru.jpg" class="mobile-images"
+                                 width="100%" alt="Руccкий"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile view navigation drawer-->
+
+<!-- /tpl_header.php -->
+
+
+
+<div id="dokuwiki__site" role="main" class="main-body content">
+    <div class="site dokuwiki mode_show tpl_analog2014   ">
+        <div class="container">
+
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content">
+                <div class="pad group">
+
+                    <div class="page group">
+                        
+                                                <!-- wikipage start -->
+                        <div class="approval approved_yes"><span class="approval_approved">This version (<span class="approval_date">06 Jun 2017 15:55</span>) was <em>approved</em> by <a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a>.</span><span class="approval_previous">The <a href="/university/courses/electronics/text/chapter-14?rev=1380480718">Previously approved version</a> (29 Sep 2013 18:51) is available.<a href="https://wiki.analog.com/university/courses/electronics/text/chapter-14?do=diff&rev2[0]=1380480718&rev2[1]=1496764521&difftype=sidebyside" class="approved_diff_link"><img src="/lib/images/diff.png" class="approved_diff_link" alt="Diff" /></a></span></div><!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#chapter_14voltage_references">Chapter 14:  Voltage References</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#introduction">14.1 Introduction</a></div></li>
+<li class="level2"><div class="li"><a href="#simple_diode_references">14.2 Simple Diode References</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#zener_diodes">14.2.1 Zener diodes</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#bandgap_references">14.3 Bandgap References</a></div></li>
+<li class="level2"><div class="li"><a href="#buried_sub-surface_zener_references">14.4 Buried (sub-surface) Zener References</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="chapter_14voltage_references">Chapter 14:  Voltage References</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2" id="introduction">14.1 Introduction</h2>
+<div class="level2">
+
+<p>
+Voltage references and linear voltage regulators have much in common. In fact, the latter could be 
+functionally described as a reference circuit, but at a greater current (or power) output level. Accordingly, 
+many of the specifications of the two circuit types have great commonality (even though the output voltage 
+tolerance of references is usually tighter with regard to temperature drift, accuracy, etc.).
+</p>
+
+<p>
+Voltage references have a major impact on the performance and accuracy of analog systems. A ±5 <abbr title="millivolt">mV</abbr> tolerance 
+on a 5 <abbr title="volt">V</abbr> reference corresponds to ±0.1% absolute accuracy which is only 1 part in a thousand or 10-bit 
+accuracy. For a system with 12-bit accuracy, choosing a reference that has a ±1 <abbr title="millivolt">mV</abbr> tolerance may be far 
+easier than manually calibrating a lower accuracy reference. Both high initial accuracy and calibration are 
+likely to be necessary in a system making absolute 16-bit measurements. Note that many systems make relative 
+or ratiometric measurements rather than absolute ones. In such cases the absolute accuracy of the reference 
+is not as important, although noise and short-term stability may be.
+</p>
+
+<p>
+Temperature drift or drift due to aging may be an even greater problem than absolute accuracy. The initial 
+error can always be adjusted or calibrated, but compensating for drift over temperature or time is difficult. 
+Where possible, references should be designed for low temperature drift and aging characteristics which 
+preserve adequate accuracy over the operating temperature range and expected lifetime of the system. Noise in 
+voltage references is often overlooked, but it can be very important in system design. Noise is an 
+instantaneous change in the reference voltage. It is generally specified on component data sheets, but system 
+designers frequently ignore the specification and mistakenly assume that their voltage reference does not 
+contribute noise in their system.
+</p>
+
+<p>
+There are two dynamic issues that must be considered with voltage references: their behavior at start-up, and 
+their behavior with transient loads. With regard to the first, always bear in mind that voltage references do 
+not power up instantly (this is true of references inside power supply regulators, ADCs and DACs as well as 
+discrete designs). Thus it is rarely possible to turn on an ADC and reference, whether internal or external, 
+make a reading, and turn off again within a relatively few microseconds, however attractive such a operation 
+might be in terms of energy saving.
+</p>
+
+<p>
+Regarding the second point, a given reference IC may or may not be well suited for pulse or fast transient 
+loading conditions, dependent upon the specific architecture. Many references use low power, and therefore 
+low bandwidth, output buffer amplifiers. This makes for poor behavior under fast transient loads, which may 
+degrade the performance of high speed ADCs (especially capacitor based successive approximation and pipe-line 
+ADCs). Suitable decoupling can ease the problem (but some references oscillate with large capacitive loads), 
+or an additional external broadband buffer amplifier may be used to drive the part of the circuit where the 
+transients occur.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="simple_diode_references">14.2 Simple Diode References</h2>
+<div class="level2">
+
+<p>
+In terms of the functionality of their circuit connection, standard reference ICs are often only available in 
+series, or three-terminal form (<abbr title="volt">V</abbr><sub>IN</sub>, Common, <abbr title="volt">V</abbr><sub>OUT</sub>), and also in positive polarity only. 
+The series types have the potential advantages of lower and more stable quiescent current, standard 
+pre-trimmed output voltages, and relatively high output current without accuracy loss. Shunt, or two-terminal 
+(<abbr title="in other words">i.e.</abbr> diode-like) references are more flexible regarding operating polarity, but they are also more 
+restrictive as to loading. They can in fact eat up excessive power with widely varying resistor-fed voltage 
+inputs. Also, they sometimes come in non-standard voltages. All of these various factors tend to govern when 
+one functional type is preferred over the other. By contrast, these most simple references (as well as all 
+other shunt-type regulators) have a basic advantage, which is the fact that the polarity is readily 
+reversible by flipping connections and reversing the drive current. However, a basic limitation of all shunt 
+regulators is that load current must always be less (usually significantly less) than the driving current.
+</p>
+
+<p>
+Some simple diode-based references are shown in Figure 14.1. In the first of these, a current driven forward 
+biased diode (or diode-connected transistor) produces a voltage, <abbr title="volt">V</abbr><sub>f</sub>= <abbr title="volt">V</abbr><sub>REF</sub>. While the 
+junction drop is somewhat decoupled from the raw supply, it has numerous deficiencies as a reference. Among 
+them are a strong temperature coefficient (TC) of about -0.3%/°C, some sensitivity to loading, and a rather 
+inflexible output voltage, it is generally only available in increments of 0.65V.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f1.png"><img src="/_media/university/courses/electronics/text/chptr14_f1.png?w=600&amp;tok=d78ebd" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ (a) Forward-biased Diode (b) Zener (Avalanche) Diode 
+</p>
+</div><div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.1: Simple two terminal Diode Reference Circuits 
+</p>
+</div>
+<p>
+The significant negative temperature coefficient of the forward biased emitter base junction of a diode 
+connected transistor is dependent on <abbr title="volt">V</abbr><sub>BE</sub>. To explore this let us first reexamine the 
+<abbr title="volt">V</abbr><sub>BE</sub> equation.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_e1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_e1.png"><img src="/_media/university/courses/electronics/text/chptr14_e1.png?w=150&amp;tok=cb5ba9" class="mediacenter" loading="lazy" alt="" width="150" /></a>
+</p>
+
+<p>
+At first glance one sees that absolute temperature, T, appears in the equation and the quantity 
+<abbr title="volt">V</abbr><sub>T</sub>, the thermal voltage (kT/q), has a positive temperature coefficient. This would make 
+<abbr title="volt">V</abbr><sub>BE</sub> have a positive temperature coefficient if I<sub>S,</sub> the junction saturation current, was 
+constant over temperature. I<sub>S</sub>in fact has a very strong temperature coefficient as seen in the 
+following equation for I<sub>S</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_e2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_e2.png"><img src="/_media/university/courses/electronics/text/chptr14_e2.png?w=220&amp;tok=b047d8" class="mediacenter" loading="lazy" alt="" width="220" /></a>
+</p>
+
+<p>
+Note: E<sub><abbr title="gravity">g</abbr></sub>is the energy gap of Silicon<br/>
+
+<abbr title="mega (prefix, as in Mbps, MHz)">M</abbr> represents the temperature dependence of mobility
+</p>
+
+<p>
+If we use this equation for I<sub>S</sub> and insert it in the <abbr title="volt">V</abbr><sub>BE</sub> equation and then differentiate 
+with respect to temperature we get the following relationship for a constant I<sub>C</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_e3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_e3.png"><img src="/_media/university/courses/electronics/text/chptr14_e3.png?w=230&amp;tok=c085e4" class="mediacenter" loading="lazy" alt="" width="230" /></a>
+</p>
+
+<p>
+Note:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_e4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_e4.png"><img src="/_media/university/courses/electronics/text/chptr14_e4.png?w=100&amp;tok=32425d" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+ and 
+<a href="/_detail/university/courses/electronics/text/chptr14_e5.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_e5.png"><img src="/_media/university/courses/electronics/text/chptr14_e5.png?w=100&amp;tok=f8c8c5" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+</p>
+
+<p>
+We can see this in the temperature simulation plot shown in figure 14.2 where the current through a diode 
+connected NPN transistor is set to 1mA, 2mA, 5mA and 10mA.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f2.png"><img src="/_media/university/courses/electronics/text/chptr14_f2.png?w=650&amp;tok=ebb0c7" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.2 <abbr title="volt">V</abbr><sub>BE</sub> vs. Temperature at 1mA, 2mA, 5mA and 10mA 
+</p>
+</div>
+<p>
+The slope of the 10 <abbr title="milliampere">mA</abbr> line is slightly less negative than the 1 <abbr title="milliampere">mA</abbr> line. In fact all the <abbr title="volt">V</abbr><sub>BE</sub> vs. 
+temperature lines would converge at absolute zero when projected back to the origin. The voltage they 
+converge to is approximately the energy gap of Silicon or 1.2 volts. This property is not very helpful by 
+itself but when combined with another property of BJTs can result in a low temperature coefficient reference 
+as we will discuss in section 14.3 on the Bandgap reference.
+</p>
+
+<p>
+The <abbr title="volt">V</abbr><sub>BE</sub> voltage of the simple diode connected transistor of figure 14.1(a) can be used to generate 
+a regulated current reference as well, as shown in figure 14.3. In this circuit the simple diode connection 
+around Q<sub>1</sub>is replaced by emitter follower Q<sub>2</sub>. The <abbr title="volt">V</abbr><sub>BE</sub> of Q<sub>1</sub> is 
+impressed across R<sub>2</sub> and the resulting current flows through Q<sub>2</sub> to become 
+I<sub>REF</sub>, neglecting the base currents of Q<sub>1</sub> and Q<sub>2</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f3.png"><img src="/_media/university/courses/electronics/text/chptr14_f3.png?w=600&amp;tok=f92bb7" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.3 <abbr title="volt">V</abbr><sub>BE</sub> generated reference current. 
+</p>
+</div>
+<p>
+The resulting reference current, I<sub>REF</sub>, will be equal to <abbr title="volt">V</abbr><sub>BE</sub> divided by R<sub>2</sub>
+and have the strong negative temperature coefficient as we saw in figure 14.2. This negative temperature 
+coefficient of the current is often referred to as CTAT or Complementary To Absolute Temperature. We can 
+compensate for this negative temperature drift by summing this current with another current with an equally 
+strong positive temperature coefficient. Remembering back to Chapter 11 Section 10 where we discussed the 
+Peaking Current source, we have a circuit block that has such a positive temperature drift. We referred to 
+this as a PTAT or Proportional To Absolute Temperature current. In figure 14.4 we combine the circuit from 
+figure 14.3 (Q<sub>1</sub>, Q<sub>2</sub>, R<sub>1</sub>and R<sub>2</sub>) on the right with the peaking 
+current source from figure 11.18 in Chapter 11 (Q<sub>3</sub>, Q<sub>4</sub>, R<sub>3</sub>and R<sub>4</sub>).
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f4.png"><img src="/_media/university/courses/electronics/text/chptr14_f4.png?w=600&amp;tok=d4a26a" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.4 Combining CTAT and PTAT currents to make a constant I<sub>REF</sub> 
+</p>
+</div>
+<p>
+If we set the PTAT and CTAT currents to be roughly equal (70uA) at some nominal temperature then the sum of 
+the two currents (140uA) will be approximately flat vs. temperature as we see in the simulation plot in 
+figure 14.5. 
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f5.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f5.png"><img src="/_media/university/courses/electronics/text/chptr14_f5.png?w=650&amp;tok=b4b369" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.5 Combined CTAT and PTAT current sources makes a constant 
+</p>
+</div>
+<p>
+It is also important to point out here that if the temperature independent I<sub>REF</sub> current were 
+applied to a low temperature coefficient resistor a more or less temperature independent voltage reference 
+would be the result. The need for a zero TCR resistor is not strictly required if all the resistors used in 
+the circuit are at the same temperature and have identical TCR.
+</p>
+
+</div>
+
+<h3 class="sectionedit16" id="zener_diodes">14.2.1 Zener diodes</h3>
+<div class="level3">
+
+<p>
+In the second circuit of figure 14.1(b), a zener or avalanche diode is used, and an appreciably higher output 
+voltage results. While true zener breakdown occurs below 5 <abbr title="volt">V</abbr>, avalanche breakdown occurs at higher voltages 
+and has a positive temperature coefficient. Note that diode reverse breakdown is referred to almost 
+universally today as zener, even though it is usually avalanche breakdown. With a D<sub>1</sub> breakdown 
+voltage in the 5 to 8 <abbr title="volt">V</abbr> range, the net positive TC is approximately such that it equals the negative TC of 
+forward-biased diode D<sub>2</sub>, yielding a small net TC of 100 ppm/°C or less when operated at the proper 
+bias current. Combinations of such carefully chosen diodes formed the basis of the early single package 
+“temperature-compensated zener” references, such as the 1N821-1N829 series. 
+</p>
+
+<p>
+The temperature-compensated zener reference is limited in terms of initial accuracy, since the best TC 
+combinations fall at odd voltages, such as the 1N829&#039;s 6.2 <abbr title="volt">V</abbr>. And, the scheme is also limited for loading, 
+since for best TC the diode current must be carefully controlled. Unlike a fundamentally lower voltage (&lt;2 <abbr title="volt">V</abbr>) 
+reference, zener diode based references must of necessity be driven from voltage sources appreciably higher 
+than 6 <abbr title="volt">V</abbr> levels, so this precludes operation of zener references from 5 <abbr title="volt">V</abbr> or lower system supplies. 
+</p>
+
+<p>
+References based on low TC zener (avalanche) diodes also tend to be noisy, due to the basic noise of the 
+breakdown mechanism. This has been improved greatly with monolithic zener types, as is described further in 
+section 14.4.
+</p>
+
+</div>
+
+<h2 class="sectionedit17" id="bandgap_references">14.3 Bandgap References</h2>
+<div class="level2">
+
+<p>
+The development of voltage references with low output voltages (&lt;5 <abbr title="volt">V</abbr>) based on the bandgap voltage of silicon 
+has led to the introduction of various integrated circuits with low temperature drift. The bandgap reference 
+technique is attractive in IC designs because of several reasons; among these are the relative simplicity, 
+and the avoidance of zeners and their noise. However, very important in these days of ever decreasing system 
+supplies is the fundamental fact that bandgap devices operate at low voltages down to 1.2V or less. Not only 
+are they used for stand-alone IC references, but they are also used within the designs of many other linear 
+ICs such as ADCs and DACs. 
+</p>
+
+<p>
+To understand the underlying concept of the Bandgap reference we first need to explore an important 
+relationship involving bipolar transistors. Imagine that we have two identical transistors as shown in figure 14.6.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f6.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f6.png"><img src="/_media/university/courses/electronics/text/chptr14_f6.png?w=600&amp;tok=1063b5" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.6 A powerful relationship in circuit design 
+</p>
+</div>
+<p>
+Let&#039;s assume that each of these devices is provided with voltages at the base and that the collector voltage 
+(<abbr title="volt">V</abbr>+) is positive enough to avoid saturation, which is generally greater than <abbr title="volt">V</abbr><sub>BE</sub>. In this 
+experiment we will need to measure the two collector currents and the difference in base voltage. Since we 
+can monitor the collector currents, it should be easy to constrain the range of the currents to a value where 
+the collector current and base voltage are related by the now familiar relationship:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_e6.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_e6.png"><img src="/_media/university/courses/electronics/text/chptr14_e6.png?w=200&amp;tok=d0b5c2" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+Where, I<sub>C</sub> is the collector current, <abbr title="volt">V</abbr><sub>BE</sub> is the base-emitter voltage, I<sub>S</sub> is 
+the saturation current for the transistor with a particular geometry and doping, and q/kT is the reciprocal 
+of the thermal voltage. A fairly standard transistor operating at around 100uA may have a <abbr title="volt">V</abbr><sub>BE</sub>of 
+around 650mV at room temperature where q/kT is about 0.039/<abbr title="volt">V</abbr>. The exponential factor in the equation will be 
+on the order of 10<sup>11</sup>. In this case we can safely drop the -1 term without serious error. Using 
+this approximation we can now investigate the effect of operating the matched transistors at different 
+currents. If we establish the two collector currents I<sub>C1</sub> and I<sub>C2</sub> by adjusting 
+<abbr title="volt">V</abbr><sub>BE1</sub> and <abbr title="volt">V</abbr><sub>BE2</sub>, then we can take the ratio of the two currents and remembering that 
+I<sub>S1</sub> is equal to I<sub>S2</sub>, as follows by rearranging the equation:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_e7.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_e7.png"><img src="/_media/university/courses/electronics/text/chptr14_e7.png?w=200&amp;tok=ab060a" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+From this equation we get the expected result that <abbr title="volt">V</abbr><sub>BE1</sub>-<abbr title="volt">V</abbr><sub>BE2</sub>=0 when the ratio of 
+I<sub>C1</sub> to I<sub>C2</sub> is equal to 1. We can get the equation for the difference in <abbr title="volt">V</abbr><sub>BE</sub>
+(ΔV<sub>BE</sub>) by taking the natural logarithm:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_e8.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_e8.png"><img src="/_media/university/courses/electronics/text/chptr14_e8.png?w=350&amp;tok=76b76f" class="mediacenter" loading="lazy" alt="" width="350" /></a>
+</p>
+
+<p>
+From these equations we can see that the I<sub>S</sub> terms are gone so the strong negative temperature 
+effect is now gone as well. So the ΔV<sub>BE</sub> now has a positive temperature coefficient and is in fact 
+proportional to absolute temperature (PTAT).
+</p>
+
+<p>
+We can now proceed to the next step in developing a voltage reference. We now extend this concept for 
+transistors with equal base voltages but different emitter areas as shown in figure 14.7. The <abbr title="volt">V</abbr><sub>BE</sub>
+of Q<sub>1</sub>equals the <abbr title="volt">V</abbr><sub>BE</sub> of Q<sub>2</sub>, which results in a controlled current ratio 
+between I<sub>C1</sub> and I<sub>C2</sub> of 1:8 based on their relative emitter areas.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f7.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f7.png"><img src="/_media/university/courses/electronics/text/chptr14_f7.png?w=600&amp;tok=173571" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.7 Different emitter areas results in controlled current ratio 
+</p>
+</div>
+<p>
+We can now reduce the current in Q<sub>2</sub>back to be equal to that of Q<sub>1</sub> by inserting a 
+resistor between the emitter of Q<sub>2</sub> and ground as in figure 14.8. I<sub>C2</sub> x R<sub>1</sub>
+reduces the <abbr title="volt">V</abbr><sub>BE</sub> of Q<sub>2</sub> changing the I<sub>C1</sub> / I<sub>C2</sub> ratio. The voltage 
+drop across the resistor, R<sub>1</sub> represents the ΔV<sub>BE</sub> at that particular current level. For 
+a given value for R<sub>1</sub>, there will be one and only one value of <abbr title="volt">V</abbr><sub>BE</sub>where the two 
+collector currents are equal (other than I<sub>C1</sub>=I<sub>C2</sub>=0). This is shown in the simulation 
+plot in figure 14.9 where for an emitter area ratio of 8 and a resistor value of 200 ohms.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f8.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f8.png"><img src="/_media/university/courses/electronics/text/chptr14_f8.png?w=600&amp;tok=a117aa" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.8 Inserting emitter resistor R<sub>1</sub> 
+</p>
+</div>
+<p>
+At low currents where the voltage drop across R<sub>1</sub> is relatively small, I<sub>C2</sub> increases 
+more or less exponentially at 8 times I<sub>C1</sub>. As the voltage drop across R<sub>1</sub> increases, the 
+current I<sub>C2</sub> becomes less and less exponential and eventually the still exponential I<sub>C1</sub>
+catches up and passes I<sub>C2</sub>. 
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f9.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f9.png"><img src="/_media/university/courses/electronics/text/chptr14_f9.png?w=650&amp;tok=0b3dc1" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.9 Plot of collector current vs. <abbr title="volt">V</abbr><sub>BE</sub> 
+</p>
+</div>
+<p>
+If we can configure a circuit, usually through negative feedback, that adjusts <abbr title="volt">V</abbr><sub>BE</sub> in figure 14.8 
+such that I<sub>C1</sub>=I<sub>C2</sub> we can obtain a controlled value for ?<abbr title="volt">V</abbr><sub>BE</sub>. 
+</p>
+
+<p>
+The basic principle of the Bandgap reference is examined here using the circuit originally proposed by Robert 
+Widlar in 1971 and is shown in figure 14.10. The fundamental idea Widlar used was to compensate the negative 
+TC of the base emitter voltage <abbr title="volt">V</abbr><sub>BE</sub> by summing it with a second voltage <abbr title="volt">V</abbr>(R<sub>2</sub>) which has 
+a positive TC.
+</p>
+
+<p>
+All Bandgap references use two basic elements:<br/>
+
+1. Two BJT&#039;s working at different current densities<br/>
+
+2. Adding a <abbr title="volt">V</abbr><sub>BE</sub> (-TC) and a PTAT voltage drop (+TC)
+</p>
+
+<p>
+The problem is that in order to compensate the large negative TC of <abbr title="volt">V</abbr><sub>BE</sub> a rather large 
+ΔV<sub>BE</sub> on the order of 600mV would be required. This cannot be done with the simple circuit of 
+figure 14.8.
+</p>
+
+<p>
+The first of these reference circuits was the LM109, and a basic bandgap cell is shown in Figure 14.10.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f10.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f10.png"><img src="/_media/university/courses/electronics/text/chptr14_f10.png?w=600&amp;tok=7e58ca" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.10: Basic Bandgap Reference 
+</p>
+</div>
+<p>
+This circuit is also called a “ΔV<sub>BE</sub>” reference. The differing current densities between matched 
+transistors Q<sub>1</sub>-Q<sub>2</sub> produce a ΔV<sub>BE</sub> across R<sub>3</sub>. Because resistors 
+R<sub>1</sub> and R<sub>2</sub> are in the ratio of 1:10 the current in Q<sub>2</sub> will be 1/10 that in 
+Q<sub>1</sub> resulting in a smaller <abbr title="volt">V</abbr><sub>BE</sub> for Q<sub>2</sub>. The output, <abbr title="volt">V</abbr><sub>Ref</sub>, is 
+produced by summing the <abbr title="volt">V</abbr><sub>BE</sub> of Q<sub>3</sub> with the amplified ΔV<sub>BE</sub> of 
+Q<sub>1</sub>-Q<sub>2</sub>, developed across R<sub>2</sub>. The ΔV<sub>BE</sub> and <abbr title="volt">V</abbr><sub>BE</sub>
+components have opposite polarity TCs; ΔV<sub>BE</sub> is proportional-to-absolute-temperature (PTAT), while 
+<abbr title="volt">V</abbr><sub>BE</sub> is complementary-to-absolute-temperature (CTAT). When the summed output, <abbr title="volt">V</abbr><sub>Ref,</sub> is 
+equal to 1.205 <abbr title="volt">V</abbr> (silicon bandgap voltage), the TC is a minimum. I<sub>IN</sub> must be larger than the sum 
+of I<sub>C1</sub> and I<sub>C2</sub> and the excess current will flow in Q<sub>3</sub> as I<sub>C3</sub>.
+</p>
+
+<p>
+However, the basic designs of figure 14.10 suffer from load and current drive sensitivity, plus the fact that 
+the output needs accurate scaling to more useful levels, <abbr title="in other words">i.e.</abbr>, 2.5 <abbr title="volt">V</abbr>, 5 <abbr title="volt">V</abbr>, etc. The load drive issue is best 
+addressed with the use of a buffer amplifier, which can also provide convenient voltage scaling to standard 
+levels.
+</p>
+
+<p>
+An improved three-terminal bandgap reference, (the AD580 introduced in 1974) is shown in figure 14.11. 
+Popularly called the “Brokaw Cell”, this circuit provides on-chip output buffering, which allows good drive 
+capability and standard output voltage scaling.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f11.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f11.png"><img src="/_media/university/courses/electronics/text/chptr14_f11.png?w=600&amp;tok=4deacd" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.11: Brokaw Cell Precision Bandgap Reference (AD580 1974) 
+</p>
+</div>
+<p>
+The Brokaw Cell based AD580 was the first precision bandgap based IC reference, and variants of the topology 
+have influenced further generations of industry standard references.
+</p>
+
+<p>
+The popular design choice is two 8:1 emitter-scaled transistors Q<sub>1</sub>-Q<sub>2</sub> operating at 
+identical collector currents (and thus 1/8 current densities), by virtue of matched load resistors 
+R<sub>3</sub>,R<sub>4</sub> and a closed loop feedback around the buffer op amp. Due to the resultant smaller 
+<abbr title="volt">V</abbr><sub>BE</sub> of the 8× area Q<sub>1</sub>, R<sub>2</sub> in series with Q<sub>1</sub> drops the 
+ΔV<sub>BE</sub> voltage, while R<sub>1</sub> (due to the current relationships) has a multiplied PTAT voltage 
+<abbr title="volt">V</abbr><sub>R1</sub>:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_e9.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_e9.png"><img src="/_media/university/courses/electronics/text/chptr14_e9.png?w=150&amp;tok=f3a1b3" class="mediacenter" loading="lazy" alt="" width="150" /></a>
+<a href="/_detail/university/courses/electronics/text/chptr14_e10.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_e10.png"><img src="/_media/university/courses/electronics/text/chptr14_e10.png?w=150&amp;tok=180a45" class="mediacenter" loading="lazy" alt="" width="150" /></a>
+</p>
+
+<p>
+The bandgap cell reference voltage <abbr title="volt">V</abbr><sub>BG</sub> appears at the combined base of Q<sub>1</sub> and 
+Q<sub>2</sub>, and is the sum of <abbr title="volt">V</abbr><sub>BE</sub> (Q<sub>2</sub>) and <abbr title="volt">V</abbr><sub>R1</sub>, or 1.205 <abbr title="volt">V</abbr>, the bandgap 
+voltage:
+</p>
+
+<p>
+However, because of the presence of the R<sub>5</sub>/R<sub>6</sub> resistor divider and the op amp, the 
+actual voltage appearing at <abbr title="volt">V</abbr><sub>OUT</sub> can be scaled higher, in this case 2.5 <abbr title="volt">V</abbr>. Following this general 
+principle, <abbr title="volt">V</abbr><sub>OUT</sub> can be raised to almost any other practical level, such as for example with 
+selectable taps for precise 2.5, 5, 7.5, and 10 <abbr title="volt">V</abbr> output values. The buffer amplifier can often provide up to 
+10 <abbr title="milliampere">mA</abbr> output current while operating from supplies between 4.5 and 30 <abbr title="volt">V</abbr>. These kinds of references can have 
+output tolerances as low as 0.4%, with TCs as low as 10 ppm/°C.
+</p>
+
+<p>
+<strong>ADALM1000 Lab Activity 9, <a href="/university/courses/alm1k/alm-lab-9" class="wikilink1" title="university:courses:alm1k:alm-lab-9" data-wiki-id="university:courses:alm1k:alm-lab-9">Bandgap reference</a></strong><br/>
+
+<strong>ADALM1000 Lab Activity 10, <a href="/university/courses/alm1k/alm-lab-10" class="wikilink1" title="university:courses:alm1k:alm-lab-10" data-wiki-id="university:courses:alm1k:alm-lab-10">Shunt Bandgap reference</a></strong>
+</p>
+
+<p>
+<strong>ADALM2000 Lab Activity 9, <a href="/university/courses/electronics/electronics-lab-9" class="wikilink1" title="university:courses:electronics:electronics-lab-9" data-wiki-id="university:courses:electronics:electronics-lab-9">Bandgap reference</a></strong><br/>
+
+<strong>ADALM2000 Lab Activity 10, <a href="/university/courses/electronics/electronics-lab-10" class="wikilink1" title="university:courses:electronics:electronics-lab-10" data-wiki-id="university:courses:electronics:electronics-lab-10">Shunt Bandgap reference</a></strong>
+</p>
+
+</div>
+
+<h2 class="sectionedit30" id="buried_sub-surface_zener_references">14.4 Buried (sub-surface) Zener References</h2>
+<div class="level2">
+
+<p>
+In terms of the design approaches used within the reference core, the two most popular basic types of IC 
+references consist of the bandgap and buried zener approaches. Bandgaps have been discussed, but zener based 
+references warrant some further discussion.  
+</p>
+
+<p>
+In an IC chip, surface operated diode junction breakdown is prone to crystal imperfections and other 
+contamination, thus zener diodes formed at the surface are more noisy and less stable than are buried (or 
+sub-surface) ones (see figure 14.17). Analog Devices&#039; zener-based IC references employ the much preferred 
+buried zener. This improves substantially upon the noise and drift of surface-mode operated zeners (see 
+Reference 4).  
+</p>
+
+<p>
+Buried zener references offer very low temperature drift, down to the 1-2 ppm/°C (AD588 and AD586), and the 
+lowest noise as a percent of full-scale, <abbr title="in other words">i.e.</abbr>, 100 <abbr title="nanovolt">nV</abbr>/√Hz or less. On the downside, the operating 
+current of zener type references is usually relatively high, typically on the order of several <abbr title="milliampere">mA</abbr>. The zener 
+voltage is also relatively high, typically on the order of 5V. This limit it&#039;s application in low voltage 
+circuits. A block diagram of the AD586 is shown in Figure 15.8. 
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f12.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f12.png"><img src="/_media/university/courses/electronics/text/chptr14_f12.png?w=500&amp;tok=abb1b5" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.17: Simple Surface Zener vs. a Buried Zener 
+</p>
+</div>
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr14_f13.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14" class="media" title="university:courses:electronics:text:chptr14_f13.png"><img src="/_media/university/courses/electronics/text/chptr14_f13.png?w=500&amp;tok=36cf5f" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 14.18: Typical Buried Zener Reference (AD586) 
+</p>
+</div>
+<p>
+An important general point arises when comparing noise performance of different references. The best way to 
+do this is to compare the ratio of the noise (within a given bandwidth) to the dc output voltage. For 
+example, a 10 <abbr title="volt">V</abbr> reference with a 100 <abbr title="nanovolt">nV</abbr>/ sqrt Hz noise density is 6 <abbr title="decibel">dB</abbr> more quiet in relative terms than is a 
+5 <abbr title="volt">V</abbr> reference with the same noise level. 
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/chapter-13" class="wikilink1" title="university:courses:electronics:text:chapter-13" data-wiki-id="university:courses:electronics:text:chapter-13">Previous Chapter</a></strong>
+</p>
+
+<p>
+<strong>Go to <a href="/university/courses/electronics/text/chapter-15" class="wikilink1" title="university:courses:electronics:text:chapter-15" data-wiki-id="university:courses:electronics:text:chapter-15">Next Chapter</a></strong>
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/electronics-toc" class="wikilink1" title="university:courses:electronics:text:electronics-toc" data-wiki-id="university:courses:electronics:text:electronics-toc">Table of Contents</a></strong>
+</p>
+
+</div>
+                        <!-- wikipage stop -->
+                    </div>
+
+                    <div class="docInfo"><bdi>university/courses/electronics/text/chapter-14.txt</bdi> · Last modified: <time datetime="2017-06-06T15:55:21+0000">06 Jun 2017 15:55</time> by <bdi><a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a></bdi></div>
+
+                                    </div>
+            </div>
+            <!-- /content -->
+
+            <hr class="a11y"/>
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="/university/courses/electronics/text/chapter-14?do=edit" title="View Source [v]" rel="nofollow" accesskey="v"><span>View Source</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="/university/courses/electronics/text/chapter-14?do=revisions" title="History [o]" rel="nofollow" accesskey="o"><span>History</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="/university/courses/electronics/text/chapter-14?do=backlink" title="Backlinks" rel="nofollow"><span>Backlinks</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="menuitemfolded"><a href="javascript:void(0);" title="Fold/unfold all" rel="nofollow" class="fold_unfold_all_new" onclick="fold_unfold_all();"><span>Fold/unfold all</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M 2,0 L 6.5,3 L 2,6 z M 8,6.6 L 12.5,9.6 L 8,12.6 z M 14,13.2 L 20,13.2 L 17,17.7 z"/></svg></a></li><li class="top"><a href="#dokuwiki__top" title="[ Back to top ] [t]" rel="nofollow" accesskey="t"><span>[ Back to top ]</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /wrapper -->
+
+    </div>
+    <!-- /container -->
+</div>
+<!-- /site -->
+
+﻿<a class="backtotop" href="#header">&nbsp;</a>
+<footer class="footer" id="footer">
+    <adi-footer short></adi-footer>
+
+    
+    <script type="text/javascript">
+        var analytics = '//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js';
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script type="text/javascript">
+        var ADIAssetsPath = "//assets2.analog.com";
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script>
+        /* Copyright 2011-2015 iPerceptions, Inc. All rights reserved. Do not distribute. iPerceptions provides this code 'as is' without warranty of any kind, either express or implied. */
+        window.iperceptionskey = 'acafac0d-3b8a-4d30-8a98-6cbcd5256d93';
+        (function() { var a = document.createElement('script'),
+            b = document.getElementsByTagName('body')[0];
+            a.type = 'text/javascript';
+            a.defer = true;
+            a.src = '//universal.iperceptions.com/wrapper.js';
+            b.appendChild(a); })();
+    </script>
+</footer>
+<script type="text/javascript">
+            if(typeof(_satellite) != 'undefined') {
+            _satellite.pageBottom();
+            }
+        </script>
+<div class="a11y"
+     style="float: left"><img src="/lib/exe/taskrunner.php?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-14&amp;1776083323" width="2" height="1" alt="" /></div>
+</body>
+</html>

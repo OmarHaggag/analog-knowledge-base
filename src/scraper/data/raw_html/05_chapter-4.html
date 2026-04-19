@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"
+      dir="ltr"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Chapter 4: Op Amp applications - Advanced topics [Analog Devices Wiki]</title>
+
+    <script>(function (H) {
+            H.className = H.className.replace(/\bno-js\b/, 'js')
+        })(document.documentElement)</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500,500i,600,600i,700,700i|Barlow:300,300i,400,400i,500,500i,600,600i&display=swap" rel="stylesheet">
+
+    <link href="https://assets2.analog.com/apps-assets/wiki/index.css" rel="stylesheet" />
+    <script src="https://assets2.analog.com/apps-assets/wiki/index.mjs"></script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="university,courses,electronics,text,chapter-4"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Analog Devices Wiki"/>
+<link rel="start" href="/"/>
+<link rel="contents" href="/university/courses/electronics/text/chapter-4?do=index" title="Sitemap"/>
+<link rel="manifest" href="/lib/exe/manifest.php" crossorigin="use-credentials"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns=university:courses:electronics:text"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/university/courses/electronics/text/chapter-4"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/university/courses/electronics/text/chapter-4"/>
+<link rel="canonical" href="https://wiki.analog.com/university/courses/electronics/text/chapter-4"/>
+<link rel="stylesheet" href="/lib/exe/css.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb"/>
+<script nonce="bbb4bcb9b112625c6008d573c841cfbd">var NS='university:courses:electronics:text';var JSINFO = {"plugin_enforcesummary":{"enforce_summary":1,"default_minoredit":0,"enforce_preview":0},"plugin_folded":{"hide":"hide","reveal":"reveal"},"plugins":{"interwikipaste":{"patterns":"[{\"shortcut\":\"footprints\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/design\\\\-center\\\\\\\/packaging\\\\-quality\\\\-symbols\\\\-footprints\\\\\\\/symbols\\\\-and\\\\-footprints\\\\\\\/([^ ]+)?\\\\.html\",\"encode\":false},{\"shortcut\":\"staging.kernel.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/gregkh\\\\\\\/staging\\\\.git;a\\\\=blob;hb\\\\=refs\\\\\\\/heads\\\\\\\/staging\\\\-next;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"avnetexpress\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/avnetexpress\\\\.avnet\\\\.com\\\\\\\/store\\\\\\\/em\\\\\\\/EMController\\\\?storeId\\\\=500201&N\\\\=0&action\\\\=products&term\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"downgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/analogdevicesinc\\\\.github\\\\.io\\\\\\\/DownGit\\\\\\\/\\\\#\\\\\\\/home\\\\?url\\\\=https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"cart\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/shoppingcart\\\\.analog\\\\.com\\\\\\\/AddModel\\\\.aspx\\\\?locale\\\\=en&ACTION\\\\=BUY_BUNDLES&modelNbr\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digikey\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digikey\\\\.com\\\\\\\/scripts\\\\\\\/DkSearch\\\\\\\/dksus\\\\.dll\\\\?KeywordSearch\\\\?Site\\\\=US&amp;Keywords\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"git.linux.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/torvalds\\\\\\\/linux\\\\.git;a\\\\=blob;hb\\\\=HEAD;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"export\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/exportclassification\\\\\\\/Search\\\\\\\/Result\\\\?strSearch\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ibis\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/media\\\\\\\/en\\\\\\\/simulation\\\\-models\\\\\\\/ibis\\\\-models\\\\\\\/([^ ]+)?\\\\.ibs\",\"encode\":false},{\"shortcut\":\"bfsvn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/project\\\\\\\/([^ ]+)?\\\\\\\/scmsvn\\\\\\\/trunk\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?;hb\\\\=HEAD\",\"encode\":false},{\"shortcut\":\"paypal\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.paypal\\\\.com\\\\\\\/cgi\\\\-bin\\\\\\\/webscr\\\\?cmd\\\\=_xclick&amp;business\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"arrow\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.arrow\\\\.com\\\\\\\/en\\\\\\\/products\\\\\\\/search\\\\?cat\\\\=&q\\\\=([^ ]+)?&r\\\\=true\",\"encode\":false},{\"shortcut\":\"linux.github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/linux\\\\\\\/blob\\\\\\\/([^ ]+)?\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit_rev\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digilent\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digilentinc\\\\.com\\\\\\\/Products\\\\\\\/Detail\\\\.cfm\\\\?Prod\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"reg\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/my\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/app\\\\\\\/registration\\\\\\\/hardware\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\\\\\\\/blob\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"go\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?&amp;btnI\\\\=lucky\",\"encode\":true},{\"shortcut\":\"docs\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/docs\\\\.blackfin\\\\.uclinux\\\\.org\\\\\\\/doku\\\\.php\\\\?id\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.com\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-20\",\"encode\":true},{\"shortcut\":\"amazon.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.de\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-21\",\"encode\":true},{\"shortcut\":\"mouser\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/mouser\\\\.com\\\\\\\/Search\\\\\\\/Refine\\\\?Keyword\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tkt\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/tracker\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"repo\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpmeta\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/meta\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bf\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"maxim\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.maximintegrated\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/en\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpfr\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/fr\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpde\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/de\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpes\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/es\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wppl\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/pl\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpjp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ja\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpru\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ru\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfin\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon.uk\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.co\\\\.uk\\\\\\\/dp\\\\\\\/([^ ]+)?\",\"encode\":true},{\"shortcut\":\"google\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"oreilly\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.oreilly\\\\.com\\\\\\\/catalog\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"mw\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.mathworks\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"rfc\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/tools\\\\.ietf\\\\.org\\\\\\\/html\\\\\\\/rfc([^ ]+)?\",\"encode\":false},{\"shortcut\":\"google.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.de\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"user\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/members\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"this\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/wiki\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"phpfn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/secure\\\\.php\\\\.net\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"adi\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"xilinx\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.xilinx\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ez\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"doku\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.dokuwiki\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"callto\",\"pattern\":\"callto\\\\:\\\\\\\/\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"man\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/man\\\\.cx\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"skype\",\"pattern\":\"skype\\\\:([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tel\",\"pattern\":\"tel\\\\:([^ ]+)?\",\"encode\":false}]"},"vshare":{"youtube":"youtube\\.com\/.*[&?]v=([a-z0-9_\\-]+)","vimeo":"vimeo\\.com\\\/(\\d+)","slideshare":"slideshare.*id=(\\d+)","dailymotion":"dailymotion\\.com\/video\/([a-z0-9]+)","archiveorg":"archive\\.org\/(?:embed|details)\/([a-zA-Z0-9_\\-]+)","soundcloud":"soundcloud\\.com\/([\\w-]+\/[\\w-]+)","niconico":"nicovideo\\.jp\/watch\/(sm[0-9]+)","bitchute":"bitchute\\.com\\\/video\\\/([a-zA-Z0-9_\\-]+)","coub":"coub\\.com\\\/view\\\/([a-zA-Z0-9_\\-]+)","odysee":"odysee\\.com\/\\$\/(?:embed|download)\/([-%_?=\/a-zA-Z0-9]+)","youku":"v\\.youku\\.com\/v_show\/id_([0-9A-Za-z=]+)\\.html","bilibili":"bilibili\\.com\\\/video\\\/(BV[0-9A-Za-z]+)","msoffice":"(?:office\\.com.*[&?]videoid=([a-z0-9\\-]+))","msstream":"microsoftstream\\.com\\\/video\\\/([a-f0-9\\-]{36})","rutube":"rutube\\.ru\\\/video\\\/([a-z0-9]+)\\\/","gdrive":"drive\\.google\\.com\\\/file\\\/d\\\/([a-zA-Z0-9_-]+)\/"}},"id":"university:courses:electronics:text:chapter-4","namespace":"university:courses:electronics:text","ACT":"show","useHeadingNavigation":1,"useHeadingContent":0};(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script src="/lib/exe/jquery.php?tseed=8faf3dc90234d51a499f4f428a0eae43" defer="defer"></script>
+<script src="/lib/exe/js.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb" defer="defer"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/lib/tpl/analog2014/images/favicon.ico" />
+
+    <script src="https://assets2.analog.com/header-footer/index.js" type="text/javascript" defer="true"></script>
+
+    <!-- LIVE tracking -->
+<script src="//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js" async></script>
+<script src="/lib/tpl/analog2014/assets/js/adi/global.analytics.js" type="text/javascript"></script>
+</head>
+
+<!-- List of supported themes thm-education, thm-applications, thm-parametric, thm-product, thm-community, thm-design-center, thm-my-analog, thm-support -->
+<body class="home">
+
+
+<!-- wiki_header.html -->
+<header class="adi_header adi_header--wiki tools-header" id="dokuwiki__top" data-ot="true">
+
+    <div class="adi_topbar">
+        <div class="adi_container">
+            <section class="adi_row">
+                <!--  BEGIN:  Internal Links -->
+                <nav class="adi_column adi_pull-left">
+                    <a class="adi_topbar-link adi_topbar-link--analog-home" href="//www.analog.com">
+                        <strong>Analog.com</strong>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--engineer-zone" href="//ez.analog.com">
+                        <strong class="adi_link--hover-accent">Engineer</strong>
+                        <span>Zone</span>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--analog-dialogue" href="//www.analog.com/en/resources/analog-dialogue.html">
+                        <strong class="adi_link--hover-accent">Analog</strong>
+                        <span>Dialogue</span>
+                    </a>
+                </nav> <!-- /.adi_column.adi_pull-left -->
+                <!--  END:  Internal Links  -->
+                <!--  BEGIN:  Language Options  -->
+                <nav class="adi_column adi_pull-right">
+                    <a class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-logo" href="//my.analog.com/">
+                        <span><img src="https://assets2.analog.com/cms-assets/images/images/images/myanalog_logo.png" alt="My Analog Login"></span>&nbsp;
+                    </a>
+
+                    <a href="/university/courses/electronics/text/chapter-4?do=login&amp;sectok="  class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-login action login" rel="nofollow" title="Log In"><strong>Log In</strong></a>                </nav> <!-- /.adi_column.adi_pull-right -->
+                <!--  END:  Language Options  -->
+            </section> <!-- /.adi_row -->
+        </div> <!-- /.adi_container -->
+    </div>
+
+
+
+    <div class="adi_container">
+        <section class="adi_row">
+            <!--  BEGIN:  Logo  -->
+            <div class="adi_column adi_logo-container">
+                <a class="adi_logo" href="/start">
+                    <img src="/lib/tpl/analog2014//assets/images/adi-logo.svg" alt="Analog Devices Wiki" />
+                </a>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+            <div class="adi_column adi_page-title-container">
+                <h1 class="adi_page-title">Wiki</h1>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+        </section> <!-- /.adi_row -->
+    </div> <!-- /.adi_container -->
+
+    <div class="navigation-bar">
+        <div class="content-wrap clearfix">
+            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"><a href="#">Wiki Tools</a></div><ul class="submenu"><li class="level2"><a href="/university/courses/electronics/text/chapter-4?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-4?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-4?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>
+            <ul class="list-inline pull-right searchmenu clearfix">
+                <li class="search-box">
+                    <form action="" accept-charset="utf-8" class="search clearfix" id="dw__search" method="get" role="search">
+                        <div class="no">
+                            <input type="hidden" name="do" value="search">
+                            <input type="text" autocomplete="off" id="qsearch__in" accesskey="f" name="id" class="edit" placeholder="search wiki">
+                            <button type="submit" value="Search" class="button search-icon" title="Search"></button>
+
+                            <div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none; white-space: nowrap;">
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</header> <!-- /.adi_header -->
+
+
+
+
+
+<!-- Mobile view navigation drawer-->
+<div class="wiki-mob-body">
+    <div class="content" role="main">
+        <div class="col-md-12 wiki-head-row">
+            <div class="row ">
+                <div class="title-nophoto">
+                    <div class="container page-title ">
+                        <h1 data-page-title="true">Analog Devices Wiki</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 floater-menu-container">
+                <div class="row product-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 wiki-right-panel">
+                                <div class="row">
+                                    <div class=" product-bookmarks" id="affix-nav" name="adi_products_left_navigation">
+                                        <ul class="nav" id="affix-ul">
+                                            <li class="">
+
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#"
+                                                   name='SDR-home_2e322e80-5ec4-4b20-b8b8-71702b590a25'>Analog Devices
+                                                    Wiki
+                                                </a>
+
+                                            </li>
+                                            <!--Wiki-->
+                                            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"><a href="#">Wiki Tools</a></div><ul class="submenu Res_tools_child"><li class="level2"><a href="/university/courses/electronics/text/chapter-4?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-4?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-4?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>                                            <!--Wiki-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="special-content">
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#English">English<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="English" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/en/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_en.jpg" class="mobile-images"
+                                 width="100%" alt="English"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#简体中文">简体中文<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="简体中文" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/cn/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_cn.jpg" class="mobile-images"
+                                 width="100%" alt="简体中文"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#日本語">日本語<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="日本語" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/jp/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_jp.jpg" class="mobile-images"
+                                 width="100%" alt="日本語"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#Руccкий">Руccкий<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="Руccкий" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/ru/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_ru.jpg" class="mobile-images"
+                                 width="100%" alt="Руccкий"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile view navigation drawer-->
+
+<!-- /tpl_header.php -->
+
+
+
+<div id="dokuwiki__site" role="main" class="main-body content">
+    <div class="site dokuwiki mode_show tpl_analog2014   ">
+        <div class="container">
+
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content">
+                <div class="pad group">
+
+                    <div class="page group">
+                        
+                                                <!-- wikipage start -->
+                        <div class="approval approved_yes"><span class="approval_approved">This version (<span class="approval_date">06 Apr 2022 12:54</span>) was <em>approved</em> by <a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a>.</span><span class="approval_previous">The <a href="/university/courses/electronics/text/chapter-4?rev=1649248750">Previously approved version</a> (06 Apr 2022 12:39) is available.<a href="https://wiki.analog.com/university/courses/electronics/text/chapter-4?do=diff&rev2[0]=1649248750&rev2[1]=1649249376&difftype=sidebyside" class="approved_diff_link"><img src="/lib/images/diff.png" class="approved_diff_link" alt="Diff" /></a></span></div><!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#chapter_4op_amp_applications_-_advanced_topics">Chapter 4: Op Amp applications - Advanced topics</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#precision_voltage_to_current_converter">4.1 Precision Voltage to Current Converter</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#the_active_voltage_to_current_converter">4.1.1 The Active Voltage to Current Converter</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#precision_current_to_voltage_converter">4.2 Precision Current to Voltage Converter</a></div></li>
+<li class="level2"><div class="li"><a href="#precision_current_mirror">4.3 Precision Current Mirror</a></div></li>
+<li class="level2"><div class="li"><a href="#simulated_inductor">4.4 Simulated Inductor</a></div></li>
+<li class="level2"><div class="li"><a href="#all-pass_filter">4.5 All-Pass Filter</a></div></li>
+<li class="level2"><div class="li"><a href="#negative_impedance_converter">4.6 Negative impedance converter</a></div></li>
+<li class="level2"><div class="li"><a href="#capacitance_multiplier">4.7 Capacitance Multiplier</a></div></li>
+<li class="level2"><div class="li"><a href="#using_op_amps_as_comparators">4.8 Using Op Amps As Comparators</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#speed_considerations">4.8.1 Speed Considerations</a></div></li>
+<li class="level3"><div class="li"><a href="#output_considerations">4.8.2 Output Considerations</a></div></li>
+<li class="level3"><div class="li"><a href="#input_considerations">4.8.3 Input Considerations</a></div></li>
+<li class="level3"><div class="li"><a href="#section_summary">Section Summary</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#operational_amplifier_schmitt_trigger">4.9 Operational amplifier Schmitt trigger</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="chapter_4op_amp_applications_-_advanced_topics">Chapter 4: Op Amp applications - Advanced topics</h1>
+<div class="level1">
+
+<p>
+In this chapter we explore a number of example op amp configuration that are presented to illustrate certain advanced applications for operational amplifiers. Many of these more advanced uses for op amps will probably make more sense after the reader has studied the material on Bipolar Junction and Field Effect transistors in later chapters. The reader can skip this material for now and circle back after gaining an understanding of how transistors work.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="precision_voltage_to_current_converter">4.1 Precision Voltage to Current Converter</h2>
+<div class="level2">
+
+<p>
+The very high forward gain (A<sub>VOL</sub>) and differential input nature of the operational amplifier can be used to create a nearly ideal voltage controlled current source or <abbr title="volt">V</abbr>-to-I converter. Note in figure 4.1, the input voltage to be converted is applied to the non-inverting input terminal of the op amp. The inverting input terminal is connected in feedback to one end of the resistor R<sub>1</sub> and the source of transistor <abbr title="mega (prefix, as in Mbps, MHz)">M</abbr><sub>1</sub>. The output of the op-amp drives the Gate of the transistor. The high open loop gain of the amplifier will force the Gate of <abbr title="mega (prefix, as in Mbps, MHz)">M</abbr><sub>1</sub> to the required voltage such that <abbr title="volt">V</abbr><sub>IN</sub> appears across R<sub>1</sub>. The current in R<sub>1</sub> will thus be <abbr title="volt">V</abbr><sub>IN</sub>/R<sub>1</sub> and will flow only in the Source of <abbr title="mega (prefix, as in Mbps, MHz)">M</abbr><sub>1</sub> and also thus appear in the Drain of <abbr title="mega (prefix, as in Mbps, MHz)">M</abbr><sub>1</sub>as I<sub>OUT</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f1.png"><img src="/_media/university/courses/electronics/text/chptr4-f1.png?w=600&amp;tok=63b820" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.1 Precision Voltage to Current converter 
+</p>
+</div>
+<p>
+This configuration is also often referred to as an Active Cascode. To understand the concept of the cascode or common gate (base) amplifier the reader is directed to study the section in Chapter 9 on the Cascode (9.3).
+</p>
+
+<p>
+An instructive application for this circuit technique can be found in this article on how to <a href="https://www.analog.com/media/en/technical-documentation/technical-articles/d61_en-convert.pdf" class="interwiki iw_adi" title="https://www.analog.com/media/en/technical-documentation/technical-articles/d61_en-convert.pdf">convert 1V to 5V signal to 4mA to 20mA output.</a>
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="the_active_voltage_to_current_converter">4.1.1 The Active Voltage to Current Converter</h3>
+<div class="level3">
+
+<p>
+Figure 4.1.1 shows a classic voltage to current (<abbr title="volt">V</abbr>-to-I) converter. The resistor values can be selected such that the output current in the load, varies only with the input voltage, <abbr title="volt">V</abbr><sub>IN</sub>, and is independent of the load. The circuit is widely used in industrial instruments for supplying a 4 to 20 <abbr title="milliampere">mA</abbr> signal for example. Also often referred to as a Howland current pump this configuration has two advantages over the MOSFET based circuit shown in figure 4.1. The first is a high output impedance and the second is the ability to provide bipolar (both sourcing and sinking) output currents.
+</p>
+
+<p>
+The circuit has its limitations due in part to the requirement that the resistor ratios must be quite accurate to obtain a near ideal current source. Published literature describing the circuit provides design methods that are for special cases or are for approximate designs. In this chapter we explore simple design formulas that can be used to determine the component values that produce a near ideal current source. These formulas also provide a general method for calculating the output current, I<sub>LOAD</sub>, for any selection of resistor values, not just the constant-current selection. Usually in order to improve stability, the circuit is made symmetrical. Therefore R<sub>1</sub> = R<sub>3</sub>, R<sub>2</sub> = R<sub>4</sub>, and R<sub>S</sub> = R<sub>S&#039;</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f2.png"><img src="/_media/university/courses/electronics/text/chptr4-f2.png?w=600&amp;tok=ff6657" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.1.1 non-inverting voltage to current converter 
+</p>
+</div>
+<p>
+For a true current output, I<sub>LOAD</sub>, as a function of the input voltage, <abbr title="volt">V</abbr><sub>IN</sub>, you must satisfy the following equations:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-e1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-e1.png"><img src="/_media/university/courses/electronics/text/chptr4-e1.png?w=300&amp;tok=56ef5e" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+The load current is:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-e2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-e2.png"><img src="/_media/university/courses/electronics/text/chptr4-e2.png?w=200&amp;tok=a1d561" class="mediacenter" loading="lazy" alt="" width="200" /></a>(1)
+</p>
+
+<p>
+The Output impedance is:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-e3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-e3.png"><img src="/_media/university/courses/electronics/text/chptr4-e3.png?w=300&amp;tok=4bd67d" class="mediacenter" loading="lazy" alt="" width="300" /></a>(2)
+</p>
+
+<p>
+In equation 1, any four of the terms can be arbitrarily selected and then the fifth term is determined by solving the resulting equation. With R<sub>1</sub> = 150 kΩ, R<sub>2</sub> = 15 kΩ, R<sub>S</sub> = 50 Ω, and <abbr title="volt">V</abbr><sub>IN</sub> can vary from 0 to 5 <abbr title="volt">V</abbr>, I<sub>LOAD</sub> will vary from 0 <abbr title="milliampere">mA</abbr> to 10 <abbr title="milliampere">mA</abbr>, and the circuit has a very high output impedance.
+</p>
+
+<p>
+if R<sub>S</sub> changes from 50 Ω to 200 Ω, the feedback changes fourfold, and you would expect that the output current would change fourfold, to 0 to 2.5 <abbr title="milliampere">mA</abbr>. You can check the result by substituting in the general formula for the output current.
+</p>
+
+<p>
+Looking at equation 2, the output impedance, Z<sub>OUT</sub> will be infinity if R<sub>1</sub>=R<sub>3</sub>, R<sub>2</sub>=R<sub>4</sub> and R<sub>S</sub>=R<sub>S&#039;</sub> because the bottom term in the ratio will be exactly zero. To the extent that the resistors do not match the output impedance could be either positive of negative. For example if R<sub>3</sub> were slightly larger than R<sub>1</sub> the bottom term would be negative.
+</p>
+
+<p>
+More details on the Howland current source can be found in <a href="https://www.analog.com/media/en/analog-dialogue/volume-52/number-4/a-large-current-source-with-high-accuracy-and-fast-settling.pdf" class="interwiki iw_adi" title="https://www.analog.com/media/en/analog-dialogue/volume-52/number-4/a-large-current-source-with-high-accuracy-and-fast-settling.pdf">A large current source with high
+accuracy and fast settling</a> and <a href="https://www.analog.com/media/en/analog-dialogue/volume-47/number-2/articles/choose-resistors-to-minimize-errors.pdf" class="interwiki iw_adi" title="https://www.analog.com/media/en/analog-dialogue/volume-47/number-2/articles/choose-resistors-to-minimize-errors.pdf">Choose resistors to minimize errors in grounded-load current source</a>.
+</p>
+
+</div>
+
+<h2 class="sectionedit8" id="precision_current_to_voltage_converter">4.2 Precision Current to Voltage Converter</h2>
+<div class="level2">
+
+<p>
+A simple single resistor can be used to convert a current into a voltage but the voltage cannot be used directly to drive other parts of a system without potentially disturbing or altering the voltage.  Often a buffer amplifier is required or the voltage may need to be shifter or “referred” to a different node (supply voltage or ground) in the circuit. Op amp circuits like those in figure 4.2 can perform this function.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f3.png"><img src="/_media/university/courses/electronics/text/chptr4-f3.png?w=600&amp;tok=388677" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.2 Precision Current to Voltage converter 
+</p>
+</div>
+<p>
+Two configurations are shown in figure 4.2. Version (a) produces an output voltage <abbr title="volt">V</abbr><sub>OUT</sub> from input current I<sub>IN</sub>. The output voltage is produced with respect to ground due to the virtual ground at the - input terminal of the amplifier and is negative (<abbr title="volt">V</abbr><sub>OUT</sub> = -I<sub>IN</sub>R<sub>1</sub>) for currents flowing into the virtual ground (from the +<abbr title="volt">V</abbr> as shown) and positive for currents flowing out of the virtual ground (flowing toward -<abbr title="volt">V</abbr>). Version (b) produces an output voltage <abbr title="volt">V</abbr><sub>OUT</sub> from input current I<sub>IN</sub> as well but now it is produced with respect to some negative node potential, -<abbr title="volt">V</abbr>. Unlike version (a) which accepts both sourcing and sinking currents, version (b) will only operate for currents flowing into the virtual ground at the - input terminal. There is an advantage to using a MOSFET, <abbr title="mega (prefix, as in Mbps, MHz)">M</abbr><sub>1</sub>, over a bipolar transistor. In the MOSFET all the current in the drain also flows in the source (no current in gate) whereas in the case of a BJT the emitter current is increased due to the base current. The current in R<sub>1</sub> will thus be slightly larger than I<sub>IN</sub> and the voltage <abbr title="volt">V</abbr><sub>OUT</sub> will not be exactly equal to I<sub>IN</sub>*R<sub>1</sub>.
+</p>
+
+</div>
+
+<h2 class="sectionedit11" id="precision_current_mirror">4.3 Precision Current Mirror</h2>
+<div class="level2">
+
+<p>
+The simple transistor based current mirror is covered in detail in Chapter 11. Here we introduce the op amp in the feedback loop of the diode connected transistor. The very large gain of the amplifier greatly reduced many of the sources of error found in the simple two transistor current mirror.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f4.png"><img src="/_media/university/courses/electronics/text/chptr4-f4.png?w=600&amp;tok=b24029" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.3 Precision Current Mirror 
+</p>
+</div>
+<p>
+The two MOSFETs <abbr title="mega (prefix, as in Mbps, MHz)">M</abbr><sub>1</sub> and <abbr title="mega (prefix, as in Mbps, MHz)">M</abbr><sub>2</sub> must be well matched (and be at the same temperature) as well as the two resistors R<sub>1</sub> and R<sub>2</sub> if I<sub>OUT</sub> is to be well matched to I<sub>IN</sub>. If two bipolar (NPN) transistors were to be used in this case, the op amp will supply all the base current for the two transistors and providing the a and <abbr title="volt">V</abbr><sub>BE</sub> (I<sub>S</sub> actually) of the two devices is well matched (and R<sub>1</sub> and R<sub>2</sub> of course) the gain of the mirror will be nearly exactly 1 in spite of the finite ß. It is also important to note that the feedback current from the drain of <abbr title="mega (prefix, as in Mbps, MHz)">M</abbr><sub>1</sub> is to the + input terminal of the op amp. This is because of the phase inversion of the common source configuration of <abbr title="mega (prefix, as in Mbps, MHz)">M</abbr><sub>1</sub>.
+</p>
+
+</div>
+
+<h2 class="sectionedit14" id="simulated_inductor">4.4 Simulated Inductor</h2>
+<div class="level2">
+
+<p>
+Before the introduction of the transistor and the integrated circuit, coils of wire with large inductance were used in electronic filters. An inductor can be replaced by a much smaller assembly consisting of a capacitor, operational amplifiers or transistors, and resistors. This is especially useful in integrated circuit technology where building inductors from large loops of wire is impractical.
+</p>
+
+<p>
+The circuit in Figure 4.4 reverses the operation of a capacitor, thus making a simulated inductor. An inductor resists any change in its current, so when a dc voltage is applied to an inductance, the current rises slowly, and the voltage falls as the external resistance becomes more significant.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f5.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f5.png"><img src="/_media/university/courses/electronics/text/chptr4-f5.png?w=600&amp;tok=619d3d" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.4. Simulated Inductor Circuit 
+</p>
+</div>
+<p>
+An inductor passes low frequencies more readily than high frequencies, the opposite of a capacitor. An ideal inductor has zero resistance. It passes dc without limitation, but it has infinite impedance at infinite frequency.
+</p>
+
+<p>
+For the circuit in figure 4.4, if a DC voltage step is suddenly applied to the inverting input through resistor R<sub>L</sub>, the op amp ignores the sudden step because the change is also coupled directly to the non-inverting input via C<sub>1</sub>. The op amp represents high impedance, just as an inductor does. As C<sub>1</sub> charges through R<sub>1</sub>, the voltage across R<sub>1</sub>falls, so the op-amp draws current from the input through R<sub>L</sub>. This continues as the capacitor charges, and eventually the op-amp has an input and output close to virtual ground because the lower end of R<sub>1</sub> is connected to ground.
+</p>
+
+<p>
+When C<sub>1</sub> is fully charged, resistor R<sub>L</sub> limits the current flow, and this appears as a series resistance within the simulated inductor. This series resistance limits the Q of the inductor. Real inductors generally have much less resistance than the simulated variety.
+</p>
+
+<p>
+There are some limitations of a simulated inductor like this:<br/>
+
+</p>
+<ul>
+<li class="level1"><div class="li">  One end of the inductor is connected to virtual ground.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  The simulated inductor cannot be made with high Q, due to the series resistor R<sub>L</sub>.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  It does not have the same energy storage as a real inductor. The collapse of the magnetic field in a real inductor causes large voltage spikes of opposite polarity. The simulated inductor is limited to the voltage swing of the op amp, so the flyback pulse is limited to the voltage swing.</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit17" id="all-pass_filter">4.5 All-Pass Filter</h2>
+<div class="level2">
+
+<p>
+The all-pass filter passes all frequencies at the same gain. It is used to change the phase of the signal, and it can also be used as a phase-correction circuit. The circuit shown in figure 4.5 has a 90° phase shift at F(90°). At DC, the phase shift is 180°, and at high frequencies it is 0°.
+R<sub>1</sub> = R<sub>2</sub> = R<sub>3</sub> = R
+F(90°) = 1/(2?R<sub>1</sub>*C<sub>1</sub>)
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f6.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f6.png"><img src="/_media/university/courses/electronics/text/chptr4-f6.png?w=600&amp;tok=33ceb5" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.5. All-Pass Filter Circuit 
+</p>
+</div>
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f7.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f7.png"><img src="/_media/university/courses/electronics/text/chptr4-f7.png?w=600&amp;tok=2b4ba6" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.6 Gain/Phase simulation plot of All-Pass circuit 
+</p>
+</div>
+</div>
+
+<h2 class="sectionedit22" id="negative_impedance_converter">4.6 Negative impedance converter</h2>
+<div class="level2">
+
+<p>
+The negative impedance converter (NIC) is an op-amp circuit which acts as a negative load. This is achieved by introducing a phase shift of 180° (inversion) between the voltage and the current for a signal source. There are two versions of this circuit - with voltage inversion (VNIC) and with current inversion (INIC). The basic circuit of an INIC and its analysis is shown figure 4.7.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f8.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f8.png"><img src="/_media/university/courses/electronics/text/chptr4-f8.png?w=600&amp;tok=60f82a" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.7 Negative impedance converter. 
+</p>
+</div>
+<p>
+INIC is a non-inverting amplifier (the op-amp and the voltage divider R<sub>1</sub>, R<sub>2</sub> in figure 4.7) with a resistor (R<sub>3</sub>) connected between its output and input. The op-amp output voltage is
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-e4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-e4.png"><img src="/_media/university/courses/electronics/text/chptr4-e4.png?w=200&amp;tok=c7e8c9" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+The current going from the operational amplifier output through resistor R<sub>3</sub> toward the source Vin is -Is, and
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-e5.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-e5.png"><img src="/_media/university/courses/electronics/text/chptr4-e5.png?w=200&amp;tok=bd5ebd" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+So the input <abbr title="volt">V</abbr><sub>in</sub> experiences an opposing current - I<sub>in</sub> that is proportional to <abbr title="volt">V</abbr><sub>in</sub>, and the circuit acts like a resistor with negative resistance
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-e6.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-e6.png"><img src="/_media/university/courses/electronics/text/chptr4-e6.png?w=200&amp;tok=d79136" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+In general, elements R<sub>1</sub>, R<sub>2</sub>, and R<sub>3</sub> need not be pure resistances (<abbr title="in other words">i.e.</abbr>, they may be capacitors, inductors, or impedance networks).
+</p>
+
+</div>
+
+<h2 class="sectionedit25" id="capacitance_multiplier">4.7 Capacitance Multiplier</h2>
+<div class="level2">
+
+<p>
+The circuit in figure 4.8(a) uses an op-amp and a small capacitor, C<sub>1</sub>, to simulate a much larger capacitor. It simulates the simple RC circuit of figure 4.8(b); the resistor R<sub>2</sub>is the same size as the resistor in the circuit being simulated (R<sub>3</sub>), but the capacitor C<sub>1</sub> is N times smaller than C<sub>2</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f9.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f9.png"><img src="/_media/university/courses/electronics/text/chptr4-f9.png?w=600&amp;tok=80df1f" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.8 Op-amp capacitance multiplier 
+</p>
+</div>
+<p>
+Current flows from the input source through R<sub>1</sub> to the capacitor (C<sub>1</sub>). If R<sub>1</sub>, for example, is 100 times larger than R<sub>2</sub>, there is 1/100th the current through it into the capacitor. For a given input voltage, the rate of change in voltage in C<sub>1</sub>is the same as in the equivalent C<sub>2</sub>in figure 4.8(b), but C<sub>2</sub> appears to have 100 times the capacitance to make up for 1/100th the current.
+</p>
+
+<p>
+The voltages across the two capacitors are the same, but the currents are not. The op-amp causes the negative input to be held at the same voltage as the voltage across C<sub>1</sub>. This means R<sub>2</sub> has the same voltage across it as R<sub>3</sub>, and therefore the same current. Since the total current from <abbr title="volt">V</abbr><sub>IN</sub> is the sum of the current in R<sub>1</sub> and R<sub>2</sub> and R<sub>2</sub> is N times smaller than R<sub>1</sub> the apparent charging current is N+1 times larger than the current in C<sub>1</sub>. 
+</p>
+
+</div>
+
+<h2 class="sectionedit28" id="using_op_amps_as_comparators">4.8 Using Op Amps As Comparators</h2>
+<div class="level2">
+
+<p>
+Op Amps and comparators may seem interchangeable at first glance based on their symbols and pinouts and one might be tempted to use or substitute readily available op amps as voltage comparators in their designs. There are some important differences however. Comparators are designed to work without negative feedback or open-loop, they are designed to drive digital logic circuits from their outputs, and they are designed to work at high speed with minimal instability. Op amps are not generally designed for use as comparators, they may saturate if over-driven which may cause it to recover comparatively slowly. Many have input stages which behave in unexpected ways when driven with large differential voltages, in fact, in many cases, the differential input voltage range of the op amp is limited. And op amp outputs are rarely compatible with logic.
+</p>
+
+<p>
+Yet many designers still try to use op amps as comparators. While this may work at low speeds and low resolutions, many times the results are not satisfactory. Not all of the issues involved with using an op amp as a comparator can be resolved by reference to the op amp data sheet, since op amps are not intended for use as comparators.
+</p>
+
+<p>
+The most common issues are speed (as we have already mentioned), the effects of input structures (protection diodes, phase inversion in FET amplifiers, and many others), output structures which are not intended to drive logic, hysteresis and stability, and common-mode effects.
+</p>
+
+</div>
+
+<h3 class="sectionedit29" id="speed_considerations">4.8.1 Speed Considerations</h3>
+<div class="level3">
+
+<p>
+Most comparators are quite fast, but so are many op amps. Why should we expect low speed when using an op amp as a comparator?
+</p>
+
+<p>
+A comparator is designed to be used with large differential input voltages, whereas op amps normally operate with their differential input voltage minimized by negative feedback. When an op amp is over-driven, sometimes by as little as a few millivolts, some of the internal stages may saturate. If this occurs the device will take a comparatively long time to come out of saturation and will therefore be much slower than if it always remained unsaturated (see figure 4.9).
+</p>
+
+<p>
+The time to come out of saturation of an overdriven op amp is likely to be considerably longer than the normal group delay of the amplifier, and will often depend on the amount of overdrive. Since few op amps have this saturation recovery time specified for various amounts of overdrive it will generally be necessary to determine, by experimental measurements in the lab, the behavior of the amplifier under the conditions of overdrive to be expected in a particular design.
+</p>
+
+<p>
+The results of such experimental measurements should be regarded with suspicion and the values of propagation delay through the op amp comparator which is chosen for worst-case design calculations should be at least twice the worst value seen in any experiment.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f10.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f10.png"><img src="/_media/university/courses/electronics/text/chptr4-f10.png?w=600&amp;tok=e36043" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.9: Effects of Saturation on Amplifier Speed when Used as a Comparator 
+</p>
+</div>
+</div>
+
+<h3 class="sectionedit32" id="output_considerations">4.8.2 Output Considerations</h3>
+<div class="level3">
+
+<p>
+The output of a comparator is designed to drive a particular logic family or families, while the output of an op amp is designed to swing close to it&#039;s supply rails if not to the supply rails.
+Frequently the logic being driven by the op amp comparator will not share the op amp&#039;s supplies and the op amp rail to rail swing may go outside the logic supply rails-this will probably damage the logic circuitry, and the resulting short circuit may damage the op amp as well.
+</p>
+
+<p>
+There are three types of logic which we must consider: ECL, TTL and CMOS.
+</p>
+
+<p>
+ECL is a very fast current steering logic family. It is unlikely that an op amp would be used as a comparator in applications where ECL&#039;s highest speed is involved, for reasons given above, so we shall usually be concerned only to drive ECL logic levels from an op amp&#039;s signal swing and some additional loss of speed due to stray capacities will be unimportant. To do this we need only three resistors, as shown in figure 4.10.
+</p>
+
+<p>
+R<sub>1</sub>, R<sub>2</sub> and R<sub>3</sub> are chosen so that when the op amp output is positive the level at the gate is -0.8 <abbr title="volt">V</abbr>, and when it is low it is -1.6 <abbr title="volt">V</abbr>. ECL is occasionally used with positive, rather than negative, supplies (often called PECL where the -5.2V rail is connected to ground and the ground is connected to a positive supply voltage), the same basic interface circuit may be used but the values must be recalculated. Using low resistance values for R<sub>1</sub>, R<sub>2</sub> and R<sub>3</sub> will minimize the effects of stray capacitance but at the same time will increase power consumption.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f11.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f11.png"><img src="/_media/university/courses/electronics/text/chptr4-f11.png?w=600&amp;tok=f929a3" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.10: Op Amp Comparator Driving ECL Logic 
+</p>
+</div>
+<p>
+Although CMOS and TTL input structures, logic levels, and current flows are quite different (although some versions of CMOS is specified to work with TTL input levels) the same interface circuitry will work perfectly well with both types of logic, since they both work for logic 0 near to 0V and logic 1 near to +5V or whatever the positive supply rail is for that logic family.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f12.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f12.png"><img src="/_media/university/courses/electronics/text/chptr4-f12.png?w=600&amp;tok=89e058" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.11: Op Amp Comparator Driving TTL or CMOS Logic 
+</p>
+</div>
+<p>
+The simplest interface uses a single N-channel MOS transistor, <abbr title="mega (prefix, as in Mbps, MHz)">M</abbr><sub>1</sub> and a pull-up resistor, R<sub>L</sub>, as shown in figure 4.15. It is important to note here that this interface circuit inverts the output of the op amp and thus reverses the sense of the + and - inputs. A similar circuit may be made with an NPN transistor, Q<sub>1</sub>,  R<sub>L</sub>, and an additional resistor, R<sub>1</sub> and diode D<sub>1</sub>. A resistor between the op amp output and the MOS FET gate and the diode to ground are generally not needed (left side of figure 4.11) because the gate can withstand relatively large voltages with respect to the source. In the case of the NPN BJT (right side of figure 4.11) the resistor serves to limit the base current and the diode limits the maximum reverse bias on the base to one diode drop (-0.7V) below ground. These circuits are simple, inexpensive and reliable, and the outputs of several op amps may be connected through separate transistors with their collectors connected in parallel and a single R<sub>L</sub> to give a “wired-or” function. The speed of the 0-1 transition depends on the value of R<sub>L</sub> and the stray capacity of the output node. The lower the value of R<sub>L</sub> the faster the response will be, but the higher the power consumption. 
+</p>
+
+<p>
+By using two MOS devices, one P-channel and one N-channel, it is possible to make a CMOS/TTL interface using only two components which has no quiescent power consumption in either state (figure 4.16). Furthermore, it may be made inverting or non-inverting by simple positioning of components. It does, however, have a large current surge during switching, when both devices are on at once, and unless MOS devices with high channel resistance are used a current limiting resistor may be necessary to reduce this effect. It is also important, in this application and the one in figure 4.11, to use MOS devices with gate-source breakdown voltages, <abbr title="volt">V</abbr><sub>BGS</sub>, greater than the output voltages of the comparator in either direction. A value of <abbr title="volt">V</abbr><sub>BGS</sub> &gt; ±25 <abbr title="volt">V</abbr> is common in MOS devices and is usually adequate, but many MOS devices contain gate protection diodes which reduce the value-these should not be used.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f13.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f13.png"><img src="/_media/university/courses/electronics/text/chptr4-f13.png?w=600&amp;tok=8fdadc" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.12: Op Amp Comparator with CMOS Driver 
+</p>
+</div>
+</div>
+
+<h3 class="sectionedit39" id="input_considerations">4.8.3 Input Considerations</h3>
+<div class="level3">
+
+<p>
+There are a number of effects which must be considered regarding the inputs of op amps when used as comparators. The first-level assumption engineers make about all op amps and comparators is that they have infinite input impedance and can be regarded as open circuits (except for current feedback (transimpedance) op amps, which have a high impedance on their non-inverting input but a low impedance of a few tens of ohms on their inverting input)
+</p>
+
+<p>
+But many op amps (especially bias-compensated ones such as the OP-07 and its many descendants) contain protective circuitry to prevent large differential input voltages from damaging the input stage transistors. Protective circuitry such as current limiting resistors and clamp diodes, as shown in figure 4.13, are often integrated between the input pins and the sensitive input transistors. This protection circuit will greatly lower the input impedance for differential input voltages greater than +/- 700 <abbr title="millivolt">mV</abbr>.
+</p>
+
+<p>
+Other op amp designs contain more complex input circuitry, which only has high impedance when the differential voltage applied to it is less than a few tens of <abbr title="millivolt">mV</abbr>, or which may actually be damaged by differential voltages of more than a few volts. It is therefore necessary, when using an op amp as a comparator, to study the manufacturer&#039;s data sheet to determine how the input circuitry behaves when large differential voltages are applied to it. It is always necessary to study the data sheet when using an integrated circuit to ensure that its non-ideal behavior, and every integrated circuit ever made has some non-ideal behavior, is compatible with the proposed design - it is just more important than usual in the present case.
+</p>
+
+<p>
+Of course some comparator applications never involve large differential voltages-or if they do the comparator input impedance when large differential voltages are present is comparatively unimportant. In such cases it may be appropriate to use as a comparator an op amp whose input circuitry behaves non-linearly-but the issues involved must be considered, not just ignored.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f14.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f14.png"><img src="/_media/university/courses/electronics/text/chptr4-f14.png?w=500&amp;tok=a39f77" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.13: Op Amp Input Structure with Protection 
+</p>
+</div>
+<p>
+As mentioned elsewhere in this text, nearly all BIFET op amps exhibit anomalous behavior when their inputs are close to one of their supplies (usually the negative supply). Their inverting and non-inverting inputs may become interchanged. If this should occur when the op amp is being used as a comparator the phase of the system involved will be inverted, which could well be inconvenient. The solution is, again, careful reading of the data sheet to determine just what common-mode range is acceptable.
+</p>
+
+<p>
+Also, the absence of negative feedback means that, unlike that of op amp circuits, the input impedance is not multiplied by the loop gain. As a result, the input current varies as the comparator switches. Therefore the driving impedance, along with parasitic feedback paths, can play a key role in affecting circuit stability. While negative feedback tends to keep amplifiers within their linear region, positive feedback forces them into saturation.
+</p>
+
+</div>
+
+<h3 class="sectionedit42" id="section_summary">Section Summary</h3>
+<div class="level3">
+
+<p>
+Operational amplifiers are not designed to be used as comparators, so this section has been, intentionally, a little discouraging. Nevertheless there are some cases where the use of an op amp as a comparator is a useful engineering decision-what is important is to make it a considered decision, and ensure that the op amp chosen will perform as expected. To do this it is necessary to read the manufacturer&#039;s data sheet carefully, to consider the effects of non-ideal op amp performance, and to calculate the effects of op amp parameters on the overall circuit. Since the op amp is being used in a non-standard manner some experimentation may also be necessary, since the amplifier used for the experiment will not necessarily be typical and the results of experiments should always be interpreted somewhat pessimistically.
+</p>
+
+<p>
+<strong>ADALM1000 Lab Activity <a href="/university/courses/alm1k/alm-lab-comp" class="wikilink1" title="university:courses:alm1k:alm-lab-comp" data-wiki-id="university:courses:alm1k:alm-lab-comp">Comparators</a></strong>
+</p>
+
+</div>
+
+<h2 class="sectionedit43" id="operational_amplifier_schmitt_trigger">4.9 Operational amplifier Schmitt trigger</h2>
+<div class="level2">
+
+<p>
+Although the simple voltage comparator circuit using either an ordinary operational amplifier or a special comparator is often adequate, the input waveform may be slow or have noise superimposed on it. This can result in the possibility that the output will switch back and forth several times as the input transitions through the comparator threshold voltage. The very large open loop gain of the amplifier will allow only small levels of noise on the input to cause the output to change. This may not cause a problem in some circumstances, but if the output from the operational amplifier comparator is being fed into fast logic circuitry, then it can often result in problems. For example, if the desire is to count the number of times the input crosses the threshold then these multiple output changes per input transition will give false readings.
+</p>
+
+<p>
+The problem can be solved very easily by adding some positive feedback to the operational amplifier or comparator circuit. This is provided by the addition of R<sub>3</sub> in the circuit in figure 4.14.  The circuit is known as a Schmitt trigger. Resistor divider R<sub>1</sub> and R<sub>2</sub> set the comparison voltage at the non-inverting input of the op amp.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr4-f15.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4" class="media" title="university:courses:electronics:text:chptr4-f15.png"><img src="/_media/university/courses/electronics/text/chptr4-f15.png?w=500&amp;tok=784236" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 4.14 Operational amplifier Schmitt trigger circuit 
+</p>
+</div>
+<p>
+The effect of the new resistor (R<sub>3</sub>) is to give the circuit different switching thresholds dependent upon the output state of the comparator or op amp. When the output of the comparator is high, this voltage is fed back to the non-inverting input of the op amp or comparator. As a result the comparison threshold becomes higher. When the output is switched low, the comparison threshold is lowered. This gives the circuit what is called hysteresis.
+</p>
+
+<p>
+It is straight forward to calculate the resistor values needed for the Schmitt trigger circuit. The center voltage about which the circuit will switch is determined by the voltage divider consisting of R<sub>1</sub> and R<sub>2</sub>. This should be chosen first. Then the feedback resistor R<sub>3</sub> can be calculated. This will provide a level of hysteresis that is equal to the output swing of the op amp reduced by the voltage divider (attenuation) formed as a result of R<sub>3</sub> and the parallel combination of R<sub>1</sub> and R<sub>2</sub>. The higher the value of R<sub>3</sub> with respect to R<sub>1</sub>||R<sub>2</sub> the smaller the hysteresis, or the difference between the two threshold levels.
+</p>
+
+<p>
+The fact that the positive feedback applied within the circuit ensures that there is effectively a higher gain and therefore the switching is faster. This is particularly useful when the input waveform may be slow. However a speed up capacitor can be applied within the Schmitt trigger circuit to increase the switching speed still further. By placing a capacitor across the positive feedback resistor R<sub>3</sub>, the gain can be increased during the changeover, making the switching even faster. This capacitor, known as a speed up capacitor may be anywhere between 10 <abbr title="picofarad">pF</abbr> and 100 <abbr title="picofarad">pF</abbr> dependent upon the circuit.
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/chapter-3" class="wikilink1" title="university:courses:electronics:text:chapter-3" data-wiki-id="university:courses:electronics:text:chapter-3">Previous Chapter</a></strong>
+</p>
+
+<p>
+<strong>Go to <a href="/university/courses/electronics/text/chapter-5" class="wikilink1" title="university:courses:electronics:text:chapter-5" data-wiki-id="university:courses:electronics:text:chapter-5">Next Chapter</a></strong>
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/electronics-toc" class="wikilink1" title="university:courses:electronics:text:electronics-toc" data-wiki-id="university:courses:electronics:text:electronics-toc">Table of Contents</a></strong>
+</p>
+
+</div>
+                        <!-- wikipage stop -->
+                    </div>
+
+                    <div class="docInfo"><bdi>university/courses/electronics/text/chapter-4.txt</bdi> · Last modified: <time datetime="2022-04-06T12:49:36+0000">06 Apr 2022 12:49</time> by <bdi><a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a></bdi></div>
+
+                                    </div>
+            </div>
+            <!-- /content -->
+
+            <hr class="a11y"/>
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="/university/courses/electronics/text/chapter-4?do=edit" title="View Source [v]" rel="nofollow" accesskey="v"><span>View Source</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="/university/courses/electronics/text/chapter-4?do=revisions" title="History [o]" rel="nofollow" accesskey="o"><span>History</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="/university/courses/electronics/text/chapter-4?do=backlink" title="Backlinks" rel="nofollow"><span>Backlinks</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="menuitemfolded"><a href="javascript:void(0);" title="Fold/unfold all" rel="nofollow" class="fold_unfold_all_new" onclick="fold_unfold_all();"><span>Fold/unfold all</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M 2,0 L 6.5,3 L 2,6 z M 8,6.6 L 12.5,9.6 L 8,12.6 z M 14,13.2 L 20,13.2 L 17,17.7 z"/></svg></a></li><li class="top"><a href="#dokuwiki__top" title="[ Back to top ] [t]" rel="nofollow" accesskey="t"><span>[ Back to top ]</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /wrapper -->
+
+    </div>
+    <!-- /container -->
+</div>
+<!-- /site -->
+
+﻿<a class="backtotop" href="#header">&nbsp;</a>
+<footer class="footer" id="footer">
+    <adi-footer short></adi-footer>
+
+    
+    <script type="text/javascript">
+        var analytics = '//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js';
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script type="text/javascript">
+        var ADIAssetsPath = "//assets2.analog.com";
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script>
+        /* Copyright 2011-2015 iPerceptions, Inc. All rights reserved. Do not distribute. iPerceptions provides this code 'as is' without warranty of any kind, either express or implied. */
+        window.iperceptionskey = 'acafac0d-3b8a-4d30-8a98-6cbcd5256d93';
+        (function() { var a = document.createElement('script'),
+            b = document.getElementsByTagName('body')[0];
+            a.type = 'text/javascript';
+            a.defer = true;
+            a.src = '//universal.iperceptions.com/wrapper.js';
+            b.appendChild(a); })();
+    </script>
+</footer>
+<script type="text/javascript">
+            if(typeof(_satellite) != 'undefined') {
+            _satellite.pageBottom();
+            }
+        </script>
+<div class="a11y"
+     style="float: left"><img src="/lib/exe/taskrunner.php?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-4&amp;1776083302" width="2" height="1" alt="" /></div>
+</body>
+</html>

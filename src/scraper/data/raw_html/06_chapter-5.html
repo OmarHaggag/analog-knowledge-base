@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"
+      dir="ltr"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Chapter 5:  Solid-state diodes and diode characteristics [Analog Devices Wiki]</title>
+
+    <script>(function (H) {
+            H.className = H.className.replace(/\bno-js\b/, 'js')
+        })(document.documentElement)</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500,500i,600,600i,700,700i|Barlow:300,300i,400,400i,500,500i,600,600i&display=swap" rel="stylesheet">
+
+    <link href="https://assets2.analog.com/apps-assets/wiki/index.css" rel="stylesheet" />
+    <script src="https://assets2.analog.com/apps-assets/wiki/index.mjs"></script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="university,courses,electronics,text,chapter-5"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Analog Devices Wiki"/>
+<link rel="start" href="/"/>
+<link rel="contents" href="/university/courses/electronics/text/chapter-5?do=index" title="Sitemap"/>
+<link rel="manifest" href="/lib/exe/manifest.php" crossorigin="use-credentials"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns=university:courses:electronics:text"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/university/courses/electronics/text/chapter-5"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/university/courses/electronics/text/chapter-5"/>
+<link rel="canonical" href="https://wiki.analog.com/university/courses/electronics/text/chapter-5"/>
+<link rel="stylesheet" href="/lib/exe/css.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb"/>
+<script nonce="cf55734923527065380a1abf131ba444">var NS='university:courses:electronics:text';var JSINFO = {"plugin_enforcesummary":{"enforce_summary":1,"default_minoredit":0,"enforce_preview":0},"plugin_folded":{"hide":"hide","reveal":"reveal"},"plugins":{"interwikipaste":{"patterns":"[{\"shortcut\":\"footprints\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/design\\\\-center\\\\\\\/packaging\\\\-quality\\\\-symbols\\\\-footprints\\\\\\\/symbols\\\\-and\\\\-footprints\\\\\\\/([^ ]+)?\\\\.html\",\"encode\":false},{\"shortcut\":\"staging.kernel.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/gregkh\\\\\\\/staging\\\\.git;a\\\\=blob;hb\\\\=refs\\\\\\\/heads\\\\\\\/staging\\\\-next;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"avnetexpress\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/avnetexpress\\\\.avnet\\\\.com\\\\\\\/store\\\\\\\/em\\\\\\\/EMController\\\\?storeId\\\\=500201&N\\\\=0&action\\\\=products&term\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"downgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/analogdevicesinc\\\\.github\\\\.io\\\\\\\/DownGit\\\\\\\/\\\\#\\\\\\\/home\\\\?url\\\\=https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"cart\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/shoppingcart\\\\.analog\\\\.com\\\\\\\/AddModel\\\\.aspx\\\\?locale\\\\=en&ACTION\\\\=BUY_BUNDLES&modelNbr\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digikey\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digikey\\\\.com\\\\\\\/scripts\\\\\\\/DkSearch\\\\\\\/dksus\\\\.dll\\\\?KeywordSearch\\\\?Site\\\\=US&amp;Keywords\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"git.linux.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/torvalds\\\\\\\/linux\\\\.git;a\\\\=blob;hb\\\\=HEAD;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"export\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/exportclassification\\\\\\\/Search\\\\\\\/Result\\\\?strSearch\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ibis\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/media\\\\\\\/en\\\\\\\/simulation\\\\-models\\\\\\\/ibis\\\\-models\\\\\\\/([^ ]+)?\\\\.ibs\",\"encode\":false},{\"shortcut\":\"bfsvn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/project\\\\\\\/([^ ]+)?\\\\\\\/scmsvn\\\\\\\/trunk\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?;hb\\\\=HEAD\",\"encode\":false},{\"shortcut\":\"paypal\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.paypal\\\\.com\\\\\\\/cgi\\\\-bin\\\\\\\/webscr\\\\?cmd\\\\=_xclick&amp;business\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"arrow\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.arrow\\\\.com\\\\\\\/en\\\\\\\/products\\\\\\\/search\\\\?cat\\\\=&q\\\\=([^ ]+)?&r\\\\=true\",\"encode\":false},{\"shortcut\":\"linux.github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/linux\\\\\\\/blob\\\\\\\/([^ ]+)?\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit_rev\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digilent\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digilentinc\\\\.com\\\\\\\/Products\\\\\\\/Detail\\\\.cfm\\\\?Prod\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"reg\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/my\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/app\\\\\\\/registration\\\\\\\/hardware\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\\\\\\\/blob\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"go\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?&amp;btnI\\\\=lucky\",\"encode\":true},{\"shortcut\":\"docs\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/docs\\\\.blackfin\\\\.uclinux\\\\.org\\\\\\\/doku\\\\.php\\\\?id\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.com\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-20\",\"encode\":true},{\"shortcut\":\"amazon.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.de\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-21\",\"encode\":true},{\"shortcut\":\"mouser\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/mouser\\\\.com\\\\\\\/Search\\\\\\\/Refine\\\\?Keyword\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tkt\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/tracker\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"repo\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpmeta\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/meta\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bf\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"maxim\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.maximintegrated\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/en\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpfr\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/fr\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpde\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/de\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpes\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/es\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wppl\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/pl\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpjp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ja\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpru\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ru\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfin\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon.uk\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.co\\\\.uk\\\\\\\/dp\\\\\\\/([^ ]+)?\",\"encode\":true},{\"shortcut\":\"google\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"oreilly\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.oreilly\\\\.com\\\\\\\/catalog\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"mw\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.mathworks\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"rfc\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/tools\\\\.ietf\\\\.org\\\\\\\/html\\\\\\\/rfc([^ ]+)?\",\"encode\":false},{\"shortcut\":\"google.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.de\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"user\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/members\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"this\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/wiki\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"phpfn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/secure\\\\.php\\\\.net\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"adi\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"xilinx\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.xilinx\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ez\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"doku\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.dokuwiki\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"callto\",\"pattern\":\"callto\\\\:\\\\\\\/\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"man\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/man\\\\.cx\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"skype\",\"pattern\":\"skype\\\\:([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tel\",\"pattern\":\"tel\\\\:([^ ]+)?\",\"encode\":false}]"},"vshare":{"youtube":"youtube\\.com\/.*[&?]v=([a-z0-9_\\-]+)","vimeo":"vimeo\\.com\\\/(\\d+)","slideshare":"slideshare.*id=(\\d+)","dailymotion":"dailymotion\\.com\/video\/([a-z0-9]+)","archiveorg":"archive\\.org\/(?:embed|details)\/([a-zA-Z0-9_\\-]+)","soundcloud":"soundcloud\\.com\/([\\w-]+\/[\\w-]+)","niconico":"nicovideo\\.jp\/watch\/(sm[0-9]+)","bitchute":"bitchute\\.com\\\/video\\\/([a-zA-Z0-9_\\-]+)","coub":"coub\\.com\\\/view\\\/([a-zA-Z0-9_\\-]+)","odysee":"odysee\\.com\/\\$\/(?:embed|download)\/([-%_?=\/a-zA-Z0-9]+)","youku":"v\\.youku\\.com\/v_show\/id_([0-9A-Za-z=]+)\\.html","bilibili":"bilibili\\.com\\\/video\\\/(BV[0-9A-Za-z]+)","msoffice":"(?:office\\.com.*[&?]videoid=([a-z0-9\\-]+))","msstream":"microsoftstream\\.com\\\/video\\\/([a-f0-9\\-]{36})","rutube":"rutube\\.ru\\\/video\\\/([a-z0-9]+)\\\/","gdrive":"drive\\.google\\.com\\\/file\\\/d\\\/([a-zA-Z0-9_-]+)\/"}},"id":"university:courses:electronics:text:chapter-5","namespace":"university:courses:electronics:text","ACT":"show","useHeadingNavigation":1,"useHeadingContent":0};(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script src="/lib/exe/jquery.php?tseed=8faf3dc90234d51a499f4f428a0eae43" defer="defer"></script>
+<script src="/lib/exe/js.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb" defer="defer"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/lib/tpl/analog2014/images/favicon.ico" />
+
+    <script src="https://assets2.analog.com/header-footer/index.js" type="text/javascript" defer="true"></script>
+
+    <!-- LIVE tracking -->
+<script src="//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js" async></script>
+<script src="/lib/tpl/analog2014/assets/js/adi/global.analytics.js" type="text/javascript"></script>
+</head>
+
+<!-- List of supported themes thm-education, thm-applications, thm-parametric, thm-product, thm-community, thm-design-center, thm-my-analog, thm-support -->
+<body class="home">
+
+
+<!-- wiki_header.html -->
+<header class="adi_header adi_header--wiki tools-header" id="dokuwiki__top" data-ot="true">
+
+    <div class="adi_topbar">
+        <div class="adi_container">
+            <section class="adi_row">
+                <!--  BEGIN:  Internal Links -->
+                <nav class="adi_column adi_pull-left">
+                    <a class="adi_topbar-link adi_topbar-link--analog-home" href="//www.analog.com">
+                        <strong>Analog.com</strong>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--engineer-zone" href="//ez.analog.com">
+                        <strong class="adi_link--hover-accent">Engineer</strong>
+                        <span>Zone</span>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--analog-dialogue" href="//www.analog.com/en/resources/analog-dialogue.html">
+                        <strong class="adi_link--hover-accent">Analog</strong>
+                        <span>Dialogue</span>
+                    </a>
+                </nav> <!-- /.adi_column.adi_pull-left -->
+                <!--  END:  Internal Links  -->
+                <!--  BEGIN:  Language Options  -->
+                <nav class="adi_column adi_pull-right">
+                    <a class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-logo" href="//my.analog.com/">
+                        <span><img src="https://assets2.analog.com/cms-assets/images/images/images/myanalog_logo.png" alt="My Analog Login"></span>&nbsp;
+                    </a>
+
+                    <a href="/university/courses/electronics/text/chapter-5?do=login&amp;sectok="  class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-login action login" rel="nofollow" title="Log In"><strong>Log In</strong></a>                </nav> <!-- /.adi_column.adi_pull-right -->
+                <!--  END:  Language Options  -->
+            </section> <!-- /.adi_row -->
+        </div> <!-- /.adi_container -->
+    </div>
+
+
+
+    <div class="adi_container">
+        <section class="adi_row">
+            <!--  BEGIN:  Logo  -->
+            <div class="adi_column adi_logo-container">
+                <a class="adi_logo" href="/start">
+                    <img src="/lib/tpl/analog2014//assets/images/adi-logo.svg" alt="Analog Devices Wiki" />
+                </a>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+            <div class="adi_column adi_page-title-container">
+                <h1 class="adi_page-title">Wiki</h1>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+        </section> <!-- /.adi_row -->
+    </div> <!-- /.adi_container -->
+
+    <div class="navigation-bar">
+        <div class="content-wrap clearfix">
+            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"><a href="#">Wiki Tools</a></div><ul class="submenu"><li class="level2"><a href="/university/courses/electronics/text/chapter-5?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-5?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-5?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>
+            <ul class="list-inline pull-right searchmenu clearfix">
+                <li class="search-box">
+                    <form action="" accept-charset="utf-8" class="search clearfix" id="dw__search" method="get" role="search">
+                        <div class="no">
+                            <input type="hidden" name="do" value="search">
+                            <input type="text" autocomplete="off" id="qsearch__in" accesskey="f" name="id" class="edit" placeholder="search wiki">
+                            <button type="submit" value="Search" class="button search-icon" title="Search"></button>
+
+                            <div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none; white-space: nowrap;">
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</header> <!-- /.adi_header -->
+
+
+
+
+
+<!-- Mobile view navigation drawer-->
+<div class="wiki-mob-body">
+    <div class="content" role="main">
+        <div class="col-md-12 wiki-head-row">
+            <div class="row ">
+                <div class="title-nophoto">
+                    <div class="container page-title ">
+                        <h1 data-page-title="true">Analog Devices Wiki</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 floater-menu-container">
+                <div class="row product-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 wiki-right-panel">
+                                <div class="row">
+                                    <div class=" product-bookmarks" id="affix-nav" name="adi_products_left_navigation">
+                                        <ul class="nav" id="affix-ul">
+                                            <li class="">
+
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#"
+                                                   name='SDR-home_2e322e80-5ec4-4b20-b8b8-71702b590a25'>Analog Devices
+                                                    Wiki
+                                                </a>
+
+                                            </li>
+                                            <!--Wiki-->
+                                            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"><a href="#">Wiki Tools</a></div><ul class="submenu Res_tools_child"><li class="level2"><a href="/university/courses/electronics/text/chapter-5?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-5?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-5?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>                                            <!--Wiki-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="special-content">
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#English">English<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="English" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/en/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_en.jpg" class="mobile-images"
+                                 width="100%" alt="English"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#简体中文">简体中文<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="简体中文" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/cn/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_cn.jpg" class="mobile-images"
+                                 width="100%" alt="简体中文"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#日本語">日本語<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="日本語" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/jp/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_jp.jpg" class="mobile-images"
+                                 width="100%" alt="日本語"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#Руccкий">Руccкий<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="Руccкий" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/ru/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_ru.jpg" class="mobile-images"
+                                 width="100%" alt="Руccкий"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile view navigation drawer-->
+
+<!-- /tpl_header.php -->
+
+
+
+<div id="dokuwiki__site" role="main" class="main-body content">
+    <div class="site dokuwiki mode_show tpl_analog2014   ">
+        <div class="container">
+
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content">
+                <div class="pad group">
+
+                    <div class="page group">
+                        
+                                                <!-- wikipage start -->
+                        <div class="approval approved_yes"><span class="approval_approved">This version (<span class="approval_date">06 Jun 2017 14:58</span>) was <em>approved</em> by <a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a>.</span><span class="approval_previous">The <a href="/university/courses/electronics/text/chapter-5?rev=1377958569">Previously approved version</a> (31 Aug 2013 14:16) is available.<a href="https://wiki.analog.com/university/courses/electronics/text/chapter-5?do=diff&rev2[0]=1377958569&rev2[1]=1496761087&difftype=sidebyside" class="approved_diff_link"><img src="/lib/images/diff.png" class="approved_diff_link" alt="Diff" /></a></span></div><!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#chapter_5solid-state_diodes_and_diode_characteristics">Chapter 5:  Solid-state diodes and diode characteristics</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#the_pn_junction">5.1 The PN junction</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#properties_of_a_pn_junction">5.1.1 Properties of a PN junction</a></div></li>
+<li class="level3"><div class="li"><a href="#equilibrium_zero_bias">5.1.2 Equilibrium (zero bias)</a></div></li>
+<li class="level3"><div class="li"><a href="#forward_bias">5.1.3 Forward bias</a></div></li>
+<li class="level3"><div class="li"><a href="#reverse_bias">5.1.4 Reverse bias</a></div></li>
+<li class="level3"><div class="li"><a href="#section_summary">Section Summary</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#actual_diodes">5.2 Actual Diodes</a></div></li>
+<li class="level2"><div class="li"><a href="#temperature_behavior_of_diodes">5.3 Temperature behavior of Diodes</a></div></li>
+<li class="level2"><div class="li"><a href="#linear_model">5.4 Linear Model</a></div></li>
+<li class="level2"><div class="li"><a href="#small-signal_model">5.5 Small-Signal Model</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#section_summary1">Section Summary</a></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="chapter_5solid-state_diodes_and_diode_characteristics">Chapter 5:  Solid-state diodes and diode characteristics</h1>
+<div class="level1">
+
+<p>
+In electronics, a diode is a two-terminal component with an asymmetric current vs. voltage characteristic, with low (ideally zero) resistance to current flow in one direction, and high (ideally infinite) resistance in the other. A silicon semiconductor diode, the most common type, is a single crystal piece of semiconductor material with a PN junction connected to two electrical terminals.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="the_pn_junction">5.1 The PN junction</h2>
+<div class="level2">
+
+<p>
+A PN junction is formed by joining p-type and n-type semiconductors together in a single crystal lattice. The term junction refers to the boundary interface where the two regions of the semiconductor meet. If the junction was constructed of two separate pieces this would introduce a discontinuity in the crystal lattice, so PN junctions are created in a single crystal of semiconductor by introducing certain impurities called dopants, for example by ion implantation, diffusion, or by epitaxy (growing a layer of crystal doped with n-type impurities on top of a layer of crystal doped with p-type impurities for example).
+</p>
+
+<p>
+PN junctions are the elementary building blocks of almost all semiconductor electronic devices such as diodes, transistors, solar cells, LEDs, and integrated circuits; they are the active sites where the electronic action of the device takes place. For example, a common type of transistor, the bipolar junction transistor, consists of two PN junctions in series, in the form NPN or PNP.
+</p>
+
+</div>
+
+<h3 class="sectionedit3" id="properties_of_a_pn_junction">5.1.1 Properties of a PN junction</h3>
+<div class="level3">
+
+<p>
+The PN junction exhibits some interesting properties which have useful applications in solid state electronics. A p-doped semiconductor is relatively conductive. The same is true of an n-doped semiconductor, but the junction between p and n type regions is a nonconductor. This non-conducting layer, called the depletion layer, occurs because the electrically charged carriers, electrons in n-type and holes p-type silicon, diffuse into the other type of material (<abbr title="in other words">i.e.</abbr> electrons in p-type and holes in n-type) and eliminate each other in a process called recombination. This diffusion of charge causes a built in potential difference across the depletion region. By manipulating this non-conductive layer, PN junctions are commonly used as diodes: circuit elements that allow a flow of electricity in one direction but not in the other (opposite) direction. This property is explained in terms of forward bias and reverse bias, where the term bias refers to the application of an electric voltage across the PN junction. A PN junction will conduct current when the applied external voltage exceeds the built in potential of the junction.
+</p>
+
+</div>
+
+<h3 class="sectionedit4" id="equilibrium_zero_bias">5.1.2 Equilibrium (zero bias)</h3>
+<div class="level3">
+
+<p>
+In a PN junction, without an external applied voltage, an equilibrium condition is reached in which a potential difference is formed across the junction. This potential difference is called the built-in potential, <abbr title="volt">V</abbr><sub>BI</sub>.
+</p>
+
+<p>
+At the junction of p-type and n-type semiconductors, higher concentration of electrons in the n-type region near the PN interface tend to diffuse into the p-type region. As electrons diffuse, they leave positively charged ions (donors) in the n region. Similarly, the higher concentration  of holes on the p-type side near the PN interface begin to diffuse into the n-type region leaving fixed ions (acceptors) with negative charge. The regions just adjacent on either side of the PN interface lose their neutrality and become charged, forming the space charge region or depletion layer (see figure 5.1).
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-f1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-f1.png"><img src="/_media/university/courses/electronics/text/chptr5-f1.png?w=600&amp;tok=bdfaf3" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 5.1 PN junction at equilibrium 
+</p>
+</div>
+<p>
+The electric field created by the space charge region opposes the diffusion process for both electrons and holes. There are two simultaneous phenomena: the diffusion process that tends to generate more space charge, and the electric field generated by the space charge that tends to counteract the diffusion. At equilibrium these two forces balance each other. The carrier concentration profile at equilibrium is shown in figure 5.1 with blue and red lines. Also shown are the two counterbalancing phenomena that establish equilibrium.
+</p>
+
+<p>
+The space charge region is a zone with a net charge provided by the fixed ions (donors or acceptors) that have been left uncovered by majority carrier diffusion. When equilibrium is reached, the charge density is approximated by the displayed step function in the figure 5.2 Q(x) graph. In fact, the region is completely depleted of majority carriers (leaving a charge density equal to the net doping level), and the edge between the space charge region and the neutral region is quite sharp. The space charge region has the same charge on both sides of the PN interface, thus it extends farther into the less heavily doped side (the n side in figures 5.1 and 5.2).
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-f2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-f2.png"><img src="/_media/university/courses/electronics/text/chptr5-f2.png?w=600&amp;tok=b05898" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 5.2 
+</p>
+</div>
+</div>
+
+<h3 class="sectionedit9" id="forward_bias">5.1.3 Forward bias</h3>
+<div class="level3">
+
+<p>
+In forward bias, a positive voltage is applied to the p-type side with respect to the n-type side of the junction. With a voltage applied in this way, the holes in the p-type region and the electrons in the n-type region are forced towards the junction. This reduces the width of the depletion layer. The positive charge applied to the p-type material repels the holes, while the negative charge applied to the n-type material repels the electrons. The distance between the electrons and holes decreases as they are forced towards the junction. This lowers the built in potential barrier. With increasing forward-bias voltage, the depletion layer eventually becomes thin enough that the built in electric field can no longer counteract the charge carrier motion across the PN junction, consequently reducing the electrical resistance. The electrons which cross the PN junction into the p-type material (or holes which cross into the n-type material) will diffuse in the near-neutral region. Therefore, the amount of minority diffusion in the near-neutral zones determines the amount of current that may flow through the diode.
+</p>
+
+<p>
+Only majority carriers (electrons in n-type material or holes in p-type) can flow through a semiconductor for a macroscopic length. With this in mind, consider the flow of electrons across the junction. The forward bias causes a force on the electrons pushing them from the N side toward the P side. With forward bias, the depletion region is narrow enough that electrons can cross the junction and are injected into the p-type material. However, they do not continue to flow through the p-type material indefinitely, because it is energetically favorable for them to recombine with holes. The average length an electron travels through the p-type material before recombining is called the diffusion length, and it is typically on the order of microns.
+</p>
+
+<p>
+Although the electrons penetrate only a short distance into the p-type material before recombining, the electric current continues uninterrupted, because holes (the majority carriers) begin to flow in the opposite direction replacing the ones that the minority carrier electrons recombined with. The total current (the sum of the electron and hole currents) is constant in space, because any variation would cause charge to build up over time (this is Kirchhoff&#039;s current law). The flow of holes from the p-type region into the n-type region is exactly analogous to the flow of electrons from N to P (electrons and holes swap roles and the signs of all currents and voltages are reversed).
+</p>
+
+<p>
+Therefore, the macroscopic picture of the current flow through the diode involves electrons flowing through the n-type region toward the junction, holes flowing through the p-type region in the opposite direction toward the junction, and the two kinds of carriers constantly recombining in the vicinity (given by the diffusion length) of the junction. The electrons and holes travel in opposite directions, but they also have opposite charges, so the overall current is in the same direction on both sides of the diode, as required.
+</p>
+
+</div>
+
+<h3 class="sectionedit10" id="reverse_bias">5.1.4 Reverse bias</h3>
+<div class="level3">
+
+<p>
+Reverse bias usually refers to how a diode is used in a circuit. If a diode is reverse biased, the voltage at the cathode is higher than that at the anode. Therefore, no current will flow until the electric field is so high that the diode breaks down. 
+</p>
+
+<p>
+Because the p-type material is now connected to the negative side of the applied voltage, the holes in the p-type material are pulled away from the junction, causing the thickness of the depletion layer to increase. Similarly, because the n-type region is connected to the positive side, the electrons will also be pulled away from the junction. Therefore the depletion layer widens, and does so increasingly with increasing reverse-bias voltage. This increases the voltage barrier causing a high resistance to the flow of charge carriers thus allowing only a very small electric current to leak across the PN junction.
+</p>
+
+<p>
+The strength of the depletion layer electric field increases as the reverse-bias voltage increases. Once the electric field intensity increases beyond a critical level, the PN junction depletion layer breaks-down and current begins to flow, usually by either the Zener or avalanche breakdown processes. Both of these breakdown processes are non-destructive and are reversible, as long as the amount of current flowing does not reach levels that cause the semiconductor material to overheat and cause thermal damage.
+</p>
+
+<p>
+This effect is used to one&#039;s advantage in zener diode regulator circuits. Zener diodes have a well-defined low reverse breakdown voltage by design. A typical value for the breakdown voltage is for instance 6.2V. This means that the voltage at the cathode can never be more than 6.2V higher than the voltage at the anode, because the diode will break down, and therefore conduct, if the voltage gets any higher. This effectively limits the voltage across the diode.
+</p>
+
+<p>
+Another application where reverse biased diodes are used is in varactor (variable capacitor) diodes. The depletion layer acts as an insulator between the two conducting plates or terminals of the diode. The capacitance is a function of the width of the insulating layer and its area. The width of the depletion zone of any diode changes with the voltage applied. This varies the capacitance of the diode. Varactors are purposely designed with one side of the PN junction lightly doped so there will be a large depletion region on that side of the diode. This thicker region will also be effected more by the applied bias voltage and thus the change in capacitance of the diode ( ΔC/ΔV ) will be a strong function of the applied bias.  
+</p>
+
+</div>
+
+<h3 class="sectionedit11" id="section_summary">Section Summary</h3>
+<div class="level3">
+
+<p>
+The forward-bias and the reverse-bias properties of the PN junction imply that it can be used as a diode. A PN junction diode allows electric charges to flow in one direction, but not in the opposite direction; negative charges (electrons) can easily flow through the junction from N to P but not from P to N and the reverse is true for holes. When the PN junction is forward biased, electric charge flows freely due to reduced resistance of the PN junction. When the PN junction is reverse biased, however, the junction barrier (and therefore resistance) becomes greater and charge flow is very small.
+</p>
+
+</div>
+
+<h2 class="sectionedit12" id="actual_diodes">5.2 Actual Diodes</h2>
+<div class="level2">
+
+<p>
+The figure 5.3 below gives the schematic symbol for a diode (a) and a picture of a typical diode from the lab (b). Diodes are quite common and useful devices. One can think of a diode as a device which allows current to flow in only one direction. This is an over-simplification, but a good approximation.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-f3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-f3.png"><img src="/_media/university/courses/electronics/text/chptr5-f3.png?w=300&amp;tok=3ed8cf" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ (a) 
+</p>
+</div>
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-f4.jpg?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-f4.jpg"><img src="/_media/university/courses/electronics/text/chptr5-f4.jpg?w=300&amp;tok=468244" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ (b) 
+</p>
+</div><div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 5.3: (a) Diode Schematic Symbol (b) small signal diode. 
+</p>
+</div>
+<p>
+As was discussed earlier, semiconductor diodes are fabricated as a two layer structure forming a PN junction. Semiconductors, such as silicon or germanium, can be doped with small concentrations of specific impurities to yield a material which conducts electricity via electron transport (n-type) or via holes (p-type). When layers of these two types of doped semiconductor are constructed to form a PN junction, electrons migrate away from the n-type side and holes migrate away from the p-type side, as shown in figure. 5.1. This redistribution of charge gives rise to a potential gap <abbr title="volt">V</abbr><sub>BI</sub> across the junction, as depicted in the Figure. This gap is <em>VBI ~</em>0<em>.</em>7 <abbr title="volt">V</abbr> for silicon and <em>~</em>0<em>.</em>3 <abbr title="volt">V</abbr> for germanium.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-f5.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-f5.png"><img src="/_media/university/courses/electronics/text/chptr5-f5.png?w=500&amp;tok=abf788" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+  Figure 5.4 A PN junction, forming a voltage gap across the junction 
+</p>
+</div>
+<p>
+When this PN junction diode is now connected to an external voltage, this can effectively increase or decrease the built in potential gap. This gives rise to very different behavior, depending upon the polarity of this external voltage, as shown by the typical <em><abbr title="volt">V</abbr> - I</em> plot of figure. 5.5. When the diode is reverse biased, as depicted in figure 5.6, the gap increases, and very little current flows across the junction (until eventually in this example at ~ 6.2V field break down occurs). Conversely, a forward biased configuration decreases the gap, approaching zero for an external voltage equal to the gap voltage, and current can flow easily. 
+</p>
+
+<p>
+The expression for the (forward bias) diode voltage <abbr title="volt">V</abbr><sub>D</sub> is as follows:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-e1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-e1.png"><img src="/_media/university/courses/electronics/text/chptr5-e1.png?w=180&amp;tok=f738ae" class="mediacenter" loading="lazy" alt="" width="180" /></a> (5.1)
+</p>
+
+<p>
+Where:<br/>
+
+<abbr title="volt">V</abbr><sub>D</sub> = applied voltage across the diode<br/>
+
+<abbr title="thousands (prefix, as in kHz, kΩ, kV, kW)">k</abbr> = Boltzman constant (1.38E-23 Joules/Kelvin)<br/>
+
+T = the absolute temperature in Kelvin<br/>
+
+q = the electron charge (1.6E-19 Coulombs)<br/>
+
+I<sub>D</sub> = the actual current through the diode<br/>
+
+I<sub>S</sub> = the diffusion current (a device dependent constant)<br/>
+
+(The so called thermal voltage, <abbr title="volt">V</abbr><sub>T</sub>, is <em>kT/q </em>= 26 <abbr title="millivolt">mV</abbr> at room temperature.)
+</p>
+
+<p>
+The equation above can be rearranged to provide I<sub>D</sub>:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-e2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-e2.png"><img src="/_media/university/courses/electronics/text/chptr5-e2.png?w=200&amp;tok=4531c2" class="mediacenter" loading="lazy" alt="" width="200" /></a>   (5.2)
+</p>
+
+<p>
+Thus, when reverse biased, the diode behaves much like an open switch; and when forward biased, for currents of about 10 <abbr title="milliampere">mA</abbr> or greater, the diode gives a nearly constant voltage drop of ~0.7 <abbr title="volt">V</abbr>. The diffusion current, I<sub>S,</sub>is dependent on the doping level of n-type and p-type impurities, the area of the diode and (very much) on temperature. A reasonable starting point for a small-geometry Integrated Circuit diode is I<sub>S</sub>=1E<sup>-16</sup>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-f6.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-f6.png"><img src="/_media/university/courses/electronics/text/chptr5-f6.png?w=600&amp;tok=0f1fee" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 5.5: The voltage, <abbr title="volt">V</abbr><sub>D</sub> vs. current, I<sub>D</sub> behavior of a diode 
+</p>
+</div>
+<p>
+The opposing charges in a semiconductor junction are no different from those on the plates of a capacitor. So every junction has a capacitance; but since the distance between the electrons and holes, the depletion layer, changes with applied voltage, the capacitance depends on the applied voltage. The lower the voltage, the higher the capacitance, and it will increase right into the forward bias region.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-f7.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-f7.png"><img src="/_media/university/courses/electronics/text/chptr5-f7.png?w=600&amp;tok=300c0f" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 5.6 Voltage vs. Current behavior of a 6.2 Volt Zener diode 
+</p>
+</div>
+<p>
+One additional thing to note about real diodes, is the series resistance in the semiconductor material not taken up by the depletion region. For a common concentration of 5E<sup>15</sup> (dopant atoms per cubic centimeter, giving a practical breakdown voltage in an IC of about 25 Volts), the bulk resistivity is about 1 Ohm-cm for phosphorus (n-type) doped silicon and 3 Ohm-cm for boron (p-type). For comparison, a metal like aluminum has a resistivity of 2.8 microOhm-cm, copper 1.7 microOhm-cm. Bulk Resistivity (ρ or rho) is measured between opposite surfaces of a cube of material with a side-length (w, h, l) of 1cm (10mm).
+</p>
+
+</div>
+
+<h2 class="sectionedit25" id="temperature_behavior_of_diodes">5.3 Temperature behavior of Diodes</h2>
+<div class="level2">
+
+<p>
+From the diode voltage equation, 5.1, we can see that it contains the absolute temperature term T. In addition, the diffusion current, I<sub>S</sub>, is not actually constant but is highly temperature dependent. In the lower set of plots in figure 5.7 the simulated diode voltage vs. temperature is plotted for four different diode currents (green=1 <abbr title="milliampere">mA</abbr>, blue=2 <abbr title="milliampere">mA</abbr>, red=5mA and cyan=10mA). It is apparent from the curves that the diode voltage has a rather strong negative temperature dependence.
+</p>
+
+<p>
+In the upper plot the difference between the 2mA and the 1mA curves is plotted along with the difference between the 5mA and 10mA curves. These two results lie exactly on top of each other. The reason for this is apparent if we examine the diode voltage equation more closely.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-f8.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-f8.png"><img src="/_media/university/courses/electronics/text/chptr5-f8.png?w=600&amp;tok=094b6d" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 5.7 Diode Voltage vs. Temperature at 1mA, 2mA, 5mA and 10mA 
+</p>
+</div>
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-e3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-e3.png"><img src="/_media/university/courses/electronics/text/chptr5-e3.png?w=350&amp;tok=f1be66" class="mediacenter" loading="lazy" alt="" width="350" /></a>  (5.3)
+</p>
+
+<p>
+Rearranging and assuming I<sub>S1</sub> = I<sub>S2</sub> we get:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-e4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-e4.png"><img src="/_media/university/courses/electronics/text/chptr5-e4.png?w=350&amp;tok=fe6978" class="mediacenter" loading="lazy" alt="" width="350" /></a>  (5.4)
+</p>
+
+<p>
+Now the strong temperature effect of I<sub>S</sub>drops out of the equation and we are left with just the absolute temperature term, T, which makes ΔV<sub>D</sub>proportional to absolute temperature (PTAT). Both <abbr title="volt">V</abbr><sub>D2</sub>-<abbr title="volt">V</abbr><sub>D1</sub> and <abbr title="volt">V</abbr><sub>D4</sub>-<abbr title="volt">V</abbr><sub>D3</sub> have the same 2:1 ratio for their currents and thus the ΔV<sub>D</sub> curves will exactly lie on top of each other. At room temperature the thermal voltage <abbr title="volt">V</abbr><sub>T</sub> is about 26 <abbr title="millivolt">mV</abbr> which when multiplied by ln(2) is the approximately 18mV seen in the graph at 25 degrees.
+</p>
+
+</div>
+
+<h2 class="sectionedit28" id="linear_model">5.4 Linear Model</h2>
+<div class="level2">
+
+<p>
+The linear model of the diode approximates the exponential I - <abbr title="volt">V</abbr> characteristics by a straight line that is tangent to the actual curve at the DC bias point. Figure 5.8 shows the curve with the tangent line at the point (<abbr title="volt">V</abbr><sub>D</sub>, I<sub>D</sub>). The curve intersects the horizontal axis at the voltage <abbr title="volt">V</abbr><sub>D0</sub>. For small changes in <abbr title="volt">V</abbr><sub>D</sub>and I<sub>D</sub> about the tangent point, the tangent line gives a good approximation to the actual curve. 
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-f9.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-f9.png"><img src="/_media/university/courses/electronics/text/chptr5-f9.png?w=550&amp;tok=af2065" class="mediacenter" loading="lazy" alt="" width="550" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 5.8 I - <abbr title="volt">V</abbr> characteristics with tangent line at (<abbr title="volt">V</abbr><sub>D</sub>, I<sub>D</sub>) 
+</p>
+</div>
+<p>
+The slope of the tangent line is given by:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-e5.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-e5.png"><img src="/_media/university/courses/electronics/text/chptr5-e5.png?w=370&amp;tok=209190" class="mediacenter" loading="lazy" alt="" width="370" /></a> (5.5)
+</p>
+
+<p>
+I<sub>D</sub> is often much larger than I<sub>S</sub>so the equation is often simplified to:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-e6.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-e6.png"><img src="/_media/university/courses/electronics/text/chptr5-e6.png?w=100&amp;tok=eadb61" class="mediacenter" loading="lazy" alt="" width="100" /></a> (5.6)
+</p>
+
+<p>
+The equation of the tangent line is:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-e7.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-e7.png"><img src="/_media/university/courses/electronics/text/chptr5-e7.png?w=180&amp;tok=e7afc1" class="mediacenter" loading="lazy" alt="" width="180" /></a> (5.7)
+</p>
+
+</div>
+
+<h2 class="sectionedit31" id="small-signal_model">5.5 Small-Signal Model</h2>
+<div class="level2">
+
+<p>
+Because the diode equation for I<sub>D</sub> as a function of <abbr title="volt">V</abbr><sub>D</sub> is non-linear, the tools of linear circuit analysis cannot be applied to circuits containing diodes the same way one would a circuit containing just resistors. However, if the diode current is known for a particular voltage, linear circuit analysis can be used to predict the change in current for a given change in voltage, provided the change is incrementally small. Such an approach is called a small-signal analysis. A few words about notation:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-e8.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-e8.png"><img src="/_media/university/courses/electronics/text/chptr5-e8.png?w=300&amp;tok=4c451e" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-e9.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-e9.png"><img src="/_media/university/courses/electronics/text/chptr5-e9.png?w=300&amp;tok=5427d3" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+Where:<br/>
+
+<abbr title="volt">V</abbr><sub>D</sub> and I<sub>D</sub> are DC bias values and v<sub>d</sub> and i<sub>d</sub> are small-signal changes about the bias values.
+</p>
+
+<p>
+The small-signal resistance is defined as the ratio of v<sub>d</sub> to i<sub>d</sub> and is given by:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-e10.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-e10.png"><img src="/_media/university/courses/electronics/text/chptr5-e10.png?w=200&amp;tok=a2fa44" class="mediacenter" loading="lazy" alt="" width="200" /></a>  (5.8)
+</p>
+
+<p>
+This results in the same r<sub>d</sub> as in the linear tangent model of the diode in figure 5.8. Thus the small-signal model of the diode when forward biased is a resistor of value r<sub>d</sub>. The value of r<sub>d</sub> is inversely proportional to the current through it. Each time the current is doubled, the resistance is halved. It follows from the linear diode model that r<sub>d</sub> can be interpreted graphically as the reciprocal of the slope of the i<sub>D</sub> versus v<sub>D</sub> curve at the point (<abbr title="volt">V</abbr><sub>D</sub>, I<sub>D</sub>).
+</p>
+
+</div>
+
+<h3 class="sectionedit32" id="section_summary1">Section Summary</h3>
+<div class="level3">
+<ol>
+<li class="level1"><div class="li">  Semiconductors contain two types of mobile charge carriers, positively charged holes and negatively charged electrons.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  A semiconductor may be doped with donor impurities (n-type doping) so that it contains mobile charges which are electrons.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  A semiconductor may be doped with acceptor impurities (p-type doping) so that it contains mobile charges which are holes.<br/>
+</div>
+</li>
+<li class="level1 node"><div class="li">  There are two important mechanisms for current flow in a semiconductor:<br/>
+</div>
+<ol>
+<li class="level2"><div class="li">  diffusion of carriers as a result of a concentration gradient; and <br/>
+</div>
+</li>
+<li class="level2"><div class="li">  drift of carriers in an electric field.<br/>
+</div>
+</li>
+</ol>
+</li>
+<li class="level1"><div class="li">  At equilibrium, a built-in potential or potential barrier of <abbr title="volt">V</abbr><sub>BI</sub>volts is developed across a PN junction.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  With the application of a forward bias voltage <abbr title="volt">V</abbr><sub>DF</sub>, the built-in potential is reduced to <abbr title="volt">V</abbr><sub>BI</sub>- <abbr title="volt">V</abbr><sub>D</sub>, and current flows through the diode when <abbr title="volt">V</abbr><sub>DF</sub> is greater than <abbr title="volt">V</abbr><sub>BI</sub>.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  With the application of a reverse bias voltage <abbr title="volt">V</abbr><sub>DR</sub>, the height of the potential barrier is increased to <abbr title="volt">V</abbr><sub>BI</sub> + <abbr title="volt">V</abbr><sub>DR</sub> and little current can flow.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  When <abbr title="volt">V</abbr><sub>BI</sub> + <abbr title="volt">V</abbr><sub>DR</sub> is greater than some critical voltage, where the electric field is higher than the dielectric strength of the semiconductor, reverse breakdown of the junction occurs and current will flow.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  The total diode current I<sub>D</sub> is related to the applied voltage <abbr title="volt">V</abbr><sub>D</sub> by </div>
+</li>
+</ol>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr5-e2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5" class="media" title="university:courses:electronics:text:chptr5-e2.png"><img src="/_media/university/courses/electronics/text/chptr5-e2.png?w=200&amp;tok=4531c2" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+<strong>ADALM1000 Lab Activity 2.<a href="/university/courses/alm1k/alm-lab-2" class="wikilink1" title="university:courses:alm1k:alm-lab-2" data-wiki-id="university:courses:alm1k:alm-lab-2"> Diode I vs. V curves</a></strong><br/>
+
+<strong>ADALM1000 Lab Activity, <a href="/university/courses/alm1k/alm-lab-2pnj" class="wikilink1" title="university:courses:alm1k:alm-lab-2pnj" data-wiki-id="university:courses:alm1k:alm-lab-2pnj">The voltage dependent capacitance of the PN junction</a></strong>
+</p>
+
+<p>
+<strong>ADALM2000 Lab Activity 2.<a href="/university/courses/electronics/electronics-lab-2" class="wikilink1" title="university:courses:electronics:electronics-lab-2" data-wiki-id="university:courses:electronics:electronics-lab-2"> Diode I vs. V curves</a></strong><br/>
+
+<strong>ADALM2000 Lab Activity, <a href="/university/courses/electronics/electronics-lab-pn-junction-cap" class="wikilink1" title="university:courses:electronics:electronics-lab-pn-junction-cap" data-wiki-id="university:courses:electronics:electronics-lab-pn-junction-cap">The voltage dependent capacitance of the PN junction</a></strong><br/>
+
+<strong>ADALM2000 Lab Activity: <a href="/university/courses/electronics/electronics-lab-25" class="wikilink1" title="university:courses:electronics:electronics-lab-25" data-wiki-id="university:courses:electronics:electronics-lab-25">Differential Temperature Sensor</a></strong>
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/chapter-4" class="wikilink1" title="university:courses:electronics:text:chapter-4" data-wiki-id="university:courses:electronics:text:chapter-4">Previous Chapter</a></strong>
+</p>
+
+<p>
+<strong>Go to <a href="/university/courses/electronics/text/chapter-6" class="wikilink1" title="university:courses:electronics:text:chapter-6" data-wiki-id="university:courses:electronics:text:chapter-6">Next Chapter</a></strong>
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/electronics-toc" class="wikilink1" title="university:courses:electronics:text:electronics-toc" data-wiki-id="university:courses:electronics:text:electronics-toc">Table of Contents</a></strong>
+</p>
+
+</div>
+                        <!-- wikipage stop -->
+                    </div>
+
+                    <div class="docInfo"><bdi>university/courses/electronics/text/chapter-5.txt</bdi> · Last modified: <time datetime="2017-06-06T14:58:07+0000">06 Jun 2017 14:58</time> by <bdi><a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a></bdi></div>
+
+                                    </div>
+            </div>
+            <!-- /content -->
+
+            <hr class="a11y"/>
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="/university/courses/electronics/text/chapter-5?do=edit" title="View Source [v]" rel="nofollow" accesskey="v"><span>View Source</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="/university/courses/electronics/text/chapter-5?do=revisions" title="History [o]" rel="nofollow" accesskey="o"><span>History</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="/university/courses/electronics/text/chapter-5?do=backlink" title="Backlinks" rel="nofollow"><span>Backlinks</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="menuitemfolded"><a href="javascript:void(0);" title="Fold/unfold all" rel="nofollow" class="fold_unfold_all_new" onclick="fold_unfold_all();"><span>Fold/unfold all</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M 2,0 L 6.5,3 L 2,6 z M 8,6.6 L 12.5,9.6 L 8,12.6 z M 14,13.2 L 20,13.2 L 17,17.7 z"/></svg></a></li><li class="top"><a href="#dokuwiki__top" title="[ Back to top ] [t]" rel="nofollow" accesskey="t"><span>[ Back to top ]</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /wrapper -->
+
+    </div>
+    <!-- /container -->
+</div>
+<!-- /site -->
+
+﻿<a class="backtotop" href="#header">&nbsp;</a>
+<footer class="footer" id="footer">
+    <adi-footer short></adi-footer>
+
+    
+    <script type="text/javascript">
+        var analytics = '//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js';
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script type="text/javascript">
+        var ADIAssetsPath = "//assets2.analog.com";
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script>
+        /* Copyright 2011-2015 iPerceptions, Inc. All rights reserved. Do not distribute. iPerceptions provides this code 'as is' without warranty of any kind, either express or implied. */
+        window.iperceptionskey = 'acafac0d-3b8a-4d30-8a98-6cbcd5256d93';
+        (function() { var a = document.createElement('script'),
+            b = document.getElementsByTagName('body')[0];
+            a.type = 'text/javascript';
+            a.defer = true;
+            a.src = '//universal.iperceptions.com/wrapper.js';
+            b.appendChild(a); })();
+    </script>
+</footer>
+<script type="text/javascript">
+            if(typeof(_satellite) != 'undefined') {
+            _satellite.pageBottom();
+            }
+        </script>
+<div class="a11y"
+     style="float: left"><img src="/lib/exe/taskrunner.php?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-5&amp;1776083304" width="2" height="1" alt="" /></div>
+</body>
+</html>

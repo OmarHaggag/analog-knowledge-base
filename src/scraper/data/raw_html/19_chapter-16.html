@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"
+      dir="ltr"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Chapter 16:  Advanced Amplifier topics: [Analog Devices Wiki]</title>
+
+    <script>(function (H) {
+            H.className = H.className.replace(/\bno-js\b/, 'js')
+        })(document.documentElement)</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500,500i,600,600i,700,700i|Barlow:300,300i,400,400i,500,500i,600,600i&display=swap" rel="stylesheet">
+
+    <link href="https://assets2.analog.com/apps-assets/wiki/index.css" rel="stylesheet" />
+    <script src="https://assets2.analog.com/apps-assets/wiki/index.mjs"></script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="university,courses,electronics,text,chapter-16"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Analog Devices Wiki"/>
+<link rel="start" href="/"/>
+<link rel="contents" href="/university/courses/electronics/text/chapter-16?do=index" title="Sitemap"/>
+<link rel="manifest" href="/lib/exe/manifest.php" crossorigin="use-credentials"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns=university:courses:electronics:text"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/university/courses/electronics/text/chapter-16"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/university/courses/electronics/text/chapter-16"/>
+<link rel="canonical" href="https://wiki.analog.com/university/courses/electronics/text/chapter-16"/>
+<link rel="stylesheet" href="/lib/exe/css.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb"/>
+<script nonce="5ccb150ef1a33a88aa90875549c82ee5">var NS='university:courses:electronics:text';var JSINFO = {"plugin_enforcesummary":{"enforce_summary":1,"default_minoredit":0,"enforce_preview":0},"plugin_folded":{"hide":"hide","reveal":"reveal"},"plugins":{"interwikipaste":{"patterns":"[{\"shortcut\":\"footprints\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/design\\\\-center\\\\\\\/packaging\\\\-quality\\\\-symbols\\\\-footprints\\\\\\\/symbols\\\\-and\\\\-footprints\\\\\\\/([^ ]+)?\\\\.html\",\"encode\":false},{\"shortcut\":\"staging.kernel.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/gregkh\\\\\\\/staging\\\\.git;a\\\\=blob;hb\\\\=refs\\\\\\\/heads\\\\\\\/staging\\\\-next;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"avnetexpress\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/avnetexpress\\\\.avnet\\\\.com\\\\\\\/store\\\\\\\/em\\\\\\\/EMController\\\\?storeId\\\\=500201&N\\\\=0&action\\\\=products&term\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"downgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/analogdevicesinc\\\\.github\\\\.io\\\\\\\/DownGit\\\\\\\/\\\\#\\\\\\\/home\\\\?url\\\\=https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"cart\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/shoppingcart\\\\.analog\\\\.com\\\\\\\/AddModel\\\\.aspx\\\\?locale\\\\=en&ACTION\\\\=BUY_BUNDLES&modelNbr\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digikey\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digikey\\\\.com\\\\\\\/scripts\\\\\\\/DkSearch\\\\\\\/dksus\\\\.dll\\\\?KeywordSearch\\\\?Site\\\\=US&amp;Keywords\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"git.linux.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/torvalds\\\\\\\/linux\\\\.git;a\\\\=blob;hb\\\\=HEAD;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"export\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/exportclassification\\\\\\\/Search\\\\\\\/Result\\\\?strSearch\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ibis\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/media\\\\\\\/en\\\\\\\/simulation\\\\-models\\\\\\\/ibis\\\\-models\\\\\\\/([^ ]+)?\\\\.ibs\",\"encode\":false},{\"shortcut\":\"bfsvn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/project\\\\\\\/([^ ]+)?\\\\\\\/scmsvn\\\\\\\/trunk\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?;hb\\\\=HEAD\",\"encode\":false},{\"shortcut\":\"paypal\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.paypal\\\\.com\\\\\\\/cgi\\\\-bin\\\\\\\/webscr\\\\?cmd\\\\=_xclick&amp;business\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"arrow\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.arrow\\\\.com\\\\\\\/en\\\\\\\/products\\\\\\\/search\\\\?cat\\\\=&q\\\\=([^ ]+)?&r\\\\=true\",\"encode\":false},{\"shortcut\":\"linux.github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/linux\\\\\\\/blob\\\\\\\/([^ ]+)?\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit_rev\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digilent\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digilentinc\\\\.com\\\\\\\/Products\\\\\\\/Detail\\\\.cfm\\\\?Prod\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"reg\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/my\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/app\\\\\\\/registration\\\\\\\/hardware\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\\\\\\\/blob\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"go\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?&amp;btnI\\\\=lucky\",\"encode\":true},{\"shortcut\":\"docs\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/docs\\\\.blackfin\\\\.uclinux\\\\.org\\\\\\\/doku\\\\.php\\\\?id\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.com\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-20\",\"encode\":true},{\"shortcut\":\"amazon.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.de\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-21\",\"encode\":true},{\"shortcut\":\"mouser\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/mouser\\\\.com\\\\\\\/Search\\\\\\\/Refine\\\\?Keyword\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tkt\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/tracker\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"repo\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpmeta\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/meta\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bf\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"maxim\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.maximintegrated\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/en\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpfr\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/fr\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpde\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/de\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpes\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/es\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wppl\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/pl\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpjp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ja\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpru\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ru\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfin\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon.uk\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.co\\\\.uk\\\\\\\/dp\\\\\\\/([^ ]+)?\",\"encode\":true},{\"shortcut\":\"google\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"oreilly\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.oreilly\\\\.com\\\\\\\/catalog\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"mw\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.mathworks\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"rfc\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/tools\\\\.ietf\\\\.org\\\\\\\/html\\\\\\\/rfc([^ ]+)?\",\"encode\":false},{\"shortcut\":\"google.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.de\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"user\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/members\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"this\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/wiki\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"phpfn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/secure\\\\.php\\\\.net\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"adi\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"xilinx\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.xilinx\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ez\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"doku\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.dokuwiki\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"callto\",\"pattern\":\"callto\\\\:\\\\\\\/\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"man\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/man\\\\.cx\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"skype\",\"pattern\":\"skype\\\\:([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tel\",\"pattern\":\"tel\\\\:([^ ]+)?\",\"encode\":false}]"},"vshare":{"youtube":"youtube\\.com\/.*[&?]v=([a-z0-9_\\-]+)","vimeo":"vimeo\\.com\\\/(\\d+)","slideshare":"slideshare.*id=(\\d+)","dailymotion":"dailymotion\\.com\/video\/([a-z0-9]+)","archiveorg":"archive\\.org\/(?:embed|details)\/([a-zA-Z0-9_\\-]+)","soundcloud":"soundcloud\\.com\/([\\w-]+\/[\\w-]+)","niconico":"nicovideo\\.jp\/watch\/(sm[0-9]+)","bitchute":"bitchute\\.com\\\/video\\\/([a-zA-Z0-9_\\-]+)","coub":"coub\\.com\\\/view\\\/([a-zA-Z0-9_\\-]+)","odysee":"odysee\\.com\/\\$\/(?:embed|download)\/([-%_?=\/a-zA-Z0-9]+)","youku":"v\\.youku\\.com\/v_show\/id_([0-9A-Za-z=]+)\\.html","bilibili":"bilibili\\.com\\\/video\\\/(BV[0-9A-Za-z]+)","msoffice":"(?:office\\.com.*[&?]videoid=([a-z0-9\\-]+))","msstream":"microsoftstream\\.com\\\/video\\\/([a-f0-9\\-]{36})","rutube":"rutube\\.ru\\\/video\\\/([a-z0-9]+)\\\/","gdrive":"drive\\.google\\.com\\\/file\\\/d\\\/([a-zA-Z0-9_-]+)\/"}},"id":"university:courses:electronics:text:chapter-16","namespace":"university:courses:electronics:text","ACT":"show","useHeadingNavigation":1,"useHeadingContent":0};(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script src="/lib/exe/jquery.php?tseed=8faf3dc90234d51a499f4f428a0eae43" defer="defer"></script>
+<script src="/lib/exe/js.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb" defer="defer"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/lib/tpl/analog2014/images/favicon.ico" />
+
+    <script src="https://assets2.analog.com/header-footer/index.js" type="text/javascript" defer="true"></script>
+
+    <!-- LIVE tracking -->
+<script src="//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js" async></script>
+<script src="/lib/tpl/analog2014/assets/js/adi/global.analytics.js" type="text/javascript"></script>
+</head>
+
+<!-- List of supported themes thm-education, thm-applications, thm-parametric, thm-product, thm-community, thm-design-center, thm-my-analog, thm-support -->
+<body class="home">
+
+
+<!-- wiki_header.html -->
+<header class="adi_header adi_header--wiki tools-header" id="dokuwiki__top" data-ot="true">
+
+    <div class="adi_topbar">
+        <div class="adi_container">
+            <section class="adi_row">
+                <!--  BEGIN:  Internal Links -->
+                <nav class="adi_column adi_pull-left">
+                    <a class="adi_topbar-link adi_topbar-link--analog-home" href="//www.analog.com">
+                        <strong>Analog.com</strong>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--engineer-zone" href="//ez.analog.com">
+                        <strong class="adi_link--hover-accent">Engineer</strong>
+                        <span>Zone</span>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--analog-dialogue" href="//www.analog.com/en/resources/analog-dialogue.html">
+                        <strong class="adi_link--hover-accent">Analog</strong>
+                        <span>Dialogue</span>
+                    </a>
+                </nav> <!-- /.adi_column.adi_pull-left -->
+                <!--  END:  Internal Links  -->
+                <!--  BEGIN:  Language Options  -->
+                <nav class="adi_column adi_pull-right">
+                    <a class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-logo" href="//my.analog.com/">
+                        <span><img src="https://assets2.analog.com/cms-assets/images/images/images/myanalog_logo.png" alt="My Analog Login"></span>&nbsp;
+                    </a>
+
+                    <a href="/university/courses/electronics/text/chapter-16?do=login&amp;sectok="  class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-login action login" rel="nofollow" title="Log In"><strong>Log In</strong></a>                </nav> <!-- /.adi_column.adi_pull-right -->
+                <!--  END:  Language Options  -->
+            </section> <!-- /.adi_row -->
+        </div> <!-- /.adi_container -->
+    </div>
+
+
+
+    <div class="adi_container">
+        <section class="adi_row">
+            <!--  BEGIN:  Logo  -->
+            <div class="adi_column adi_logo-container">
+                <a class="adi_logo" href="/start">
+                    <img src="/lib/tpl/analog2014//assets/images/adi-logo.svg" alt="Analog Devices Wiki" />
+                </a>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+            <div class="adi_column adi_page-title-container">
+                <h1 class="adi_page-title">Wiki</h1>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+        </section> <!-- /.adi_row -->
+    </div> <!-- /.adi_container -->
+
+    <div class="navigation-bar">
+        <div class="content-wrap clearfix">
+            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"><a href="#">Wiki Tools</a></div><ul class="submenu"><li class="level2"><a href="/university/courses/electronics/text/chapter-16?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-16?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-16?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>
+            <ul class="list-inline pull-right searchmenu clearfix">
+                <li class="search-box">
+                    <form action="" accept-charset="utf-8" class="search clearfix" id="dw__search" method="get" role="search">
+                        <div class="no">
+                            <input type="hidden" name="do" value="search">
+                            <input type="text" autocomplete="off" id="qsearch__in" accesskey="f" name="id" class="edit" placeholder="search wiki">
+                            <button type="submit" value="Search" class="button search-icon" title="Search"></button>
+
+                            <div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none; white-space: nowrap;">
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</header> <!-- /.adi_header -->
+
+
+
+
+
+<!-- Mobile view navigation drawer-->
+<div class="wiki-mob-body">
+    <div class="content" role="main">
+        <div class="col-md-12 wiki-head-row">
+            <div class="row ">
+                <div class="title-nophoto">
+                    <div class="container page-title ">
+                        <h1 data-page-title="true">Analog Devices Wiki</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 floater-menu-container">
+                <div class="row product-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 wiki-right-panel">
+                                <div class="row">
+                                    <div class=" product-bookmarks" id="affix-nav" name="adi_products_left_navigation">
+                                        <ul class="nav" id="affix-ul">
+                                            <li class="">
+
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#"
+                                                   name='SDR-home_2e322e80-5ec4-4b20-b8b8-71702b590a25'>Analog Devices
+                                                    Wiki
+                                                </a>
+
+                                            </li>
+                                            <!--Wiki-->
+                                            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"><a href="#">Wiki Tools</a></div><ul class="submenu Res_tools_child"><li class="level2"><a href="/university/courses/electronics/text/chapter-16?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-16?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-16?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>                                            <!--Wiki-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="special-content">
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#English">English<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="English" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/en/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_en.jpg" class="mobile-images"
+                                 width="100%" alt="English"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#简体中文">简体中文<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="简体中文" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/cn/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_cn.jpg" class="mobile-images"
+                                 width="100%" alt="简体中文"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#日本語">日本語<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="日本語" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/jp/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_jp.jpg" class="mobile-images"
+                                 width="100%" alt="日本語"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#Руccкий">Руccкий<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="Руccкий" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/ru/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_ru.jpg" class="mobile-images"
+                                 width="100%" alt="Руccкий"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile view navigation drawer-->
+
+<!-- /tpl_header.php -->
+
+
+
+<div id="dokuwiki__site" role="main" class="main-body content">
+    <div class="site dokuwiki mode_show tpl_analog2014   ">
+        <div class="container">
+
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content">
+                <div class="pad group">
+
+                    <div class="page group">
+                        
+                                                <!-- wikipage start -->
+                        <div class="approval approved_yes"><span class="approval_approved">This version (<span class="approval_date">20 Jan 2021 14:51</span>) was <em>approved</em> by <a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a>.</span><span class="approval_previous">The <a href="/university/courses/electronics/text/chapter-16?rev=1391799132">Previously approved version</a> (07 Feb 2014 18:52) is available.<a href="https://wiki.analog.com/university/courses/electronics/text/chapter-16?do=diff&rev2[0]=1391799132&rev2[1]=1611154273&difftype=sidebyside" class="approved_diff_link"><img src="/lib/images/diff.png" class="approved_diff_link" alt="Diff" /></a></span></div><!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#chapter_16advanced_amplifier_topics">Chapter 16:  Advanced Amplifier topics:</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#improvements_to_the_emitter_follower">16.1 Improvements to the emitter follower</a></div></li>
+<li class="level2"><div class="li"><a href="#complementary_feedback_pair_emitter_follower">16.2 Complementary Feedback Pair Emitter Follower</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#fet_source_followers">16.2.1 FET Source Followers</a></div></li>
+<li class="level3"><div class="li"><a href="#the_body_effect">16.2.2 The Body effect</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#improved_series_voltage_regulator">16.3 Improved series voltage regulator</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#transistor_based_capacitance_multiplier">16.3.1 Transistor based Capacitance multiplier</a></div></li>
+<li class="level3"><div class="li"><a href="#adding_an_output_current_limit">16.3.2 Adding an output current limit</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#single_transistor_high_pass_filter">16.4 Single Transistor high pass filter</a></div></li>
+<li class="level2"><div class="li"><a href="#frequency_multiplication">16.5 Frequency Multiplication</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="chapter_16advanced_amplifier_topics">Chapter 16:  Advanced Amplifier topics:</h1>
+<div class="level1">
+
+<p>
+In this chapter we will explore a few circuit techniques involving multiple transistors that are beyond the basic configurations we discussed in earlier chapters.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="improvements_to_the_emitter_follower">16.1 Improvements to the emitter follower</h2>
+<div class="level2">
+
+<p>
+The incremental voltage gain, A<sub><abbr title="volt">V</abbr></sub>, (<abbr title="volt">V</abbr><sub>OUT</sub> / <abbr title="volt">V</abbr><sub>IN</sub>) of the emitter follower should ideally be 1 but will always be slightly less than 1. The gain is generally given by the following equation:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr16_e1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-16" class="media" title="university:courses:electronics:text:chptr16_e1.png"><img src="/_media/university/courses/electronics/text/chptr16_e1.png?w=120&amp;tok=434f8c" class="mediacenter" loading="lazy" alt="" width="120" /></a>
+</p>
+
+<p>
+From the equation we can see that in order to obtain a gain close to one we can either increase R<sub>L</sub> or decrease r<sub>e</sub>. We also know that r<sub>e</sub> is a function of I<sub>E</sub> and that as I<sub>E</sub> increases r<sub>e</sub> decreases. Also from the circuit, figure 16.1(a) we can see that I<sub>E</sub> is related to R<sub>L</sub> and that as R<sub>L</sub> increases I<sub>E</sub> decreases for a fixed supply voltage. These two effects work counter to each other in the simple resistively loaded emitter follower. Thus to optimize the gain of the follower we need to explore ways to either decrease r<sub>e</sub> or increase R<sub>L</sub> without effecting the other.
+</p>
+
+<p>
+Looking at the follower in another way, because of the inherent DC shift due to the transistor&#039;s <abbr title="volt">V</abbr><sub>BE</sub>, the difference between input and output should be constant over the intended signal swing. Due to the simple resistive load R<sub>L</sub>in figure 16.1(a), the emitter current I<sub>E</sub> increases and decreases as the output swings up and down. We know that <abbr title="volt">V</abbr><sub>BE</sub> is an exponential function of I<sub>E</sub> and will change approximately 18 <abbr title="millivolt">mV</abbr> (at room temperature) for a factor of 2 change in I<sub>E</sub>. Given R<sub>L</sub> = 2.2KΩ and a +/- 2V swing and an 8V total supply voltage, ( <abbr title="volt">V</abbr>+ = +4V and <abbr title="volt">V</abbr>- = -4V ), the minimum I<sub>E</sub>= 2V/2.2KΩ or 0.91 <abbr title="milliampere">mA</abbr> and the maximum I<sub>E</sub>= 6V/2.2KΩ or 2.7 <abbr title="milliampere">mA</abbr>. This results in a difference of 1.8 <abbr title="milliampere">mA</abbr> and results in a 28 <abbr title="millivolt">mV</abbr> change in <abbr title="volt">V</abbr><sub>BE</sub>. This observation leads us to the first possible improvement in the emitter follower shown in figure 16.1(b).
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr16_f1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-16" class="media" title="university:courses:electronics:text:chptr16_f1.png"><img src="/_media/university/courses/electronics/text/chptr16_f1.png?w=600&amp;tok=4151f5" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 16.1 Emitter follower with current source load. 
+</p>
+</div>
+<p>
+The current mirror from chapter 11 can be substituted for the emitter load resistor to supply a fixed emitter current to the amplifier transistor, figure 16.1(b). A current mirror will sink a more or less constant current over a wide range of voltages. Ignoring any current in an external load on <abbr title="volt">V</abbr><sub>OUT</sub>, this more or less constant current flowing in transistor Q<sub>1</sub> will result in a more or less constant <abbr title="volt">V</abbr><sub>BE</sub>. 
+</p>
+
+<p>
+Viewed another way, the very high output resistance of the current source has effectively increased R<sub>L</sub> while r<sub>e</sub> remains at a low value set by the current I<sub>E</sub>. We saw in Chapter section 11.5.3 on the output resistance of the current mirror that the use of emitter degeneration resistors can greatly increase r<sub>O</sub>beyond that set by the transistor&#039;s Early voltage <abbr title="volt">V</abbr><sub>A</sub>.
+</p>
+
+</div>
+
+<h2 class="sectionedit5" id="complementary_feedback_pair_emitter_follower">16.2 Complementary Feedback Pair Emitter Follower</h2>
+<div class="level2">
+
+<p>
+An alternate approach to improving the emitter follower is to reduce the effective r<sub>e</sub> through negative feedback. Reducing r<sub>e</sub> can be addressed by adding a second transistor to increase the negative feedback factor by increasing the open-loop-gain. The single transistor is replaced by a pair of transistors with 100% voltage feedback to the emitter of the first transistor. This is often referred to as a complementary feedback pair as shown in figure 16.2.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr16_f2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-16" class="media" title="university:courses:electronics:text:chptr16_f2.png"><img src="/_media/university/courses/electronics/text/chptr16_f2.png?w=600&amp;tok=8aa4f0" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 16.2 Complementary Feedback Pair Emitter Follower 
+</p>
+</div>
+<p>
+The value of R<sub>1</sub> is crucial to good linearity, as it sets the I<sub>C</sub> of transistor Q<sub>1</sub>. The collector current of Q<sub>1</sub> will be approximately equal to the <abbr title="volt">V</abbr><sub>BE</sub> of Q<sub>2</sub> divided by R<sub>1</sub>. This current in Q<sub>1</sub> will be relatively more constant than the current in R<sub>L</sub>. The majority of the variable current in R<sub>L</sub> (as <abbr title="volt">V</abbr><sub>OUT</sub> changes) will flow in Q<sub>2</sub> rather than Q<sub>1</sub>. Resistor R<sub>L</sub> can of course be additionally replaced with a constant current source as a further improvement as we just saw in section 16.1.
+</p>
+
+<p>
+An important consequence of adding the complementary transistor Q<sub>2</sub> is that it further limits the maximum positive output swing. In the simple emitter follower of figure 16.1(a) the output can swing no higher than <abbr title="volt">V</abbr>+ - <abbr title="volt">V</abbr><sub>BEQ1</sub>. Whereas the output of the follower in figure 16.2 can swing no higher than <abbr title="volt">V</abbr>+ - <abbr title="volt">V</abbr><sub>BEQ1</sub> - <abbr title="volt">V</abbr><sub>BEQ2</sub> and have the collector base junctions of the transistors remain reverse biased.
+</p>
+
+</div>
+
+<h3 class="sectionedit8" id="fet_source_followers">16.2.1 FET Source Followers</h3>
+<div class="level3">
+
+<p>
+It is important to note that the gain equation for FET based source followers is much the same as for BJT based followers substituting the small signal source resistance r<sub>s</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr16_e2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-16" class="media" title="university:courses:electronics:text:chptr16_e2.png"><img src="/_media/university/courses/electronics/text/chptr16_e2.png?w=125&amp;tok=5b2447" class="mediacenter" loading="lazy" alt="" width="125" /></a>
+</p>
+
+<p>
+We also know that the small signal source resistance is a function of the DC drain current I<sub>D</sub> so using these same circuit techniques to keep I<sub>D</sub> more constant with changes in the load current will improve the performance of FET based followers as well.
+</p>
+
+</div>
+
+<h3 class="sectionedit9" id="the_body_effect">16.2.2 The Body effect</h3>
+<div class="level3">
+
+<p>
+All MOS transistors have a fourth terminal which must be considered when designing circuits that use these devices. An additional effect that limits the gain accuracy of a FET based source follower comes from possible changes in the voltage on this fourth terminal, often called the body or back-gate, in cases where the body or substrate is connected to the fixed negative power supply ( for NMOS devices or positive supply for PMOS devices ) rather than the source. 
+</p>
+
+<p>
+The body effect refers to the change in the threshold voltage, <abbr title="volt">V</abbr><sub>th</sub>, by the change in <abbr title="volt">V</abbr><sub>SB</sub>, the source to back-gate voltage. Because the voltage on the back-gate influences the threshold voltage (when it is not tied to the source), it can be thought of as a second gate. The body effect is sometimes called the “back-gate effect”.
+</p>
+
+<p>
+For an enhancement mode, NMOS device the body effect upon threshold voltage is calculated by applying the Shichman-Hodges model using the following equation:
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=6b9ebdca46b431cec74c4a85a734e58d" class=" mathpublish" alt="V_TB=V_TO +\gamma (\sqrt {{V_SB + 2\phi _F}}-{\sqrt {2\phi _F}})" title="V_TB=V_TO +\gamma (\sqrt {{V_SB + 2\phi _F}}-{\sqrt {2\phi _F}})" width="316" height="40" style="display: inline-block; object-fit: fill;" />
+</p>
+
+<p>
+Where:<br/>
+
+<abbr title="volt">V</abbr><sub>TB</sub> is the threshold voltage when substrate bias is present,<br/>
+
+<abbr title="volt">V</abbr><sub>SB</sub> is the source-to-body substrate bias<br/>
+
+2f<sub>F</sub> is the surface potential<br/>
+
+<abbr title="volt">V</abbr><sub>TO</sub> is threshold voltage for zero substrate bias
+</p>
+
+<p>
+The body effect parameter:
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=6dddb0f348cad7cbf338a0a7c1a277d9" class=" mathpublish" alt="\gamma = (t_ox)/(\epsilon _ox) {\sqrt {2q\epsilon _si N_A}}" title="\gamma = (t_ox)/(\epsilon _ox) {\sqrt {2q\epsilon _si N_A}}" width="189" height="78" style="display: inline-block; object-fit: fill;" />
+</p>
+
+<p>
+Where:<br/>
+
+t<sub>ox</sub> is oxide thickness<br/>
+
+ε<sub>ox</sub> is oxide permittivity<br/>
+
+ε<sub>si</sub> is the permittivity of silicon<br/>
+
+N<sub>A</sub> is a doping concentration<br/>
+
+q is the charge of an electron
+</p>
+
+</div>
+
+<h2 class="sectionedit10" id="improved_series_voltage_regulator">16.3 Improved series voltage regulator</h2>
+<div class="level2">
+
+<p>
+Back in chapter 6 we briefly looked at the zener diode as a shunt regulator figure 16.3(a). If we incorporate an emitter follower transistor stage in place of the series resistor we can greatly improve the load regulation performance of the regulator. Adding an emitter follower stage to the simple Zener regulator as shown in figure 16.3(b) forms a simple series voltage regulator and substantially improves the regulation of the circuit. Here, the load current I<sub>RL</sub> is supplied by the transistor whose base is now connected to the Zener diode. Thus the transistor&#039;s base current (I<sub>B</sub>) is the only variable current flowing in the Zener diode and is smaller than the current through R<sub>L</sub> by the ß or current gain of the emitter follower. This regulator is classified as “series” because the regulating element, the transistor, appears in series with the load. R<sub>1</sub> sets the Zener current (I<sub>Z</sub>) and is determined as:
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=105ed2029fe5164e5d5a58266de7c8a4" class=" mathpublish" alt="R_1=(V_S-V_Z)/(I_Z+KI_B )" title="R_1=(V_S-V_Z)/(I_Z+KI_B )" width="126" height="78" style="display: inline-block; object-fit: fill;" />
+</p>
+
+<p>
+where, <abbr title="volt">V</abbr><sub>Z</sub> is the Zener voltage, I<sub>B</sub> is the transistor&#039;s base current and <abbr title="kelvin (unit of temperature, not degrees)">K</abbr> is a scaling factor of 1.2 to 2 to ensure that R<sub>1</sub> is low enough for the maximum I<sub>B</sub> under heavy output load currents.
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=27ef6b4700fe139da314736fa0b87618" class=" mathpublish" alt="I_B=I_L/ß" title="I_B=I_L/ß" width="59" height="46" style="display: inline-block; object-fit: fill;" />
+</p>
+
+<p>
+where:<br/>
+
+I<sub>L</sub> is the required load current, also the transistor&#039;s emitter current (assumed to be approximately equal to the collector current)<br/>
+
+ß<sub>(min)</sub> is the minimum acceptable DC current gain for the transistor.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr16_f3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-16" class="media" title="university:courses:electronics:text:chptr16_f3.png"><img src="/_media/university/courses/electronics/text/chptr16_f3.png?w=600&amp;tok=118514" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 16.3.1 Improved zener voltage regulator 
+</p>
+</div>
+<p>
+This circuit has much better load regulation than the simple Zener shunt regulator, since the base current of the transistor forms a very light load on the Zener, thereby minimizing variation in the Zener voltage due to variation in the load. It is also useful to note here that the output voltage would now be about 0.65V less than <abbr title="volt">V</abbr><sub>Z</sub> due to the transistor&#039;s <abbr title="volt">V</abbr><sub>BE</sub> drop if we did not include the extra diode D<sub>1</sub> in series with the zener. The voltage drop across D<sub>1</sub> can be thought to be approximately the same as the <abbr title="volt">V</abbr><sub>BE</sub> of Q<sub>1</sub>. A second diode connected NPN transistor similar to Q<sub>1</sub> used in place of D<sub>1</sub> would provide a better approximation. Although this circuit has good regulation, it is still somewhat sensitive to the load and supply variation. This can be further improved by incorporating negative feedback. This simple regulator is often used as a “pre-regulator” in more advanced linear voltage regulator circuits.
+</p>
+
+<p>
+The circuit can be made adjustable by adding a variable resistor as a voltage divider across the Zener, moving the transistor base connection from the top of the Zener to the potentiometer wiper. Another way to make the output voltage adjustable in steps is by switching in Zeners with different breakdown voltages.
+</p>
+
+</div>
+
+<h3 class="sectionedit13" id="transistor_based_capacitance_multiplier">16.3.1 Transistor based Capacitance multiplier</h3>
+<div class="level3">
+
+<p>
+In a related power supply circuit shown in figure 16.3.2 the effective capacitance of capacitor C<sub>1</sub>is multiplied by the transistor&#039;s current gain (β).
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr16_f4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-16" class="media" title="university:courses:electronics:text:chptr16_f4.png"><img src="/_media/university/courses/electronics/text/chptr16_f4.png?w=600&amp;tok=e1b373" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 16.3.2 Transistor based Capacitance multiplier 
+</p>
+</div>
+<p>
+R<sub>1</sub> and C<sub>1</sub> form a low-pass filter that helps smooth any ripple on <abbr title="volt">V</abbr><sub>S</sub>such as from a full wave rectifier. R<sub>1</sub> supplies the charging current as well as the transistor&#039;s (Q<sub>1</sub>) base current. R<sub>L</sub> is the load on the circuit. Without Q<sub>1</sub>, R<sub>L</sub> would be the load on the capacitor and C<sub>1</sub> would have to be very large to maintain low ripple. With Q<sub>1</sub> in place, the loading imposed upon C<sub>1</sub> is simply the load current reduced by a factor of β. Conversely, C<sub>1</sub> appears “multiplied” by a factor of β to the load.
+</p>
+
+<p>
+Note that this circuit is not a voltage regulator, since the output voltage varies directly with the input <abbr title="volt">V</abbr><sub>IN</sub>. The output voltage is less than the base voltage by <abbr title="volt">V</abbr><sub>BE</sub> (about 0.65V). The Base will be less than <abbr title="volt">V</abbr><sub>S</sub> (when loaded) by the base current times R<sub>1</sub>. Larger values of R<sub>1</sub> (and C<sub>1</sub>) reduce the output ripple to almost negligible levels. On the downside this causes the output to rise slowly towards the required value (especially when the load is connected), due to the larger time constant of R<sub>1</sub> and C<sub>1</sub>. However the circuits of figure 16.3.1 and figure 16.3.2 could be combined to provide improved filtering and voltage regulation.
+</p>
+
+</div>
+
+<h3 class="sectionedit16" id="adding_an_output_current_limit">16.3.2 Adding an output current limit</h3>
+<div class="level3">
+
+<p>
+A current limiting circuit is an essential element of any power supply. There is always a risk that the load may draw too much current or the power supply rails may even get accidentally shorted. The inclusion of a current limiter circuit will prevent any further damage occurring to the external circuit as well as preventing damage to the power supply itself.
+</p>
+
+<p>
+It is possible to implement a power supply current limiter with just diodes, but the one we will be looking at here uses a single transistor and a current sense resistor. This circuit forms the basis of most power supply current limiter designs used today and is commonly used to limit the current in the output stage of operational amplifiers. The limiting circuit consisting of Q<sub>2</sub> and R<sub>2</sub> is incorporated into the simple regulator circuit shown in figure 16.3.3.
+</p>
+
+<p>
+The operation of the current limiter is very straightforward. When the power supply is supplying current below the maximum level, current flows through the sense resistor and a small potential difference develops across it. The value of the resistor is chosen so that when the maximum allowable current flows from the power supply, a voltage equal to the <abbr title="volt">V</abbr><sub>BE</sub> of the current sense transistor, Q<sub>2</sub>, is developed across it. This is typically 0.6 volts, assuming that a silicon transistor is used.
+</p>
+
+<p>
+As the voltage across the current sense resistor approaches 0.6 volts, the current sense transistor starts to turn on. When it does, the voltage at the base of the main power supply pass transistor is pulled down, thereby preventing any increase in the output current of the power supply. In this way it is very easy to calculate the value for the sense resistor using Ohms Law. It is simply <abbr title="volt">V</abbr><sub>BE</sub> / I<sub>Lmax</sub>. The current sense transistor, Q<sub>2</sub>, should have a sufficiently large current capacity to be able to take away all the current from the base of the main series pass transistor.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr16_f5.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-16" class="media" title="university:courses:electronics:text:chptr16_f5.png"><img src="/_media/university/courses/electronics/text/chptr16_f5.png?w=600&amp;tok=e4ae6e" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 16.3.3 Power supply regulator with feedback and transistor current limiting 
+</p>
+</div>
+<p>
+In view of the fact that the regulator sense point occurs after the current sense resistor, any voltage drop across the resistor will not affect the output voltage of the circuit as this will be compensated for by the regulator. This assumes that the input supply voltage is sufficiently large enough for the circuit to regulate correctly. In this way the current sense resistor will not cause any reduction in the voltage output from the power supply regulator circuit.
+</p>
+
+<p>
+The power supply current limiter circuit is shown within the circuit of a very simple regulator. However it can be placed within most regulator circuits made from discrete components with little change. For circuits using integrated circuit regulators, they are virtually certain to contain current limiter circuitry based around this principle.
+</p>
+
+</div>
+
+<h2 class="sectionedit19" id="single_transistor_high_pass_filter">16.4 Single Transistor high pass filter</h2>
+<div class="level2">
+
+<p>
+It is sometimes desirable to design a simple active high pass filter using a single transistor amplifier stage. The transistor filter circuit shown in figure 16.4 provides a two pole filter with unity gain. This filter is convenient to place in a larger circuit because it contains few components and does not occupy much space.
+</p>
+
+<p>
+The active high pass transistor circuit is quite straightforward, using just a total of four resistors, two capacitors and a single transistor. The operating conditions for the transistor are set up in the normal way. R<sub>2</sub> and R<sub>3</sub> are used to set up the bias point for the base of the transistor. The resistor R<sub>L</sub> is the emitter resistor and sets the current for the transistor.
+</p>
+
+<p>
+The filter components are included in negative feedback from the output of the circuit to the input. The components that form the active filter network consist of C<sub>1</sub>, C<sub>2</sub>, R<sub>1</sub> and the combination of R<sub>2</sub> and R<sub>3</sub> in parallel, assuming that the input resistance to the emitter follower circuit are very high and can be ignored.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr16_f6.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-16" class="media" title="university:courses:electronics:text:chptr16_f6.png"><img src="/_media/university/courses/electronics/text/chptr16_f6.png?w=500&amp;tok=e78f37" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 16.4 Transistor active high pass filter circuit 
+</p>
+</div>
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=bbdb7370ad7c3cb3d6f4a59b7c381272" class=" mathpublish" alt="C_1 = 2 * C_2" title="C_1 = 2 * C_2" width="87" height="27" style="display: inline-block; object-fit: fill;" />
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=a6d9bf56211094604d59bd0fd98a43bd" class=" mathpublish" alt="R_1 = R_2 * R_3 /(R_2 + R_3)" title="R_1 = R_2 * R_3 /(R_2 + R_3)" width="124" height="66" style="display: inline-block; object-fit: fill;" />
+</p>
+
+<p>
+This is for values where the effect of the emitter follower transistor itself within the high pass filter circuit can be ignored, <abbr title="in other words">i.e.</abbr>:
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=1c1d9bc831cbc2c36dfc99b9dba88916" class=" mathpublish" alt="R_L (β+1) &gt;&gt; R_2 * R_3 /(R_2 + R_3 )" title="R_L (β+1) &gt;&gt; R_2 * R_3 /(R_2 + R_3 )" width="188" height="66" style="display: inline-block; object-fit: fill;" />
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=33f81e917d7e113ea8148c1eb2ce8a93" class=" mathpublish" alt="f_o = 1.414 / (4 π R_1 C_2)" title="f_o = 1.414 / (4 π R_1 C_2)" width="132" height="58" style="display: inline-block; object-fit: fill;" />
+</p>
+
+<p>
+Where:<br/>
+
+β = the forward current gain of the transistor<br/>
+
+f<sub>o</sub> = the cut-off frequency of the high pass filter<br/>
+
+π = equal to 3.14159
+</p>
+
+<p>
+The equations for determining the component values provide a Butterworth response, which provides maximum flatness within the pass-band at the expense of achieving the ultimate roll off as quickly as possible. This has been chosen because this form of filter suits most applications and the mathematics works out easily.
+</p>
+
+</div>
+
+<h2 class="sectionedit22" id="frequency_multiplication">16.5 Frequency Multiplication</h2>
+<div class="level2">
+
+<p>
+Frequency Multipliers are a special class of amplifiers that are biased at 3 to 10 times the normal cutoff bias. They are used to generate a frequency that is a multiple (harmonic) of a lower frequency. Such circuits are called frequency multipliers or harmonic generators.
+</p>
+
+<p>
+Figure 16.5.1 illustrates a frequency multiplier known as a Frequency Doubler or Second Harmonic Generator. As illustrated, the input is 10 KHz and the output is 20 KHz, or twice the input frequency. In other words, the second harmonic of 10 KHz is 20 KHz. The third harmonic (frequency tripler) would be 30 KHz, or 3 times the input signal. The fourth harmonic (quadruplet) would be 40 KHz, or 4 times the 10 KHz input signal. The fifth harmonic (frequency quintupler) is normally as high in multiplication as is practical, because at harmonics higher than the fifth, the output diminishes to a very weak signal.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr16_f7.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-16" class="media" title="university:courses:electronics:text:chptr16_f7.png"><img src="/_media/university/courses/electronics/text/chptr16_f7.png?w=600&amp;tok=bd8a68" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 16.5.1, Frequency multiplication using single transistor 
+</p>
+</div>
+<p>
+Frequency multipliers are operated by the pulses of collector current produced by a class C amplifier. Although the collector current flows in pulses, the alternating collector voltage is sinusoidal because of the action of the tank circuit. With the output tank circuit tuned to the required harmonic, the tank circuit acts as a filter, accepting the desired frequency and rejecting all others.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr16_e4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-16" class="media" title="university:courses:electronics:text:chptr16_e4.png"><img src="/_media/university/courses/electronics/text/chptr16_e4.png?w=150&amp;tok=04165e" class="mediacenter" loading="lazy" alt="" width="150" /></a>
+</p>
+
+<p>
+The following circuit, figure 16.5.2, is a better frequency multiplier using an NPN differential amplifier with an LC resonate output load. With the component values shown in the figure, the output level is about 4V p-p at 33 KHz with a 1v p-p, 11 KHz input. Other frequencies and multiplication factors are possible by adjusting the resonate frequency of the L<sub>1</sub>,C<sub>1</sub>tank.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr16_f8.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-16" class="media" title="university:courses:electronics:text:chptr16_f8.png"><img src="/_media/university/courses/electronics/text/chptr16_f8.png?w=600&amp;tok=c87cb7" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 16.5.2, Improved Frequency Multiplier. 
+</p>
+</div>
+<p>
+Amplitude modulation may be applied to the output frequency by capacitor coupling the modulating (audio) signal to base of current source transistor Q<sub>3</sub>.
+</p>
+
+<p>
+Figure 16.5.3 illustrates the waveforms in a typical circuit. You can see that the pulses of collector current are the same frequency as the input signal. These pulses of collector current energize the tank circuit and cause it to oscillate at twice the base signal frequency. Between the pulses of collector current, the tank circuit continues to oscillate. Therefore, the tank circuit receives a current pulse for every other cycle of its output
+</p>
+
+<p>
+Figure 16.5.3
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/chapter-15" class="wikilink1" title="university:courses:electronics:text:chapter-15" data-wiki-id="university:courses:electronics:text:chapter-15">Previous Chapter</a></strong>
+</p>
+
+<p>
+<strong>Go to <a href="https://www.analog.com//media/en/training-seminars/design-handbooks/Basic-Linear-Design/Chapter9.pdf" class="interwiki iw_adi" title="https://www.analog.com//media/en/training-seminars/design-handbooks/Basic-Linear-Design/Chapter9.pdf">Next Chapter</a></strong>
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/electronics-toc" class="wikilink1" title="university:courses:electronics:text:electronics-toc" data-wiki-id="university:courses:electronics:text:electronics-toc">Table of Contents</a></strong>
+</p>
+
+</div>
+                        <!-- wikipage stop -->
+                    </div>
+
+                    <div class="docInfo"><bdi>university/courses/electronics/text/chapter-16.txt</bdi> · Last modified: <time datetime="2021-01-20T14:51:13+0000">20 Jan 2021 14:51</time> by <bdi><a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a></bdi></div>
+
+                                    </div>
+            </div>
+            <!-- /content -->
+
+            <hr class="a11y"/>
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="/university/courses/electronics/text/chapter-16?do=edit" title="View Source [v]" rel="nofollow" accesskey="v"><span>View Source</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="/university/courses/electronics/text/chapter-16?do=revisions" title="History [o]" rel="nofollow" accesskey="o"><span>History</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="/university/courses/electronics/text/chapter-16?do=backlink" title="Backlinks" rel="nofollow"><span>Backlinks</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="menuitemfolded"><a href="javascript:void(0);" title="Fold/unfold all" rel="nofollow" class="fold_unfold_all_new" onclick="fold_unfold_all();"><span>Fold/unfold all</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M 2,0 L 6.5,3 L 2,6 z M 8,6.6 L 12.5,9.6 L 8,12.6 z M 14,13.2 L 20,13.2 L 17,17.7 z"/></svg></a></li><li class="top"><a href="#dokuwiki__top" title="[ Back to top ] [t]" rel="nofollow" accesskey="t"><span>[ Back to top ]</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /wrapper -->
+
+    </div>
+    <!-- /container -->
+</div>
+<!-- /site -->
+
+﻿<a class="backtotop" href="#header">&nbsp;</a>
+<footer class="footer" id="footer">
+    <adi-footer short></adi-footer>
+
+    
+    <script type="text/javascript">
+        var analytics = '//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js';
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script type="text/javascript">
+        var ADIAssetsPath = "//assets2.analog.com";
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script>
+        /* Copyright 2011-2015 iPerceptions, Inc. All rights reserved. Do not distribute. iPerceptions provides this code 'as is' without warranty of any kind, either express or implied. */
+        window.iperceptionskey = 'acafac0d-3b8a-4d30-8a98-6cbcd5256d93';
+        (function() { var a = document.createElement('script'),
+            b = document.getElementsByTagName('body')[0];
+            a.type = 'text/javascript';
+            a.defer = true;
+            a.src = '//universal.iperceptions.com/wrapper.js';
+            b.appendChild(a); })();
+    </script>
+</footer>
+<script type="text/javascript">
+            if(typeof(_satellite) != 'undefined') {
+            _satellite.pageBottom();
+            }
+        </script>
+<div class="a11y"
+     style="float: left"><img src="/lib/exe/taskrunner.php?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-16&amp;1776083326" width="2" height="1" alt="" /></div>
+</body>
+</html>

@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"
+      dir="ltr"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Chapter 1:  Introduction and Chapter Objectives [Analog Devices Wiki]</title>
+
+    <script>(function (H) {
+            H.className = H.className.replace(/\bno-js\b/, 'js')
+        })(document.documentElement)</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500,500i,600,600i,700,700i|Barlow:300,300i,400,400i,500,500i,600,600i&display=swap" rel="stylesheet">
+
+    <link href="https://assets2.analog.com/apps-assets/wiki/index.css" rel="stylesheet" />
+    <script src="https://assets2.analog.com/apps-assets/wiki/index.mjs"></script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="university,courses,electronics,text,chapter-1"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Analog Devices Wiki"/>
+<link rel="start" href="/"/>
+<link rel="contents" href="/university/courses/electronics/text/chapter-1?do=index" title="Sitemap"/>
+<link rel="manifest" href="/lib/exe/manifest.php" crossorigin="use-credentials"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns=university:courses:electronics:text"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/university/courses/electronics/text/chapter-1"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/university/courses/electronics/text/chapter-1"/>
+<link rel="canonical" href="https://wiki.analog.com/university/courses/electronics/text/chapter-1"/>
+<link rel="stylesheet" href="/lib/exe/css.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb"/>
+<script nonce="522f748213445b32ac2e5591c81bfea7">var NS='university:courses:electronics:text';var JSINFO = {"plugin_enforcesummary":{"enforce_summary":1,"default_minoredit":0,"enforce_preview":0},"plugin_folded":{"hide":"hide","reveal":"reveal"},"plugins":{"interwikipaste":{"patterns":"[{\"shortcut\":\"footprints\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/design\\\\-center\\\\\\\/packaging\\\\-quality\\\\-symbols\\\\-footprints\\\\\\\/symbols\\\\-and\\\\-footprints\\\\\\\/([^ ]+)?\\\\.html\",\"encode\":false},{\"shortcut\":\"staging.kernel.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/gregkh\\\\\\\/staging\\\\.git;a\\\\=blob;hb\\\\=refs\\\\\\\/heads\\\\\\\/staging\\\\-next;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"avnetexpress\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/avnetexpress\\\\.avnet\\\\.com\\\\\\\/store\\\\\\\/em\\\\\\\/EMController\\\\?storeId\\\\=500201&N\\\\=0&action\\\\=products&term\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"downgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/analogdevicesinc\\\\.github\\\\.io\\\\\\\/DownGit\\\\\\\/\\\\#\\\\\\\/home\\\\?url\\\\=https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"cart\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/shoppingcart\\\\.analog\\\\.com\\\\\\\/AddModel\\\\.aspx\\\\?locale\\\\=en&ACTION\\\\=BUY_BUNDLES&modelNbr\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digikey\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digikey\\\\.com\\\\\\\/scripts\\\\\\\/DkSearch\\\\\\\/dksus\\\\.dll\\\\?KeywordSearch\\\\?Site\\\\=US&amp;Keywords\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"git.linux.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/torvalds\\\\\\\/linux\\\\.git;a\\\\=blob;hb\\\\=HEAD;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"export\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/exportclassification\\\\\\\/Search\\\\\\\/Result\\\\?strSearch\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ibis\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/media\\\\\\\/en\\\\\\\/simulation\\\\-models\\\\\\\/ibis\\\\-models\\\\\\\/([^ ]+)?\\\\.ibs\",\"encode\":false},{\"shortcut\":\"bfsvn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/project\\\\\\\/([^ ]+)?\\\\\\\/scmsvn\\\\\\\/trunk\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?;hb\\\\=HEAD\",\"encode\":false},{\"shortcut\":\"paypal\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.paypal\\\\.com\\\\\\\/cgi\\\\-bin\\\\\\\/webscr\\\\?cmd\\\\=_xclick&amp;business\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"arrow\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.arrow\\\\.com\\\\\\\/en\\\\\\\/products\\\\\\\/search\\\\?cat\\\\=&q\\\\=([^ ]+)?&r\\\\=true\",\"encode\":false},{\"shortcut\":\"linux.github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/linux\\\\\\\/blob\\\\\\\/([^ ]+)?\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit_rev\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digilent\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digilentinc\\\\.com\\\\\\\/Products\\\\\\\/Detail\\\\.cfm\\\\?Prod\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"reg\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/my\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/app\\\\\\\/registration\\\\\\\/hardware\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\\\\\\\/blob\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"go\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?&amp;btnI\\\\=lucky\",\"encode\":true},{\"shortcut\":\"docs\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/docs\\\\.blackfin\\\\.uclinux\\\\.org\\\\\\\/doku\\\\.php\\\\?id\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.com\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-20\",\"encode\":true},{\"shortcut\":\"amazon.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.de\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-21\",\"encode\":true},{\"shortcut\":\"mouser\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/mouser\\\\.com\\\\\\\/Search\\\\\\\/Refine\\\\?Keyword\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tkt\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/tracker\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"repo\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpmeta\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/meta\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bf\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"maxim\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.maximintegrated\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/en\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpfr\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/fr\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpde\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/de\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpes\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/es\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wppl\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/pl\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpjp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ja\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpru\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ru\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfin\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon.uk\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.co\\\\.uk\\\\\\\/dp\\\\\\\/([^ ]+)?\",\"encode\":true},{\"shortcut\":\"google\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"oreilly\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.oreilly\\\\.com\\\\\\\/catalog\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"mw\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.mathworks\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"rfc\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/tools\\\\.ietf\\\\.org\\\\\\\/html\\\\\\\/rfc([^ ]+)?\",\"encode\":false},{\"shortcut\":\"google.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.de\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"user\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/members\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"this\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/wiki\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"phpfn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/secure\\\\.php\\\\.net\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"adi\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"xilinx\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.xilinx\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ez\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"doku\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.dokuwiki\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"callto\",\"pattern\":\"callto\\\\:\\\\\\\/\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"man\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/man\\\\.cx\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"skype\",\"pattern\":\"skype\\\\:([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tel\",\"pattern\":\"tel\\\\:([^ ]+)?\",\"encode\":false}]"},"vshare":{"youtube":"youtube\\.com\/.*[&?]v=([a-z0-9_\\-]+)","vimeo":"vimeo\\.com\\\/(\\d+)","slideshare":"slideshare.*id=(\\d+)","dailymotion":"dailymotion\\.com\/video\/([a-z0-9]+)","archiveorg":"archive\\.org\/(?:embed|details)\/([a-zA-Z0-9_\\-]+)","soundcloud":"soundcloud\\.com\/([\\w-]+\/[\\w-]+)","niconico":"nicovideo\\.jp\/watch\/(sm[0-9]+)","bitchute":"bitchute\\.com\\\/video\\\/([a-zA-Z0-9_\\-]+)","coub":"coub\\.com\\\/view\\\/([a-zA-Z0-9_\\-]+)","odysee":"odysee\\.com\/\\$\/(?:embed|download)\/([-%_?=\/a-zA-Z0-9]+)","youku":"v\\.youku\\.com\/v_show\/id_([0-9A-Za-z=]+)\\.html","bilibili":"bilibili\\.com\\\/video\\\/(BV[0-9A-Za-z]+)","msoffice":"(?:office\\.com.*[&?]videoid=([a-z0-9\\-]+))","msstream":"microsoftstream\\.com\\\/video\\\/([a-f0-9\\-]{36})","rutube":"rutube\\.ru\\\/video\\\/([a-z0-9]+)\\\/","gdrive":"drive\\.google\\.com\\\/file\\\/d\\\/([a-zA-Z0-9_-]+)\/"}},"id":"university:courses:electronics:text:chapter-1","namespace":"university:courses:electronics:text","ACT":"show","useHeadingNavigation":1,"useHeadingContent":0};(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script src="/lib/exe/jquery.php?tseed=8faf3dc90234d51a499f4f428a0eae43" defer="defer"></script>
+<script src="/lib/exe/js.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb" defer="defer"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/lib/tpl/analog2014/images/favicon.ico" />
+
+    <script src="https://assets2.analog.com/header-footer/index.js" type="text/javascript" defer="true"></script>
+
+    <!-- LIVE tracking -->
+<script src="//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js" async></script>
+<script src="/lib/tpl/analog2014/assets/js/adi/global.analytics.js" type="text/javascript"></script>
+</head>
+
+<!-- List of supported themes thm-education, thm-applications, thm-parametric, thm-product, thm-community, thm-design-center, thm-my-analog, thm-support -->
+<body class="home">
+
+
+<!-- wiki_header.html -->
+<header class="adi_header adi_header--wiki tools-header" id="dokuwiki__top" data-ot="true">
+
+    <div class="adi_topbar">
+        <div class="adi_container">
+            <section class="adi_row">
+                <!--  BEGIN:  Internal Links -->
+                <nav class="adi_column adi_pull-left">
+                    <a class="adi_topbar-link adi_topbar-link--analog-home" href="//www.analog.com">
+                        <strong>Analog.com</strong>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--engineer-zone" href="//ez.analog.com">
+                        <strong class="adi_link--hover-accent">Engineer</strong>
+                        <span>Zone</span>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--analog-dialogue" href="//www.analog.com/en/resources/analog-dialogue.html">
+                        <strong class="adi_link--hover-accent">Analog</strong>
+                        <span>Dialogue</span>
+                    </a>
+                </nav> <!-- /.adi_column.adi_pull-left -->
+                <!--  END:  Internal Links  -->
+                <!--  BEGIN:  Language Options  -->
+                <nav class="adi_column adi_pull-right">
+                    <a class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-logo" href="//my.analog.com/">
+                        <span><img src="https://assets2.analog.com/cms-assets/images/images/images/myanalog_logo.png" alt="My Analog Login"></span>&nbsp;
+                    </a>
+
+                    <a href="/university/courses/electronics/text/chapter-1?do=login&amp;sectok="  class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-login action login" rel="nofollow" title="Log In"><strong>Log In</strong></a>                </nav> <!-- /.adi_column.adi_pull-right -->
+                <!--  END:  Language Options  -->
+            </section> <!-- /.adi_row -->
+        </div> <!-- /.adi_container -->
+    </div>
+
+
+
+    <div class="adi_container">
+        <section class="adi_row">
+            <!--  BEGIN:  Logo  -->
+            <div class="adi_column adi_logo-container">
+                <a class="adi_logo" href="/start">
+                    <img src="/lib/tpl/analog2014//assets/images/adi-logo.svg" alt="Analog Devices Wiki" />
+                </a>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+            <div class="adi_column adi_page-title-container">
+                <h1 class="adi_page-title">Wiki</h1>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+        </section> <!-- /.adi_row -->
+    </div> <!-- /.adi_container -->
+
+    <div class="navigation-bar">
+        <div class="content-wrap clearfix">
+            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"><a href="#">Wiki Tools</a></div><ul class="submenu"><li class="level2"><a href="/university/courses/electronics/text/chapter-1?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-1?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-1?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>
+            <ul class="list-inline pull-right searchmenu clearfix">
+                <li class="search-box">
+                    <form action="" accept-charset="utf-8" class="search clearfix" id="dw__search" method="get" role="search">
+                        <div class="no">
+                            <input type="hidden" name="do" value="search">
+                            <input type="text" autocomplete="off" id="qsearch__in" accesskey="f" name="id" class="edit" placeholder="search wiki">
+                            <button type="submit" value="Search" class="button search-icon" title="Search"></button>
+
+                            <div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none; white-space: nowrap;">
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</header> <!-- /.adi_header -->
+
+
+
+
+
+<!-- Mobile view navigation drawer-->
+<div class="wiki-mob-body">
+    <div class="content" role="main">
+        <div class="col-md-12 wiki-head-row">
+            <div class="row ">
+                <div class="title-nophoto">
+                    <div class="container page-title ">
+                        <h1 data-page-title="true">Analog Devices Wiki</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 floater-menu-container">
+                <div class="row product-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 wiki-right-panel">
+                                <div class="row">
+                                    <div class=" product-bookmarks" id="affix-nav" name="adi_products_left_navigation">
+                                        <ul class="nav" id="affix-ul">
+                                            <li class="">
+
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#"
+                                                   name='SDR-home_2e322e80-5ec4-4b20-b8b8-71702b590a25'>Analog Devices
+                                                    Wiki
+                                                </a>
+
+                                            </li>
+                                            <!--Wiki-->
+                                            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"><a href="#">Wiki Tools</a></div><ul class="submenu Res_tools_child"><li class="level2"><a href="/university/courses/electronics/text/chapter-1?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-1?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-1?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>                                            <!--Wiki-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="special-content">
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#English">English<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="English" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/en/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_en.jpg" class="mobile-images"
+                                 width="100%" alt="English"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#简体中文">简体中文<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="简体中文" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/cn/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_cn.jpg" class="mobile-images"
+                                 width="100%" alt="简体中文"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#日本語">日本語<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="日本語" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/jp/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_jp.jpg" class="mobile-images"
+                                 width="100%" alt="日本語"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#Руccкий">Руccкий<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="Руccкий" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/ru/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_ru.jpg" class="mobile-images"
+                                 width="100%" alt="Руccкий"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile view navigation drawer-->
+
+<!-- /tpl_header.php -->
+
+
+
+<div id="dokuwiki__site" role="main" class="main-body content">
+    <div class="site dokuwiki mode_show tpl_analog2014   ">
+        <div class="container">
+
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content">
+                <div class="pad group">
+
+                    <div class="page group">
+                        
+                                                <!-- wikipage start -->
+                        <div class="approval approved_yes"><span class="approval_approved">This version (<span class="approval_date">05 Jun 2017 13:49</span>) was <em>approved</em> by <a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a>.</span><span class="approval_previous">The <a href="/university/courses/electronics/text/chapter-1?rev=1496670226">Previously approved version</a> (05 Jun 2017 13:43) is available.<a href="https://wiki.analog.com/university/courses/electronics/text/chapter-1?do=diff&rev2[0]=1496670226&rev2[1]=1496670523&difftype=sidebyside" class="approved_diff_link"><img src="/lib/images/diff.png" class="approved_diff_link" alt="Diff" /></a></span></div><!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#chapter_1introduction_and_chapter_objectives">Chapter 1:  Introduction and Chapter Objectives</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#active_versus_passive_devices">1.1 Active versus passive devices:</a></div></li>
+<li class="level2"><div class="li"><a href="#notation_and_conventional_terminology">1.2 Notation and conventional terminology</a></div></li>
+<li class="level2"><div class="li"><a href="#basic_quantities">1.3 Basic quantities.</a></div></li>
+<li class="level2"><div class="li"><a href="#review_of_kirchhoff_s_circuit_laws">1.4 Review of Kirchhoff&#039;s circuit laws</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#kirchhoff_s_current_law_kcl">1.4.1 Kirchhoff&#039;s current law (KCL)</a></div></li>
+<li class="level3"><div class="li"><a href="#kirchhoff_s_voltage_law_kvl">1.4.2 Kirchhoff&#039;s voltage law (KVL)</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#review_of_thevenin_s_theorem">1.5 Review of Thévenin&#039;s theorem</a></div></li>
+<li class="level2"><div class="li"><a href="#review_of_norton_s_theorem">1.6 Review of Norton&#039;s theorem</a></div></li>
+<li class="level2"><div class="li"><a href="#review_of_the_superposition_theorem">1.7 Review of the Superposition Theorem</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#section_review">Section Review:</a></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="chapter_1introduction_and_chapter_objectives">Chapter 1:  Introduction and Chapter Objectives</h1>
+<div class="level1">
+
+<p>
+This introductory chapter will serve as a quick review of a few of the more important topics from the earlier courses Circuits I and II. It can be skipped if the reader feels he or she is sufficiently familiar with these fundamental circuit analysis and design concepts.
+</p>
+
+<p>
+<strong>After completing this chapter you should be able to:</strong>
+</p>
+<ul>
+<li class="level1"><div class="li">  Define an Active Device vs. a Passive Device</div>
+</li>
+<li class="level1"><div class="li">  Apply KVL and KCL to a circuit</div>
+</li>
+<li class="level1"><div class="li">  Create Thevenin and Norton Equivalent Circuits</div>
+</li>
+<li class="level1"><div class="li">  Convert between Thevenin and Norton Equivalent Circuits</div>
+</li>
+<li class="level1"><div class="li">  Use the Superposition Theorem to analyze circuits with multiple sources</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="active_versus_passive_devices">1.1 Active versus passive devices:</h2>
+<div class="level2">
+
+<p>
+An active device is any type of component with the ability to electrically control the flow of current (electricity controlled by electricity). For a circuit to be called electronic, it must contain at least one active device. Components incapable of controlling current by means of another electrical signal are called passive devices. Resistors, capacitors, inductors, transformers, and even diodes are all considered passive devices. Passive devices can have linear current vs voltage characteristic like a resistor or non-linear I vs <abbr title="volt">V</abbr> curves such as a diode and are commonly two terminal elements. Active devices include, but are not limited to, vacuum tubes, transistors, silicon-controlled rectifiers (SCRs), and TRIACs. 
+</p>
+
+<p>
+All active devices have the means to control the flow of current through them. Some active devices allow a voltage to control this current while other active devices allow another current to be the controlling signal. Devices utilizing a voltage as the controlling signal are, not surprisingly, called voltage-controlled devices. Devices working on the principle of one current controlling another current are known as current-controlled devices. The first type of solid-state transistor successfully demonstrated was a current-controlled device. 
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="notation_and_conventional_terminology">1.2 Notation and conventional terminology</h2>
+<div class="level2">
+
+<p>
+The notations used in these pages for voltages and currents correspond to the following conventions: DC bias values are indicated by an upper case letter with upper case subscripts, <abbr title="for example">e.g.</abbr> <abbr title="volt">V</abbr><sub>DS</sub>, I<sub>C</sub>. Instantaneous values of small-signal variables are indicated by a lower-case letter with lower-case subscripts, <abbr title="for example">e.g.</abbr> v<sub>gs</sub><em>, </em>i<sub>d</sub>. Total values are indicated by a lower-case letter with upper-case subscripts, <abbr title="for example">e.g.</abbr> <em>vBE, iD</em>. Schematic symbols for independent sources are circular and symbols for controlled sources have a diamond shape. Voltage sources have a ± sign within the symbol and current sources have an arrow. Schematics are drawn with the standard conventions where the most positive supply voltage is drawn at the top and the most negative at the bottom. Thus positive current flow is generally from top to bottom in the schematic. Inputs are generally on the left and outputs on the right with the signal flow from left to right.
+</p>
+
+<p>
+Over time as the study of Electronics developed the use of certain terminology has become common or the defacto standard. Some terms and symbols have over time been used in multiple contexts and taken on somewhat different meanings. One such case is the use of the word “saturation”. In the context of Bipolar Junction Transistors “saturation” has a much different meaning than in the context of Field Effect Transistors. This can lead to confusion in readers new to Electronics. Another example is the use of the Greek letter ? (beta). It is used to represent the dimensionless feedback factor in the context of Op-Amp circuits and as the dimensionless current gain of BJT devices. The reader should take care when reading though the material covered in this text to avoid confusion when these and other such context sensitive terms are encountered.
+</p>
+
+<p>
+In this text the reader should expect that calculations done in the various example circuits should result in reasonable values. If the power supply voltage is +/-10 <abbr title="volt">V</abbr>, a calculated DC bias value of 15 <abbr title="volt">V</abbr> (not within the range of the power supply voltages) for example would be unreasonable. Generally, bias current levels will be between 1 microamp and a few hundred milliamps. A calculated bias current of 3.2 amps is probably unreasonable and should be reexamined (except in case of perhaps power devices). Peak-to-peak ac voltages should be within the power supply voltage range. A calculated component value that is unrealistic should be rechecked.  For example, a resistance equal to 0.013 ohms. Given the inherent variations in most electronic components, three significant digits are more than adequate for representation of results.
+</p>
+
+</div>
+
+<h2 class="sectionedit4" id="basic_quantities">1.3 Basic quantities.</h2>
+<div class="level2">
+
+<p>
+Two of the main laws that describe the operation of electronic systems are Ohm&#039;s law and Kirchhoff&#039;s laws. The main quantities that describe the operation of electronic systems are resistance R, capacitance C, and inductance L. The derivative quantities are reactance X, impedance Z, and admittance, or full conductivity G.
+</p>
+
+<p>
+It is presumed that the reader has a level of familiarity with the following basic circuit concepts:
+</p>
+<ol>
+<li class="level1"><div class="li">  Ohm&#039;s Law</div>
+</li>
+<li class="level1"><div class="li">  Passive Circuit Analysis</div>
+</li>
+<li class="level1"><div class="li">  Kirchhoff&#039;s circuit laws</div>
+</li>
+<li class="level1"><div class="li">  Thevenin and Norton Equivalent Circuits</div>
+</li>
+<li class="level1"><div class="li">  The Superposition Theorem</div>
+</li>
+<li class="level1"><div class="li">  Controlled Sources</div>
+</li>
+<li class="level1"><div class="li">  Ideal operational amplifiers</div>
+</li>
+<li class="level1"><div class="li">  Transformers</div>
+</li>
+<li class="level1"><div class="li">  Frequency Response</div>
+</li>
+<li class="level1"><div class="li">  Familiarity with the Spice circuit simulator or similar software</div>
+</li>
+</ol>
+
+<p>
+What follows is a short review of some of these concepts.
+</p>
+
+</div>
+
+<h2 class="sectionedit5" id="review_of_kirchhoff_s_circuit_laws">1.4 Review of Kirchhoff&#039;s circuit laws</h2>
+<div class="level2">
+
+<p>
+Kirchhoff&#039;s circuit laws are two equalities that deal with the conservation of charge and energy in electrical circuits, and were first described in 1845 by Gustav Kirchhoff. These “laws” are widely used in the analysis and design of electronic circuits.
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="kirchhoff_s_current_law_kcl">1.4.1 Kirchhoff&#039;s current law (KCL)</h3>
+<div class="level3">
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-f1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-f1.png"><img src="/_media/university/courses/electronics/text/chptr1-f1.png?w=300&amp;tok=8d0cbc" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 1.4.1 Currents entering and leaving a node. 
+</p>
+</div>
+<p>
+The current entering any junction in a circuit network is equal to the current leaving that junction.
+</p>
+
+<p>
+<em>i</em><sub>1</sub> + <em>i</em><sub>4</sub> = <em>i</em><sub>2</sub> + <em>i</em><sub>3</sub>
+</p>
+
+<p>
+This law is sometimes referred to as Kirchhoff&#039;s point rule, Kirchhoff&#039;s junction rule (or nodal rule), and Kirchhoff&#039;s first rule.
+</p>
+
+<p>
+The principle of conservation of electric charge implies that:
+At any node (junction) in an electrical circuit, the sum of currents flowing into that node is equal to the sum of currents flowing out of that node.  Otherwise electric charge would endlessly build up on or drain off the node which is physically impossible.
+</p>
+
+<p>
+or
+</p>
+
+<p>
+The algebraic sum of currents in a network of conductors meeting at a point is zero. (Assuming that current entering the junction is taken as positive and current leaving the junction is taken as negative).
+</p>
+
+<p>
+Recalling that current is a signed (positive or negative) quantity reflecting direction towards or away from a node; this principle can be stated as the following equation:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-e1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-e1.png"><img src="/_media/university/courses/electronics/text/chptr1-e1.png?w=100&amp;tok=aa22f0" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+</p>
+
+<p>
+Here, n is the total number of branches with currents flowing towards or away from the node. This formula is also valid for complex currents:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-e2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-e2.png"><img src="/_media/university/courses/electronics/text/chptr1-e2.png?w=100&amp;tok=064373" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+</p>
+
+<p>
+The law is based on the conservation of charge whereby the charge (measured in coulombs) is the product of the current (in amperes) and the time (which is measured in seconds).
+A matrix version of Kirchhoff&#039;s current law is the basis of most circuit simulation software, such as SPICE.
+</p>
+
+<p>
+<a href="/university/courses/alm1k/circuits1/alm-cir-1" class="wikilink1" title="university:courses:alm1k:circuits1:alm-cir-1" data-wiki-id="university:courses:alm1k:circuits1:alm-cir-1">Activity 1: Kirchhoff&#039;s Voltage and Current Laws for ADALM1000</a>
+</p>
+
+</div>
+
+<h3 class="sectionedit9" id="kirchhoff_s_voltage_law_kvl">1.4.2 Kirchhoff&#039;s voltage law (KVL)</h3>
+<div class="level3">
+
+<p>
+This law is sometimes referred to as Kirchhoff&#039;s second law, Kirchhoff&#039;s loop (or mesh) rule, and Kirchhoff&#039;s second rule.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-f2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-f2.png"><img src="/_media/university/courses/electronics/text/chptr1-f2.png?w=300&amp;tok=44a87b" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 1.4.2 Kirchhoff&#039;s voltage law 
+</p>
+</div>
+<p>
+The sum of all the voltages around a loop of circuit elements is equal to zero.
+</p>
+
+<p>
+<em>v1 + v2 + v3 + v4 = 0</em>
+</p>
+
+<p>
+The principle of conservation of energy implies that:
+</p>
+
+<p>
+The directed sum of the electrical potential differences (voltage) around any closed circuit must be zero.
+</p>
+
+<p>
+or
+</p>
+
+<p>
+Simply, the sum of the electromotive forces in any closed loop is equivalent to the sum of the potential drops in that loop. 
+</p>
+
+<p>
+or
+</p>
+
+<p>
+The algebraic sum of the products of the resistances of the conductors and the currents in them in a closed loop is equal to the total electromotive force available in that loop.
+</p>
+
+<p>
+Similarly to KCL, it can be stated as:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-e3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-e3.png"><img src="/_media/university/courses/electronics/text/chptr1-e3.png?w=100&amp;tok=78c48f" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+</p>
+
+<p>
+Here, <em>n</em> is the total number of voltages measured. The voltages may also be complex:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-e4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-e4.png"><img src="/_media/university/courses/electronics/text/chptr1-e4.png?w=100&amp;tok=7c9e35" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+</p>
+
+<p>
+This law is based on the conservation of “energy given/taken by potential field” (not including energy taken by dissipation). Given a voltage potential, a charge which has completed a closed loop doesn&#039;t gain or lose energy as it has gone back to initial potential level.
+</p>
+
+<p>
+This law holds true even when resistance (which causes dissipation of energy) is present in a circuit. The validity of this law in this case can be understood if one realizes that a charge in fact doesn&#039;t go back to its starting point, due to dissipation of energy. A charge will just terminate at the negative terminal, instead of positive terminal. This means all the energy (from the power supply) given by the potential difference has been fully consumed by resistance which in turn loses the energy as heat dissipation.
+</p>
+
+<p>
+To summarize, Kirchhoff&#039;s voltage law has nothing to do with gain or loss of energy by electronic components (resistors, capacitors, etc). It is a law referring to the potential field generated by voltage sources. In this potential field, regardless of what electronic components are present, the gain or loss in “energy given by the potential field” must be zero when a charge completes a closed loop.
+</p>
+
+</div>
+
+<h2 class="sectionedit12" id="review_of_thevenin_s_theorem">1.5 Review of Thévenin&#039;s theorem</h2>
+<div class="level2">
+
+<p>
+In circuit theory, Thévenin&#039;s theorem for linear electrical networks states that any combination of voltage sources, current sources and resistors with two terminals is electrically equivalent to a single voltage source <abbr title="volt">V</abbr> and a single series resistor R. For single frequency AC systems the theorem can also be applied to general impedances, not just resistors. 
+</p>
+
+<p>
+This theorem states that a circuit of voltage sources and resistors can be converted into a Thévenin equivalent, which is a simplification technique used in circuit analysis. The Thévenin equivalent can be used as a good model for a power supply or battery (with the resistor representing the internal impedance and the source representing the electromotive force). The circuit consists of an ideal voltage source in series with an ideal resistor.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-f3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-f3.png"><img src="/_media/university/courses/electronics/text/chptr1-f3.png?w=400&amp;tok=5a2fbf" class="mediacenter" loading="lazy" alt="" width="400" /></a>
+</p>
+
+<p>
+Figure 1.5.1 Any black box containing only voltage sources, current sources, and other resistors can be converted to a Thévenin equivalent circuit, comprising exactly one voltage source and one resistor.
+</p>
+
+<p>
+<strong>Review Lab Activity: <a href="/university/courses/alm1k/alm-lab-e1" class="wikilink1" title="university:courses:alm1k:alm-lab-e1" data-wiki-id="university:courses:alm1k:alm-lab-e1">Real voltage sources</a> for ADALM1000</strong><br/>
+
+<strong>Review Lab Activity: <a href="/university/courses/electronics/electronics-lab-0" class="wikilink1" title="university:courses:electronics:electronics-lab-0" data-wiki-id="university:courses:electronics:electronics-lab-0">Real voltage sources</a> for ADALM2000</strong>
+</p>
+
+</div>
+
+<h2 class="sectionedit13" id="review_of_norton_s_theorem">1.6 Review of Norton&#039;s theorem</h2>
+<div class="level2">
+
+<p>
+Norton&#039;s theorem for linear electrical networks states that any collection of voltage sources, current sources, and resistors with two terminals is electrically equivalent to an ideal current source, I, in parallel with a single resistor, R. For single-frequency AC systems the theorem can also be applied to general impedances, not just resistors. The Norton equivalent is used to represent any network of linear sources and impedances, at a given frequency. The circuit consists of an ideal current source in parallel with an ideal impedance (or resistor for non-reactive circuits).
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-f4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-f4.png"><img src="/_media/university/courses/electronics/text/chptr1-f4.png?w=400&amp;tok=183aff" class="mediacenter" loading="lazy" alt="" width="400" /></a>
+</p>
+
+<p>
+Figure 1.6.1 Any black box containing only voltage sources, current sources, and resistors can be converted to a Norton equivalent circuit.
+</p>
+
+<p>
+<a href="/university/courses/alm1k/circuits1/alm-cir-4" class="wikilink1" title="university:courses:alm1k:circuits1:alm-cir-4" data-wiki-id="university:courses:alm1k:circuits1:alm-cir-4">Activity 4: Thévenin Equivalent Circuit and Maximum Power Transfer for ADALM1000</a>
+</p>
+
+</div>
+
+<h2 class="sectionedit14" id="review_of_the_superposition_theorem">1.7 Review of the Superposition Theorem</h2>
+<div class="level2">
+
+<p>
+The Superposition Theorem is one of those strokes of genius that takes a complex subject and simplifies it in a way that makes perfect sense. The strategy used in the Superposition Theorem is to eliminate all but one source of power within a network at a time, using series/parallel analysis to determine voltage drops (and/or currents) within the modified network for each power source separately. Then, once voltage drops and/or currents have been determined for each power source working separately, the values are all “superimposed” on top of each other (added algebraically) to find the actual voltage drops/currents with all sources active. To understand the concept we will analyze the following example circuit and apply the Superposition Theorem to it:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-f5.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-f5.png"><img src="/_media/university/courses/electronics/text/chptr1-f5.png?w=500&amp;tok=112104" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 1.7.1 
+</p>
+</div>
+<p>
+There are two sources of power in this circuit, figure 1.7.1, therefore we will have to calculate two sets of values for voltage drops and/or currents. The general rule, when applying the Superposition Theorem to a circuit for series/parallel analysis with one source, all other voltage sources are replaced by shorts, and all current sources with open circuits. We have only voltage sources (batteries) in this example circuit. Every inactive source will be replaced with a short during analysis.
+</p>
+
+<p>
+The first set is done for the circuit with the 5 volt source removed and replaced with a short circuit, and only the 2.6 volt source remaining, figure 1.7.2.  
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-f6.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-f6.png"><img src="/_media/university/courses/electronics/text/chptr1-f6.png?w=500&amp;tok=d6b83f" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 1.7.2 
+</p>
+</div>
+<p>
+For the second set we replace the 2.6 volt source with a short and with only the 5 volt source remaining, figure 1.7.3.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-f7.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-f7.png"><img src="/_media/university/courses/electronics/text/chptr1-f7.png?w=500&amp;tok=f51c1b" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 1.7.3 
+</p>
+</div>
+<p>
+Analyzing the circuit with only the 2.6 volt source, we obtain the following values for voltage and current: 
+</p>
+<div class="table sectionedit21"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0">R<sub>1</sub></th><th class="col1">R<sub>2</sub></th><th class="col2">R<sub>3</sub></th><th class="col3">R<sub>2</sub>IIR<sub>3</sub></th><th class="col4">R<sub>1</sub>+R<sub>2</sub>IIR<sub>3</sub></th><th class="col5 leftalign">  </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">2</td><td class="col1">0.6</td><td class="col2">0.6</td><td class="col3">0.6</td><td class="col4">2.6</td><td class="col5">Volts</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">5</td><td class="col1">3</td><td class="col2">2</td><td class="col3">5</td><td class="col4">5</td><td class="col5">mAmps</td>
+	</tr>
+	<tr class="row3">
+		<td class="col0">400</td><td class="col1">200</td><td class="col2">300</td><td class="col3">120</td><td class="col4">520</td><td class="col5">Ohms</td>
+	</tr>
+</table></div>
+
+<p>
+Table 1.7.1
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-f8.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-f8.png"><img src="/_media/university/courses/electronics/text/chptr1-f8.png?w=500&amp;tok=8a9fbe" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 1.7.4 
+</p>
+</div>
+<p>
+Analyzing the circuit with only the 5 volt battery, we obtain another set of values for voltage and current: 
+</p>
+<div class="table sectionedit24"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0">R<sub>1</sub></th><th class="col1">R<sub>2</sub></th><th class="col2">R<sub>3</sub></th><th class="col3">R<sub>1</sub>IIR<sub>2</sub></th><th class="col4">R<sub>3</sub>+R<sub>1</sub>IIR<sub>2</sub></th><th class="col5 leftalign">  </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">1.538</td><td class="col1">1.538</td><td class="col2">3.462</td><td class="col3">1.538</td><td class="col4">5</td><td class="col5">Volts</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">3.845</td><td class="col1">7.69</td><td class="col2">11.54</td><td class="col3">11.54</td><td class="col4">11.54</td><td class="col5">mAmps</td>
+	</tr>
+	<tr class="row3">
+		<td class="col0">400</td><td class="col1">200</td><td class="col2">300</td><td class="col3">133.33</td><td class="col4">433.33</td><td class="col5">Ohms</td>
+	</tr>
+</table></div>
+
+<p>
+Table 1.7.2
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-f9.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-f9.png"><img src="/_media/university/courses/electronics/text/chptr1-f9.png?w=500&amp;tok=cb1871" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 1.7.5 
+</p>
+</div>
+<p>
+When superimposing these values of voltage and current, we have to be very careful to consider polarity (voltage drop) and direction (electron flow), as the values have to be added algebraically. 
+</p>
+<div class="table sectionedit27"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0">Voltage</th><th class="col1">With only 2.6V source</th><th class="col2">With only 5V source</th><th class="col3">With both sources</th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">VR<sub>1</sub></td><td class="col1">2</td><td class="col2">-1.538</td><td class="col3">0.462</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">VR<sub>2</sub></td><td class="col1">0.6</td><td class="col2">1.538</td><td class="col3">2.138</td>
+	</tr>
+	<tr class="row3">
+		<td class="col0">VR<sub>3</sub></td><td class="col1">-0.6</td><td class="col2">3.462</td><td class="col3">2.862</td>
+	</tr>
+</table></div>
+
+<p>
+Table 1.7.3
+</p>
+
+<p>
+Applying these superimposed voltages to the circuit, the end result looks something like this: 
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-f10.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-f10.png"><img src="/_media/university/courses/electronics/text/chptr1-f10.png?w=500&amp;tok=ad633f" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 1.7.6 
+</p>
+</div>
+<p>
+Currents add up algebraically as well, and can either be superimposed as done with the resistor voltage drops, or simply calculated from the final voltage drops and respective resistances (I=<abbr title="volt">V</abbr>/R). Either way, the answers will be the same. Here we show the superposition method applied to current:
+</p>
+<div class="table sectionedit30"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0">Current</th><th class="col1">With only 2.6V source</th><th class="col2">With only 5V source</th><th class="col3">With both sources</th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">IR<sub>1</sub></td><td class="col1">5mA</td><td class="col2">-3.845mA</td><td class="col3">1.155mA</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">IR<sub>2</sub></td><td class="col1">3mA</td><td class="col2">7.69mA</td><td class="col3">10.69mA</td>
+	</tr>
+	<tr class="row3">
+		<td class="col0">IR<sub>3</sub></td><td class="col1">-2mA</td><td class="col2">11.54mA</td><td class="col3">9.54mA</td>
+	</tr>
+</table></div>
+
+<p>
+Table 1.7.4
+</p>
+
+<p>
+Once again applying these superimposed figures to our circuit: 
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr1-f11.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1" class="media" title="university:courses:electronics:text:chptr1-f11.png"><img src="/_media/university/courses/electronics/text/chptr1-f11.png?w=500&amp;tok=42dcb0" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 1.7.7 
+</p>
+</div>
+<p>
+It must be noted that the Superposition Theorem works only for circuits that are reducible to series/parallel combinations for each of the power sources at a time (thus, this theorem is useless for analyzing an unbalanced bridge circuit), and it only works where the underlying equations are linear (no mathematical powers or roots). The requisite of linearity means that Superposition Theorem is only applicable for determining voltage and current, not power. Power dissipation, being a nonlinear function, does not algebraically add to an accurate total when only one source is calculated at a time. The need for linearity also means this Theorem cannot be applied in circuits where the resistance of a component changes with voltage or current. Hence, networks containing components like incandescent light bulbs could not be analyzed. 
+Another prerequisite for Superposition Theorem is that all components must be “bilateral,” meaning that they behave the same with electrons flowing either direction through them. Resistors have no polarity-specific behavior, and so the circuits we&#039;ve been studying so far all meet this criterion. Unidirectional devices like diodes cannot be included in the circuit being analyzed. 
+</p>
+
+<p>
+The Superposition Theorem finds use in the study of alternating current (AC) circuits, and semiconductor (amplifier) circuits, where sometimes AC is often mixed (superimposed) with DC. Because AC voltage and current equations (Ohm&#039;s Law) are linear just like DC, we can use Superposition to analyze the circuit with just the DC power source, then just the AC power source, combining the results to tell what will happen with both AC and DC sources in effect. For now, though, Superposition will suffice as a break from having to do simultaneous equations to analyze a circuit. 
+</p>
+
+<p>
+<a href="/university/courses/alm1k/circuits1/alm-cir-3" class="wikilink1" title="university:courses:alm1k:circuits1:alm-cir-3" data-wiki-id="university:courses:alm1k:circuits1:alm-cir-3">Activity 3: Proportionality and Superposition for ADALM1000</a>
+</p>
+
+</div>
+
+<h3 class="sectionedit33" id="section_review">Section Review:</h3>
+<div class="level3">
+<ol>
+<li class="level1"><div class="li">  The Superposition Theorem states that a circuit can be analyzed with only one source of power at a time, the corresponding component voltages and currents algebraically added to find out what they&#039;ll do with all power sources in effect.</div>
+</li>
+<li class="level1"><div class="li">  To negate all but one power source for analysis, replace any source of voltage (batteries) with a wire; replace any current source with an open (break).</div>
+</li>
+</ol>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/preface" class="wikilink1" title="university:courses:electronics:text:preface" data-wiki-id="university:courses:electronics:text:preface">Previous Chapter</a></strong>
+</p>
+
+<p>
+<strong>Go to <a href="/university/courses/electronics/text/chapter-2" class="wikilink1" title="university:courses:electronics:text:chapter-2" data-wiki-id="university:courses:electronics:text:chapter-2">Next Chapter</a></strong>
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/electronics-toc" class="wikilink1" title="university:courses:electronics:text:electronics-toc" data-wiki-id="university:courses:electronics:text:electronics-toc">Table of Contents</a></strong>
+</p>
+
+</div>
+                        <!-- wikipage stop -->
+                    </div>
+
+                    <div class="docInfo"><bdi>university/courses/electronics/text/chapter-1.txt</bdi> · Last modified: <time datetime="2017-06-05T13:48:43+0000">05 Jun 2017 13:48</time> by <bdi><a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a></bdi></div>
+
+                                    </div>
+            </div>
+            <!-- /content -->
+
+            <hr class="a11y"/>
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="/university/courses/electronics/text/chapter-1?do=edit" title="View Source [v]" rel="nofollow" accesskey="v"><span>View Source</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="/university/courses/electronics/text/chapter-1?do=revisions" title="History [o]" rel="nofollow" accesskey="o"><span>History</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="/university/courses/electronics/text/chapter-1?do=backlink" title="Backlinks" rel="nofollow"><span>Backlinks</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="menuitemfolded"><a href="javascript:void(0);" title="Fold/unfold all" rel="nofollow" class="fold_unfold_all_new" onclick="fold_unfold_all();"><span>Fold/unfold all</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M 2,0 L 6.5,3 L 2,6 z M 8,6.6 L 12.5,9.6 L 8,12.6 z M 14,13.2 L 20,13.2 L 17,17.7 z"/></svg></a></li><li class="top"><a href="#dokuwiki__top" title="[ Back to top ] [t]" rel="nofollow" accesskey="t"><span>[ Back to top ]</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /wrapper -->
+
+    </div>
+    <!-- /container -->
+</div>
+<!-- /site -->
+
+﻿<a class="backtotop" href="#header">&nbsp;</a>
+<footer class="footer" id="footer">
+    <adi-footer short></adi-footer>
+
+    
+    <script type="text/javascript">
+        var analytics = '//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js';
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script type="text/javascript">
+        var ADIAssetsPath = "//assets2.analog.com";
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script>
+        /* Copyright 2011-2015 iPerceptions, Inc. All rights reserved. Do not distribute. iPerceptions provides this code 'as is' without warranty of any kind, either express or implied. */
+        window.iperceptionskey = 'acafac0d-3b8a-4d30-8a98-6cbcd5256d93';
+        (function() { var a = document.createElement('script'),
+            b = document.getElementsByTagName('body')[0];
+            a.type = 'text/javascript';
+            a.defer = true;
+            a.src = '//universal.iperceptions.com/wrapper.js';
+            b.appendChild(a); })();
+    </script>
+</footer>
+<script type="text/javascript">
+            if(typeof(_satellite) != 'undefined') {
+            _satellite.pageBottom();
+            }
+        </script>
+<div class="a11y"
+     style="float: left"><img src="/lib/exe/taskrunner.php?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-1&amp;1776083297" width="2" height="1" alt="" /></div>
+</body>
+</html>

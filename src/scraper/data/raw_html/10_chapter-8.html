@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"
+      dir="ltr"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Chapter 8:  Transistors [Analog Devices Wiki]</title>
+
+    <script>(function (H) {
+            H.className = H.className.replace(/\bno-js\b/, 'js')
+        })(document.documentElement)</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500,500i,600,600i,700,700i|Barlow:300,300i,400,400i,500,500i,600,600i&display=swap" rel="stylesheet">
+
+    <link href="https://assets2.analog.com/apps-assets/wiki/index.css" rel="stylesheet" />
+    <script src="https://assets2.analog.com/apps-assets/wiki/index.mjs"></script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="university,courses,electronics,text,chapter-8"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Analog Devices Wiki"/>
+<link rel="start" href="/"/>
+<link rel="contents" href="/university/courses/electronics/text/chapter-8?do=index" title="Sitemap"/>
+<link rel="manifest" href="/lib/exe/manifest.php" crossorigin="use-credentials"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns=university:courses:electronics:text"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/university/courses/electronics/text/chapter-8"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/university/courses/electronics/text/chapter-8"/>
+<link rel="canonical" href="https://wiki.analog.com/university/courses/electronics/text/chapter-8"/>
+<link rel="stylesheet" href="/lib/exe/css.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb"/>
+<script nonce="6c689272b825f2a82a00711b1d3dc27c">var NS='university:courses:electronics:text';var JSINFO = {"plugin_enforcesummary":{"enforce_summary":1,"default_minoredit":0,"enforce_preview":0},"plugin_folded":{"hide":"hide","reveal":"reveal"},"plugins":{"interwikipaste":{"patterns":"[{\"shortcut\":\"footprints\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/design\\\\-center\\\\\\\/packaging\\\\-quality\\\\-symbols\\\\-footprints\\\\\\\/symbols\\\\-and\\\\-footprints\\\\\\\/([^ ]+)?\\\\.html\",\"encode\":false},{\"shortcut\":\"staging.kernel.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/gregkh\\\\\\\/staging\\\\.git;a\\\\=blob;hb\\\\=refs\\\\\\\/heads\\\\\\\/staging\\\\-next;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"avnetexpress\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/avnetexpress\\\\.avnet\\\\.com\\\\\\\/store\\\\\\\/em\\\\\\\/EMController\\\\?storeId\\\\=500201&N\\\\=0&action\\\\=products&term\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"downgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/analogdevicesinc\\\\.github\\\\.io\\\\\\\/DownGit\\\\\\\/\\\\#\\\\\\\/home\\\\?url\\\\=https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"cart\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/shoppingcart\\\\.analog\\\\.com\\\\\\\/AddModel\\\\.aspx\\\\?locale\\\\=en&ACTION\\\\=BUY_BUNDLES&modelNbr\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digikey\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digikey\\\\.com\\\\\\\/scripts\\\\\\\/DkSearch\\\\\\\/dksus\\\\.dll\\\\?KeywordSearch\\\\?Site\\\\=US&amp;Keywords\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"git.linux.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/torvalds\\\\\\\/linux\\\\.git;a\\\\=blob;hb\\\\=HEAD;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"export\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/exportclassification\\\\\\\/Search\\\\\\\/Result\\\\?strSearch\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ibis\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/media\\\\\\\/en\\\\\\\/simulation\\\\-models\\\\\\\/ibis\\\\-models\\\\\\\/([^ ]+)?\\\\.ibs\",\"encode\":false},{\"shortcut\":\"bfsvn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/project\\\\\\\/([^ ]+)?\\\\\\\/scmsvn\\\\\\\/trunk\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?;hb\\\\=HEAD\",\"encode\":false},{\"shortcut\":\"paypal\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.paypal\\\\.com\\\\\\\/cgi\\\\-bin\\\\\\\/webscr\\\\?cmd\\\\=_xclick&amp;business\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"arrow\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.arrow\\\\.com\\\\\\\/en\\\\\\\/products\\\\\\\/search\\\\?cat\\\\=&q\\\\=([^ ]+)?&r\\\\=true\",\"encode\":false},{\"shortcut\":\"linux.github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/linux\\\\\\\/blob\\\\\\\/([^ ]+)?\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit_rev\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digilent\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digilentinc\\\\.com\\\\\\\/Products\\\\\\\/Detail\\\\.cfm\\\\?Prod\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"reg\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/my\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/app\\\\\\\/registration\\\\\\\/hardware\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\\\\\\\/blob\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"go\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?&amp;btnI\\\\=lucky\",\"encode\":true},{\"shortcut\":\"docs\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/docs\\\\.blackfin\\\\.uclinux\\\\.org\\\\\\\/doku\\\\.php\\\\?id\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.com\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-20\",\"encode\":true},{\"shortcut\":\"amazon.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.de\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-21\",\"encode\":true},{\"shortcut\":\"mouser\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/mouser\\\\.com\\\\\\\/Search\\\\\\\/Refine\\\\?Keyword\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tkt\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/tracker\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"repo\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpmeta\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/meta\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bf\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"maxim\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.maximintegrated\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/en\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpfr\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/fr\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpde\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/de\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpes\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/es\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wppl\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/pl\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpjp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ja\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpru\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ru\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfin\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon.uk\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.co\\\\.uk\\\\\\\/dp\\\\\\\/([^ ]+)?\",\"encode\":true},{\"shortcut\":\"google\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"oreilly\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.oreilly\\\\.com\\\\\\\/catalog\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"mw\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.mathworks\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"rfc\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/tools\\\\.ietf\\\\.org\\\\\\\/html\\\\\\\/rfc([^ ]+)?\",\"encode\":false},{\"shortcut\":\"google.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.de\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"user\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/members\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"this\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/wiki\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"phpfn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/secure\\\\.php\\\\.net\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"adi\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"xilinx\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.xilinx\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ez\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"doku\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.dokuwiki\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"callto\",\"pattern\":\"callto\\\\:\\\\\\\/\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"man\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/man\\\\.cx\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"skype\",\"pattern\":\"skype\\\\:([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tel\",\"pattern\":\"tel\\\\:([^ ]+)?\",\"encode\":false}]"},"vshare":{"youtube":"youtube\\.com\/.*[&?]v=([a-z0-9_\\-]+)","vimeo":"vimeo\\.com\\\/(\\d+)","slideshare":"slideshare.*id=(\\d+)","dailymotion":"dailymotion\\.com\/video\/([a-z0-9]+)","archiveorg":"archive\\.org\/(?:embed|details)\/([a-zA-Z0-9_\\-]+)","soundcloud":"soundcloud\\.com\/([\\w-]+\/[\\w-]+)","niconico":"nicovideo\\.jp\/watch\/(sm[0-9]+)","bitchute":"bitchute\\.com\\\/video\\\/([a-zA-Z0-9_\\-]+)","coub":"coub\\.com\\\/view\\\/([a-zA-Z0-9_\\-]+)","odysee":"odysee\\.com\/\\$\/(?:embed|download)\/([-%_?=\/a-zA-Z0-9]+)","youku":"v\\.youku\\.com\/v_show\/id_([0-9A-Za-z=]+)\\.html","bilibili":"bilibili\\.com\\\/video\\\/(BV[0-9A-Za-z]+)","msoffice":"(?:office\\.com.*[&?]videoid=([a-z0-9\\-]+))","msstream":"microsoftstream\\.com\\\/video\\\/([a-f0-9\\-]{36})","rutube":"rutube\\.ru\\\/video\\\/([a-z0-9]+)\\\/","gdrive":"drive\\.google\\.com\\\/file\\\/d\\\/([a-zA-Z0-9_-]+)\/"}},"id":"university:courses:electronics:text:chapter-8","namespace":"university:courses:electronics:text","ACT":"show","useHeadingNavigation":1,"useHeadingContent":0};(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script src="/lib/exe/jquery.php?tseed=8faf3dc90234d51a499f4f428a0eae43" defer="defer"></script>
+<script src="/lib/exe/js.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb" defer="defer"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/lib/tpl/analog2014/images/favicon.ico" />
+
+    <script src="https://assets2.analog.com/header-footer/index.js" type="text/javascript" defer="true"></script>
+
+    <!-- LIVE tracking -->
+<script src="//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js" async></script>
+<script src="/lib/tpl/analog2014/assets/js/adi/global.analytics.js" type="text/javascript"></script>
+</head>
+
+<!-- List of supported themes thm-education, thm-applications, thm-parametric, thm-product, thm-community, thm-design-center, thm-my-analog, thm-support -->
+<body class="home">
+
+
+<!-- wiki_header.html -->
+<header class="adi_header adi_header--wiki tools-header" id="dokuwiki__top" data-ot="true">
+
+    <div class="adi_topbar">
+        <div class="adi_container">
+            <section class="adi_row">
+                <!--  BEGIN:  Internal Links -->
+                <nav class="adi_column adi_pull-left">
+                    <a class="adi_topbar-link adi_topbar-link--analog-home" href="//www.analog.com">
+                        <strong>Analog.com</strong>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--engineer-zone" href="//ez.analog.com">
+                        <strong class="adi_link--hover-accent">Engineer</strong>
+                        <span>Zone</span>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--analog-dialogue" href="//www.analog.com/en/resources/analog-dialogue.html">
+                        <strong class="adi_link--hover-accent">Analog</strong>
+                        <span>Dialogue</span>
+                    </a>
+                </nav> <!-- /.adi_column.adi_pull-left -->
+                <!--  END:  Internal Links  -->
+                <!--  BEGIN:  Language Options  -->
+                <nav class="adi_column adi_pull-right">
+                    <a class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-logo" href="//my.analog.com/">
+                        <span><img src="https://assets2.analog.com/cms-assets/images/images/images/myanalog_logo.png" alt="My Analog Login"></span>&nbsp;
+                    </a>
+
+                    <a href="/university/courses/electronics/text/chapter-8?do=login&amp;sectok="  class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-login action login" rel="nofollow" title="Log In"><strong>Log In</strong></a>                </nav> <!-- /.adi_column.adi_pull-right -->
+                <!--  END:  Language Options  -->
+            </section> <!-- /.adi_row -->
+        </div> <!-- /.adi_container -->
+    </div>
+
+
+
+    <div class="adi_container">
+        <section class="adi_row">
+            <!--  BEGIN:  Logo  -->
+            <div class="adi_column adi_logo-container">
+                <a class="adi_logo" href="/start">
+                    <img src="/lib/tpl/analog2014//assets/images/adi-logo.svg" alt="Analog Devices Wiki" />
+                </a>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+            <div class="adi_column adi_page-title-container">
+                <h1 class="adi_page-title">Wiki</h1>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+        </section> <!-- /.adi_row -->
+    </div> <!-- /.adi_container -->
+
+    <div class="navigation-bar">
+        <div class="content-wrap clearfix">
+            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"><a href="#">Wiki Tools</a></div><ul class="submenu"><li class="level2"><a href="/university/courses/electronics/text/chapter-8?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-8?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-8?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>
+            <ul class="list-inline pull-right searchmenu clearfix">
+                <li class="search-box">
+                    <form action="" accept-charset="utf-8" class="search clearfix" id="dw__search" method="get" role="search">
+                        <div class="no">
+                            <input type="hidden" name="do" value="search">
+                            <input type="text" autocomplete="off" id="qsearch__in" accesskey="f" name="id" class="edit" placeholder="search wiki">
+                            <button type="submit" value="Search" class="button search-icon" title="Search"></button>
+
+                            <div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none; white-space: nowrap;">
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</header> <!-- /.adi_header -->
+
+
+
+
+
+<!-- Mobile view navigation drawer-->
+<div class="wiki-mob-body">
+    <div class="content" role="main">
+        <div class="col-md-12 wiki-head-row">
+            <div class="row ">
+                <div class="title-nophoto">
+                    <div class="container page-title ">
+                        <h1 data-page-title="true">Analog Devices Wiki</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 floater-menu-container">
+                <div class="row product-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 wiki-right-panel">
+                                <div class="row">
+                                    <div class=" product-bookmarks" id="affix-nav" name="adi_products_left_navigation">
+                                        <ul class="nav" id="affix-ul">
+                                            <li class="">
+
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#"
+                                                   name='SDR-home_2e322e80-5ec4-4b20-b8b8-71702b590a25'>Analog Devices
+                                                    Wiki
+                                                </a>
+
+                                            </li>
+                                            <!--Wiki-->
+                                            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"><a href="#">Wiki Tools</a></div><ul class="submenu Res_tools_child"><li class="level2"><a href="/university/courses/electronics/text/chapter-8?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-8?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-8?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>                                            <!--Wiki-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="special-content">
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#English">English<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="English" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/en/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_en.jpg" class="mobile-images"
+                                 width="100%" alt="English"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#简体中文">简体中文<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="简体中文" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/cn/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_cn.jpg" class="mobile-images"
+                                 width="100%" alt="简体中文"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#日本語">日本語<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="日本語" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/jp/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_jp.jpg" class="mobile-images"
+                                 width="100%" alt="日本語"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#Руccкий">Руccкий<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="Руccкий" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/ru/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_ru.jpg" class="mobile-images"
+                                 width="100%" alt="Руccкий"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile view navigation drawer-->
+
+<!-- /tpl_header.php -->
+
+
+
+<div id="dokuwiki__site" role="main" class="main-body content">
+    <div class="site dokuwiki mode_show tpl_analog2014   ">
+        <div class="container">
+
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content">
+                <div class="pad group">
+
+                    <div class="page group">
+                        
+                                                <!-- wikipage start -->
+                        <div class="approval approved_yes"><span class="approval_approved">This version (<span class="approval_date">06 Jun 2017 15:13</span>) was <em>approved</em> by <a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a>.</span><span class="approval_previous">The <a href="/university/courses/electronics/text/chapter-8?rev=1398779534">Previously approved version</a> (29 Apr 2014 13:52) is available.<a href="https://wiki.analog.com/university/courses/electronics/text/chapter-8?do=diff&rev2[0]=1398779534&rev2[1]=1496761985&difftype=sidebyside" class="approved_diff_link"><img src="/lib/images/diff.png" class="approved_diff_link" alt="Diff" /></a></span></div><!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#chapter_8transistors">Chapter 8:  Transistors</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#basic_principles">8.1 Basic principles</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#simple_model_characteristics">8.1.1 Simple model characteristics</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#transistor_symbols">8.2 Transistor Symbols</a></div></li>
+<li class="level2"><div class="li"><a href="#bipolar_junction_transistor_basics">8.3  Bipolar Junction Transistor basics</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#voltage_current_and_charge_control">8.3.1 Voltage, current, and charge control</a></div></li>
+<li class="level3"><div class="li"><a href="#transistor_alpha_and_beta">8.3.2 Transistor alpha and beta</a></div></li>
+<li class="level3"><div class="li"><a href="#npn">8.3.3 NPN</a></div></li>
+<li class="level3"><div class="li"><a href="#pnp">8.3.4 PNP</a></div></li>
+<li class="level3"><div class="li"><a href="#bjt_regions_of_operation">8.3.5 BJT Regions of operation</a></div></li>
+<li class="level3"><div class="li"><a href="#bipolar_junction_transistor_large_signal_model">8.4.1 Bipolar Junction Transistor large signal Model</a></div></li>
+<li class="level3"><div class="li"><a href="#early_effect_base_width_modulation">8.4.2 Early Effect (Base width modulation)</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#metal-oxide-semi-conductor_field-effect_transistor_basics">8.5 Metal-Oxide-Semi-conductor Field-Effect Transistor basics</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#basic_structure_and_principle_of_operation">8.5.1 Basic Structure and Principle of Operation</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#mos_fet_large_signal_model">8.6 MOS FET Large signal model</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#modes_of_operation">8.6.1 Modes of operation</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#small_signal_hybrid-pi_models">8.7 Small Signal Hybrid-pi models</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#bipolar_junction_bjt_parameters">8.7.1 Bipolar junction (BJT) parameters</a></div></li>
+<li class="level3"><div class="li"><a href="#mosfet_parameters">8.7.2 MOSFET parameters</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#the_t_model">8.8 The T Model</a></div></li>
+<li class="level2"><div class="li"><a href="#lab_activities">Lab Activities</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="chapter_8transistors">Chapter 8:  Transistors</h1>
+<div class="level1">
+
+<p>
+In this chapter we will explore our first active devices.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="basic_principles">8.1 Basic principles</h2>
+<div class="level2">
+
+<p>
+An active device is any type of component with the ability to electrically control the flow of current (controlling one electric signal with another electric signal). For a circuit to be called electronic, it must contain at least one active device. All active devices control the flow of current through them. One type of active device uses a voltage to control the current while another type of active devices uses another current to be the controlling signal. Devices utilizing a voltage as the controlling signal are, not surprisingly, called voltage-controlled devices. Devices working on the principle of one current controlling another current are known as current-controlled devices. The first type of transistor successfully demonstrated was a current-controlled device.
+</p>
+
+<p>
+As a side note: The origin of the term transistor is a contraction of “transconductance varistor”, as
+proposed by Bell Telephone Laboratories. It is sometimes incorrectly attributed to a contraction of transresistance.
+</p>
+
+<p>
+A simple and general form of such a device is shown in figure 8.1.1. It has three terminals; we will call them X, Y and Z for the moment. Let&#039;s also assume that the controlled current flows into terminal X and back out terminal Y. The third terminal, Z, is the control terminal. To describe the function of this block we first need to define the terminal currents <em>IX</em><sub></sub>, <em>IY </em>and <em>IZ</em><sub>,</sub> and the terminal voltages <em>VXY </em>and <em>VZY</em> as shown in the figure. Because current flows into terminal X, we generally assume the voltage seen at X is greater than terminal Y and voltage <em>VXY</em> is a positive number. The same can be said for the voltage seen at terminal Z with respect to terminal Y and voltage <em>VZY</em> is a positive number.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f1.png"><img src="/_media/university/courses/electronics/text/chptr8-f1.png?w=600&amp;tok=2e430d" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.1.1 General Model 
+</p>
+</div>
+<p>
+In the case of a current controlled device, let&#039;s assume that the control current <em>IZ,</em><sub></sub>flows into terminal Z and back out terminal Y. Conservation of charge tells us that the sum of the currents flowing into a box must equal the sum of the currents flowing out. Thus <em>IY</em><sub></sub>= <em>IX</em> + <em>IZ</em>. To make the device useful it would be desirable to have the control current <em>IZ</em> very small relative to the much larger controlled current <em>IX</em>. The ratio of <em>IX</em> to <em>IZ</em> is the gain of the device and the Greek letter β (beta) is used to represent this gain. The ratio of <em>IX</em><sub></sub>to <em>IY</em> which is always less than unity, is also a measure of the device gain and is most often represented by the Greek letter α (alpha).
+</p>
+
+<p>
+For the voltage controlled device let&#039;s assume, as we did before, that the current flows into terminal X and out terminal Y. The voltage on terminal Z now controls the amount of current in terminals X and Y. This voltage now needs to be referenced with respect to one of the two other terminals and we will use terminal Y for our purposes here. Also, since a voltage is the control signal in this case, we will assume that no current flows into (or out of) terminal Z. Comparing this back to the current controlled device we can say that α = 1 and β is infinite. The output current to control voltage relationship, expressed as amps/volt, is dimensionally a conductance and the letter <em><abbr title="gravity">g</abbr></em> is most often used to represent conductance. This parameter of a transistor is called transconductance and <em>gm</em> is the common usage.
+</p>
+
+<p>
+We can also describe complementary devices by reversing the direction of the currents such that the controlled current now flows out of terminal X and into terminal Y as shown in figure 8.1.2. Because direction of the current is now reversed, we generally assume the voltage seen at Y is greater than terminal X and voltage <em>VXY</em> is a negative number. The same can be said for the voltage seen at terminal Z with respect to terminal Y and voltage <em>VZY</em> is a negative number. For the current controlled case we also reverse the direction of the control current I<sub>Z</sub> which now flows out of terminal Z.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f2.png"><img src="/_media/university/courses/electronics/text/chptr8-f2.png?w=600&amp;tok=a4d4d7" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.1.2 Complementary Model 
+</p>
+</div>
+<p>
+To summarize we have described four types of active devices, a positive current controlled current source and it&#039;s complementary negative form, and a positive voltage controlled current source and it&#039;s complementary negative form.
+</p>
+
+</div>
+
+<h3 class="sectionedit7" id="simple_model_characteristics">8.1.1 Simple model characteristics</h3>
+<div class="level3">
+
+<p>
+Now we will examine the transfer characteristics of these simple transistor models and how they may need to be modified or extended to make them more realistic. First we will examine the output current vs. output voltage characteristics of a simple (ideal) voltage controlled current source as the voltage on the control input is stepped. The results for a controlled source with a transconductance of 1 <abbr title="milliampere">mA</abbr>/<abbr title="volt">V</abbr> is shown in figure 8.1.3 as <abbr title="volt">V</abbr><sub>XY</sub> is swept from 0 to 5V and the control voltage <abbr title="volt">V</abbr><sub>ZY</sub> is stepped in 0.4 volt increments from 0.1 <abbr title="volt">V</abbr> to 2.1 <abbr title="volt">V</abbr>. An ideal current controlled current source would have essentially the same characteristics except that each horizontal line would represent a different control current (in terminal Z) rather than a different control voltage.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f3.png"><img src="/_media/university/courses/electronics/text/chptr8-f3.png?w=600&amp;tok=f5a36d" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.1.3 Ideal Voltage (or Current) controlled current source characteristics 
+</p>
+</div>
+<p>
+From these characteristic curves we can learn the following; first the current is indeed independent of the voltage across the X and Y terminals. Second, the current I<sub>XY</sub> is equal to 1mA per volt applied to the Z terminal with respect to the X terminal (figure 8.1.1). However, there is one thing that is evident that cannot happen in a real device and that is having I<sub>XY</sub> be something other than zero when the voltage <abbr title="volt">V</abbr><sub>XY</sub> is zero. This implies that the device contains a source of energy and we know that is impossible. Otherwise we would have a solution to the world&#039;s energy crisis. A more realistic set of characteristics is something more like those shown in figure 8.1.4.
+</p>
+
+<p>
+Curves like those in figure 8.1.4 make more physical sense but still have some properties that actual devices can&#039;t have. The plot shows abrupt breaks in the curves where the angled line, which goes through the origin, intersects the horizontal line at the constant controlled current value. This transition can never be this sharp and must somehow smoothly transition from one line to the other.
+</p>
+
+<p>
+Another property of these simple curves is the perfectly horizontal nature of the current vs. voltage lines. A real device will show some change, usually an increase due to a finite real resistance, with the voltage across X and Y. 
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f4.png"><img src="/_media/university/courses/electronics/text/chptr8-f4.png?w=600&amp;tok=bcc7dd" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.1.4 VCCS current must be zero when <abbr title="volt">V</abbr><sub>XY</sub> = 0 
+</p>
+</div>
+<p>
+A more complete complex mathematical model of the real physical transistor is shown in figure 8.1.5. We will explore this more complete model in the coming sections of this chapter.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f5.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f5.png"><img src="/_media/university/courses/electronics/text/chptr8-f5.png?w=600&amp;tok=bf1fe0" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.1.5 Complex mathematical device model 
+</p>
+</div>
+</div>
+
+<h2 class="sectionedit14" id="transistor_symbols">8.2 Transistor Symbols</h2>
+<div class="level2">
+
+<p>
+There are four transistor types that correspond to these basic active device models. The schematic symbols for these are shown in figure 8.2.1. The n-type current controlled device is the NPN Bipolar Junction Transistor (BJT). The p-type current controlled device is the PNP BJT. The n-type voltage controlled device is the NMOS FET (metal oxide semiconductor field effect transistor). And finally, the p-type voltage controlled device is the PMOS FET. Rather than giving the device terminals generic names like X, Y and Z, the established convention for the BJT is Collector and Emitter for the current source terminals and Base for the current control terminal. Similarly, the convention for the MOS device is Drain and Source for the current source terminals and Gate for the voltage control terminal, 
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f6.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f6.png"><img src="/_media/university/courses/electronics/text/chptr8-f6.png?w=600&amp;tok=c3dab0" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.2.1 transistor symbols 
+</p>
+</div>
+<p>
+Note: Unless the reader gets into device fabrication, it is generally less important to understand the inner workings of transistors. The descriptions which one gets by getting into the intrinsic properties are not particularly satisfying for circuit design and can be difficult to fully comprehend. Rather for circuit analysis and design, it is usually enough to understand the extrinsic properties of transistors, treating them more or less as a black box. Adding some discussion about the subtleties which arise from the physics going on inside the black box is of course necessary for robust circuit design.
+</p>
+
+</div>
+
+<h2 class="sectionedit17" id="bipolar_junction_transistor_basics">8.3  Bipolar Junction Transistor basics</h2>
+<div class="level2">
+
+<p>
+A bipolar junction transistor (BJT) is a three-terminal electronic device constructed of doped semiconductor material and may be used in amplifying or switching applications. Bipolar transistors are so named because their operation involves both electrons and holes. Charge flow in a BJT is due to bidirectional diffusion of charge carriers across a junction between two regions of different charge concentrations. By design, most of the BJT collector current is due to the flow of charges injected from a high-concentration emitter into the base where they are minority carriers that diffuse toward the collector, and so BJTs are classified as minority carrier devices This mode of operation is contrasted with majority carrier transistors, such as field-effect transistors, in which only majority carriers are involved in current flow due to drift. 
+</p>
+
+<p>
+The typical cross section of a planar NPN transistor is shown in figure 8.3.1. An NPN transistor can be viewed as two PN junction diodes with a very thin shared anode, P layer. In typical operation, the base-emitter junction is forward biased and the base collector junction is reverse biased. In an NPN transistor, for example, when a positive voltage is applied to the base-emitter junction, the equilibrium between thermally generated carriers and the repelling electric field of the depletion region becomes unbalanced, allowing thermally excited electrons to inject into the base region. These electrons wander (or “diffuse”) through the very thin base from the region of high concentration near the emitter towards the region of low concentration near the collector. The electrons in the base are called minority carriers because the base is doped p-type which would make holes the majority carrier in the base.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f7.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f7.png"><img src="/_media/university/courses/electronics/text/chptr8-f7.png?w=400&amp;tok=4b7e61" class="mediacenter" loading="lazy" alt="" width="400" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.3.1 Cross section of a planar NPN transistor 
+</p>
+</div>
+<p>
+To minimize the percentage of carriers that recombine before reaching the collector-base junction depletion layer, the transistor&#039;s base region must be thin enough that carriers can diffuse across it in much less time than the semiconductor&#039;s minority carrier lifetime. In particular, the thickness of the base must be much less than the diffusion length of the electrons. The collector base junction is reverse-biased, and so little electron injection occurs from the collector to the base, but electrons that diffuse through the base towards the collector are swept into the collector by the electric field in the depletion region of the collector-base junction. The thin shared base and asymmetric collector-emitter doping is what differentiates a bipolar transistor from two separate and oppositely biased diodes stacked in series.
+</p>
+
+</div>
+
+<h3 class="sectionedit20" id="voltage_current_and_charge_control">8.3.1 Voltage, current, and charge control</h3>
+<div class="level3">
+
+<p>
+The collector emitter current can be viewed as being controlled by the base-emitter current (current control), or by the base-emitter voltage (voltage control). These views are related by the current-voltage relation of the base-emitter junction, which is just the usual exponential current-voltage curve of a PN junction (diode).
+</p>
+
+<p>
+The physical explanation for collector current is the amount of minority-carrier charge in the base region. 
+</p>
+
+<p>
+Detailed models of transistor action, such as the Gummel-Poon model, account for the distribution of this charge explicitly to explain transistor behavior more exactly. The charge-control view easily handles phototransistors, where minority carriers in the base region are created by the absorption of photons, and handles the dynamics of turn-off, or recovery time, which depends on charge in the base region recombining. However, because base charge is not a signal that is visible at the terminals, the current- and voltage-control views are generally used in circuit design and analysis.
+</p>
+
+<p>
+In analog circuit design, the current-control view is sometimes used because it is approximately linear. That is, the collector current is approximately ?<sub>F</sub> times the base current. Some basic circuits can be designed by assuming that the emitter-base voltage is approximately constant, and that collector current is beta times the base current. However, to accurately and reliably design robust BJT circuits, the voltage-control (for example, Ebers-Moll) model is more often used. The voltage-control model requires an exponential function to be taken into account. The following equation for the collector current I<sub>C</sub> shows the exponential relationship to <abbr title="volt">V</abbr><sub>BE</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e1.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e1.png"><img src="/_media/university/courses/electronics/text/chptr8-e1.png?w=250&amp;tok=b67e87" class="mediacenter" loading="lazy" alt="" width="250" /></a>
+</p>
+
+<p>
+A fairly standard transistor operating at around 100uA may have a <abbr title="volt">V</abbr><sub>BE</sub>of around 650mV at room temperature where q/kT is about 0.039/<abbr title="millivolt">mV</abbr> (or the thermal voltage, kT/q is 25mV). The exponential factor in the equation will be on the order of 10<sup>11</sup>. In this case we can safely drop the -1 term in the equation without serious error. Taking the natural logarithm, we get the equation for <abbr title="volt">V</abbr><sub>BE</sub>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e2.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e2.png"><img src="/_media/university/courses/electronics/text/chptr8-e2.png?w=200&amp;tok=8fc5a4" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+When this exponential is linearized such that the transistor can be modeled as a transconductance, as in the Ebers-Moll model, design for circuits such as amplifiers again becomes a mostly linear problem, so the voltage-control view is often preferred. For translinear circuits, in which the exponential I-<abbr title="volt">V</abbr> curve is key to the operation, the transistors are usually modeled as voltage controlled with transconductance proportional to collector current. In general, transistor level circuit design is performed using SPICE or a comparable analog circuit simulator, so model mathematical complexity is usually not of much concern to the designer.
+</p>
+
+</div>
+
+<h3 class="sectionedit21" id="transistor_alpha_and_beta">8.3.2 Transistor alpha and beta</h3>
+<div class="level3">
+
+<p>
+The proportion of electrons able to cross the base and reach the collector is a measure of the BJT efficiency. The asymmetric heavy doping of the emitter region and light doping of the base region cause many more electrons to be injected from the emitter into the base than holes to be injected from the base into the emitter. The common<em>-</em>emitter<em> </em>current<em> </em>gain is represented by ß<sub>F</sub> or h<sub>fe</sub> and is approximately the ratio of the DC collector current to the DC base current in the forward-active region. It is typically greater than 100 for small-signal transistors but can be smaller in transistors designed for high-power applications. Another important parameter is the common-base current gain, a<sub>F</sub>. The common-base current gain is approximately the gain of current from emitter to collector in the forward-active region. This ratio usually has a value close to unity; between 0.98 and 0.998. Alpha and beta are more precisely related by the following identities (NPN transistor):
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e3.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e3.png"><img src="/_media/university/courses/electronics/text/chptr8-e3.png?w=100&amp;tok=d290fe" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+<a href="/_detail/university/courses/electronics/text/chptr8-e4.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e4.png"><img src="/_media/university/courses/electronics/text/chptr8-e4.png?w=100&amp;tok=07299a" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+<a href="/_detail/university/courses/electronics/text/chptr8-e5.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e5.png"><img src="/_media/university/courses/electronics/text/chptr8-e5.png?w=400&amp;tok=240ee8" class="mediacenter" loading="lazy" alt="" width="400" /></a>
+</p>
+
+<p>
+A BJT consists of three differently doped semiconductor regions, the emitter region, the base region and the collector region. These regions are, respectively, <em>p</em> type, <em>n</em> type and <em>p</em> type in a PNP, and <em>n</em> type, <em>p</em> type and <em>n</em> type in a NPN transistor. Each semiconductor region is connected to a terminal, appropriately labeled: emitter (E), base (B) and collector (C).
+</p>
+
+<p>
+The base is physically located between the emitter and the collector and is made from lightly doped, high resistivity material. The collector surrounds the emitter and base regions (figure 8.3.1), making it almost impossible for the electrons injected into the base region from the emitter region to escape being collected, thus making the resulting value of a very close to unity, and so, giving the transistor a large ß. A cross section view of a BJT, figure 8.3.1, indicates that the collector-base junction has a much larger area than the emitter-base junction.
+</p>
+
+<p>
+The bipolar junction transistor, unlike the MOSFET transistor which we will discuss in detail shortly, is usually not a symmetrical device. This means that interchanging the collector and the emitter makes the transistor leave the forward active mode and start to operate in what is called the reverse active mode. 
+</p>
+
+<p>
+Because the transistor&#039;s internal structure is usually optimized for forward-mode operation, interchanging the collector and the emitter makes the values of a and ß in reverse operation much smaller than those in forward operation; often the a of the reverse mode is lower than 0.5. The lack of symmetry is primarily due to the relative doping ratios of the emitter and the collector. The emitter is heavily doped, while the collector is lightly doped, allowing a large reverse bias voltage to be applied before the collector-base junction breaks down. The collector-base junction is reverse biased in normal operation. The reason the emitter is heavily doped is to increase the emitter injection efficiency: the ratio of carriers injected by the emitter to those injected by the base. For high current gain, most of the carriers injected into the emitter-base junction must come from the emitter.
+</p>
+
+<p>
+The low-performance “lateral” bipolar transistors sometimes used in CMOS processes are sometimes designed symmetrically, that is, with no difference between forward and backward operation, figure 8.3.2. However, because the base width is often much larger than the vertical structure of figure 8.3.1 ß and a are not nearly as high. A layout technique to improve collection efficiency is to surround the emitter region completely on all four sides with a ring or doughnut shaped collector region. This structure is now no longer symmetrical of course.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f8.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f8.png"><img src="/_media/university/courses/electronics/text/chptr8-f8.png?w=400&amp;tok=2f1fa4" class="mediacenter" loading="lazy" alt="" width="400" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.3.2 Lateral NPN cross section 
+</p>
+</div>
+<p>
+Small changes in the voltage applied across the base-emitter terminals causes the current that flows between the emitter and the collector to change significantly. This effect can be used to amplify the input voltage or current. BJTs can be thought of as voltage-controlled current sources, but are more simply characterized as current-controlled current sources, or current amplifiers, due to the relatively low impedance seen at the base.
+</p>
+
+<p>
+Early transistors were made from germanium but most modern BJTs are made from silicon. Special purpose devices are also made from III-<abbr title="volt">V</abbr> element compound semiconductors like gallium arsenide, especially for very high frequency applications.
+</p>
+
+</div>
+
+<h3 class="sectionedit24" id="npn">8.3.3 NPN</h3>
+<div class="level3">
+
+<p>
+The NPN is one of the two types of bipolar transistors, in which the letters “N” (negative) and “P” (positive) refer to the majority charge carriers inside the different regions of the transistor. Better performing bipolar transistors produced today are NPN, because electron mobility is higher than hole mobility in semiconductors, allowing greater currents and faster operation.
+</p>
+
+<p>
+NPN transistors consist of a layer of P-doped semiconductor (the “base”) sandwiched between two N-doped layers. A small current entering the base in common-emitter mode is amplified in the collector output. In other terms, an NPN transistor is “on” when its base is pulled high relative to the emitter. The arrow in the NPN transistor symbol is on the emitter leg and points in the direction of the conventional current flow when the device is in the forward active operating mode.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f9.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f9.png"><img src="/_media/university/courses/electronics/text/chptr8-f9.png?w=400&amp;tok=2e42d2" class="mediacenter" loading="lazy" alt="" width="400" /></a>
+</p>
+
+<p>
+One mnemonic device for identifying the symbol for the NPN transistor is “<strong>n</strong>ot <strong>p</strong>ointing i<strong>n</strong>, or &#039;<strong>n</strong>ot <strong>p</strong>ointing, <strong>n</strong>o&#039; ”
+</p>
+
+</div>
+
+<h3 class="sectionedit25" id="pnp">8.3.4 PNP</h3>
+<div class="level3">
+
+<p>
+The other type of BJT is the PNP with the letters “P” and “N” referring to the majority charge carriers inside the different regions of the transistor.PNP transistors consist of a layer of N-doped semiconductor between two layers of P-doped material. A small current leaving the base in common-emitter mode is amplified in the collector output. In other terms, a PNP transistor is “on” when its base is pulled low relative to the emitter.
+</p>
+
+<p>
+The arrow in the PNP transistor symbol is on the emitter leg and points in the direction of the conventional current flow when the device is in forward active mode.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f10.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f10.png"><img src="/_media/university/courses/electronics/text/chptr8-f10.png?w=400&amp;tok=5e511d" class="mediacenter" loading="lazy" alt="" width="400" /></a>
+</p>
+
+</div>
+
+<h3 class="sectionedit26" id="bjt_regions_of_operation">8.3.5 BJT Regions of operation</h3>
+<div class="level3">
+
+<p>
+Bipolar transistors have five distinct regions of operation, defined by the way the junctions are biased. In order to visualize the modes of operation draw an NPN transistor with its collector on top, base in the middle and emitter on the bottom. Now, there are two voltage differences: between Collector and base, and between base and emitter. Note two points: <abbr title="volt">V</abbr><sub>CB</sub> = -<abbr title="volt">V</abbr><sub>BC</sub>, and &#039;reverse biased base-collector junction&#039; means <abbr title="volt">V</abbr><sub>BC</sub> &lt; 0 or <abbr title="volt">V</abbr><sub>CB</sub>&gt;0. In simple words, it means the collector has a higher voltage than the base (if probed). The mechanical analog can be a pipe and a valve. 
+</p>
+
+<p>
+The valve is base, and two sides of the pipe are collector and emitter. Now the amount of water (current) going through depends on how much the valve is open (base to emitter voltage), and how much water you have on top of the pipe (collector to base voltage). If you write the biases in term of applied voltages (<abbr title="volt">V</abbr><sub>CB</sub>, <abbr title="volt">V</abbr><sub>BE</sub>) instead of junction biasing the modes of operation can be described as:
+</p>
+<ol>
+<li class="level1"><div class="li">  Forward Active: Base higher than Emitter, Collector higher than Base ( in this mode the collector current is proportional to base current by β<sub>F</sub>).<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  Saturation: Base higher than emitter, but collector is not higher than base.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  Cut-Off: Base lower than emitter, but collector is higher than base. It means the transistor is not letting conventional current to go through collector to emitter.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  Reverse Active: Base lower than emitter, collector lower than base: reverse conventional current goes through transistor.</div>
+</li>
+</ol>
+
+<p>
+In terms of junction biasing: (&#039;reverse biased base-collector junction&#039; means <abbr title="volt">V</abbr><sub>BC</sub>&lt;0 or <abbr title="volt">V</abbr><sub>CB</sub>&gt;0)<br/>
+
+</p>
+<ol>
+<li class="level1"><div class="li">  Forward<strong>-</strong>active (or simply, active): The base-emitter junction is forward biased and the base-collector junction is reverse biased. Most bipolar transistors are designed to afford the greatest common-emitter current gain, β<sub>F</sub>, in forward-active mode. If this is the case, the collector-emitter current is approximately proportional to the base current, but many times larger, for small base current variations.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  Reverse<strong>-</strong>active (or inverse<strong>-</strong>active or inverted): By reversing the biasing conditions of the forward-active region, a bipolar transistor goes into reverse-active mode. In this mode, the emitter and collector regions switch roles. Because most BJTs are designed to maximize current gain in forward-active mode, the β<sub>F</sub> in inverted mode is several (2-3 for the ordinary germanium transistor) times smaller. This transistor mode is seldom used, usually being considered only for failsafe conditions and some types of bipolar logic. The reverse bias breakdown voltage to the base may be an order of magnitude lower in this region.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  Saturation: With both junctions forward-biased, a BJT is in saturation mode and facilitates high current conduction from the emitter to the collector. This mode corresponds to a logical “on”, or a closed switch.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  Cutoff: In cutoff, biasing conditions opposite of saturation (both junctions reverse biased) are present. There is very little current flow, which corresponds to a logical “off”, or an open switch.</div>
+</li>
+<li class="level1"><div class="li">  Avalanche<strong> </strong>breakdown<strong> </strong>region</div>
+</li>
+</ol>
+
+<p>
+Although these regions are well defined for sufficiently large applied voltage, they overlap somewhat for small (less than a few hundred millivolts) biases. For example, in the typical grounded-emitter configuration of an NPN BJT used as a pull-down switch in digital logic, the “off” state never involves a reverse-biased junction because the base voltage never goes below ground; nevertheless the forward bias is close enough to zero that essentially no current flows, so this extreme of the forward active region can be regarded as the cutoff region.
+</p>
+
+</div>
+
+<h3 class="sectionedit27" id="bipolar_junction_transistor_large_signal_model">8.4.1 Bipolar Junction Transistor large signal Model</h3>
+<div class="level3">
+
+<p>
+As we just learned, the bipolar junction transistor (BJT) can operate in one of three regions:
+</p>
+<ol>
+<li class="level1"><div class="li">  Cutoff region: Transistor is off and no current flows between collector and emitter (<abbr title="in other words">i.e.</abbr>, collector-emitter resistance is infinite).<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  Active region: Transistor acts like a current controlled current source between collector and emitter as in the basic model.<br/>
+</div>
+</li>
+<li class="level1"><div class="li">  Saturation region: When the voltage between collector and emitter drops below a certain level (typically when the collector to base voltage is zero or less) the base current increases and the ratio of <em>I<sub>C</sub></em> to <em>I<sub>B</sub></em>, or β is much smaller than in the active region.</div>
+</li>
+</ol>
+
+<p>
+In the active region, the transistor adjusts the collector current to be ? times the base current. If the base current I<sub>B</sub>, falls to 0, the transistor enters the cutoff region and shuts off. When the collector voltage becomes less than or equal to the base voltage the base current rises and β falls. In this case, the transistor enters the saturation region. To keep the transistor out of the saturation region, the general rule of thumb is that the voltage on the collector should be more positive than the voltage on the base. That is the collector base junction is always reversed biased.
+</p>
+
+<p>
+A simple model for the operation of NPN and PNP BJT transistors in the active region is shown in figure 8.4.1. It requires knowing the current gain β in order to design a circuit. In both of these models,
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+I<sub>C</sub> = βI<sub>B</sub>, I<sub>E</sub> = (β + 1)I<sub>B</sub> and 
+</p>
+</div><div class="wrap_centeralign plugin_wrap">
+<p>
+I<sub>E</sub>=I<sub>C</sub>+I<sub>B</sub> 
+</p>
+</div>
+<p>
+The emitter is separated from the base by a diode. In order for this diode to conduct current, in the case of a Silicon based device, it must be forward biased with ~0.65V.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f11.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f11.png"><img src="/_media/university/courses/electronics/text/chptr8-f11.png?w=600&amp;tok=9a735a" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.4.1 (a) Active region NPN (b) Active region PNP 
+</p>
+</div>
+<p>
+The Base-Emitter Diode: Always keep figure 8.4.1 in mind. The Ebers-Moll model of a BJT treats the current-voltage relationship of the base-emitter junction just like a Shockley ideal diode whose current is mirrored in the collector with gain. When <abbr title="volt">V</abbr><sub>B</sub> and <abbr title="volt">V</abbr><sub>E</sub> are not obvious, remember the base-emitter diode.
+</p>
+
+</div>
+
+<h3 class="sectionedit34" id="early_effect_base_width_modulation">8.4.2 Early Effect (Base width modulation)</h3>
+<div class="level3">
+
+<p>
+The Early Effect was first observed and explained by James Early while at Bell Labs. In our ideal device, the collector current should be equal to the base current multiplied by a constant gain β. But, as we have seen above, each p-n junction has two depletion layers. For the collector-base junction, one depletion layer extends into the collector, the other into the base. The base is almost always more heavily doped than the collector, so its depletion layer is fairly shallow. However, the base is also very thin, so even a shallow depletion layer takes up a significant portion of the base width. As the collector voltage increases, the depletion layers widen. In the collector region this has little effect (as long as it doesn&#039;t hit the other side of the collector), but in the base region it narrows the base-width. Since the gain of a bipolar transistor is very much dependent on the base-width, the gain simply increases as the effective base-width decreases. If you draw a straight line, extending the slope in the forward active region (from 0.4 to 15 Volts for example) into the negative quadrant and let it intersect with the zero-current line, you get the Early Voltage <abbr title="volt">V</abbr><sub>A</sub>. In the exaggerated case shown in figure 8.4.2 the Early voltage would be -15 Volts (but is generally expressed as 15V). Depending on the base-width designed into the manufacturing process it can be more or less than that shown with the slope correspondingly shallower or steeper.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f12.jpg?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f12.jpg"><img src="/_media/university/courses/electronics/text/chptr8-f12.jpg?w=600&amp;tok=4b2ef7" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.4.2 Early Voltage 
+</p>
+</div>
+</div>
+
+<h2 class="sectionedit37" id="metal-oxide-semi-conductor_field-effect_transistor_basics">8.5 Metal-Oxide-Semi-conductor Field-Effect Transistor basics</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit38" id="basic_structure_and_principle_of_operation">8.5.1 Basic Structure and Principle of Operation</h3>
+<div class="level3">
+
+<p>
+The n-type Metal-Oxide-Semiconductor Field-Effect-Transistor (MOSFET) consists of a source and a drain, two highly conducting n-type semiconductor regions which are isolated from the p-type substrate by reversed-biased PN diodes. A poly-crystalline silicon gate covers the region between source and drain, but is separated from the semiconductor by an insulating layer of oxide. The basic structure of an n-type MOSFET and the corresponding circuit symbol are shown in figure 8.5.1.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f13.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f13.png"><img src="/_media/university/courses/electronics/text/chptr8-f13.png?w=600&amp;tok=fe77fe" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.5.1 Cross section and circuit symbol of an n-type Metal-Oxide-Semiconductor-Field-Effect-Transistor (MOSFET) 
+</p>
+</div>
+<p>
+As can be seen in the figure the source and drain regions are identical. It is the applied voltages which determine which n-type region provides the electrons and becomes the source, while the other n-type region collects the electrons and becomes the drain. The voltages applied to the drain and gate electrode as well as to the substrate by means of a back contact are referred to the source potential, as also indicated on the figure.
+</p>
+
+<p>
+A top view of the same MOSFET is shown in figure. 8.5.2, where the gate length, L, and gate width, W, are identified. Note that the gate length does not equal the physical dimension of the gate, but rather the distance between the source and drain regions underneath the gate. The overlap between the gate and the source and drain region is required to ensure that the inversion layer forms a continuous conducting path between the source and drain region. Typically this overlap is made as small as possible in order to minimize its parasitic capacitance.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f14.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f14.png"><img src="/_media/university/courses/electronics/text/chptr8-f14.png?w=500&amp;tok=1be11c" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.5.2 Top view of an n-type Metal-Oxide-Semiconductor- Field-Effect-Transistor (MOSFET) 
+</p>
+</div>
+<p>
+The flow of electrons from the source to the drain is controlled by the voltage applied to the gate. A positive voltage applied to the gate, attracts electrons to the interface between the gate dielectric and the semiconductor. These electrons form a conducting channel between the source and the drain, called the inversion layer. No gate current is required to maintain the inversion layer at the interface since the gate oxide blocks any carrier flow. The net result is that the current between drain and source is controlled by the voltage which is applied to the gate.
+</p>
+
+<p>
+The typical current versus voltage (I-<abbr title="volt">V</abbr>) characteristics of a MOSFET are shown in the figure below. 
+Implemented is the quadratic model for the MOSFET.
+</p>
+
+</div>
+
+<h2 class="sectionedit43" id="mos_fet_large_signal_model">8.6 MOS FET Large signal model</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit44" id="modes_of_operation">8.6.1 Modes of operation</h3>
+<div class="level3">
+
+<p>
+The operation of a MOSFET can be separated into three different modes, depending on the voltages at the terminals. In the following discussion, a simplified algebraic model is used that is accurate only for old technology. Modern MOSFET characteristics require computer models that have rather more complex behavior.
+</p>
+
+<p>
+For an enhancement<strong>-</strong>mode<strong>, </strong>n-channel<strong> </strong>MOSFET, the three operational modes are:
+</p>
+
+<p>
+Cutoff, subthreshold, or weak-inversion mode<br/>
+
+When <img src="/lib/plugins/mathpublish/img.php?img=7405439cb3c701ddaab03cd968d51b3f" class="mediacenter mathpublish" alt="V_GS &lt; V_th" title="V_GS &lt; V_th" width="75" height="27" style="display: block; object-fit: fill;" /> : <br/>
+
+Where <abbr title="volt">V</abbr><sub>th</sub> is the threshold voltage of the device.
+</p>
+
+<p>
+According to the basic threshold model, the transistor is turned off, and there is no conduction between drain and source. In reality, the Boltzmann distribution of electron energies allows some of the more energetic electrons at the source to enter the channel and flow to the drain, resulting in a subthreshold current that is an exponential function of gate-source voltage. While the current between drain and source should ideally be zero when the transistor is being used as a turned-off switch, there is a weak-inversion current, sometimes called subthreshold leakage. In weak inversion the current varies exponentially with gate-to-source bias <abbr title="volt">V</abbr><sub>GS</sub> as given approximately by:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e6.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e6.png"><img src="/_media/university/courses/electronics/text/chptr8-e6.png?w=200&amp;tok=8d2098" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+Where:<br/>
+
+ I<sub>D0</sub> = current at <abbr title="volt">V</abbr><sub>GS</sub>  = <abbr title="volt">V</abbr><sub>th</sub>
+</p>
+
+<p>
+and the slope factor <em>n</em> is given by
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e7.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e7.png"><img src="/_media/university/courses/electronics/text/chptr8-e7.png?w=170&amp;tok=6b715d" class="mediacenter" loading="lazy" alt="" width="170" /></a>
+</p>
+
+<p>
+With:
+</p>
+
+<p>
+ C<sub>D</sub> = capacitance of the depletion layer 
+</p>
+
+<p>
+And
+</p>
+
+<p>
+ C<sub>OX</sub> = capacitance of the oxide layer.
+</p>
+
+<p>
+In a long-channel device, there is no drain voltage dependence of the current once <abbr title="volt">V</abbr><sub>DS</sub> » <abbr title="volt">V</abbr><sub>T</sub>, but as channel length is reduced drain-induced barrier lowering introduces drain voltage dependence that depends in a complex way upon the device geometry (for example, the channel doping, the junction doping and so on). Frequently, threshold voltage <abbr title="volt">V</abbr><sub>th</sub> for this mode is defined as the gate voltage at which a selected value of current I<sub>D0</sub> occurs, for example, I<sub>D0</sub> = 1 µA, which may not be the same <abbr title="volt">V</abbr><sub>th</sub>-value used in the equations for the following modes.
+</p>
+
+<p>
+Some micropower analog circuits are designed to take advantage of subthreshold conduction. By working in the weak-inversion region, the MOSFETs in these circuits deliver the highest possible transconductance-to-current ratio, namely:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e8.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e8.png"><img src="/_media/university/courses/electronics/text/chptr8-e8.png?w=150&amp;tok=9d6ca6" class="mediacenter" loading="lazy" alt="" width="150" /></a>
+</p>
+
+<p>
+Which is almost the same as a bipolar transistor. 
+</p>
+
+<p>
+The subthreshold I-<abbr title="volt">V</abbr> curve depends exponentially upon threshold voltage, introducing a strong dependence on any manufacturing variation that affects threshold voltage; for example: variations in oxide thickness, junction depth, or body doping that change the degree of drain-induced barrier lowering. The resulting sensitivity to fabrication variations complicates optimization for leakage and performance.
+</p>
+
+<p>
+Triode mode or linear region (also known as the resistive mode)
+</p>
+
+<p>
+When 
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=738e02495fac0ab5f672e5d0e67043bf" class="mediacenter mathpublish" alt="V_GS &gt; V_th" title="V_GS &gt; V_th" width="75" height="27" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+and 
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=49c42ccd35208f9c7e059f4cfa63f908" class="mediacenter mathpublish" alt="V_DS &lt; ( V_GS - V_th )" title="V_DS &lt; ( V_GS - V_th )" width="142" height="40" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+The transistor is turned on, and a channel has been created which allows current to flow between the drain and the source. The MOSFET operates like a resistor, controlled by the gate voltage relative to both the source and drain voltages. The current from drain to source is modeled as:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e9.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e9.png"><img src="/_media/university/courses/electronics/text/chptr8-e9.png?w=300&amp;tok=106f69" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+Where:<br/>
+
+μ<sub>n</sub> is the charge-carrier effective mobility,<br/>
+
+W is the gate width,<br/>
+
+L is the gate length<br/>
+
+C<sub>ox</sub> is the gate oxide capacitance per unit area.
+</p>
+
+<p>
+The transition from the exponential subthreshold region to the triode region is not as sharp as the equations suggest.
+</p>
+
+<p>
+Saturation or active mode,
+</p>
+
+<p>
+When
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=738e02495fac0ab5f672e5d0e67043bf" class="mediacenter mathpublish" alt="V_GS &gt; V_th" title="V_GS &gt; V_th" width="75" height="27" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+and
+</p>
+
+<p>
+<img src="/lib/plugins/mathpublish/img.php?img=63287e137ea2ae44e4874a82fadafad3" class="mediacenter mathpublish" alt="V_DS &gt; ( V_GS - V_th )" title="V_DS &gt; ( V_GS - V_th )" width="142" height="40" style="display: block; object-fit: fill;" />
+</p>
+
+<p>
+The switch is turned on, and a channel has been created, which allows current to flow between the drain and source. Since the drain voltage is higher than the gate voltage, the electrons spread out, and conduction is not through a narrow channel but through a broader, two- or three-dimensional current distribution extending away from the interface and deeper in the substrate. The onset of this region is also known as <strong>pinch-</strong>off to indicate the lack of channel region near the drain. The drain current is now weakly dependent upon drain voltage and controlled primarily by the gate-source voltage, and modeled very approximately as:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e10.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e10.png"><img src="/_media/university/courses/electronics/text/chptr8-e10.png?w=300&amp;tok=953705" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+The additional factor involving λ, the channel-length modulation parameter, models current dependence on drain voltage due to the Early effect, or channel length modulation. According to this equation, a key design parameter, the MOSFET transconductance is: 
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e11.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e11.png"><img src="/_media/university/courses/electronics/text/chptr8-e11.png?w=300&amp;tok=26f4c0" class="mediacenter" loading="lazy" alt="" width="300" /></a>
+</p>
+
+<p>
+The combination <img src="/lib/plugins/mathpublish/img.php?img=c5f66376f42d4790f0607ff0e2b37065" class="medialeft mathpublish" alt="V_ov = V_GS - V_th" title="V_ov = V_GS - V_th" width="112" height="27" style="display: block; object-fit: fill;" /> is called the overdrive voltage. Another key design parameter is the MOSFET output resistance r<sub>O</sub>given by:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e12.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e12.png"><img src="/_media/university/courses/electronics/text/chptr8-e12.png?w=150&amp;tok=83611c" class="mediacenter" loading="lazy" alt="" width="150" /></a>
+</p>
+
+<p>
+r<sub>out</sub> is the inverse of <abbr title="gravity">g</abbr><sub>ds</sub> where
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e13.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e13.png"><img src="/_media/university/courses/electronics/text/chptr8-e13.png?w=150&amp;tok=8f4f10" class="mediacenter" loading="lazy" alt="" width="150" /></a>
+</p>
+
+<p>
+ <abbr title="volt">V</abbr><sub>DS</sub> is the expression in saturation region.
+</p>
+
+<p>
+If ? is taken as zero, an infinite output resistance of the device results that leads to unrealistic circuit predictions, particularly in analog circuits. As the channel length becomes very short, these equations become quite inaccurate. New physical effects arise. For example, carrier transport in the active mode may become limited by velocity saturation. When velocity saturation dominates, the saturation drain current is more nearly linear than quadratic in <abbr title="volt">V</abbr><sub>GS</sub>. At even shorter lengths, carriers transport with near zero scattering, known as quasi-ballistic transport. In addition, the output current is affected by drain-induced barrier lowering of the threshold voltage.
+</p>
+
+</div>
+
+<h2 class="sectionedit45" id="small_signal_hybrid-pi_models">8.7 Small Signal Hybrid-pi models</h2>
+<div class="level2">
+
+<p>
+The hybrid-pi model is a popular circuit model used for analyzing the small signal behavior of bipolar junction and field effect transistors. The model can be quite accurate for low-frequency circuits and can easily be adapted for higher frequency circuits with the addition of appropriate inter-electrode capacitances and other parasitic elements.
+</p>
+
+</div>
+
+<h3 class="sectionedit46" id="bipolar_junction_bjt_parameters">8.7.1 Bipolar junction (BJT) parameters</h3>
+<div class="level3">
+
+<p>
+The hybrid-pi model is a linearized two-port network approximation to the BJT using the small-signal base-emitter voltage v<sub>be</sub> and collector-emitter voltage v<sub>ce</sub> as independent variables, and the small-signal base current i<sub>b</sub> and collector current i<sub>c</sub> as dependent variables. A basic, low-frequency hybrid-pi model for the bipolar transistor (NPN) is shown in figure 8.7.1.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f15.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f15.png"><img src="/_media/university/courses/electronics/text/chptr8-f15.png?w=600&amp;tok=de4b8a" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.7.1 BJT Hybrid-pi Model 
+</p>
+</div>
+<p>
+The various parameters are as follows:
+</p>
+
+<p>
+The transconductance, <abbr title="gravity">g</abbr><sub><abbr title="milli (prefix, as in mW, mA, mV, ms)">m</abbr></sub>, in siemens, is given by the following equation,
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e14.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e14.png"><img src="/_media/university/courses/electronics/text/chptr8-e14.png?w=100&amp;tok=4a9d88" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+</p>
+
+<p>
+where:<br/>
+
+</p>
+
+<p>
+<em>I<sub>C</sub> </em> is the quiescent collector current (also called the collector bias or DC collector current)
+<a href="/_detail/university/courses/electronics/text/chptr8-e15.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e15.png"><img src="/_media/university/courses/electronics/text/chptr8-e15.png?w=100&amp;tok=a2af79" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+ is the thermal voltage, calculated from Boltzmann&#039;s constant <em><abbr title="thousands (prefix, as in kHz, kΩ, kV, kW)">k</abbr></em>, the charge of an electron <em>q</em>, and the transistor temperature in kelvins, <em>T</em>. At 300 <abbr title="kelvin (unit of temperature, not degrees)">K</abbr> (approximately room temperature) <em><abbr title="volt">V</abbr><sub>T</sub></em> is about 26 <abbr title="millivolt">mV</abbr>.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e16.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e16.png"><img src="/_media/university/courses/electronics/text/chptr8-e16.png?w=175&amp;tok=d41e56" class="mediacenter" loading="lazy" alt="" width="175" /></a>
+</p>
+
+<p>
+where:<br/>
+
+<a href="/_detail/university/courses/electronics/text/chptr8-e17.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e17.png"><img src="/_media/university/courses/electronics/text/chptr8-e17.png?w=100&amp;tok=2f7f39" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+is the current gain at low frequencies  (also referred to as  <em>h<sub>FE</sub></em>). 
+</p>
+
+<p>
+Here <em>I<sub>B</sub></em> is the quiescent point base current. This is a parameter specific to each transistor, and can be found on a datasheet; ß is a function of the choice of collector current.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr-e18.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr-e18.png"><img src="/_media/university/courses/electronics/text/chptr-e18.png?w=200&amp;tok=fb8ccf" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+Is the output resistance due to the Early effect (<em><abbr title="volt">V</abbr><sub>A</sub></em> is the Early voltage).
+</p>
+
+<p>
+Related terms:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e19.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e19.png"><img src="/_media/university/courses/electronics/text/chptr8-e19.png?w=100&amp;tok=23421b" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+</p>
+
+<p>
+The reciprocal of the output resistance is named the output conductance.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e20.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e20.png"><img src="/_media/university/courses/electronics/text/chptr8-e20.png?w=100&amp;tok=830bd0" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+</p>
+
+<p>
+The reciprocal of <abbr title="gravity">g</abbr><sub><abbr title="milli (prefix, as in mW, mA, mV, ms)">m</abbr></sub> is called the intrinsic resistance <em>r<sub>E</sub></em>
+</p>
+
+</div>
+
+<h3 class="sectionedit49" id="mosfet_parameters">8.7.2 MOSFET parameters</h3>
+<div class="level3">
+
+<p>
+A basic, low-frequency hybrid-pi model for the MOSFET (n-type) is shown in figure 8.7.2.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f16.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f16.png"><img src="/_media/university/courses/electronics/text/chptr8-f16.png?w=600&amp;tok=6d7a3f" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.7.2 MOSFET Hybrid-pi Model 
+</p>
+</div>
+<p>
+The various parameters are as follows:
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e21.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e21.png"><img src="/_media/university/courses/electronics/text/chptr8-e21.png?w=200&amp;tok=2a6503" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+gm is the transconductance in siemens, evaluated in terms of the drain current <em>I<sub>D</sub>.</em>
+where:
+</p>
+
+<p>
+<em>I<sub>D</sub></em> is the quiescent drain current (also called the drain bias or DC drain current)
+<em><abbr title="volt">V</abbr><sub>th</sub></em> = threshold voltage and <em><abbr title="volt">V</abbr><sub>GS</sub></em> = gate-to-source voltage.
+</p>
+
+<p>
+The combination: <a href="/_detail/university/courses/electronics/text/chptr8-e22.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e22.png"><img src="/_media/university/courses/electronics/text/chptr8-e22.png?w=200&amp;tok=4b3ed3" class="mediacenter" loading="lazy" alt="" width="200" /></a>  often is called the overdrive voltage.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e23.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e23.png"><img src="/_media/university/courses/electronics/text/chptr8-e23.png?w=250&amp;tok=0fd595" class="mediacenter" loading="lazy" alt="" width="250" /></a>
+</p>
+
+<p>
+r<sub>o</sub> is the output resistance due to channel length modulation, using the approximation for the channel length modulation parameter λ.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e24.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e24.png"><img src="/_media/university/courses/electronics/text/chptr8-e24.png?w=100&amp;tok=74bead" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+</p>
+
+<p>
+Here <em><abbr title="volt">V</abbr><sub>E</sub></em> is a technology-related parameter (about 4 <abbr title="volt">V</abbr>/µm for the 65 nm technology node) and L is the length of the source-to-drain separation.
+</p>
+
+<p>
+The reciprocal of the output resistance is named the drain conductance
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e25.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e25.png"><img src="/_media/university/courses/electronics/text/chptr8-e25.png?w=100&amp;tok=58f691" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+</p>
+
+</div>
+
+<h2 class="sectionedit52" id="the_t_model">8.8 The T Model</h2>
+<div class="level2">
+
+<p>
+The hybrid-pi model is definitely the most popular small-signal model for the BJT and MOS transistors. The alternative is the T model, which is useful in certain situations. The T model also has two versions:
+</p>
+
+<p>
+The small-signal T models for PNP BJTs and PMOS are identically the same as those shown here for the NPN transistors and NMOS. It is important to note that there is no change in any polarities (voltage or current) for the p-type models relative to the n-type models. Again, these small-signal models are identically the same. The model can be quite accurate for low-frequency circuits and can easily be adapted for higher frequency circuits with the addition of appropriate inter-electrode capacitances and other parasitic elements.
+</p>
+
+<p>
+A basic, low-frequency T model for the MOSFET and BJT is shown in figure 8.8.1.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-f17.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-f17.png"><img src="/_media/university/courses/electronics/text/chptr8-f17.png?w=600&amp;tok=029f31" class="mediacenter" loading="lazy" alt="" width="600" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 8.8.1 MOSFET and BJT T Model 
+</p>
+</div>
+<p>
+Some important MOS equations.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e25.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e25.png"><img src="/_media/university/courses/electronics/text/chptr8-e25.png?w=100&amp;tok=58f691" class="mediacenter" loading="lazy" alt="" width="100" /></a>
+</p>
+
+<p>
+Some important BJT equations.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e26.png?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e26.png"><img src="/_media/university/courses/electronics/text/chptr8-e26.png?w=500&amp;tok=080aa3" class="mediacenter" loading="lazy" alt="" width="500" /></a>
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e27.jpg?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e27.jpg"><img src="/_media/university/courses/electronics/text/chptr8-e27.jpg?w=200&amp;tok=8a79b5" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr8-e28.jpg?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8" class="media" title="university:courses:electronics:text:chptr8-e28.jpg"><img src="/_media/university/courses/electronics/text/chptr8-e28.jpg?w=200&amp;tok=e3a83b" class="mediacenter" loading="lazy" alt="" width="200" /></a>
+</p>
+
+</div>
+
+<h2 class="sectionedit55" id="lab_activities">Lab Activities</h2>
+<div class="level2">
+
+<p>
+<strong>ADALM1000 Lab Activity 3, <a href="/university/courses/alm1k/alm-lab-3" class="wikilink1" title="university:courses:alm1k:alm-lab-3" data-wiki-id="university:courses:alm1k:alm-lab-3">BJT as a diode</a></strong><br/>
+
+<strong>ADALM1000 Lab Activity 4, <a href="/university/courses/alm1k/alm-lab-4" class="wikilink1" title="university:courses:alm1k:alm-lab-4" data-wiki-id="university:courses:alm1k:alm-lab-4">BJT I/V curves</a></strong>
+</p>
+
+<p>
+<strong>ADALM1000 Lab Activity 3M, <a href="/university/courses/alm1k/alm-lab-3m" class="wikilink1" title="university:courses:alm1k:alm-lab-3m" data-wiki-id="university:courses:alm1k:alm-lab-3m">MOS as a diode</a></strong><br/>
+
+<strong>ADALM1000 Lab Activity 4M, <a href="/university/courses/alm1k/alm-lab-4m" class="wikilink1" title="university:courses:alm1k:alm-lab-4m" data-wiki-id="university:courses:alm1k:alm-lab-4m">MOS I/V curves</a></strong>
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/chapter-7" class="wikilink1" title="university:courses:electronics:text:chapter-7" data-wiki-id="university:courses:electronics:text:chapter-7">Previous Chapter</a></strong>
+</p>
+
+<p>
+<strong>Go to <a href="/university/courses/electronics/text/chapter-9" class="wikilink1" title="university:courses:electronics:text:chapter-9" data-wiki-id="university:courses:electronics:text:chapter-9">Next Chapter</a></strong>
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/electronics-toc" class="wikilink1" title="university:courses:electronics:text:electronics-toc" data-wiki-id="university:courses:electronics:text:electronics-toc">Table of Contents</a></strong>
+</p>
+
+</div>
+                        <!-- wikipage stop -->
+                    </div>
+
+                    <div class="docInfo"><bdi>university/courses/electronics/text/chapter-8.txt</bdi> · Last modified: <time datetime="2017-06-06T15:13:05+0000">06 Jun 2017 15:13</time> by <bdi><a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a></bdi></div>
+
+                                    </div>
+            </div>
+            <!-- /content -->
+
+            <hr class="a11y"/>
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="/university/courses/electronics/text/chapter-8?do=edit" title="View Source [v]" rel="nofollow" accesskey="v"><span>View Source</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="/university/courses/electronics/text/chapter-8?do=revisions" title="History [o]" rel="nofollow" accesskey="o"><span>History</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="/university/courses/electronics/text/chapter-8?do=backlink" title="Backlinks" rel="nofollow"><span>Backlinks</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="menuitemfolded"><a href="javascript:void(0);" title="Fold/unfold all" rel="nofollow" class="fold_unfold_all_new" onclick="fold_unfold_all();"><span>Fold/unfold all</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M 2,0 L 6.5,3 L 2,6 z M 8,6.6 L 12.5,9.6 L 8,12.6 z M 14,13.2 L 20,13.2 L 17,17.7 z"/></svg></a></li><li class="top"><a href="#dokuwiki__top" title="[ Back to top ] [t]" rel="nofollow" accesskey="t"><span>[ Back to top ]</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /wrapper -->
+
+    </div>
+    <!-- /container -->
+</div>
+<!-- /site -->
+
+﻿<a class="backtotop" href="#header">&nbsp;</a>
+<footer class="footer" id="footer">
+    <adi-footer short></adi-footer>
+
+    
+    <script type="text/javascript">
+        var analytics = '//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js';
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script type="text/javascript">
+        var ADIAssetsPath = "//assets2.analog.com";
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script>
+        /* Copyright 2011-2015 iPerceptions, Inc. All rights reserved. Do not distribute. iPerceptions provides this code 'as is' without warranty of any kind, either express or implied. */
+        window.iperceptionskey = 'acafac0d-3b8a-4d30-8a98-6cbcd5256d93';
+        (function() { var a = document.createElement('script'),
+            b = document.getElementsByTagName('body')[0];
+            a.type = 'text/javascript';
+            a.defer = true;
+            a.src = '//universal.iperceptions.com/wrapper.js';
+            b.appendChild(a); })();
+    </script>
+</footer>
+<script type="text/javascript">
+            if(typeof(_satellite) != 'undefined') {
+            _satellite.pageBottom();
+            }
+        </script>
+<div class="a11y"
+     style="float: left"><img src="/lib/exe/taskrunner.php?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-8&amp;1776083311" width="2" height="1" alt="" /></div>
+</body>
+</html>

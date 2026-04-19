@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"
+      dir="ltr"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Chapter 20:  Analog to Digital Conversion [Analog Devices Wiki]</title>
+
+    <script>(function (H) {
+            H.className = H.className.replace(/\bno-js\b/, 'js')
+        })(document.documentElement)</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500,500i,600,600i,700,700i|Barlow:300,300i,400,400i,500,500i,600,600i&display=swap" rel="stylesheet">
+
+    <link href="https://assets2.analog.com/apps-assets/wiki/index.css" rel="stylesheet" />
+    <script src="https://assets2.analog.com/apps-assets/wiki/index.mjs"></script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="university,courses,electronics,text,chapter-20"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Analog Devices Wiki"/>
+<link rel="start" href="/"/>
+<link rel="contents" href="/university/courses/electronics/text/chapter-20?do=index" title="Sitemap"/>
+<link rel="manifest" href="/lib/exe/manifest.php" crossorigin="use-credentials"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns=university:courses:electronics:text"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/university/courses/electronics/text/chapter-20"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/university/courses/electronics/text/chapter-20"/>
+<link rel="canonical" href="https://wiki.analog.com/university/courses/electronics/text/chapter-20"/>
+<link rel="stylesheet" href="/lib/exe/css.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb"/>
+<script nonce="c6fb7719c696463265a3ec580789b041">var NS='university:courses:electronics:text';var JSINFO = {"plugin_enforcesummary":{"enforce_summary":1,"default_minoredit":0,"enforce_preview":0},"plugin_folded":{"hide":"hide","reveal":"reveal"},"plugins":{"interwikipaste":{"patterns":"[{\"shortcut\":\"footprints\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/design\\\\-center\\\\\\\/packaging\\\\-quality\\\\-symbols\\\\-footprints\\\\\\\/symbols\\\\-and\\\\-footprints\\\\\\\/([^ ]+)?\\\\.html\",\"encode\":false},{\"shortcut\":\"staging.kernel.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/gregkh\\\\\\\/staging\\\\.git;a\\\\=blob;hb\\\\=refs\\\\\\\/heads\\\\\\\/staging\\\\-next;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"avnetexpress\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/avnetexpress\\\\.avnet\\\\.com\\\\\\\/store\\\\\\\/em\\\\\\\/EMController\\\\?storeId\\\\=500201&N\\\\=0&action\\\\=products&term\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"downgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/analogdevicesinc\\\\.github\\\\.io\\\\\\\/DownGit\\\\\\\/\\\\#\\\\\\\/home\\\\?url\\\\=https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"cart\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/shoppingcart\\\\.analog\\\\.com\\\\\\\/AddModel\\\\.aspx\\\\?locale\\\\=en&ACTION\\\\=BUY_BUNDLES&modelNbr\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digikey\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digikey\\\\.com\\\\\\\/scripts\\\\\\\/DkSearch\\\\\\\/dksus\\\\.dll\\\\?KeywordSearch\\\\?Site\\\\=US&amp;Keywords\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"git.linux.org\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/git\\\\.kernel\\\\.org\\\\\\\/\\\\?p\\\\=linux\\\\\\\/kernel\\\\\\\/git\\\\\\\/torvalds\\\\\\\/linux\\\\.git;a\\\\=blob;hb\\\\=HEAD;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"export\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/exportclassification\\\\\\\/Search\\\\\\\/Result\\\\?strSearch\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ibis\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/media\\\\\\\/en\\\\\\\/simulation\\\\-models\\\\\\\/ibis\\\\-models\\\\\\\/([^ ]+)?\\\\.ibs\",\"encode\":false},{\"shortcut\":\"bfsvn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/project\\\\\\\/([^ ]+)?\\\\\\\/scmsvn\\\\\\\/trunk\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?;hb\\\\=HEAD\",\"encode\":false},{\"shortcut\":\"paypal\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.paypal\\\\.com\\\\\\\/cgi\\\\-bin\\\\\\\/webscr\\\\?cmd\\\\=_xclick&amp;business\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"arrow\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.arrow\\\\.com\\\\\\\/en\\\\\\\/products\\\\\\\/search\\\\?cat\\\\=&q\\\\=([^ ]+)?&r\\\\=true\",\"encode\":false},{\"shortcut\":\"linux.github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/linux\\\\\\\/blob\\\\\\\/([^ ]+)?\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfgit_rev\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/git\\\\\\\/\\\\?p\\\\=([^ ]+)?;a\\\\=blob;f\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"digilent\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.digilentinc\\\\.com\\\\\\\/Products\\\\\\\/Detail\\\\.cfm\\\\?Prod\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"reg\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/my\\\\.analog\\\\.com\\\\\\\/en\\\\\\\/app\\\\\\\/registration\\\\\\\/hardware\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"github\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\\\\\\\/blob\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"go\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?&amp;btnI\\\\=lucky\",\"encode\":true},{\"shortcut\":\"docs\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/docs\\\\.blackfin\\\\.uclinux\\\\.org\\\\\\\/doku\\\\.php\\\\?id\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.com\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-20\",\"encode\":true},{\"shortcut\":\"amazon.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.de\\\\\\\/dp\\\\\\\/([^ ]+)?\\\\?tag\\\\=splitbrain\\\\-21\",\"encode\":true},{\"shortcut\":\"mouser\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/mouser\\\\.com\\\\\\\/Search\\\\\\\/Refine\\\\?Keyword\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tkt\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/tracker\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"repo\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/github\\\\.com\\\\\\\/analogdevicesinc\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpmeta\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/meta\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bf\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/gf\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"maxim\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.maximintegrated\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/en\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpfr\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/fr\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpde\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/de\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpes\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/es\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wppl\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/pl\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpjp\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ja\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"wpru\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ru\\\\.wikipedia\\\\.org\\\\\\\/wiki\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"bfin\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/blackfin\\\\.uclinux\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"amazon.uk\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.amazon\\\\.co\\\\.uk\\\\\\\/dp\\\\\\\/([^ ]+)?\",\"encode\":true},{\"shortcut\":\"google\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.com\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"oreilly\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.oreilly\\\\.com\\\\\\\/catalog\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"mw\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.mathworks\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"rfc\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/tools\\\\.ietf\\\\.org\\\\\\\/html\\\\\\\/rfc([^ ]+)?\",\"encode\":false},{\"shortcut\":\"google.de\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.google\\\\.de\\\\\\\/search\\\\?q\\\\=([^ ]+)?\",\"encode\":false},{\"shortcut\":\"user\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/members\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"this\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/wiki\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"phpfn\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/secure\\\\.php\\\\.net\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"adi\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"xilinx\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.xilinx\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"ez\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/ez\\\\.analog\\\\.com\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"doku\",\"pattern\":\"https\\\\:\\\\\\\/\\\\\\\/www\\\\.dokuwiki\\\\.org\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"callto\",\"pattern\":\"callto\\\\:\\\\\\\/\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"man\",\"pattern\":\"http\\\\:\\\\\\\/\\\\\\\/man\\\\.cx\\\\\\\/([^ ]+)?\",\"encode\":false},{\"shortcut\":\"skype\",\"pattern\":\"skype\\\\:([^ ]+)?\",\"encode\":false},{\"shortcut\":\"tel\",\"pattern\":\"tel\\\\:([^ ]+)?\",\"encode\":false}]"},"vshare":{"youtube":"youtube\\.com\/.*[&?]v=([a-z0-9_\\-]+)","vimeo":"vimeo\\.com\\\/(\\d+)","slideshare":"slideshare.*id=(\\d+)","dailymotion":"dailymotion\\.com\/video\/([a-z0-9]+)","archiveorg":"archive\\.org\/(?:embed|details)\/([a-zA-Z0-9_\\-]+)","soundcloud":"soundcloud\\.com\/([\\w-]+\/[\\w-]+)","niconico":"nicovideo\\.jp\/watch\/(sm[0-9]+)","bitchute":"bitchute\\.com\\\/video\\\/([a-zA-Z0-9_\\-]+)","coub":"coub\\.com\\\/view\\\/([a-zA-Z0-9_\\-]+)","odysee":"odysee\\.com\/\\$\/(?:embed|download)\/([-%_?=\/a-zA-Z0-9]+)","youku":"v\\.youku\\.com\/v_show\/id_([0-9A-Za-z=]+)\\.html","bilibili":"bilibili\\.com\\\/video\\\/(BV[0-9A-Za-z]+)","msoffice":"(?:office\\.com.*[&?]videoid=([a-z0-9\\-]+))","msstream":"microsoftstream\\.com\\\/video\\\/([a-f0-9\\-]{36})","rutube":"rutube\\.ru\\\/video\\\/([a-z0-9]+)\\\/","gdrive":"drive\\.google\\.com\\\/file\\\/d\\\/([a-zA-Z0-9_-]+)\/"}},"id":"university:courses:electronics:text:chapter-20","namespace":"university:courses:electronics:text","ACT":"show","useHeadingNavigation":1,"useHeadingContent":0};(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script src="/lib/exe/jquery.php?tseed=8faf3dc90234d51a499f4f428a0eae43" defer="defer"></script>
+<script src="/lib/exe/js.php?t=analog2014&amp;tseed=d706046f42012efb098e8b4f542c6afb" defer="defer"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/lib/tpl/analog2014/images/favicon.ico" />
+
+    <script src="https://assets2.analog.com/header-footer/index.js" type="text/javascript" defer="true"></script>
+
+    <!-- LIVE tracking -->
+<script src="//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js" async></script>
+<script src="/lib/tpl/analog2014/assets/js/adi/global.analytics.js" type="text/javascript"></script>
+</head>
+
+<!-- List of supported themes thm-education, thm-applications, thm-parametric, thm-product, thm-community, thm-design-center, thm-my-analog, thm-support -->
+<body class="home">
+
+
+<!-- wiki_header.html -->
+<header class="adi_header adi_header--wiki tools-header" id="dokuwiki__top" data-ot="true">
+
+    <div class="adi_topbar">
+        <div class="adi_container">
+            <section class="adi_row">
+                <!--  BEGIN:  Internal Links -->
+                <nav class="adi_column adi_pull-left">
+                    <a class="adi_topbar-link adi_topbar-link--analog-home" href="//www.analog.com">
+                        <strong>Analog.com</strong>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--engineer-zone" href="//ez.analog.com">
+                        <strong class="adi_link--hover-accent">Engineer</strong>
+                        <span>Zone</span>
+                    </a>
+                    <a class="adi_topbar-link adi_topbar-link--analog-dialogue" href="//www.analog.com/en/resources/analog-dialogue.html">
+                        <strong class="adi_link--hover-accent">Analog</strong>
+                        <span>Dialogue</span>
+                    </a>
+                </nav> <!-- /.adi_column.adi_pull-left -->
+                <!--  END:  Internal Links  -->
+                <!--  BEGIN:  Language Options  -->
+                <nav class="adi_column adi_pull-right">
+                    <a class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-logo" href="//my.analog.com/">
+                        <span><img src="https://assets2.analog.com/cms-assets/images/images/images/myanalog_logo.png" alt="My Analog Login"></span>&nbsp;
+                    </a>
+
+                    <a href="/university/courses/electronics/text/chapter-20?do=login&amp;sectok="  class="adi_topbar-link adi_topbar-link--light adi_topbar-link--myanalog-login action login" rel="nofollow" title="Log In"><strong>Log In</strong></a>                </nav> <!-- /.adi_column.adi_pull-right -->
+                <!--  END:  Language Options  -->
+            </section> <!-- /.adi_row -->
+        </div> <!-- /.adi_container -->
+    </div>
+
+
+
+    <div class="adi_container">
+        <section class="adi_row">
+            <!--  BEGIN:  Logo  -->
+            <div class="adi_column adi_logo-container">
+                <a class="adi_logo" href="/start">
+                    <img src="/lib/tpl/analog2014//assets/images/adi-logo.svg" alt="Analog Devices Wiki" />
+                </a>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+            <div class="adi_column adi_page-title-container">
+                <h1 class="adi_page-title">Wiki</h1>
+            </div> <!-- /.adi_column.adi_logo -->
+            <!--  END:  Logo  -->
+        </section> <!-- /.adi_row -->
+    </div> <!-- /.adi_container -->
+
+    <div class="navigation-bar">
+        <div class="content-wrap clearfix">
+            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li"><a href="#">Wiki Tools</a></div><ul class="submenu"><li class="level2"><a href="/university/courses/electronics/text/chapter-20?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-20?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-20?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>
+            <ul class="list-inline pull-right searchmenu clearfix">
+                <li class="search-box">
+                    <form action="" accept-charset="utf-8" class="search clearfix" id="dw__search" method="get" role="search">
+                        <div class="no">
+                            <input type="hidden" name="do" value="search">
+                            <input type="text" autocomplete="off" id="qsearch__in" accesskey="f" name="id" class="edit" placeholder="search wiki">
+                            <button type="submit" value="Search" class="button search-icon" title="Search"></button>
+
+                            <div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none; white-space: nowrap;">
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</header> <!-- /.adi_header -->
+
+
+
+
+
+<!-- Mobile view navigation drawer-->
+<div class="wiki-mob-body">
+    <div class="content" role="main">
+        <div class="col-md-12 wiki-head-row">
+            <div class="row ">
+                <div class="title-nophoto">
+                    <div class="container page-title ">
+                        <h1 data-page-title="true">Analog Devices Wiki</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 floater-menu-container">
+                <div class="row product-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2 wiki-right-panel">
+                                <div class="row">
+                                    <div class=" product-bookmarks" id="affix-nav" name="adi_products_left_navigation">
+                                        <ul class="nav" id="affix-ul">
+                                            <li class="">
+
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#"
+                                                   name='SDR-home_2e322e80-5ec4-4b20-b8b8-71702b590a25'>Analog Devices
+                                                    Wiki
+                                                </a>
+
+                                            </li>
+                                            <!--Wiki-->
+                                            <ul class="list-inline pull-left nav-links clearfix">
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/resources" class="wikilink1" title="resources" data-wiki-id="resources">Resources and Tools</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/resources/eval" class="wikilink1" title="resources:eval" data-wiki-id="resources:eval">Evaluation Boards &amp; Kits</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/fpga" class="wikilink1" title="resources:fpga" data-wiki-id="resources:fpga">FPGA Reference Designs</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/quick-start" class="wikilink1" title="resources:quick-start" data-wiki-id="resources:quick-start">Quick Start Guides</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/linux-drivers-all" class="wikilink1" title="resources:tools-software:linux-drivers-all" data-wiki-id="resources:tools-software:linux-drivers-all">Linux Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/no-os/drivers" class="wikilink1" title="resources:no-os:drivers" data-wiki-id="resources:no-os:drivers">Microcontroller Software Drivers</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/tools-software/ace" class="wikilink1" title="resources:tools-software:ace" data-wiki-id="resources:tools-software:ace">ACE Software</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/resources/technical-guides" class="wikilink1" title="resources:technical-guides" data-wiki-id="resources:technical-guides">Technical Guides</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/university/courses/tutorials/index" class="wikilink1" title="university:courses:tutorials:index" data-wiki-id="university:courses:tutorials:index">Education Content</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level2"><div class="li"> <a href="/university" class="wikilink1" title="university" data-wiki-id="university">University Program Overview</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m1k" class="wikilink1" title="university:tools:m1k" data-wiki-id="university:tools:m1k">ADALM1000 (M1k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/m2k" class="wikilink1" title="university:tools:m2k" data-wiki-id="university:tools:m2k">ADALM2000 (M2k) Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/adalp2000/parts-index" class="wikilink1" title="university:tools:adalp2000:parts-index" data-wiki-id="university:tools:adalp2000:parts-index">ADALP2000 Parts kit for Circuits</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university/tools/pluto" class="wikilink1" title="university:tools:pluto" data-wiki-id="university:tools:pluto">ADALM-PLUTO SDR Active Learning Module</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="/university#teaching_materials_lab_exercises" class="wikilink1" title="university" data-wiki-id="university">Teaching and Lab Materials</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Wiki Help</a></div>
+<ul class="submenu Res_tools_child">
+<li class="level3"><div class="li"> <a href="/wiki/help" class="wikilink1" title="wiki:help" data-wiki-id="wiki:help">Help</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/wiki/introduction" class="wikilink1" title="wiki:introduction" data-wiki-id="wiki:introduction">About Wiki</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/playground/playground" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">Playground</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="/start?do=index" class="wikilink1" title="start" data-wiki-id="start">Wiki Site Map</a></div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><div class="li Res_tools_parent"><a href="#">Wiki Tools</a></div><ul class="submenu Res_tools_child"><li class="level2"><a href="/university/courses/electronics/text/chapter-20?do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-20?do=media&amp;ns=university%3Acourses%3Aelectronics%3Atext"  class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li class="level2"><a href="/university/courses/electronics/text/chapter-20?do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li></ul></li></ul>                                            <!--Wiki-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="special-content">
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#English">English<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="English" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/en/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_en.jpg" class="mobile-images"
+                                 width="100%" alt="English"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#简体中文">简体中文<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="简体中文" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/cn/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_cn.jpg" class="mobile-images"
+                                 width="100%" alt="简体中文"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#日本語">日本語<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="日本語" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/jp/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_jp.jpg" class="mobile-images"
+                                 width="100%" alt="日本語"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group language-footer-block">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#Руccкий">Руccкий<span
+                            class="glyphicon  pull-right glyphicon-chevron-down visible-phone"></span>
+                    </a>
+                </div>
+                <div id="Руccкий" class="accordion-body collapse">
+                    <div class="accordion-inner language-footer">
+                        <a href="//www.analog.com/ru/landing-pages/001/sdr/sdr-get-started.html">
+                            <img data-image-source="//assets2.analog.com/images/language_ru.jpg" class="mobile-images"
+                                 width="100%" alt="Руccкий"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mobile view navigation drawer-->
+
+<!-- /tpl_header.php -->
+
+
+
+<div id="dokuwiki__site" role="main" class="main-body content">
+    <div class="site dokuwiki mode_show tpl_analog2014   ">
+        <div class="container">
+
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content">
+                <div class="pad group">
+
+                    <div class="page group">
+                        
+                                                <!-- wikipage start -->
+                        <div class="approval approved_yes"><span class="approval_approved">This version (<span class="approval_date">20 Jan 2021 14:52</span>) was <em>approved</em> by <a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a>.</span><span class="approval_previous">The <a href="/university/courses/electronics/text/chapter-20?rev=1378403756">Previously approved version</a> (05 Sep 2013 17:55) is available.<a href="https://wiki.analog.com/university/courses/electronics/text/chapter-20?do=diff&rev2[0]=1378403756&rev2[1]=1611154363&difftype=sidebyside" class="approved_diff_link"><img src="/lib/images/diff.png" class="approved_diff_link" alt="Diff" /></a></span></div><!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#chapter_20analog_to_digital_conversion">Chapter 20:  Analog to Digital Conversion</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#what_they_do">20.1 What they do</a></div></li>
+<li class="level2"><div class="li"><a href="#basic_operation">20.2 Basic Operation</a></div></li>
+<li class="level2"><div class="li"><a href="#understanding_key_specifications">20.3 Understanding Key Specifications</a></div></li>
+<li class="level2"><div class="li"><a href="#adc_classifications">20.4 ADC Classifications</a></div></li>
+<li class="level2"><div class="li"><a href="#how_it_works_-_flash_architecture">20.5 How It Works - Flash Architecture</a></div></li>
+<li class="level2"><div class="li"><a href="#how_it_works_-_pipeline_architecture">20.6 How It Works - Pipeline Architecture</a></div></li>
+<li class="level2"><div class="li"><a href="#how_it_works_-_sar_architecture">20.7 How It Works - SAR Architecture</a></div></li>
+<li class="level2"><div class="li"><a href="#how_it_works_-_sigma-delta_architecture">20.8 How It Works - Sigma-Delta Architecture</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="chapter_20analog_to_digital_conversion">Chapter 20:  Analog to Digital Conversion</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2" id="what_they_do">20.1 What they do</h2>
+<div class="level2">
+
+<p>
+Analog-to-Digital converters (ADC) translate analog signals, real world signals like temperature, pressure, voltage, current, distance, or light intensity, into a digital representation of that signal. This digital representation can then be processed, manipulated, computed, transmitted or stored. 
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f1.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f1.gif"><img src="/_media/university/courses/electronics/text/chptr20-f1.gif?w=650&amp;tok=6b5353" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 20.1 Analog to Digital conversion 
+</p>
+</div>
+<p>
+In many cases, the analog to digital conversion process is just one step within a larger measurement and control loop where digitized data is processed and then reconverted back to analog signals to drive external transducers. These transducers can include things like motors, heaters and acoustic divers like loudspeakers. The performance required of the ADC will reflect the performance goals of the measurement and control loop. ADC performance needs will also reflect the capabilities and requirements of the other signal processing elements in the loop.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f2.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f2.gif"><img src="/_media/university/courses/electronics/text/chptr20-f2.gif?w=650&amp;tok=ec6581" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+ Figure 20.2 Measurement and Control Loop 
+</p>
+</div>
+</div>
+
+<h2 class="sectionedit7" id="basic_operation">20.2 Basic Operation</h2>
+<div class="level2">
+
+<p>
+An ADC samples an analog waveform at uniform time intervals and assigns a digital value to each sample. The digital value appears on the converter’s output in a binary coded format. The value is obtained by dividing the sampled analog input voltage by the reference voltage and them multiplying by the number of digital codes. The resolution of converter is set by the number of binary bits in the output code.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f3.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f3.gif"><img src="/_media/university/courses/electronics/text/chptr20-f3.gif?w=650&amp;tok=09a30e" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+Figure 20.3 Digital output code 
+</p>
+</div>
+<p>
+An ADC carries out two processes, sampling and quantization. The ADC represents an analog signal, which has infinite resolution, as a digital code that has finite resolution. The ADC produces 2N digital values where N represents the number of binary output bits. The analog input signal will fall between the quantization levels because the converter has finite resolution resulting in an inherent uncertainty or quantization error. That error determines the maximum dynamic range of the converter.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f4.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f4.gif"><img src="/_media/university/courses/electronics/text/chptr20-f4.gif?w=650&amp;tok=ed0491" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+Figure 20.4 Quantization Process 
+</p>
+</div>
+<p>
+The sampling process represents a continuous time domain signal with values measured at discrete and uniform time intervals. This process determines the maximum bandwidth of the sampled signal in accordance with the Nyquist Theory. This theory states that the signal frequency must be less than or equal to one half the sampling frequency to prevent aliasing. Aliasing is a condition in which frequency signals outside the desired signal band will, through the sampling process, appear within the bandwidth of interest. However, this aliasing process can be exploited in communications systems design to down-convert a high frequency signal to a lower frequency. This technique is known as under-sampling. A criterion for under-sampling is that the ADC has sufficient input bandwidth and dynamic range to acquire the highest frequency signal of interest.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f5.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f5.gif"><img src="/_media/university/courses/electronics/text/chptr20-f5.gif?w=650&amp;tok=b27388" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+Figure 20.5 Sampling Process 
+</p>
+</div>
+<p>
+Sampling and quantization are important concepts because they establish the performance limits of an ideal ADC. In an ideal ADC, the code transitions are exactly 1 least significant bit (<abbr title="least significant bit">LSB</abbr>) apart. So, for an N-bit ADC, there are 2N codes and 1 <abbr title="least significant bit">LSB</abbr> = FS/2N, where FS is the full-scale analog input voltage. However, ADC operation in the real world is also affected by non-ideal effects, which produce errors beyond those dictated by converter resolution and sample rate. These errors are reflected in a number of AC and DC performance specifications associated with ADCs.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f6.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f6.gif"><img src="/_media/university/courses/electronics/text/chptr20-f6.gif?w=650&amp;tok=9c9f0b" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+Figure 20.6 Transfer Function for an Ideal ADC 
+</p>
+</div>
+<p>
+Any analog input in this range gives the same digital output code.
+</p>
+
+</div>
+
+<h2 class="sectionedit16" id="understanding_key_specifications">20.3 Understanding Key Specifications</h2>
+<div class="level2">
+<div class="table sectionedit17"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0">Specification and terms, units of measure</th><th class="col1">Meaning</th><th class="col2">Significance</th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">DC specifications</td><td class="col1 leftalign">  </td><td class="col2 leftalign">  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">Resolution or bits</td><td class="col1">Number of bits representing an analog signal, generally ranging from 6 to 24.</td><td class="col2">Determines how small an input can be resolved.</td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign">  </td><td class="col1"></td><td class="col2"></td>
+	</tr>
+	<tr class="row4">
+		<td class="col0">Conversion speed or rate, ksamples/s or Msamples/s</td><td class="col1">The number of repetitive conversions per second for a full-scale change to specified resolution and linearity</td><td class="col2">Determines the fastest sampling capability of the ADC</td>
+	</tr>
+	<tr class="row5">
+		<td class="col0">Least significant bit (<abbr title="least significant bit">LSB</abbr>)</td><td class="col1">The right-most bit in an ADC output code. <abbr title="least significant bit">LSB</abbr> size is a function of converter resolution.</td><td class="col2">Not a specification, but a common term.</td>
+	</tr>
+	<tr class="row6">
+		<td class="col0">Most significant bit (<abbr title="most significant bit">MSB</abbr>)</td><td class="col1">The left-most bit in an ADC output code. </td><td class="col2">Not a specification, but a common term.</td>
+	</tr>
+	<tr class="row7">
+		<td class="col0">Differential nonlinearity (DNL), expressed in terms of <abbr title="least significant bit">LSB</abbr></td><td class="col1">The deviation from the ideal (1 <abbr title="least significant bit">LSB</abbr>) code width between any two adjacent codes. In an ideal converter, every code is exactly the same size and DNL is zero.</td><td class="col2">DNL, INL, offset error, and gain error specify how accurately the data represents the signal across the entire internal and external range.</td>
+	</tr>
+	<tr class="row8">
+		<td class="col0">Integral nonlinearity (INL), expressed in terms of <abbr title="least significant bit">LSB</abbr> </td><td class="col1"></td><td class="col2"></td>
+	</tr>
+	<tr class="row9">
+		<td class="col0">(also referred to as </td><td class="col1"></td><td class="col2"></td>
+	</tr>
+	<tr class="row10">
+		<td class="col0">“relative accuracy error”) </td><td class="col1"></td><td class="col2"></td>
+	</tr>
+	<tr class="row11">
+		<td class="col0 leftalign">  </td><td class="col1">The deviation of an actual code transition point from its ideal position on a straight line drawn between the end points of the transfer function.</td><td class="col2">The narrowing or widening of code widths caused by DNL can lead to “missing codes” and add noise and frequency spurs beyond the effects of quantization.</td>
+	</tr>
+	<tr class="row12">
+		<td class="col0">Offset, expressed in terms of <abbr title="least significant bit">LSB</abbr></td><td class="col1">The difference between the ideal and actual output when the converter input is zero.</td><td class="col2">INL describes the absolute</td>
+	</tr>
+	<tr class="row13">
+		<td class="col0">accuracy of a converter.</td><td class="col1"></td><td class="col2"></td>
+	</tr>
+	<tr class="row14">
+		<td class="col0">Calculated after offset and gain errors are removed. </td><td class="col1"></td><td class="col2"></td>
+	</tr>
+	<tr class="row15">
+		<td class="col0">Gain error/full-scale error, expressed in terms of <abbr title="least significant bit">LSB</abbr> </td><td class="col1">The difference between the ideal and actual output when the converter input is at full scale.</td><td class="col2">INL produces additional harmonics and spurs in the frequency domain.</td>
+	</tr>
+</table></div>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f7.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f7.gif"><img src="/_media/university/courses/electronics/text/chptr20-f7.gif?w=650&amp;tok=7c43a9" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+Figure 20.7 ADC Transfer Function with DNL Error 
+</p>
+</div>
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f8.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f8.gif"><img src="/_media/university/courses/electronics/text/chptr20-f8.gif?w=650&amp;tok=066ce2" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+Figure 20.8 ADC Transfer Function with INL Error 
+</p>
+</div><div class="table sectionedit22"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0">Specification and terms, units of measure</th><th class="col1">Meaning</th><th class="col2">Significance</th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0">AC specifications</td><td class="col1 leftalign">  </td><td class="col2 leftalign">  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0">Spurious-free dynamic range (SFDR), <abbr title="decibel">dB</abbr></td><td class="col1">The ratio of the fundamental frequency&#039;s amplitude to that of the largest spurious signal in a given bandwidth.</td><td class="col2">Important in communications</td>
+	</tr>
+	<tr class="row3">
+		<td class="col0">applications where a spur may</td><td class="col1"></td><td class="col2"></td>
+	</tr>
+	<tr class="row4">
+		<td class="col0">interfere with a neighboring channel.</td><td class="col1"></td><td class="col2"></td>
+	</tr>
+	<tr class="row5">
+		<td class="col0">Total harmonic distortion</td><td class="col1"></td><td class="col2"></td>
+	</tr>
+	<tr class="row6">
+		<td class="col0">(THD), <abbr title="decibel">dB</abbr></td><td class="col1">The ratio of the <abbr title="root-mean-squared">rms</abbr> sum of the first six harmonics to the amplitude of the fundamental frequency.</td><td class="col2">Harmonics are noise components related to, or generated by, a-d conversion. Harmonics can limit the dynamic performance of a converter.</td>
+	</tr>
+	<tr class="row7">
+		<td class="col0">Signal-to-noise-and-distortion ratio (SINAD ), <abbr title="decibel">dB</abbr></td><td class="col1">The ratio of the <abbr title="root-mean-squared">rms</abbr> signal amplitude to the mean value of the root-sum-squares (RSS) of all other spectral components including harmonics but excluding dc.</td><td class="col2">SINAD indicates the true ac linearity an ADC because it includes the effects of the 2nd and 3rd harmonics</td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 leftalign">  </td><td class="col1"></td><td class="col2"></td>
+	</tr>
+	<tr class="row9">
+		<td class="col0">Effective number of bits (ENOB)</td><td class="col1">ENOB = SINAD …1.76 <abbr title="decibel">dB</abbr> 6.02</td><td class="col2">ENOB specifies the dynamic</td>
+	</tr>
+	<tr class="row10">
+		<td class="col0">performance of a given ADC as compared to an ideal converter.</td><td class="col1"></td><td class="col2"></td>
+	</tr>
+	<tr class="row11">
+		<td class="col0">Signal-to-noise ratio (SNR) or signal-to-noise ratio without harmonics.</td><td class="col1">Similar to SINAD, the ratio of the <abbr title="root-mean-squared">rms</abbr> signal amplitude to the mean value of the root-sum-squares of all other spectral components, excluding the first five harmonics and dc.</td><td class="col2">SNR indicates noise performance of a converter compared to an ideal converter.</td>
+	</tr>
+	<tr class="row12">
+		<td class="col0">Analog bandwidth (full-power, small signal), <abbr title="kilohertz">kHz</abbr> or <abbr title="megahertz">MHz</abbr></td><td class="col1">The input frequency where the fundamental in an FFT of the output rolls off by 3 <abbr title="decibel">dB</abbr>. Generally determined by the </td><td class="col2"></td>
+	</tr>
+	<tr class="row13">
+		<td class="col0">Converter&#039;s sample-and-hold amplifier. </td><td class="col1">Important in IF under-sampling applications. This <abbr title="specification">spec</abbr> may not be compatible with the ADC&#039;s maximum sampling rate.</td><td class="col2"></td>
+	</tr>
+	<tr class="row14">
+		<td class="col0">Power dissipation, mW or W</td><td class="col1">The amount of power consumed by the converter.</td><td class="col2">Important for power-sensitive applications in which battery life, temperature, or space limitations may affect power dissipation requirements.</td>
+	</tr>
+</table></div>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f9.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f9.gif"><img src="/_media/university/courses/electronics/text/chptr20-f9.gif?w=750&amp;tok=df621d" class="mediacenter" loading="lazy" alt="" width="750" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+Figure 20.9 Frequency Domain Specifications 
+</p>
+</div>
+</div>
+
+<h2 class="sectionedit25" id="adc_classifications">20.4 ADC Classifications</h2>
+<div class="level2">
+
+<p>
+Speed and accuracy are two critical measures of ADC performance. As such, they provide a means for broadly categorizing today’s monolithic ADCs. ADC chips may be loosely grouped along these lines as general-purpose, high-speed, or precision. Converters with 8- to 14-bit resolution and conversion rates below 10 Msamples/s are typically considered general-purpose ADCs. Those with conversion rates above 10 Msamples/s usually get the high-speed moniker, while those with 16 bits or more of resolution fall into the precision ADC category. 
+</p>
+
+<p>
+These definitions, however, are somewhat arbitrary and largely reflect the current state-of-the-art.
+</p>
+
+<p>
+Within these broad categories, ADCs may also be grouped according to converter architecture. The most popular types are flash, pipelined, successive approximation- register, and sigma-delta. Each architecture offers certain advantages with respect to conversion speed, accuracy, and other parameters. The characteristics associated with each architecture help determine its suitability for a given application.
+</p>
+
+<p>
+ADCs have been implemented both as discrete Designs’ sometimes constructed with hybrid packaging and as monolithic designs implemented as integrated circuits (ICs). Much of the discussion of ADC performance within these pages relates specifically to ADCs in IC form. Development of monolithic ADCs has been heavily influenced by process innovation, both in high-end processes such as bipolar, biCMOS, and SiGe, as well as mainstream CMOS processes.
+</p>
+
+<p>
+Over time, the migration of ADC designs to CMOS processes with smaller geometries has increased the possibilities for performance enhancements, while also allowing higher levels of integration. That integration can increase the number of conversion channels achieved on a single die, or allow conversion- related functions to be brought on-chip. As a result, die size and, consequently, package size depend on the semiconductor process employed. The process also determines supply voltage, which along with conversion speed, influences power dissipation.
+</p>
+
+</div>
+
+<h2 class="sectionedit26" id="how_it_works_-_flash_architecture">20.5 How It Works - Flash Architecture</h2>
+<div class="level2">
+
+<p>
+In the flash or parallel ADC architecture, an array of 2N-1 comparators converts an analog signal to digital with a resolution of N bits. The comparators receive the analog signal on one input and a unique fraction of the reference voltage on the other. The reference voltage for each comparator is often a tap off a resistive voltage divider, whereby the comparators are biased in voltage increments equivalent to 1 <abbr title="least significant bit">LSB</abbr>. The comparator array is clocked simultaneously.
+</p>
+
+<p>
+The comparators with reference voltages less than the analog input will output a digital one. The comparators with reference voltages greater than the analog input will output a digital zero.  When read together, the outputs present a “thermometer code,” which the output logic converts to standard binary code.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f10.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f10.gif"><img src="/_media/university/courses/electronics/text/chptr20-f10.gif?w=650&amp;tok=3f0da5" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+Figure 20.10 Flash Architecture 
+</p>
+</div>
+<p>
+Pros:
+</p>
+
+<p>
++ Very fast„ converts in one ADC clock cycle.
+</p>
+
+<p>
+Cons:
+</p>
+
+<p>
+- Requires many comparators. The physical limits of monolithic integration generally allow only up to 8 bits of resolution per ADC chip.<br/>
+
+- High input capacitance.
+</p>
+
+</div>
+
+<h2 class="sectionedit29" id="how_it_works_-_pipeline_architecture">20.6 How It Works - Pipeline Architecture</h2>
+<div class="level2">
+
+<p>
+This architecture divides the conversion into two or more stages. Each stage consists of a sample-and-hold (S/H) circuit, an <abbr title="milli (prefix, as in mW, mA, mV, ms)">m</abbr>-bit flash ADC, and a DAC. The analog signal is fed to the first stage, where it’s sampled by the S/H and converted to a digital code by the flash ADC. The code generated by the flash ADC in this stage represents the most significant bits of the ADC’s final output.
+</p>
+
+<p>
+The same code is then fed to the DAC, which reconverts the code back to an analog signal that is subtracted from the original, sampled analog input signal. The resulting difference signal or residue, is next amplified and sent on to the following stage in the pipeline, where the whole process is repeated. The number of stages needed depends on the required resolution and the resolution of the flash ADCs used in each stage. In theory, the overall resolution of the ADC would be the sum of the resolutions of the flash ADCs. But in practice, some extra overlapping bits are required for error correction.
+</p>
+
+<p>
+Pros:
+</p>
+
+<p>
++ Not as fast as pure flash architecture, but achieves higher resolutions and dynamic range.<br/>
+
++ Handles wideband inputs.<br/>
+
++ Use of dither noise and averaging increases the effective resolution of the converter.<br/>
+
++ Permits under sampling of wideband IF signal.
+</p>
+
+<p>
+Cons:
+</p>
+
+<p>
+- Pipeline delay. Total throughput can be equal to that of a flash converter (one conversion per cycle), but with a latency or pipeline delay equal to the number of stages.<br/>
+
+- Accuracy of conversion depends on the DAC linearity.<br/>
+
+- Ill-suited to applications where conversion results must be available immediately after the sample clock.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f11.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f11.gif"><img src="/_media/university/courses/electronics/text/chptr20-f11.gif?w=650&amp;tok=0754a6" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+Figure 20.11 Single Pipelined Converter Stage 
+</p>
+</div>
+</div>
+
+<h2 class="sectionedit32" id="how_it_works_-_sar_architecture">20.7 How It Works - SAR Architecture</h2>
+<div class="level2">
+
+<p>
+The SAR converter works like a balance scale that compares an unknown weight against a series of known weights. In lieu of weights, the SAR converter compares the analog input voltage against a series of successively smaller voltages representing each of the bits in the digital output code. These voltages are fractions of the full-scale input voltage (1/2, 1/4, 1/8, 1/16…1/2<sup>N</sup>, where N=number of bits).
+</p>
+
+<p>
+The first comparison is made between the analog input voltage and a voltage representing the most significant bit (<abbr title="most significant bit">MSB</abbr>). If that analog input voltage is greater than the <abbr title="most significant bit">MSB</abbr> voltage, the value of the <abbr title="most significant bit">MSB</abbr> is set to 1, otherwise it’s set to 0. The second comparison is made between the analog input voltage and a voltage representing the sum of the <abbr title="most significant bit">MSB</abbr> and the next most significant bit. The value of the second most significant bit is then set accordingly. The third comparison is made between the analog input voltage and the voltage representing the sum of the three most significant bits. At this point, the value of the third most significant bit is set. The process repeats until the value of the <abbr title="least significant bit">LSB</abbr> is established.
+</p>
+
+<p>
+Pros:
+</p>
+
+<p>
++ Uses a single comparator to achieve high resolution, resulting in small die size for monolithic ADCs.<br/>
+
++ No pipeline delay.<br/>
+
++ Well-suited for non-periodic inputs.<br/>
+
++ Use of dither noise and averaging increases the effective resolution of the converter.<br/>
+
++ Permits under-sampling.
+</p>
+
+<p>
+Cons:
+</p>
+
+<p>
+- Requires N comparisons to achieve N-bit resolution, which is more than both flash and pipelined.<br/>
+
+- Accuracy of conversion depends on the DAC linearity and comparator noise.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f12.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f12.gif"><img src="/_media/university/courses/electronics/text/chptr20-f12.gif?w=650&amp;tok=035045" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+Figure 20.12 Successive-Approximation-Register (SAR) ADC 
+</p>
+</div>
+</div>
+
+<h2 class="sectionedit35" id="how_it_works_-_sigma-delta_architecture">20.8 How It Works - Sigma-Delta Architecture</h2>
+<div class="level2">
+
+<p>
+The basic elements of this architecture are an integrator, a comparator, and a one-bit DAC, which together form a sigma-delta modulator. The modulator subtracts the DAC from the analog input signal and then feeds the signal to the integrator. The output of the integrator then goes to a comparator, which converts the signal to a one-bit digital output. The resulting bit is fed to the DAC, which produces an analog signal to be subtracted from the input signal. The process repeats at a very fast “oversampled rate.“
+</p>
+
+<p>
+The modulator produces a binary stream in which the ratio of ones to zeros is a function of the input signal’s amplitude. By digitally filtering and decimating this stream of one and zeroes, a binary output representing the value of the analog input is obtained.
+</p>
+
+<p>
+Pros:
+</p>
+
+<p>
++ Yields the highest precision for lower input-bandwidth applications.<br/>
+
++ Permits noise shaping whereby low-frequency noise is moved to higher frequencies, outside the band of interest.<br/>
+
++ Oversampling reduces requirements for anti-aliasing filtering.
+</p>
+
+<p>
+Cons:
+</p>
+
+<p>
+- Latency is much greater than with other architectures.<br/>
+
+- Oversampling and latency discourage the use of sigma-delta ADCs when digitizing multiplexed input signals.
+</p>
+
+<p>
+<a href="/_detail/university/courses/electronics/text/chptr20-f13.gif?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20" class="media" title="university:courses:electronics:text:chptr20-f13.gif"><img src="/_media/university/courses/electronics/text/chptr20-f13.gif?w=650&amp;tok=62454c" class="mediacenter" loading="lazy" alt="" width="650" /></a>
+</p>
+<div class="wrap_centeralign plugin_wrap">
+<p>
+Figure 20.13 Sigma-Delta Architecture 
+</p>
+</div>
+<p>
+<strong>Return to <a href="/university/courses/tutorials/cmos-dac-chapter" class="wikilink1" title="university:courses:tutorials:cmos-dac-chapter" data-wiki-id="university:courses:tutorials:cmos-dac-chapter">Previous Chapter</a></strong>
+</p>
+
+<p>
+<strong>Go to Next Chapter</strong>
+</p>
+
+<p>
+<strong>Return to <a href="/university/courses/electronics/text/electronics-toc" class="wikilink1" title="university:courses:electronics:text:electronics-toc" data-wiki-id="university:courses:electronics:text:electronics-toc">Table of Contents</a></strong>
+</p>
+
+</div>
+                        <!-- wikipage stop -->
+                    </div>
+
+                    <div class="docInfo"><bdi>university/courses/electronics/text/chapter-20.txt</bdi> · Last modified: <time datetime="2021-01-20T14:52:43+0000">20 Jan 2021 14:52</time> by <bdi><a href="https://ez.analog.com/members/dmercer" class=" interwiki iw_user">Doug Mercer</a></bdi></div>
+
+                                    </div>
+            </div>
+            <!-- /content -->
+
+            <hr class="a11y"/>
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="/university/courses/electronics/text/chapter-20?do=edit" title="View Source [v]" rel="nofollow" accesskey="v"><span>View Source</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="/university/courses/electronics/text/chapter-20?do=revisions" title="History [o]" rel="nofollow" accesskey="o"><span>History</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="/university/courses/electronics/text/chapter-20?do=backlink" title="Backlinks" rel="nofollow"><span>Backlinks</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="menuitemfolded"><a href="javascript:void(0);" title="Fold/unfold all" rel="nofollow" class="fold_unfold_all_new" onclick="fold_unfold_all();"><span>Fold/unfold all</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M 2,0 L 6.5,3 L 2,6 z M 8,6.6 L 12.5,9.6 L 8,12.6 z M 14,13.2 L 20,13.2 L 17,17.7 z"/></svg></a></li><li class="top"><a href="#dokuwiki__top" title="[ Back to top ] [t]" rel="nofollow" accesskey="t"><span>[ Back to top ]</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /wrapper -->
+
+    </div>
+    <!-- /container -->
+</div>
+<!-- /site -->
+
+﻿<a class="backtotop" href="#header">&nbsp;</a>
+<footer class="footer" id="footer">
+    <adi-footer short></adi-footer>
+
+    
+    <script type="text/javascript">
+        var analytics = '//assets.adobedtm.com/bc68b7886092/2a726ea8b70d/launch-a4a6d55de309.min.js';
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script type="text/javascript">
+        var ADIAssetsPath = "//assets2.analog.com";
+        var cookiesToDelete = [{ "Domain": ".analog.com", "Cookie": ["__qca", "adiHintCookie", "bCrumbs", "cookieAccepted", "dmdbase_cdc", "ELOQUA", "FedAuthentication", "gpv_p14", "gpv_v100", "myAnalog_id", "Mysite_info", "s_cc", "s_dfa", "s_fid", "s_gad", "s_gpv", "s_invisit", "s_lv", "s_nr", "s_ptc", "s_sq", "s_vi", "s_vnum", "es_visited", "AdiSessionAuthCookie", "AdiSecureDlCookie"] }, { "Domain": ".investor.analog.com", "Cookie": ["ADI_BRIEFCASE", "ADI_SESSION"] }, { "Domain": "careers.analog.com", "Cookie": ["in_ref", "Per_UniqueID", "PLAY_SESSION", "VISITED_COUNTRY", "VISITED_LANG", "ext_trk", "_gat_UA-84784380-31"] }, { "Domain": "distiadmin-dev.corpnt.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "distributor-dev.corpnt.analog.com", "Cookie": ["FedAuth1", "FedAuth", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_Email Address", "dmdbase", "_sdsat_DevQaOrProd"] }, { "Domain": "ez.analog.com", "Cookie": ["containerSecurityToken", "jive.security.context", "X-JCAPI-Token ", "BIGipServerpool_vanity_analog.jiveon.com", "JSESSIONID", "jive.login.ts"] }, { "Domain": "form.analog.com", "Cookie": ["AdiSessionAuthCookie", "FedAuth1", "FedAuth", "ASP.NET_SessionId", "AlteonP", "ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "_sdsat_DevQaOrProd", "adicftlassetdata", "AdiSessionAuthCookie", "_sdsat_Membership Status", "_sdsat_Email Address"] }, { "Domain": "registration.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "registration-dev.corpnt.analog.com", "_sdsat_Email Address", "FedAuth1", "FedAuth", "_sdsat_Membership Status", "AlteonP", "ASP.NET_SessionId"] }, { "Domain": "sdk.analog.com", "Cookie": ["dmdbase", "_sdsat_DevQaOrProd", "ipe_30155_fov", "ipe.30155.pageViewedCount", "_sdsat_Membership Status", "_sdsat_Email Address", "ipe_s", "AdiSessionAuthCookie", "FedAuth1"] }, { "Domain": "shoppingcart.analog.com", "Cookie": ["ipe_30155_fov", "ipe.30155.pageViewedCount", "ipe_s", "dmdbase", "_sdsat_DevQaOrProd", "_sdsat_Membership Status", "_sdsat_Email Address", "ASP.NET_SessionId", "adiSessionAuth", "FedAuth", "FedAuth1", "analogp", "USERID", "SHOPPINGCARTID", "DISTI_COUNTRY_CODE", "AlteonP"] }, { "Domain": "webuseradmin.analog.com", "Cookie": ["ASP.NET_SessionId"] }, { "Domain": "wiki.analog.com", "Cookie": ["DokuWiki", "DW<hash>", "DOKU_PREFS"] }, { "Domain": "www.analog.com", "Cookie": ["__atuvc", "__atuvs", "_sdsat_Email Address", "_sdsat_Membership Status", "DisclaimerConfirmation", "dmdbase", "downloadGoals", "sc.ASP.NET_SESSIONID", "sc.Status", "SC_ANALYTICS_GLOBAL_COOKIE", "website#lang", "ipe.30155.pageViewedCount", "ipe_30155_fov", "ipe_s", "_sdsat_DevQaOrProd", "ASP.NET_SessionId"] }];
+    </script>
+    <script>
+        /* Copyright 2011-2015 iPerceptions, Inc. All rights reserved. Do not distribute. iPerceptions provides this code 'as is' without warranty of any kind, either express or implied. */
+        window.iperceptionskey = 'acafac0d-3b8a-4d30-8a98-6cbcd5256d93';
+        (function() { var a = document.createElement('script'),
+            b = document.getElementsByTagName('body')[0];
+            a.type = 'text/javascript';
+            a.defer = true;
+            a.src = '//universal.iperceptions.com/wrapper.js';
+            b.appendChild(a); })();
+    </script>
+</footer>
+<script type="text/javascript">
+            if(typeof(_satellite) != 'undefined') {
+            _satellite.pageBottom();
+            }
+        </script>
+<div class="a11y"
+     style="float: left"><img src="/lib/exe/taskrunner.php?id=university%3Acourses%3Aelectronics%3Atext%3Achapter-20&amp;1776083328" width="2" height="1" alt="" /></div>
+</body>
+</html>
